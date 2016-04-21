@@ -5,8 +5,8 @@
 	<key>appid</key>
 	<string>1002967469</string>
 	<key>version</key>
-	<integer>20</integer>
+	<integer>10</integer>
 	<key>dbname</key>
-	<string>cdmx.db</string>
+	<string>migthyassets.db</string>
 </dict>
 </plist>
