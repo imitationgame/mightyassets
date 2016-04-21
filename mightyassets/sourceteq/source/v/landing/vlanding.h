@@ -6,5 +6,6 @@
 -(instancetype)init:(clanding*)controller;
 
 @property(weak, nonatomic)UIViewController *controller;
+@property(weak, nonatomic)NSLayoutConstraint *layoutbarheight;
 
 @end

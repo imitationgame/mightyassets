@@ -1,5 +1,10 @@
 #import "vlanding.h"
 #import "vlandingbar.h"
+#import "vlandingclearheader.h"
+#import "vlandingcell.h"
+#import "genericconstants.h"
+
+static NSInteger const barheight = 200;
 
 @implementation vlanding
 
@@ -17,8 +22,10 @@
     NSDictionary *views = @{@"bar":bar};
     NSDictionary *metrics = @{};
     
+    self.layoutbarheight = [NSLayoutConstraint constraintWithItem:bar attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:barheight];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bar]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar]" options:0 metrics:metrics views:views]];
+    [self addConstraint:self.layoutbarheight];
     
     return self;
 }

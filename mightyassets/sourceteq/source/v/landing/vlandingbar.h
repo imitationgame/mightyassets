@@ -6,5 +6,6 @@
 -(instancetype)init:(clanding*)controller;
 
 @property(weak, nonatomic)clanding *controller;
+@property(weak, nonatomic)UIButton *buttonadd;
 
 @end

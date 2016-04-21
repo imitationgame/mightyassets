@@ -11,6 +11,8 @@
 		DA94F7AB1CC9476E00FC50C9 /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA94F7AA1CC9476E00FC50C9 /* brand.xcassets */; };
 		DAAFB2871CC96842003173A7 /* vlanding.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2861CC96842003173A7 /* vlanding.m */; };
 		DAAFB28A1CC96947003173A7 /* vlandingbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2891CC96947003173A7 /* vlandingbar.m */; };
+		DAAFB28D1CC970AB003173A7 /* vlandingclearheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB28C1CC970AB003173A7 /* vlandingclearheader.m */; };
+		DAAFB2901CC970B4003173A7 /* vlandingcell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB28F1CC970B4003173A7 /* vlandingcell.m */; };
 		DAB376FD1CC93901001E8625 /* mightyassets.db in Resources */ = {isa = PBXBuildFile; fileRef = DAB376BE1CC93901001E8625 /* mightyassets.db */; };
 		DAB376FE1CC93901001E8625 /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB376C11CC93901001E8625 /* analytics.plist */; };
 		DAB376FF1CC93901001E8625 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB376C21CC93901001E8625 /* defs.plist */; };
@@ -45,6 +47,10 @@
 		DAAFB2861CC96842003173A7 /* vlanding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vlanding.m; sourceTree = "<group>"; };
 		DAAFB2881CC96947003173A7 /* vlandingbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlandingbar.h; sourceTree = "<group>"; };
 		DAAFB2891CC96947003173A7 /* vlandingbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vlandingbar.m; sourceTree = "<group>"; };
+		DAAFB28B1CC970AB003173A7 /* vlandingclearheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlandingclearheader.h; sourceTree = "<group>"; };
+		DAAFB28C1CC970AB003173A7 /* vlandingclearheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vlandingclearheader.m; sourceTree = "<group>"; };
+		DAAFB28E1CC970B4003173A7 /* vlandingcell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlandingcell.h; sourceTree = "<group>"; };
+		DAAFB28F1CC970B4003173A7 /* vlandingcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vlandingcell.m; sourceTree = "<group>"; };
 		DAB376A31CC93769001E8625 /* mightyassets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mightyassets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB376BE1CC93901001E8625 /* mightyassets.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mightyassets.db; sourceTree = "<group>"; };
 		DAB376C11CC93901001E8625 /* analytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = analytics.plist; sourceTree = "<group>"; };
@@ -132,6 +138,10 @@
 				DAAFB2861CC96842003173A7 /* vlanding.m */,
 				DAAFB2881CC96947003173A7 /* vlandingbar.h */,
 				DAAFB2891CC96947003173A7 /* vlandingbar.m */,
+				DAAFB28B1CC970AB003173A7 /* vlandingclearheader.h */,
+				DAAFB28C1CC970AB003173A7 /* vlandingclearheader.m */,
+				DAAFB28E1CC970B4003173A7 /* vlandingcell.h */,
+				DAAFB28F1CC970B4003173A7 /* vlandingcell.m */,
 			);
 			path = landing;
 			sourceTree = "<group>";
@@ -524,10 +534,12 @@
 				DAB377131CC93901001E8625 /* vspinner.m in Sources */,
 				DAB3770C1CC93901001E8625 /* cmain.m in Sources */,
 				DAB377101CC93901001E8625 /* mdirs.m in Sources */,
+				DAAFB2901CC970B4003173A7 /* vlandingcell.m in Sources */,
 				DAAFB2871CC96842003173A7 /* vlanding.m in Sources */,
 				DAB377061CC93901001E8625 /* tools.m in Sources */,
 				DAB377111CC93901001E8625 /* msettings.m in Sources */,
 				DAB377041CC93901001E8625 /* analytics.m in Sources */,
+				DAAFB28D1CC970AB003173A7 /* vlandingclearheader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
