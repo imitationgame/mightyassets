@@ -76,6 +76,7 @@
 		DAB376FA1CC93901001E8625 /* vblur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vblur.m; sourceTree = "<group>"; };
 		DAB376FB1CC93901001E8625 /* vspinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vspinner.h; sourceTree = "<group>"; };
 		DAB376FC1CC93901001E8625 /* vspinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vspinner.m; sourceTree = "<group>"; };
+		DAB377151CC93EA1001E8625 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +147,7 @@
 		DAB376C61CC93901001E8625 /* sourceteq */ = {
 			isa = PBXGroup;
 			children = (
+				DAB377141CC93EA1001E8625 /* private */,
 				DAB376C71CC93901001E8625 /* core */,
 				DAB376CC1CC93901001E8625 /* generic */,
 				DAB376DA1CC93901001E8625 /* lib */,
@@ -298,6 +300,14 @@
 				DAB376FC1CC93901001E8625 /* vspinner.m */,
 			);
 			path = general;
+			sourceTree = "<group>";
+		};
+		DAB377141CC93EA1001E8625 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				DAB377151CC93EA1001E8625 /* privateconstants.h */,
+			);
+			path = private;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
