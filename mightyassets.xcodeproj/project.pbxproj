@@ -16,6 +16,7 @@
 		DAAFB2941CC972C8003173A7 /* mfixedconstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2931CC972C8003173A7 /* mfixedconstraints.m */; };
 		DAAFB2971CC9872A003173A7 /* cadd.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2961CC9872A003173A7 /* cadd.m */; };
 		DAAFB29B1CC9878C003173A7 /* vadd.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB29A1CC9878C003173A7 /* vadd.m */; };
+		DAAFB29E1CC98A76003173A7 /* vaddbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB29D1CC98A76003173A7 /* vaddbar.m */; };
 		DAB376FD1CC93901001E8625 /* mightyassets.db in Resources */ = {isa = PBXBuildFile; fileRef = DAB376BE1CC93901001E8625 /* mightyassets.db */; };
 		DAB376FE1CC93901001E8625 /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB376C11CC93901001E8625 /* analytics.plist */; };
 		DAB376FF1CC93901001E8625 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB376C21CC93901001E8625 /* defs.plist */; };
@@ -60,6 +61,8 @@
 		DAAFB2961CC9872A003173A7 /* cadd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cadd.m; sourceTree = "<group>"; };
 		DAAFB2991CC9878C003173A7 /* vadd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vadd.h; sourceTree = "<group>"; };
 		DAAFB29A1CC9878C003173A7 /* vadd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vadd.m; sourceTree = "<group>"; };
+		DAAFB29C1CC98A76003173A7 /* vaddbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaddbar.h; sourceTree = "<group>"; };
+		DAAFB29D1CC98A76003173A7 /* vaddbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddbar.m; sourceTree = "<group>"; };
 		DAB376A31CC93769001E8625 /* mightyassets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mightyassets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB376BE1CC93901001E8625 /* mightyassets.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mightyassets.db; sourceTree = "<group>"; };
 		DAB376C11CC93901001E8625 /* analytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = analytics.plist; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 			children = (
 				DAAFB2991CC9878C003173A7 /* vadd.h */,
 				DAAFB29A1CC9878C003173A7 /* vadd.m */,
+				DAAFB29C1CC98A76003173A7 /* vaddbar.h */,
+				DAAFB29D1CC98A76003173A7 /* vaddbar.m */,
 			);
 			path = add;
 			sourceTree = "<group>";
@@ -561,6 +566,7 @@
 				DAAFB28A1CC96947003173A7 /* vlandingbar.m in Sources */,
 				DAB377121CC93901001E8625 /* vblur.m in Sources */,
 				DAB377071CC93901001E8625 /* uicolor+uicolormain.m in Sources */,
+				DAAFB29E1CC98A76003173A7 /* vaddbar.m in Sources */,
 				DAB377051CC93901001E8625 /* nsnotification+nsnotificationmain.m in Sources */,
 				DAB3770D1CC93901001E8625 /* cpages.m in Sources */,
 				DAB377131CC93901001E8625 /* vspinner.m in Sources */,

@@ -12,6 +12,7 @@
     [buttoninteractive setClipsToBounds:YES];
     [buttoninteractive setTranslatesAutoresizingMaskIntoConstraints:NO];
     [buttoninteractive setBackgroundColor:[UIColor clearColor]];
+    [buttoninteractive addTarget:self action:@selector(actioninteractive:) forControlEvents:UIControlEventTouchUpInside];
     
     [self addSubview:buttoninteractive];
     
