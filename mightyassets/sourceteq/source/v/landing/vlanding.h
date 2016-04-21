@@ -8,6 +8,6 @@
 
 @property(weak, nonatomic)vlandingbar *bar;
 @property(weak, nonatomic)UIViewController *controller;
-@property(weak, nonatomic)NSLayoutConstraint *layoutbartop;
+@property(weak, nonatomic)NSLayoutConstraint *layoutbarheight;
 
 @end

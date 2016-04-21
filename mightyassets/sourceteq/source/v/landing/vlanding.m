@@ -12,9 +12,6 @@ static NSInteger const interitem = 1;
 static NSInteger const colbottom;
 
 @implementation vlanding
-{
-    CGFloat barmintop;
-}
 
 -(instancetype)init:(clanding*)controller
 {
@@ -22,7 +19,6 @@ static NSInteger const colbottom;
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor background]];
     self.controller = controller;
-    barmintop = -barheight + navbarheightmin;
     
     vlandingbar *bar = [[vlandingbar alloc] init:controller];
     self.bar = bar;
@@ -51,12 +47,12 @@ static NSInteger const colbottom;
     NSDictionary *views = @{@"bar":bar, @"col":collection};
     NSDictionary *metrics = @{@"barheight":@(barheight)};
     
-    self.layoutbartop = [NSLayoutConstraint constraintWithItem:bar attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1 constant:0];
+    self.layoutbarheight = [NSLayoutConstraint constraintWithItem:bar attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:barheight];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bar]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[bar(barheight)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(0)-[col]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraint:self.layoutbartop];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraint:self.layoutbarheight];
     
     return self;
 }
@@ -67,18 +63,14 @@ static NSInteger const colbottom;
 -(void)scrollViewDidScroll:(UIScrollView*)scroll
 {
     CGFloat offsety = scroll.contentOffset.y;
-    CGFloat newbartop = -offsety;
+    CGFloat newbarheight = barheight - offsety;
     
-    if(newbartop < barmintop)
+    if(newbarheight < navbarheightmin)
     {
-        newbartop = barmintop;
-    }
-    else if(newbartop > 0)
-    {
-        newbartop = 0;
+        newbarheight = navbarheightmin;
     }
     
-    self.layoutbartop.constant = newbartop;
+    self.layoutbarheight.constant = newbarheight;
 }
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForHeaderInSection:(NSInteger)section
