@@ -1,6 +1,6 @@
-#import "minteractiveconstraints.h"
+#import "mfixedconstraints.h"
 
-@implementation minteractiveconstraints
+@implementation mfixedconstraints
 
 -(instancetype)init:(NSInteger)top right:(NSInteger)right bottom:(NSInteger)bottom left:(NSInteger)left
 {

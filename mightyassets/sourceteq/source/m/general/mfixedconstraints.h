@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface minteractiveconstraints:NSObject
+@interface mfixedconstraints:NSObject
 
 -(instancetype)init:(NSInteger)top right:(NSInteger)right bottom:(NSInteger)bottom left:(NSInteger)left;
 
