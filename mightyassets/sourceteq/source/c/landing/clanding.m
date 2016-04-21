@@ -1,5 +1,6 @@
 #import "clanding.h"
 #import "vlanding.h"
+#import "cmain.h"
 
 @interface clanding ()
 
@@ -20,7 +21,7 @@
 
 -(void)addproject
 {
-    
+    [[cmain singleton].pages page_add];
 }
 
 @end

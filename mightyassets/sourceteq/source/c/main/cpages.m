@@ -1,5 +1,6 @@
 #import "cpages.h"
 #import "clanding.h"
+#import "cadd.h"
 
 @implementation cpages
 
@@ -47,7 +48,8 @@
 
 -(void)page_add
 {
-    
+    cadd *controller = [[cadd alloc] init];
+    [self changecontroller:controller direction:UIPageViewControllerNavigationDirectionForward animated:YES];
 }
 
 @end
