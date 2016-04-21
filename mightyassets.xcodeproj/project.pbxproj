@@ -19,6 +19,11 @@
 		DAAFB29E1CC98A76003173A7 /* vaddbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB29D1CC98A76003173A7 /* vaddbar.m */; };
 		DAAFB2A11CC98F8C003173A7 /* vaddcell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2A01CC98F8C003173A7 /* vaddcell.m */; };
 		DAAFB2A41CC98F9F003173A7 /* vaddheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2A31CC98F9F003173A7 /* vaddheader.m */; };
+		DAAFB2A81CC99385003173A7 /* madd.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2A71CC99385003173A7 /* madd.m */; };
+		DAAFB2AB1CC9939F003173A7 /* maddsection.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2AA1CC9939F003173A7 /* maddsection.m */; };
+		DAAFB2AE1CC993DC003173A7 /* madditem.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2AD1CC993DC003173A7 /* madditem.m */; };
+		DAAFB2B11CC994FD003173A7 /* maddsectionproject.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2B01CC994FD003173A7 /* maddsectionproject.m */; };
+		DAAFB2B41CC9959D003173A7 /* madditemprojectname.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2B31CC9959D003173A7 /* madditemprojectname.m */; };
 		DAB376FD1CC93901001E8625 /* mightyassets.db in Resources */ = {isa = PBXBuildFile; fileRef = DAB376BE1CC93901001E8625 /* mightyassets.db */; };
 		DAB376FE1CC93901001E8625 /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB376C11CC93901001E8625 /* analytics.plist */; };
 		DAB376FF1CC93901001E8625 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB376C21CC93901001E8625 /* defs.plist */; };
@@ -69,6 +74,16 @@
 		DAAFB2A01CC98F8C003173A7 /* vaddcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddcell.m; sourceTree = "<group>"; };
 		DAAFB2A21CC98F9F003173A7 /* vaddheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaddheader.h; sourceTree = "<group>"; };
 		DAAFB2A31CC98F9F003173A7 /* vaddheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddheader.m; sourceTree = "<group>"; };
+		DAAFB2A61CC99385003173A7 /* madd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madd.h; sourceTree = "<group>"; };
+		DAAFB2A71CC99385003173A7 /* madd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madd.m; sourceTree = "<group>"; };
+		DAAFB2A91CC9939F003173A7 /* maddsection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maddsection.h; sourceTree = "<group>"; };
+		DAAFB2AA1CC9939F003173A7 /* maddsection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddsection.m; sourceTree = "<group>"; };
+		DAAFB2AC1CC993DC003173A7 /* madditem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditem.h; sourceTree = "<group>"; };
+		DAAFB2AD1CC993DC003173A7 /* madditem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditem.m; sourceTree = "<group>"; };
+		DAAFB2AF1CC994FD003173A7 /* maddsectionproject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maddsectionproject.h; sourceTree = "<group>"; };
+		DAAFB2B01CC994FD003173A7 /* maddsectionproject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddsectionproject.m; sourceTree = "<group>"; };
+		DAAFB2B21CC9959D003173A7 /* madditemprojectname.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditemprojectname.h; sourceTree = "<group>"; };
+		DAAFB2B31CC9959D003173A7 /* madditemprojectname.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditemprojectname.m; sourceTree = "<group>"; };
 		DAB376A31CC93769001E8625 /* mightyassets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mightyassets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB376BE1CC93901001E8625 /* mightyassets.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mightyassets.db; sourceTree = "<group>"; };
 		DAB376C11CC93901001E8625 /* analytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = analytics.plist; sourceTree = "<group>"; };
@@ -182,6 +197,23 @@
 				DAAFB2A31CC98F9F003173A7 /* vaddheader.m */,
 				DAAFB29F1CC98F8C003173A7 /* vaddcell.h */,
 				DAAFB2A01CC98F8C003173A7 /* vaddcell.m */,
+			);
+			path = add;
+			sourceTree = "<group>";
+		};
+		DAAFB2A51CC9937D003173A7 /* add */ = {
+			isa = PBXGroup;
+			children = (
+				DAAFB2A61CC99385003173A7 /* madd.h */,
+				DAAFB2A71CC99385003173A7 /* madd.m */,
+				DAAFB2A91CC9939F003173A7 /* maddsection.h */,
+				DAAFB2AA1CC9939F003173A7 /* maddsection.m */,
+				DAAFB2AF1CC994FD003173A7 /* maddsectionproject.h */,
+				DAAFB2B01CC994FD003173A7 /* maddsectionproject.m */,
+				DAAFB2AC1CC993DC003173A7 /* madditem.h */,
+				DAAFB2AD1CC993DC003173A7 /* madditem.m */,
+				DAAFB2B21CC9959D003173A7 /* madditemprojectname.h */,
+				DAAFB2B31CC9959D003173A7 /* madditemprojectname.m */,
 			);
 			path = add;
 			sourceTree = "<group>";
@@ -346,6 +378,7 @@
 		DAB376EA1CC93901001E8625 /* m */ = {
 			isa = PBXGroup;
 			children = (
+				DAAFB2A51CC9937D003173A7 /* add */,
 				DAAFB2911CC97247003173A7 /* landing */,
 				DAB376EB1CC93901001E8625 /* db */,
 				DAB376F01CC93901001E8625 /* dirs */,
@@ -570,6 +603,7 @@
 				DAAFB2A11CC98F8C003173A7 /* vaddcell.m in Sources */,
 				DAB377031CC93901001E8625 /* main.m in Sources */,
 				DAB377091CC93901001E8625 /* updater.m in Sources */,
+				DAAFB2B11CC994FD003173A7 /* maddsectionproject.m in Sources */,
 				DAB377081CC93901001E8625 /* uifont+uifontmain.m in Sources */,
 				DAE16D831CC9651500C7A812 /* clanding.m in Sources */,
 				DAB377011CC93901001E8625 /* appdel.m in Sources */,
@@ -577,13 +611,17 @@
 				DAAFB28A1CC96947003173A7 /* vlandingbar.m in Sources */,
 				DAB377121CC93901001E8625 /* vblur.m in Sources */,
 				DAB377071CC93901001E8625 /* uicolor+uicolormain.m in Sources */,
+				DAAFB2B41CC9959D003173A7 /* madditemprojectname.m in Sources */,
 				DAAFB29E1CC98A76003173A7 /* vaddbar.m in Sources */,
 				DAB377051CC93901001E8625 /* nsnotification+nsnotificationmain.m in Sources */,
 				DAB3770D1CC93901001E8625 /* cpages.m in Sources */,
 				DAB377131CC93901001E8625 /* vspinner.m in Sources */,
+				DAAFB2AE1CC993DC003173A7 /* madditem.m in Sources */,
 				DAB3770C1CC93901001E8625 /* cmain.m in Sources */,
 				DAB377101CC93901001E8625 /* mdirs.m in Sources */,
 				DAAFB2901CC970B4003173A7 /* vlandingcell.m in Sources */,
+				DAAFB2AB1CC9939F003173A7 /* maddsection.m in Sources */,
+				DAAFB2A81CC99385003173A7 /* madd.m in Sources */,
 				DAAFB2871CC96842003173A7 /* vlanding.m in Sources */,
 				DAB377061CC93901001E8625 /* tools.m in Sources */,
 				DAAFB2971CC9872A003173A7 /* cadd.m in Sources */,
