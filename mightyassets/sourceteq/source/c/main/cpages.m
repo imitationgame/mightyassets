@@ -1,4 +1,5 @@
 #import "cpages.h"
+#import "clanding.h"
 
 @implementation cpages
 
@@ -36,5 +37,11 @@
 }
 
 #pragma mark public
+
+-(void)page_landing:(UIPageViewControllerNavigationDirection)direction animated:(BOOL)animated
+{
+    clanding *controller = [[clanding alloc] init];
+    [self changecontroller:controller direction:direction animated:animated];
+}
 
 @end
