@@ -36,6 +36,7 @@ static NSInteger const colbottom;
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     [collection setShowsVerticalScrollIndicator:NO];
     [collection setShowsHorizontalScrollIndicator:NO];
+    [collection setAlwaysBounceVertical:YES];
     [collection setDataSource:self];
     [collection setDelegate:self];
     [collection registerClass:[vlandingclearheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:clearheaderid];

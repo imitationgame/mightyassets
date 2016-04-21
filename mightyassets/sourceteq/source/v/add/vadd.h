@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "cadd.h"
 
-@interface vadd:UIView
+@interface vadd:UIView<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 -(instancetype)init:(cadd*)controller;
 
