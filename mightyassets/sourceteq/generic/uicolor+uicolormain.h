@@ -4,5 +4,6 @@
 
 +(instancetype)main;
 +(instancetype)second;
++(instancetype)background;
 
 @end

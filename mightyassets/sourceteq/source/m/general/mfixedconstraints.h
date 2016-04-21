@@ -2,11 +2,11 @@
 
 @interface mfixedconstraints:NSObject
 
--(instancetype)init:(NSInteger)top right:(NSInteger)right bottom:(NSInteger)bottom left:(NSInteger)left;
-
-@property(copy, nonatomic)NSNumber *top;
-@property(copy, nonatomic)NSNumber *right;
-@property(copy, nonatomic)NSNumber *bottom;
-@property(copy, nonatomic)NSNumber *left;
+@property(nonatomic)NSInteger top;
+@property(nonatomic)NSInteger right;
+@property(nonatomic)NSInteger bottom;
+@property(nonatomic)NSInteger left;
+@property(nonatomic)NSInteger width;
+@property(nonatomic)NSInteger height;
 
 @end

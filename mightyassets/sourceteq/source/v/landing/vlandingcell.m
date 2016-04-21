@@ -1,13 +1,14 @@
-//
-//  vlandingcell.m
-//  mightyassets
-//
-//  Created by zero on 4/21/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
-
 #import "vlandingcell.h"
 
 @implementation vlandingcell
+
+-(instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    [self setClipsToBounds:YES];
+    [self setBackgroundColor:[UIColor whiteColor]];
+    
+    return self;
+}
 
 @end

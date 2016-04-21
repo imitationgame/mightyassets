@@ -32,9 +32,9 @@
 -(void)config:(mfixedconstraints*)interactive
 {
     self.layouttopinteractive.constant = interactive.top.integerValue;
-    self.layouttopinteractive.constant = interactive.right.integerValue;
-    self.layouttopinteractive.constant = interactive.bottom.integerValue;
-    self.layouttopinteractive.constant = interactive.left.integerValue;
+    self.layoutrightinteractive.constant = -interactive.right.integerValue;
+    self.layoutbottominteractive.constant = -interactive.bottom.integerValue;
+    self.layoutleftinteractive.constant = interactive.left.integerValue;
 }
 
 @end

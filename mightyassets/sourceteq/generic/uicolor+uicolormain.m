@@ -12,4 +12,9 @@
     return [UIColor colorWithRed:0.64705 green:0.73333 blue:0.8549 alpha:1];
 }
 
++(instancetype)background
+{
+    return [UIColor colorWithRed:0.94901 green:0.94509 blue:0.94901 alpha:1];
+}
+
 @end

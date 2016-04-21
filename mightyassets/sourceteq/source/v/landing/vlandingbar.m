@@ -1,9 +1,9 @@
 #import "vlandingbar.h"
 #import "uicolor+uicolormain.h"
 
-static NSInteger const buttontopmargin = 100;
-static NSInteger const buttonrightmargin = -100;
-static NSInteger const buttonbottommargin = -100;
+static NSInteger const buttontopmargin = 40;
+static NSInteger const buttonrightmargin = 100;
+static NSInteger const buttonbottommargin = 40;
 static NSInteger const buttonleftmargin = 100;
 
 @implementation vlandingbar
