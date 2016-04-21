@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DAB376FD1CC93901001E8625 /* mightyassets.db in Resources */ = {isa = PBXBuildFile; fileRef = DAB376BE1CC93901001E8625 /* mightyassets.db */; };
+		DAB376FE1CC93901001E8625 /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB376C11CC93901001E8625 /* analytics.plist */; };
+		DAB376FF1CC93901001E8625 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB376C21CC93901001E8625 /* defs.plist */; };
+		DAB377001CC93901001E8625 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAB376C31CC93901001E8625 /* Localizable.strings */; };
+		DAB377011CC93901001E8625 /* appdel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376C91CC93901001E8625 /* appdel.m */; };
+		DAB377031CC93901001E8625 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376CB1CC93901001E8625 /* main.m */; };
+		DAB377041CC93901001E8625 /* analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376CE1CC93901001E8625 /* analytics.m */; };
+		DAB377051CC93901001E8625 /* nsnotification+nsnotificationmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376D11CC93901001E8625 /* nsnotification+nsnotificationmain.m */; };
+		DAB377061CC93901001E8625 /* tools.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376D31CC93901001E8625 /* tools.m */; };
+		DAB377071CC93901001E8625 /* uicolor+uicolormain.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376D51CC93901001E8625 /* uicolor+uicolormain.m */; };
+		DAB377081CC93901001E8625 /* uifont+uifontmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376D71CC93901001E8625 /* uifont+uifontmain.m */; };
+		DAB377091CC93901001E8625 /* updater.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376D91CC93901001E8625 /* updater.m */; };
+		DAB3770A1CC93901001E8625 /* libdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB376DD1CC93901001E8625 /* libdb.a */; };
+		DAB3770B1CC93901001E8625 /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB376DE1CC93901001E8625 /* libtimerbg.a */; };
+		DAB3770C1CC93901001E8625 /* cmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376E71CC93901001E8625 /* cmain.m */; };
+		DAB3770D1CC93901001E8625 /* cpages.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376E91CC93901001E8625 /* cpages.m */; };
+		DAB3770E1CC93901001E8625 /* mdb.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376ED1CC93901001E8625 /* mdb.m */; };
+		DAB3770F1CC93901001E8625 /* mdbcreate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376EF1CC93901001E8625 /* mdbcreate.m */; };
+		DAB377101CC93901001E8625 /* mdirs.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376F21CC93901001E8625 /* mdirs.m */; };
+		DAB377111CC93901001E8625 /* msettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376F61CC93901001E8625 /* msettings.m */; };
+		DAB377121CC93901001E8625 /* vblur.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376FA1CC93901001E8625 /* vblur.m */; };
+		DAB377131CC93901001E8625 /* vspinner.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376FC1CC93901001E8625 /* vspinner.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DAB376A31CC93769001E8625 /* mightyassets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mightyassets.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAB376BE1CC93901001E8625 /* mightyassets.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mightyassets.db; sourceTree = "<group>"; };
+		DAB376C11CC93901001E8625 /* analytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = analytics.plist; sourceTree = "<group>"; };
+		DAB376C21CC93901001E8625 /* defs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defs.plist; sourceTree = "<group>"; };
+		DAB376C41CC93901001E8625 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DAB376C51CC93901001E8625 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DAB376C81CC93901001E8625 /* appdel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appdel.h; sourceTree = "<group>"; };
+		DAB376C91CC93901001E8625 /* appdel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = appdel.m; sourceTree = "<group>"; };
+		DAB376CA1CC93901001E8625 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAB376CB1CC93901001E8625 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DAB376CD1CC93901001E8625 /* analytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = analytics.h; sourceTree = "<group>"; };
+		DAB376CE1CC93901001E8625 /* analytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = analytics.m; sourceTree = "<group>"; };
+		DAB376CF1CC93901001E8625 /* genericconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = genericconstants.h; sourceTree = "<group>"; };
+		DAB376D01CC93901001E8625 /* nsnotification+nsnotificationmain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "nsnotification+nsnotificationmain.h"; sourceTree = "<group>"; };
+		DAB376D11CC93901001E8625 /* nsnotification+nsnotificationmain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "nsnotification+nsnotificationmain.m"; sourceTree = "<group>"; };
+		DAB376D21CC93901001E8625 /* tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tools.h; sourceTree = "<group>"; };
+		DAB376D31CC93901001E8625 /* tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tools.m; sourceTree = "<group>"; };
+		DAB376D41CC93901001E8625 /* uicolor+uicolormain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "uicolor+uicolormain.h"; sourceTree = "<group>"; };
+		DAB376D51CC93901001E8625 /* uicolor+uicolormain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "uicolor+uicolormain.m"; sourceTree = "<group>"; };
+		DAB376D61CC93901001E8625 /* uifont+uifontmain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "uifont+uifontmain.h"; sourceTree = "<group>"; };
+		DAB376D71CC93901001E8625 /* uifont+uifontmain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "uifont+uifontmain.m"; sourceTree = "<group>"; };
+		DAB376D81CC93901001E8625 /* updater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = updater.h; sourceTree = "<group>"; };
+		DAB376D91CC93901001E8625 /* updater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updater.m; sourceTree = "<group>"; };
+		DAB376DC1CC93901001E8625 /* db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = db.h; sourceTree = "<group>"; };
+		DAB376DD1CC93901001E8625 /* libdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdb.a; sourceTree = "<group>"; };
+		DAB376DE1CC93901001E8625 /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
+		DAB376E01CC93901001E8625 /* timerbg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timerbg.h; sourceTree = "<group>"; };
+		DAB376E61CC93901001E8625 /* cmain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmain.h; sourceTree = "<group>"; };
+		DAB376E71CC93901001E8625 /* cmain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmain.m; sourceTree = "<group>"; };
+		DAB376E81CC93901001E8625 /* cpages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpages.h; sourceTree = "<group>"; };
+		DAB376E91CC93901001E8625 /* cpages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cpages.m; sourceTree = "<group>"; };
+		DAB376EC1CC93901001E8625 /* mdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdb.h; sourceTree = "<group>"; };
+		DAB376ED1CC93901001E8625 /* mdb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdb.m; sourceTree = "<group>"; };
+		DAB376EE1CC93901001E8625 /* mdbcreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdbcreate.h; sourceTree = "<group>"; };
+		DAB376EF1CC93901001E8625 /* mdbcreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdbcreate.m; sourceTree = "<group>"; };
+		DAB376F11CC93901001E8625 /* mdirs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdirs.h; sourceTree = "<group>"; };
+		DAB376F21CC93901001E8625 /* mdirs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdirs.m; sourceTree = "<group>"; };
+		DAB376F41CC93901001E8625 /* mgeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgeneral.h; sourceTree = "<group>"; };
+		DAB376F51CC93901001E8625 /* msettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msettings.h; sourceTree = "<group>"; };
+		DAB376F61CC93901001E8625 /* msettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msettings.m; sourceTree = "<group>"; };
+		DAB376F91CC93901001E8625 /* vblur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vblur.h; sourceTree = "<group>"; };
+		DAB376FA1CC93901001E8625 /* vblur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vblur.m; sourceTree = "<group>"; };
+		DAB376FB1CC93901001E8625 /* vspinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vspinner.h; sourceTree = "<group>"; };
+		DAB376FC1CC93901001E8625 /* vspinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vspinner.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAB376A01CC93769001E8625 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAB3770B1CC93901001E8625 /* libtimerbg.a in Frameworks */,
+				DAB3770A1CC93901001E8625 /* libdb.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAB3769A1CC93768001E8625 = {
+			isa = PBXGroup;
+			children = (
+				DAB376A51CC93769001E8625 /* mightyassets */,
+				DAB376A41CC93769001E8625 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAB376A41CC93769001E8625 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376A31CC93769001E8625 /* mightyassets.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAB376A51CC93769001E8625 /* mightyassets */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376BD1CC93901001E8625 /* db */,
+				DAB376BF1CC93901001E8625 /* imateq */,
+				DAB376C01CC93901001E8625 /* langteq */,
+				DAB376C61CC93901001E8625 /* sourceteq */,
+			);
+			path = mightyassets;
+			sourceTree = "<group>";
+		};
+		DAB376BD1CC93901001E8625 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376BE1CC93901001E8625 /* mightyassets.db */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		DAB376BF1CC93901001E8625 /* imateq */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = imateq;
+			sourceTree = "<group>";
+		};
+		DAB376C01CC93901001E8625 /* langteq */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376C11CC93901001E8625 /* analytics.plist */,
+				DAB376C21CC93901001E8625 /* defs.plist */,
+				DAB376C31CC93901001E8625 /* Localizable.strings */,
+			);
+			path = langteq;
+			sourceTree = "<group>";
+		};
+		DAB376C61CC93901001E8625 /* sourceteq */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376C71CC93901001E8625 /* core */,
+				DAB376CC1CC93901001E8625 /* generic */,
+				DAB376DA1CC93901001E8625 /* lib */,
+				DAB376E31CC93901001E8625 /* source */,
+			);
+			path = sourceteq;
+			sourceTree = "<group>";
+		};
+		DAB376C71CC93901001E8625 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376C81CC93901001E8625 /* appdel.h */,
+				DAB376C91CC93901001E8625 /* appdel.m */,
+				DAB376CA1CC93901001E8625 /* Info.plist */,
+				DAB376CB1CC93901001E8625 /* main.m */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		DAB376CC1CC93901001E8625 /* generic */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376CD1CC93901001E8625 /* analytics.h */,
+				DAB376CE1CC93901001E8625 /* analytics.m */,
+				DAB376CF1CC93901001E8625 /* genericconstants.h */,
+				DAB376D01CC93901001E8625 /* nsnotification+nsnotificationmain.h */,
+				DAB376D11CC93901001E8625 /* nsnotification+nsnotificationmain.m */,
+				DAB376D21CC93901001E8625 /* tools.h */,
+				DAB376D31CC93901001E8625 /* tools.m */,
+				DAB376D41CC93901001E8625 /* uicolor+uicolormain.h */,
+				DAB376D51CC93901001E8625 /* uicolor+uicolormain.m */,
+				DAB376D61CC93901001E8625 /* uifont+uifontmain.h */,
+				DAB376D71CC93901001E8625 /* uifont+uifontmain.m */,
+				DAB376D81CC93901001E8625 /* updater.h */,
+				DAB376D91CC93901001E8625 /* updater.m */,
+			);
+			path = generic;
+			sourceTree = "<group>";
+		};
+		DAB376DA1CC93901001E8625 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376DB1CC93901001E8625 /* db */,
+				DAB376DD1CC93901001E8625 /* libdb.a */,
+				DAB376DE1CC93901001E8625 /* libtimerbg.a */,
+				DAB376DF1CC93901001E8625 /* timerbg */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		DAB376DB1CC93901001E8625 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376DC1CC93901001E8625 /* db.h */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		DAB376DF1CC93901001E8625 /* timerbg */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376E01CC93901001E8625 /* timerbg.h */,
+			);
+			path = timerbg;
+			sourceTree = "<group>";
+		};
+		DAB376E31CC93901001E8625 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376E41CC93901001E8625 /* c */,
+				DAB376EA1CC93901001E8625 /* m */,
+				DAB376F71CC93901001E8625 /* v */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		DAB376E41CC93901001E8625 /* c */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376E51CC93901001E8625 /* main */,
+			);
+			path = c;
+			sourceTree = "<group>";
+		};
+		DAB376E51CC93901001E8625 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376E61CC93901001E8625 /* cmain.h */,
+				DAB376E71CC93901001E8625 /* cmain.m */,
+				DAB376E81CC93901001E8625 /* cpages.h */,
+				DAB376E91CC93901001E8625 /* cpages.m */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		DAB376EA1CC93901001E8625 /* m */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376EB1CC93901001E8625 /* db */,
+				DAB376F01CC93901001E8625 /* dirs */,
+				DAB376F31CC93901001E8625 /* general */,
+			);
+			path = m;
+			sourceTree = "<group>";
+		};
+		DAB376EB1CC93901001E8625 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376EC1CC93901001E8625 /* mdb.h */,
+				DAB376ED1CC93901001E8625 /* mdb.m */,
+				DAB376EE1CC93901001E8625 /* mdbcreate.h */,
+				DAB376EF1CC93901001E8625 /* mdbcreate.m */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		DAB376F01CC93901001E8625 /* dirs */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376F11CC93901001E8625 /* mdirs.h */,
+				DAB376F21CC93901001E8625 /* mdirs.m */,
+			);
+			path = dirs;
+			sourceTree = "<group>";
+		};
+		DAB376F31CC93901001E8625 /* general */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376F41CC93901001E8625 /* mgeneral.h */,
+				DAB376F51CC93901001E8625 /* msettings.h */,
+				DAB376F61CC93901001E8625 /* msettings.m */,
+			);
+			path = general;
+			sourceTree = "<group>";
+		};
+		DAB376F71CC93901001E8625 /* v */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376F81CC93901001E8625 /* general */,
+			);
+			path = v;
+			sourceTree = "<group>";
+		};
+		DAB376F81CC93901001E8625 /* general */ = {
+			isa = PBXGroup;
+			children = (
+				DAB376F91CC93901001E8625 /* vblur.h */,
+				DAB376FA1CC93901001E8625 /* vblur.m */,
+				DAB376FB1CC93901001E8625 /* vspinner.h */,
+				DAB376FC1CC93901001E8625 /* vspinner.m */,
+			);
+			path = general;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAB376A21CC93769001E8625 /* mightyassets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAB376BA1CC93769001E8625 /* Build configuration list for PBXNativeTarget "mightyassets" */;
+			buildPhases = (
+				DAB3769F1CC93769001E8625 /* Sources */,
+				DAB376A01CC93769001E8625 /* Frameworks */,
+				DAB376A11CC93769001E8625 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mightyassets;
+			productName = mightyassets;
+			productReference = DAB376A31CC93769001E8625 /* mightyassets.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAB3769B1CC93768001E8625 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = iturbide;
+				TargetAttributes = {
+					DAB376A21CC93769001E8625 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = DAB3769E1CC93768001E8625 /* Build configuration list for PBXProject "mightyassets" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				es,
+			);
+			mainGroup = DAB3769A1CC93768001E8625;
+			productRefGroup = DAB376A41CC93769001E8625 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAB376A21CC93769001E8625 /* mightyassets */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAB376A11CC93769001E8625 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAB376FD1CC93901001E8625 /* mightyassets.db in Resources */,
+				DAB377001CC93901001E8625 /* Localizable.strings in Resources */,
+				DAB376FF1CC93901001E8625 /* defs.plist in Resources */,
+				DAB376FE1CC93901001E8625 /* analytics.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAB3769F1CC93769001E8625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAB3770E1CC93901001E8625 /* mdb.m in Sources */,
+				DAB377031CC93901001E8625 /* main.m in Sources */,
+				DAB377091CC93901001E8625 /* updater.m in Sources */,
+				DAB377081CC93901001E8625 /* uifont+uifontmain.m in Sources */,
+				DAB377011CC93901001E8625 /* appdel.m in Sources */,
+				DAB3770F1CC93901001E8625 /* mdbcreate.m in Sources */,
+				DAB377121CC93901001E8625 /* vblur.m in Sources */,
+				DAB377071CC93901001E8625 /* uicolor+uicolormain.m in Sources */,
+				DAB377051CC93901001E8625 /* nsnotification+nsnotificationmain.m in Sources */,
+				DAB3770D1CC93901001E8625 /* cpages.m in Sources */,
+				DAB377131CC93901001E8625 /* vspinner.m in Sources */,
+				DAB3770C1CC93901001E8625 /* cmain.m in Sources */,
+				DAB377101CC93901001E8625 /* mdirs.m in Sources */,
+				DAB377061CC93901001E8625 /* tools.m in Sources */,
+				DAB377111CC93901001E8625 /* msettings.m in Sources */,
+				DAB377041CC93901001E8625 /* analytics.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DAB376C31CC93901001E8625 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAB376C41CC93901001E8625 /* en */,
+				DAB376C51CC93901001E8625 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAB376B81CC93769001E8625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAB376B91CC93769001E8625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAB376BB1CC93769001E8625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = mightyassets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/mightyassets/sourceteq/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iturbide.mightyassets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DAB376BC1CC93769001E8625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = mightyassets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/mightyassets/sourceteq/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iturbide.mightyassets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAB3769E1CC93768001E8625 /* Build configuration list for PBXProject "mightyassets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAB376B81CC93769001E8625 /* Debug */,
+				DAB376B91CC93769001E8625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAB376BA1CC93769001E8625 /* Build configuration list for PBXNativeTarget "mightyassets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAB376BB1CC93769001E8625 /* Debug */,
+				DAB376BC1CC93769001E8625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAB3769B1CC93768001E8625 /* Project object */;
+}
