@@ -102,7 +102,7 @@ static NSInteger const colbottom;
 -(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
 {
     vlandingclearheader *header = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:clearheaderid forIndexPath:index];
-    [header config:self.bar.interactiveconstraints];
+    [header config:self.controller constraints:self.bar.interactiveconstraints];
     
     return header;
 }

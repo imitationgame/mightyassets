@@ -16,4 +16,11 @@
     self.view = [[vlanding alloc] init:self];
 }
 
+#pragma mark public
+
+-(void)addproject
+{
+    
+}
+
 @end

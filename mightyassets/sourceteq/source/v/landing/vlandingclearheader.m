@@ -11,7 +11,7 @@
     UIButton *buttoninteractive = [[UIButton alloc] init];
     [buttoninteractive setClipsToBounds:YES];
     [buttoninteractive setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [buttoninteractive setBackgroundColor:[[UIColor blueColor] colorWithAlphaComponent:0.4]];
+    [buttoninteractive setBackgroundColor:[UIColor clearColor]];
     
     [self addSubview:buttoninteractive];
     
@@ -27,10 +27,18 @@
     return self;
 }
 
+#pragma mark actions
+
+-(void)actioninteractive:(UIButton*)button
+{
+    [self.controller addproject];
+}
+
 #pragma mark public
 
--(void)config:(mfixedconstraints*)interactive
+-(void)config:(clanding*)controller constraints:(mfixedconstraints*)interactive
 {
+    self.controller = controller;
     self.layoutbottominteractive.constant = -interactive.bottom;
     self.layoutrightinteractive.constant = -interactive.right;
     self.layoutleftinteractive.constant = interactive.left;

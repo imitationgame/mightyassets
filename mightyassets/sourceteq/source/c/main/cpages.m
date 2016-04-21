@@ -45,4 +45,9 @@
     [self changecontroller:controller direction:direction animated:animated];
 }
 
+-(void)page_add
+{
+    
+}
+
 @end

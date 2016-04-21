@@ -2,4 +2,6 @@
 
 @interface clanding:UIViewController
 
+-(void)addproject;
+
 @end
