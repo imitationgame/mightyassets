@@ -7,6 +7,6 @@
 	<key>version</key>
 	<integer>10</integer>
 	<key>dbname</key>
-	<string>migthyassets.db</string>
+	<string>mightyassets.db</string>
 </dict>
 </plist>

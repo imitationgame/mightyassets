@@ -5,7 +5,6 @@
 #import "db.h"
 #import "analytics.h"
 #import "cmain.h"
-#import "mstations.h"
 
 @implementation updater
 
@@ -13,23 +12,9 @@ NSString *documents;
 
 +(void)launch
 {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
-                   ^
-                   {
-                       [updater update];
-                       [[msettings singleton] load];
-                       
-                       mpages *modelpages = [[mpages alloc] init];
-                       [[mstations singleton] load];
-                       
-                       dispatch_async(dispatch_get_main_queue(),
-                                      ^
-                                      {
-                                          [[analytics singleton] start];
-                                          [[cmain singleton].pages loadfinished:modelpages];
-                                          [updater registernotifications];
-                                      });
-                   });
+    [updater update];
+    [[msettings singleton] load];
+    [[analytics singleton] start];
 }
 
 #pragma mark private

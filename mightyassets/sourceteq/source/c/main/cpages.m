@@ -1,6 +1,4 @@
 #import "cpages.h"
-#import "cloading.h"
-#import "cmenu.h"
 
 @implementation cpages
 
