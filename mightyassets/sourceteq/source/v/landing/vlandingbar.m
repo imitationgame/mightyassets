@@ -4,12 +4,13 @@
 
 @implementation vlandingbar
 
--(instancetype)init
+-(instancetype)init:(clanding*)controller
 {
     self = [super init];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor main]];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.controller = controller;
     
     return self;
 }
