@@ -31,6 +31,7 @@
 		DAB377111CC93901001E8625 /* msettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376F61CC93901001E8625 /* msettings.m */; };
 		DAB377121CC93901001E8625 /* vblur.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376FA1CC93901001E8625 /* vblur.m */; };
 		DAB377131CC93901001E8625 /* vspinner.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376FC1CC93901001E8625 /* vspinner.m */; };
+		DAE16D831CC9651500C7A812 /* clanding.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE16D821CC9651500C7A812 /* clanding.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,8 @@
 		DAB376FB1CC93901001E8625 /* vspinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vspinner.h; sourceTree = "<group>"; };
 		DAB376FC1CC93901001E8625 /* vspinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vspinner.m; sourceTree = "<group>"; };
 		DAB377151CC93EA1001E8625 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
+		DAE16D811CC9651500C7A812 /* clanding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clanding.h; sourceTree = "<group>"; };
+		DAE16D821CC9651500C7A812 /* clanding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = clanding.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +257,9 @@
 		DAB376E41CC93901001E8625 /* c */ = {
 			isa = PBXGroup;
 			children = (
+				DAE16D7E1CC94D7C00C7A812 /* add */,
+				DAE16D7F1CC94D7C00C7A812 /* landing */,
+				DAE16D801CC94D7C00C7A812 /* project */,
 				DAB376E51CC93901001E8625 /* main */,
 			);
 			path = c;
@@ -335,6 +341,29 @@
 				DAB377151CC93EA1001E8625 /* privateconstants.h */,
 			);
 			path = private;
+			sourceTree = "<group>";
+		};
+		DAE16D7E1CC94D7C00C7A812 /* add */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = add;
+			sourceTree = "<group>";
+		};
+		DAE16D7F1CC94D7C00C7A812 /* landing */ = {
+			isa = PBXGroup;
+			children = (
+				DAE16D811CC9651500C7A812 /* clanding.h */,
+				DAE16D821CC9651500C7A812 /* clanding.m */,
+			);
+			path = landing;
+			sourceTree = "<group>";
+		};
+		DAE16D801CC94D7C00C7A812 /* project */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = project;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,6 +495,7 @@
 				DAB377031CC93901001E8625 /* main.m in Sources */,
 				DAB377091CC93901001E8625 /* updater.m in Sources */,
 				DAB377081CC93901001E8625 /* uifont+uifontmain.m in Sources */,
+				DAE16D831CC9651500C7A812 /* clanding.m in Sources */,
 				DAB377011CC93901001E8625 /* appdel.m in Sources */,
 				DAB3770F1CC93901001E8625 /* mdbcreate.m in Sources */,
 				DAB377121CC93901001E8625 /* vblur.m in Sources */,
