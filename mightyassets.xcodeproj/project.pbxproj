@@ -13,6 +13,7 @@
 		DAAFB28A1CC96947003173A7 /* vlandingbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2891CC96947003173A7 /* vlandingbar.m */; };
 		DAAFB28D1CC970AB003173A7 /* vlandingclearheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB28C1CC970AB003173A7 /* vlandingclearheader.m */; };
 		DAAFB2901CC970B4003173A7 /* vlandingcell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB28F1CC970B4003173A7 /* vlandingcell.m */; };
+		DAAFB2941CC972C8003173A7 /* minteractiveconstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2931CC972C8003173A7 /* minteractiveconstraints.m */; };
 		DAB376FD1CC93901001E8625 /* mightyassets.db in Resources */ = {isa = PBXBuildFile; fileRef = DAB376BE1CC93901001E8625 /* mightyassets.db */; };
 		DAB376FE1CC93901001E8625 /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB376C11CC93901001E8625 /* analytics.plist */; };
 		DAB376FF1CC93901001E8625 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB376C21CC93901001E8625 /* defs.plist */; };
@@ -51,6 +52,8 @@
 		DAAFB28C1CC970AB003173A7 /* vlandingclearheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vlandingclearheader.m; sourceTree = "<group>"; };
 		DAAFB28E1CC970B4003173A7 /* vlandingcell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlandingcell.h; sourceTree = "<group>"; };
 		DAAFB28F1CC970B4003173A7 /* vlandingcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vlandingcell.m; sourceTree = "<group>"; };
+		DAAFB2921CC972C8003173A7 /* minteractiveconstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = minteractiveconstraints.h; sourceTree = "<group>"; };
+		DAAFB2931CC972C8003173A7 /* minteractiveconstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = minteractiveconstraints.m; sourceTree = "<group>"; };
 		DAB376A31CC93769001E8625 /* mightyassets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mightyassets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB376BE1CC93901001E8625 /* mightyassets.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mightyassets.db; sourceTree = "<group>"; };
 		DAB376C11CC93901001E8625 /* analytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = analytics.plist; sourceTree = "<group>"; };
@@ -142,6 +145,13 @@
 				DAAFB28C1CC970AB003173A7 /* vlandingclearheader.m */,
 				DAAFB28E1CC970B4003173A7 /* vlandingcell.h */,
 				DAAFB28F1CC970B4003173A7 /* vlandingcell.m */,
+			);
+			path = landing;
+			sourceTree = "<group>";
+		};
+		DAAFB2911CC97247003173A7 /* landing */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = landing;
 			sourceTree = "<group>";
@@ -306,6 +316,7 @@
 		DAB376EA1CC93901001E8625 /* m */ = {
 			isa = PBXGroup;
 			children = (
+				DAAFB2911CC97247003173A7 /* landing */,
 				DAB376EB1CC93901001E8625 /* db */,
 				DAB376F01CC93901001E8625 /* dirs */,
 				DAB376F31CC93901001E8625 /* general */,
@@ -339,6 +350,8 @@
 				DAB376F41CC93901001E8625 /* mgeneral.h */,
 				DAB376F51CC93901001E8625 /* msettings.h */,
 				DAB376F61CC93901001E8625 /* msettings.m */,
+				DAAFB2921CC972C8003173A7 /* minteractiveconstraints.h */,
+				DAAFB2931CC972C8003173A7 /* minteractiveconstraints.m */,
 			);
 			path = general;
 			sourceTree = "<group>";
@@ -538,6 +551,7 @@
 				DAAFB2871CC96842003173A7 /* vlanding.m in Sources */,
 				DAB377061CC93901001E8625 /* tools.m in Sources */,
 				DAB377111CC93901001E8625 /* msettings.m in Sources */,
+				DAAFB2941CC972C8003173A7 /* minteractiveconstraints.m in Sources */,
 				DAB377041CC93901001E8625 /* analytics.m in Sources */,
 				DAAFB28D1CC970AB003173A7 /* vlandingclearheader.m in Sources */,
 			);

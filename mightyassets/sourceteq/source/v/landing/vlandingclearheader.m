@@ -1,13 +1,14 @@
-//
-//  vlandingclearheader.m
-//  mightyassets
-//
-//  Created by zero on 4/21/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
-
 #import "vlandingclearheader.h"
 
 @implementation vlandingclearheader
+
+-(instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    [self setClipsToBounds:YES];
+    [self setBackgroundColor:[UIColor clearColor]];
+    
+    return self;
+}
 
 @end

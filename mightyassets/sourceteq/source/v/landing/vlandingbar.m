@@ -1,6 +1,11 @@
 #import "vlandingbar.h"
 #import "uicolor+uicolormain.h"
 
+static NSInteger const buttontopmargin = 100;
+static NSInteger const buttonrightmargin = 100;
+static NSInteger const buttonbottommargin = 100;
+static NSInteger const buttonleftmargin = 100;
+
 @implementation vlandingbar
 
 -(instancetype)init:(clanding*)controller
@@ -9,6 +14,7 @@
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor main]];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self setUserInteractionEnabled:NO];
     self.controller = controller;
     
     UIButton *buttonadd = [[UIButton alloc] init];
@@ -28,6 +34,13 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-80-[buttonadd]-80-|" options:0 metrics:metrics views:views]];
     
     return self;
+}
+
+#pragma mark public
+
+-(CGRect)interactivezone
+{
+    
 }
 
 @end
