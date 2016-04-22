@@ -5,5 +5,6 @@
 +(instancetype)main;
 +(instancetype)second;
 +(instancetype)background;
++(instancetype)lighttext;
 
 @end

@@ -17,4 +17,9 @@
     return [UIColor colorWithRed:0.94901 green:0.94509 blue:0.94901 alpha:1];
 }
 
++(instancetype)lighttext
+{
+    return [UIColor colorWithRed:0.80901 green:0.80509 blue:0.80901 alpha:1];
+}
+
 @end

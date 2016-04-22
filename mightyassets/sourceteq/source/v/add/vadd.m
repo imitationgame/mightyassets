@@ -98,14 +98,18 @@ static NSInteger const headerheight = 40;
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    NSInteger count = self.model.sections[section].items.count;
+    maddsection *model = self.model.sections[section];
+    NSInteger count = model.items.count;
     
     return count;
 }
 
 -(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
 {
+    maddsection *model = self.model.sections[index.section];
+    
     vaddheader *header = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:addheaderid forIndexPath:index];
+    [header config:model];
     
     return header;
 }
