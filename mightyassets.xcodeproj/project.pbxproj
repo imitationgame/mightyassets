@@ -27,8 +27,8 @@
 		DAAFB2B71CC9AA20003173A7 /* madditemprojectdevices.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2B61CC9AA20003173A7 /* madditemprojectdevices.m */; };
 		DAAFB2BA1CC9ACA1003173A7 /* maddsectioncolors.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2B91CC9ACA1003173A7 /* maddsectioncolors.m */; };
 		DAAFB2BD1CC9AD7A003173A7 /* madditemcolorsbackground.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2BC1CC9AD7A003173A7 /* madditemcolorsbackground.m */; };
-		DAAFB2C01CC9AF07003173A7 /* vaddfooter.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2BF1CC9AF07003173A7 /* vaddfooter.m */; };
 		DAAFB2C31CCA9F06003173A7 /* vaddcellcolor.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2C21CCA9F06003173A7 /* vaddcellcolor.m */; };
+		DAAFB2C61CCAAD6B003173A7 /* madditemcolors.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2C51CCAAD6B003173A7 /* madditemcolors.m */; };
 		DAB376FD1CC93901001E8625 /* mightyassets.db in Resources */ = {isa = PBXBuildFile; fileRef = DAB376BE1CC93901001E8625 /* mightyassets.db */; };
 		DAB376FE1CC93901001E8625 /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB376C11CC93901001E8625 /* analytics.plist */; };
 		DAB376FF1CC93901001E8625 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB376C21CC93901001E8625 /* defs.plist */; };
@@ -95,10 +95,10 @@
 		DAAFB2B91CC9ACA1003173A7 /* maddsectioncolors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddsectioncolors.m; sourceTree = "<group>"; };
 		DAAFB2BB1CC9AD7A003173A7 /* madditemcolorsbackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditemcolorsbackground.h; sourceTree = "<group>"; };
 		DAAFB2BC1CC9AD7A003173A7 /* madditemcolorsbackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditemcolorsbackground.m; sourceTree = "<group>"; };
-		DAAFB2BE1CC9AF07003173A7 /* vaddfooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaddfooter.h; sourceTree = "<group>"; };
-		DAAFB2BF1CC9AF07003173A7 /* vaddfooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddfooter.m; sourceTree = "<group>"; };
 		DAAFB2C11CCA9F06003173A7 /* vaddcellcolor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaddcellcolor.h; sourceTree = "<group>"; };
 		DAAFB2C21CCA9F06003173A7 /* vaddcellcolor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddcellcolor.m; sourceTree = "<group>"; };
+		DAAFB2C41CCAAD6B003173A7 /* madditemcolors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditemcolors.h; sourceTree = "<group>"; };
+		DAAFB2C51CCAAD6B003173A7 /* madditemcolors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditemcolors.m; sourceTree = "<group>"; };
 		DAB376A31CC93769001E8625 /* mightyassets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mightyassets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB376BE1CC93901001E8625 /* mightyassets.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mightyassets.db; sourceTree = "<group>"; };
 		DAB376C11CC93901001E8625 /* analytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = analytics.plist; sourceTree = "<group>"; };
@@ -210,8 +210,6 @@
 				DAAFB29D1CC98A76003173A7 /* vaddbar.m */,
 				DAAFB2A21CC98F9F003173A7 /* vaddheader.h */,
 				DAAFB2A31CC98F9F003173A7 /* vaddheader.m */,
-				DAAFB2BE1CC9AF07003173A7 /* vaddfooter.h */,
-				DAAFB2BF1CC9AF07003173A7 /* vaddfooter.m */,
 				DAAFB29F1CC98F8C003173A7 /* vaddcell.h */,
 				DAAFB2A01CC98F8C003173A7 /* vaddcell.m */,
 				DAAFB2C11CCA9F06003173A7 /* vaddcellcolor.h */,
@@ -237,6 +235,8 @@
 				DAAFB2B31CC9959D003173A7 /* madditemprojectname.m */,
 				DAAFB2B51CC9AA20003173A7 /* madditemprojectdevices.h */,
 				DAAFB2B61CC9AA20003173A7 /* madditemprojectdevices.m */,
+				DAAFB2C41CCAAD6B003173A7 /* madditemcolors.h */,
+				DAAFB2C51CCAAD6B003173A7 /* madditemcolors.m */,
 				DAAFB2BB1CC9AD7A003173A7 /* madditemcolorsbackground.h */,
 				DAAFB2BC1CC9AD7A003173A7 /* madditemcolorsbackground.m */,
 			);
@@ -629,7 +629,6 @@
 				DAAFB2A11CC98F8C003173A7 /* vaddcell.m in Sources */,
 				DAB377031CC93901001E8625 /* main.m in Sources */,
 				DAB377091CC93901001E8625 /* updater.m in Sources */,
-				DAAFB2C01CC9AF07003173A7 /* vaddfooter.m in Sources */,
 				DAAFB2B11CC994FD003173A7 /* maddsectionproject.m in Sources */,
 				DAB377081CC93901001E8625 /* uifont+uifontmain.m in Sources */,
 				DAE16D831CC9651500C7A812 /* clanding.m in Sources */,
@@ -659,6 +658,7 @@
 				DAAFB2941CC972C8003173A7 /* mfixedconstraints.m in Sources */,
 				DAB377041CC93901001E8625 /* analytics.m in Sources */,
 				DAAFB2A41CC98F9F003173A7 /* vaddheader.m in Sources */,
+				DAAFB2C61CCAAD6B003173A7 /* madditemcolors.m in Sources */,
 				DAAFB28D1CC970AB003173A7 /* vlandingclearheader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

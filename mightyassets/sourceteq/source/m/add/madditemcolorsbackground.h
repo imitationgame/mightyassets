@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
-#import "madditem.h"
+#import "madditemcolors.h"
 
-@interface madditemcolorsbackground:madditem
+@interface madditemcolorsbackground:madditemcolors
 
 @end

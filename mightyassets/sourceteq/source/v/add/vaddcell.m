@@ -7,6 +7,7 @@
 {
     self = [super initWithFrame:frame];
     [self setClipsToBounds:YES];
+    [self setBackgroundColor:[UIColor clearColor]];
     
     return self;
 }
@@ -29,11 +30,11 @@
 {
     if(self.isSelected || self.isHighlighted)
     {
-        [self setBackgroundColor:[UIColor second]];
+        [self setAlpha:0.35];
     }
     else
     {
-        [self setBackgroundColor:[UIColor whiteColor]];
+        [self setAlpha:1];
     }
 }
 

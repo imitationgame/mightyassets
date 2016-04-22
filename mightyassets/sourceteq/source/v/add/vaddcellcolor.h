@@ -3,4 +3,7 @@
 
 @interface vaddcellcolor:vaddcell
 
+@property(weak, nonatomic)UILabel *title;
+@property(weak, nonatomic)UIView *circle;
+
 @end
