@@ -1,13 +1,10 @@
-//
-//  madditem.h
-//  mightyassets
-//
-//  Created by zero on 4/21/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
-@interface madditem : NSObject
+@interface madditem:NSObject
+
+-(instancetype)init:(NSString*)title;
+
+@property(copy, nonatomic)NSString *title;
+@property(assign, nonatomic)NSInteger height;
 
 @end

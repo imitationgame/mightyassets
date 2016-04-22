@@ -3,11 +3,13 @@
 #import "vaddheader.h"
 #import "vaddcell.h"
 #import "genericconstants.h"
+#import "uicolor+uicolormain.h"
 
 static NSString* const addheaderid = @"addheader";
 static NSString* const addcellid = @"addcell";
 static NSInteger const interitem = 1;
 static NSInteger const colbottom = 40;
+static NSInteger const headerheight = 40;
 
 @implementation vadd
 
@@ -15,8 +17,9 @@ static NSInteger const colbottom = 40;
 {
     self = [super init];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor whiteColor]];
+    [self setBackgroundColor:[UIColor background]];
     self.controller = controller;
+    self.model = [[madd alloc] init];
     
     vaddbar *bar = [[vaddbar alloc] init:controller];
     
@@ -25,7 +28,7 @@ static NSInteger const colbottom = 40;
     [flow setMinimumLineSpacing:interitem];
     [flow setMinimumInteritemSpacing:0];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flow setSectionInset:UIEdgeInsetsMake(navbarheight, 0, 0, colbottom)];
+    [flow setSectionInset:UIEdgeInsetsMake(0, 0, colbottom, 0)];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setClipsToBounds:YES];
@@ -48,24 +51,56 @@ static NSInteger const colbottom = 40;
     self.layoutbarheight = [NSLayoutConstraint constraintWithItem:bar attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:navbarheight];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bar]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar]-0-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraint:self.layoutbarheight];
     
     return self;
 }
 
+#pragma mark functionality
+
+-(madditem*)modelforindex:(NSIndexPath*)index
+{
+    NSInteger section = index.section;
+    NSInteger item = index.item;
+    madditem *model = self.model.sections[section].items[item];
+    
+    return model;
+}
+
 #pragma mark -
 #pragma mark col del
 
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    NSInteger width = col.bounds.size.width;
+    CGSize size = CGSizeMake(width, headerheight);
+    
+    return size;
+}
+
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
+{
+    madditem *model = [self modelforindex:index];
+    NSInteger width = col.bounds.size.width;
+    NSInteger height = model.height;
+    CGSize size = CGSizeMake(width, height);
+    
+    return size;
+}
+
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
 {
+    NSInteger count = self.model.sections.count;
     
+    return count;
 }
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
+    NSInteger count = self.model.sections[section].items.count;
     
+    return count;
 }
 
 -(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index

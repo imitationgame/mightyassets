@@ -1,4 +1,5 @@
 #import "madd.h"
+#import "maddsectionproject.h"
 
 @implementation madd
 
@@ -6,6 +7,7 @@
 {
     self = [super init];
     self.sections = @[
+                      [[maddsectionproject alloc] init]
                       ];
     
     return self;
