@@ -1,5 +1,7 @@
 #import "maddsectioncolors.h"
 #import "madditemcolorsbackground.h"
+#import "madditemcolorsdevice.h"
+#import "madditemcolorstext.h"
 
 @implementation maddsectioncolors
 
@@ -7,7 +9,9 @@
 {
     self = [super init:NSLocalizedString(@"madd_section_colors_name", nil)];
     self.items = @[
-                   [[madditemcolorsbackground alloc] init]
+                   [[madditemcolorsbackground alloc] init],
+                   [[madditemcolorsdevice alloc] init],
+                   [[madditemcolorstext alloc] init]
                    ];
     
     return self;

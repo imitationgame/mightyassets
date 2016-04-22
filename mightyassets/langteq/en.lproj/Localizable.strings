@@ -4,4 +4,6 @@
 "madd_section_colors_name"="Colors";
 "madd_item_projectname_title"="Name";
 "madd_item_projectdevices_title"="Devices";
-"madd_item_colorsbackground_title"="Background color";
+"madd_item_colorsbackground_title"="Background";
+"madd_item_colorsdevice_title"="Device";
+"madd_item_colorstext_title"="Text";
