@@ -1,15 +1,17 @@
 #import "vadd.h"
 #import "vaddbar.h"
 #import "vaddheader.h"
+#import "vaddfooter.h"
 #import "vaddcell.h"
 #import "genericconstants.h"
 #import "uicolor+uicolormain.h"
 
 static NSString* const addheaderid = @"addheader";
+static NSString* const addfooterid = @"addfooter";
 static NSString* const addcellid = @"addcell";
 static NSInteger const interitem = 1;
-static NSInteger const colbottom = 40;
 static NSInteger const headerheight = 40;
+static NSInteger const footerheight = 40;
 
 @implementation vadd
 
@@ -24,11 +26,10 @@ static NSInteger const headerheight = 40;
     vaddbar *bar = [[vaddbar alloc] init:controller];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
-    [flow setFooterReferenceSize:CGSizeZero];
     [flow setMinimumLineSpacing:interitem];
     [flow setMinimumInteritemSpacing:0];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flow setSectionInset:UIEdgeInsetsMake(0, 0, colbottom, 0)];
+    [flow setSectionInset:UIEdgeInsetsZero];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setClipsToBounds:YES];
@@ -40,6 +41,7 @@ static NSInteger const headerheight = 40;
     [collection setDataSource:self];
     [collection setDelegate:self];
     [collection registerClass:[vaddheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:addheaderid];
+    [collection registerClass:[vaddfooter class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:addfooterid];
     [collection registerClass:[vaddcell class] forCellWithReuseIdentifier:addcellid];
     
     [self addSubview:collection];
@@ -79,6 +81,14 @@ static NSInteger const headerheight = 40;
     return size;
 }
 
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForFooterInSection:(NSInteger)section
+{
+    NSInteger width = col.bounds.size.width;
+    CGSize size = CGSizeMake(width, footerheight);
+    
+    return size;
+}
+
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
     madditem *model = [self modelforindex:index];
@@ -106,12 +116,23 @@ static NSInteger const headerheight = 40;
 
 -(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
 {
-    maddsection *model = self.model.sections[index.section];
+    UICollectionReusableView *reusable;
     
-    vaddheader *header = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:addheaderid forIndexPath:index];
-    [header config:model];
+    if(kind == UICollectionElementKindSectionHeader)
+    {
+        maddsection *model = self.model.sections[index.section];
+        vaddheader *header = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:addheaderid forIndexPath:index];
+        [header config:model];
+        
+        reusable = header;
+    }
+    else
+    {
+        vaddfooter *footer = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:addfooterid forIndexPath:index];
+        reusable = footer;
+    }
     
-    return header;
+    return reusable;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
