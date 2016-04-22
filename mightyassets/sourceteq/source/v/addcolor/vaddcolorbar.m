@@ -10,6 +10,7 @@
     self = [super init];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
+    [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.controller = controller;
     
     UIView *border = [[UIView alloc] init];
@@ -18,13 +19,26 @@
     [border setTranslatesAutoresizingMaskIntoConstraints:NO];
     [border setClipsToBounds:YES];
     
-    [self addSubview:border];
+    NSString *texttitle = [NSString stringWithFormat:NSLocalizedString(@"addcolor_title", nil), controller.model.title];
     
-    NSDictionary *views = @{@"border":border};
+    UILabel *label = [[UILabel alloc] init];
+    [label setUserInteractionEnabled:NO];
+    [label setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [label setFont:[UIFont boldsize:16]];
+    [label setTextColor:[UIColor colorWithWhite:0.5 alpha:1]];
+    [label setText:texttitle];
+    
+    [self addSubview:border];
+    [self addSubview:label];
+    
+    NSDictionary *views = @{@"border":border, @"label":label};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[border]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[border(1)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[label(45)]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }

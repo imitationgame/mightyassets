@@ -29,6 +29,11 @@
     return NO;
 }
 
+-(void)loadView
+{
+    self.view = [[vaddcolor alloc] init:self];
+}
+
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
