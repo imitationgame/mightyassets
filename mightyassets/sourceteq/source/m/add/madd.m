@@ -15,4 +15,20 @@
     return self;
 }
 
+#pragma mark public
+
+-(void)registercells:(UICollectionView*)collection
+{
+    for(maddsection *section in self.sections)
+    {
+        for(madditem *item in section.items)
+        {
+            Class cellclass = item.cellclass;
+            NSString *cellclassname = item.cellclassname;
+           
+            [collection registerClass:cellclass forCellWithReuseIdentifier:cellclassname];
+        }
+    }
+}
+
 @end

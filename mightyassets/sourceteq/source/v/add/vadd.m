@@ -8,7 +8,6 @@
 
 static NSString* const addheaderid = @"addheader";
 static NSString* const addfooterid = @"addfooter";
-static NSString* const addcellid = @"addcell";
 static NSInteger const interitem = 1;
 static NSInteger const headerheight = 40;
 static NSInteger const footerheight = 40;
@@ -42,7 +41,7 @@ static NSInteger const footerheight = 40;
     [collection setDelegate:self];
     [collection registerClass:[vaddheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:addheaderid];
     [collection registerClass:[vaddfooter class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:addfooterid];
-    [collection registerClass:[vaddcell class] forCellWithReuseIdentifier:addcellid];
+    [self.model registercells:collection];
     
     [self addSubview:collection];
     [self addSubview:bar];
@@ -138,7 +137,7 @@ static NSInteger const footerheight = 40;
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
     madditem *model = [self modelforindex:index];
-    vaddcell *cell = [col dequeueReusableCellWithReuseIdentifier:addcellid forIndexPath:index];
+    vaddcell *cell = [col dequeueReusableCellWithReuseIdentifier:model.cellclassname forIndexPath:index];
     [cell config:model];
     
     return cell;
