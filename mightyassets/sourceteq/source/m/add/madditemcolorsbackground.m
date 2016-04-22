@@ -13,4 +13,12 @@ static NSInteger const cellheight = 80;
     return self;
 }
 
+#pragma mark -
+#pragma mark add item
+
+-(void)selectedaction
+{
+    
+}
+
 @end

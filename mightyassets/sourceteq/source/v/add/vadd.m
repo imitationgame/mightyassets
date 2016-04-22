@@ -137,9 +137,25 @@ static NSInteger const footerheight = 40;
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
+    madditem *model = [self modelforindex:index];
     vaddcell *cell = [col dequeueReusableCellWithReuseIdentifier:addcellid forIndexPath:index];
+    [cell config:model];
     
     return cell;
+}
+
+-(BOOL)collectionView:(UICollectionView*)col shouldSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    madditem *model = [self modelforindex:index];
+    BOOL selectable = model.selectable;
+    
+    return selectable;
+}
+
+-(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    madditem *model = [self modelforindex:index];
+    [model selectedaction];
 }
 
 @end
