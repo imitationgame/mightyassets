@@ -8,6 +8,7 @@ static NSInteger const cellheight = 80;
 {
     self = [super init:NSLocalizedString(@"madd_item_colorsbackground_title", nil)];
     self.height = cellheight;
+    self.selectable = YES;
     
     return self;
 }

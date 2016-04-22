@@ -6,6 +6,7 @@
 {
     self = [super init];
     self.title = title;
+    self.selectable = NO;
     
     return self;
 }
