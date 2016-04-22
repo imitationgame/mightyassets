@@ -29,7 +29,7 @@
 {
     if(self.isSelected || self.isHighlighted)
     {
-        [self setBackgroundColor:[UIColor main]];
+        [self setBackgroundColor:[UIColor second]];
     }
     else
     {
