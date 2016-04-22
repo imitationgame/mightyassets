@@ -1,6 +1,15 @@
 #import "caddcolor.h"
+#import "vaddcolor.h"
+
+@interface caddcolor ()
+
+@property(strong, nonatomic)vaddcolor *view;
+
+@end
 
 @implementation caddcolor
+
+@dynamic view;
 
 -(instancetype)init:(madditemcolors*)model
 {
@@ -12,7 +21,7 @@
 
 -(UIStatusBarStyle)preferredStatusBarStyle
 {
-    return UIStatusBarStyleLightContent;
+    return UIStatusBarStyleDefault;
 }
 
 -(BOOL)prefersStatusBarHidden
