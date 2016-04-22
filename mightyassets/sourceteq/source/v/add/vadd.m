@@ -6,7 +6,6 @@
 #import "uicolor+uicolormain.h"
 
 static NSString* const addheaderid = @"addheader";
-static NSInteger const interitem = 1;
 static NSInteger const headerheight = 40;
 static NSInteger const colbottom = 40;
 
@@ -24,7 +23,7 @@ static NSInteger const colbottom = 40;
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setFooterReferenceSize:CGSizeZero];
-    [flow setMinimumLineSpacing:interitem];
+    [flow setMinimumLineSpacing:0];
     [flow setMinimumInteritemSpacing:0];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
     [flow setSectionInset:UIEdgeInsetsMake(0, 0, colbottom, 0)];

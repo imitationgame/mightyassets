@@ -1,7 +1,9 @@
 #import "madditemcolors.h"
 #import "vaddcellcolor.h"
+#import "cmain.h"
+#import "caddcolor.h"
 
-static NSInteger const cellheight = 60;
+static NSInteger const cellheight = 64;
 
 @implementation madditemcolors
 
@@ -20,7 +22,8 @@ static NSInteger const cellheight = 60;
 
 -(void)selectedaction
 {
-    
+    caddcolor *controller = [[caddcolor alloc] init:self];
+    [[cmain singleton] pushViewController:controller animated:YES];
 }
 
 @end
