@@ -39,6 +39,11 @@
     [super viewDidAppear:animated];
     self.prevgesturedelegate = self.navigationController.interactivePopGestureRecognizer.delegate;
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    
+    if(!self.view.collection)
+    {
+        [self.view viewappear];
+    }
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -52,6 +57,12 @@
 -(void)back
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)changecolor:(UIColor*)color
+{
+    self.model.color = color;
+    [self back];
 }
 
 @end
