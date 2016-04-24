@@ -4,6 +4,7 @@
 @interface caddcolor:UIViewController<UIGestureRecognizerDelegate>
 
 -(instancetype)init:(madditemcolors*)model;
+-(void)back;
 
 @property(weak, nonatomic)madditemcolors *model;
 @property(weak, nonatomic)id<UIGestureRecognizerDelegate> prevgesturedelegate;

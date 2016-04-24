@@ -47,4 +47,11 @@
     self.navigationController.interactivePopGestureRecognizer.delegate = self.prevgesturedelegate;
 }
 
+#pragma mark public
+
+-(void)back
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 @end
