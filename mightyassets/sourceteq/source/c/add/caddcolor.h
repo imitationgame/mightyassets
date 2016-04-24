@@ -6,5 +6,6 @@
 -(instancetype)init:(madditemcolors*)model;
 
 @property(weak, nonatomic)madditemcolors *model;
+@property(weak, nonatomic)id<UIGestureRecognizerDelegate> prevgesturedelegate;
 
 @end

@@ -37,15 +37,14 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    self.prevgesturedelegate = self.navigationController.interactivePopGestureRecognizer.delegate;
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
-#warning "test on iphone 4"
-    
     [super viewWillDisappear:animated];
-    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    self.navigationController.interactivePopGestureRecognizer.delegate = self.prevgesturedelegate;
 }
 
 @end
