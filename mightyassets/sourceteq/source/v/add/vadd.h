@@ -9,5 +9,6 @@
 @property(strong, nonatomic)madd *model;
 @property(weak, nonatomic)cadd *controller;
 @property(weak, nonatomic)NSLayoutConstraint *layoutbarheight;
+@property(weak, nonatomic)UICollectionView *collection;
 
 @end

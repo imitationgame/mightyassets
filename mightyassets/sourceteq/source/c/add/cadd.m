@@ -16,4 +16,10 @@
     self.view = [[vadd alloc] init:self];
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.view.collection reloadData];
+}
+
 @end

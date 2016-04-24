@@ -39,6 +39,7 @@ static NSInteger const colbottom = 40;
     [collection setDelegate:self];
     [collection registerClass:[vaddheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:addheaderid];
     [self.model registercells:collection];
+    self.collection = collection;
     
     [self addSubview:collection];
     [self addSubview:bar];
