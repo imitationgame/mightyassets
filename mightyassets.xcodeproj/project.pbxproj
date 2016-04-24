@@ -35,6 +35,9 @@
 		DAAFB2D31CCABD60003173A7 /* vaddcolor.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2D21CCABD60003173A7 /* vaddcolor.m */; };
 		DAAFB2D61CCABD6C003173A7 /* vaddcolorbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2D51CCABD6C003173A7 /* vaddcolorbar.m */; };
 		DAAFB2DB1CCC4D1E003173A7 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAFB2DA1CCC4D1E003173A7 /* generic.xcassets */; };
+		DAAFB2DF1CCC5348003173A7 /* maddcolor.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2DE1CCC5348003173A7 /* maddcolor.m */; };
+		DAAFB2E21CCC539E003173A7 /* maddcoloritem.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2E11CCC539E003173A7 /* maddcoloritem.m */; };
+		DAAFB2E71CCC5777003173A7 /* colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAAFB2E61CCC5777003173A7 /* colors.plist */; };
 		DAB376FD1CC93901001E8625 /* mightyassets.db in Resources */ = {isa = PBXBuildFile; fileRef = DAB376BE1CC93901001E8625 /* mightyassets.db */; };
 		DAB376FE1CC93901001E8625 /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB376C11CC93901001E8625 /* analytics.plist */; };
 		DAB376FF1CC93901001E8625 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB376C21CC93901001E8625 /* defs.plist */; };
@@ -116,6 +119,11 @@
 		DAAFB2D41CCABD6C003173A7 /* vaddcolorbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaddcolorbar.h; sourceTree = "<group>"; };
 		DAAFB2D51CCABD6C003173A7 /* vaddcolorbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddcolorbar.m; sourceTree = "<group>"; };
 		DAAFB2DA1CCC4D1E003173A7 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
+		DAAFB2DD1CCC5348003173A7 /* maddcolor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maddcolor.h; sourceTree = "<group>"; };
+		DAAFB2DE1CCC5348003173A7 /* maddcolor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddcolor.m; sourceTree = "<group>"; };
+		DAAFB2E01CCC539E003173A7 /* maddcoloritem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maddcoloritem.h; sourceTree = "<group>"; };
+		DAAFB2E11CCC539E003173A7 /* maddcoloritem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddcoloritem.m; sourceTree = "<group>"; };
+		DAAFB2E61CCC5777003173A7 /* colors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = colors.plist; sourceTree = "<group>"; };
 		DAB376A31CC93769001E8625 /* mightyassets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mightyassets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB376BE1CC93901001E8625 /* mightyassets.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mightyassets.db; sourceTree = "<group>"; };
 		DAB376C11CC93901001E8625 /* analytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = analytics.plist; sourceTree = "<group>"; };
@@ -275,6 +283,17 @@
 			path = addcolor;
 			sourceTree = "<group>";
 		};
+		DAAFB2DC1CCC532C003173A7 /* addcolor */ = {
+			isa = PBXGroup;
+			children = (
+				DAAFB2DD1CCC5348003173A7 /* maddcolor.h */,
+				DAAFB2DE1CCC5348003173A7 /* maddcolor.m */,
+				DAAFB2E01CCC539E003173A7 /* maddcoloritem.h */,
+				DAAFB2E11CCC539E003173A7 /* maddcoloritem.m */,
+			);
+			path = addcolor;
+			sourceTree = "<group>";
+		};
 		DAB3769A1CC93768001E8625 = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +346,7 @@
 				DAB376C11CC93901001E8625 /* analytics.plist */,
 				DAB376C21CC93901001E8625 /* defs.plist */,
 				DAB376C31CC93901001E8625 /* Localizable.strings */,
+				DAAFB2E61CCC5777003173A7 /* colors.plist */,
 			);
 			path = langteq;
 			sourceTree = "<group>";
@@ -436,6 +456,7 @@
 		DAB376EA1CC93901001E8625 /* m */ = {
 			isa = PBXGroup;
 			children = (
+				DAAFB2DC1CCC532C003173A7 /* addcolor */,
 				DAAFB2A51CC9937D003173A7 /* add */,
 				DAAFB2911CC97247003173A7 /* landing */,
 				DAB376EB1CC93901001E8625 /* db */,
@@ -601,6 +622,7 @@
 				DAB377001CC93901001E8625 /* Localizable.strings in Resources */,
 				DAAFB2DB1CCC4D1E003173A7 /* generic.xcassets in Resources */,
 				DAB376FF1CC93901001E8625 /* defs.plist in Resources */,
+				DAAFB2E71CCC5777003173A7 /* colors.plist in Resources */,
 				DAB376FE1CC93901001E8625 /* analytics.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,6 +696,7 @@
 				DAB377011CC93901001E8625 /* appdel.m in Sources */,
 				DAB3770F1CC93901001E8625 /* mdbcreate.m in Sources */,
 				DAAFB28A1CC96947003173A7 /* vlandingbar.m in Sources */,
+				DAAFB2DF1CCC5348003173A7 /* maddcolor.m in Sources */,
 				DAB377121CC93901001E8625 /* vblur.m in Sources */,
 				DAB377071CC93901001E8625 /* uicolor+uicolormain.m in Sources */,
 				DAAFB2B41CC9959D003173A7 /* madditemprojectname.m in Sources */,
@@ -697,6 +720,7 @@
 				DAB377061CC93901001E8625 /* tools.m in Sources */,
 				DAAFB2971CC9872A003173A7 /* cadd.m in Sources */,
 				DAB377111CC93901001E8625 /* msettings.m in Sources */,
+				DAAFB2E21CCC539E003173A7 /* maddcoloritem.m in Sources */,
 				DAAFB2941CC972C8003173A7 /* mfixedconstraints.m in Sources */,
 				DAB377041CC93901001E8625 /* analytics.m in Sources */,
 				DAAFB2A41CC98F9F003173A7 /* vaddheader.m in Sources */,
