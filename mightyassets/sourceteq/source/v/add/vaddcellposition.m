@@ -3,6 +3,7 @@
 #import "madditemposition.h"
 
 static NSString* const positioncellid = @"positioncell";
+static NSInteger const cellwidth = 100;
 
 @interface vaddcellposition ()
 
@@ -21,6 +22,15 @@ static NSString* const positioncellid = @"positioncell";
     return self;
 }
 
+#pragma mark functionality
+
+-(madditempositionitem*)modelforindex:(NSIndexPath*)index
+{
+    madditempositionitem *model = self.model.items[index.item];
+    
+    return model;
+}
+
 #pragma mark -
 #pragma mark add cell
 
@@ -32,6 +42,26 @@ static NSString* const positioncellid = @"positioncell";
 
 #pragma mark col del
 
+-(UIEdgeInsets)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout insetForSectionAtIndex:(NSInteger)section
+{
+    CGFloat width = col.bounds.size.width;
+    NSInteger cells = self.model.items.count;
+    CGFloat totalwidth = cellwidth * cells;
+    CGFloat remain = width - totalwidth;
+    CGFloat margin = remain / 2.0;
+    UIEdgeInsets insets = UIEdgeInsetsMake(0, margin, 0, margin);
+    
+    return insets;
+}
+
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
+{
+    CGFloat height = col.bounds.size.height;
+    CGSize size = CGSizeMake(cellwidth, height);
+    
+    return size;
+}
+
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
 {
     return 1;
@@ -39,7 +69,18 @@ static NSString* const positioncellid = @"positioncell";
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
+    NSInteger count = self.model.items.count;
     
+    return count;
+}
+
+-(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
+{
+    madditempositionitem *model = [self modelforindex:index];
+    vaddcellpositioncell *cell = [col dequeueReusableCellWithReuseIdentifier:positioncellid forIndexPath:index];
+    [cell config:model];
+    
+    return cell;
 }
 
 @end
