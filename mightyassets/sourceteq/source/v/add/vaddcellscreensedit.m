@@ -4,6 +4,7 @@
 #import "madditemscreensedit.h"
 
 static NSInteger const iconsize = 30;
+static NSInteger const warningsize = 45;
 
 @interface vaddcellscreensedit ()
 
@@ -37,20 +38,28 @@ static NSInteger const iconsize = 30;
     [icondoneimage setImage:[UIImage imageNamed:@"generic_done"]];
     self.icondoneimage = icondoneimage;
     
+    UIImageView *iconwarning = [[UIImageView alloc] init];
+    [iconwarning setContentMode:UIViewContentModeScaleAspectFit];
+    [iconwarning setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [iconwarning setUserInteractionEnabled:NO];
+    [iconwarning setClipsToBounds:YES];
+    [iconwarning setImage:[UIImage imageNamed:@"generic_warning"]];
+    self.iconwarning = iconwarning;
+    
     UILabel *label = [[UILabel alloc] init];
     [label setUserInteractionEnabled:NO];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setUserInteractionEnabled:NO];
     [label setBackgroundColor:[UIColor clearColor]];
     [label setFont:[UIFont regularsize:16]];
-    [label setTextColor:[UIColor colorWithWhite:0.7 alpha:1]];
+    [label setTextColor:[UIColor colorWithWhite:0.5 alpha:1]];
     self.label = label;
     
     UILabel *labeltitles = [[UILabel alloc] init];
     [labeltitles setUserInteractionEnabled:NO];
     [labeltitles setFont:[UIFont boldsize:16]];
     [labeltitles setBackgroundColor:[UIColor clearColor]];
-    [labeltitles setTextColor:[UIColor colorWithWhite:0.6 alpha:1]];
+    [labeltitles setTextColor:[UIColor colorWithWhite:0.75 alpha:1]];
     [labeltitles setTranslatesAutoresizingMaskIntoConstraints:NO];
     [labeltitles setText:NSLocalizedString(@"madd_item_screensedit_cell_titles", nil)];
     
@@ -58,7 +67,7 @@ static NSInteger const iconsize = 30;
     [labelimage setUserInteractionEnabled:NO];
     [labelimage setFont:[UIFont boldsize:16]];
     [labelimage setBackgroundColor:[UIColor clearColor]];
-    [labelimage setTextColor:[UIColor colorWithWhite:0.6 alpha:1]];
+    [labelimage setTextColor:[UIColor colorWithWhite:0.75 alpha:1]];
     [labelimage setTranslatesAutoresizingMaskIntoConstraints:NO];
     [labelimage setText:NSLocalizedString(@"madd_item_screensedit_cell_image", nil)];
     
@@ -67,20 +76,24 @@ static NSInteger const iconsize = 30;
     [self addSubview:labelimage];
     [self addSubview:icondonetitles];
     [self addSubview:icondoneimage];
+    [self addSubview:iconwarning];
     
-    NSDictionary *views = @{@"icondonetitles":icondonetitles, @"icondoneimage":icondoneimage, @"label":label, @"labeltitles":labeltitles, @"labelimage":labelimage};
+    NSDictionary *views = @{@"icondonetitles":icondonetitles, @"icondoneimage":icondoneimage, @"label":label, @"labeltitles":labeltitles, @"labelimage":labelimage, @"iconwarning":iconwarning};
     NSDictionary *metric = @{};
     
     self.layouticontitleswidth = [NSLayoutConstraint constraintWithItem:icondonetitles attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:0];
     self.layouticonimagewidth = [NSLayoutConstraint constraintWithItem:icondoneimage attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:0];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[label]-10-|" options:0 metrics:metric views:views]];
+    self.layouticonwarningwidth = [NSLayoutConstraint constraintWithItem:iconwarning attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:0];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[iconwarning]-0-[label]-10-|" options:0 metrics:metric views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[icondonetitles]-5-[labeltitles(100)]" options:0 metrics:metric views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[icondoneimage]-5-[labelimage(100)]" options:0 metrics:metric views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[label(20)]-20-[icondonetitles(30)]-10-[icondoneimage(30)]" options:0 metrics:metric views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[label]-20-[labeltitles(30)]" options:0 metrics:metric views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[icondonetitles]-10-[labelimage(30)]" options:0 metrics:metric views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[iconwarning(20)]" options:0 metrics:metric views:views]];
     [self addConstraint:self.layouticonimagewidth];
     [self addConstraint:self.layouticontitleswidth];
+    [self addConstraint:self.layouticonwarningwidth];
     
     return self;
 }
@@ -134,6 +147,15 @@ static NSInteger const iconsize = 30;
     if(model.titles.count == model.model.modelproject.languages.quantity)
     {
         icontitleswidth = iconsize;
+    }
+    
+    if(iconimagewidth && icontitleswidth)
+    {
+        self.layouticonwarningwidth.constant = 0;
+    }
+    else
+    {
+        self.layouticonwarningwidth.constant = warningsize;
     }
     
     self.layouticontitleswidth.constant = icontitleswidth;
