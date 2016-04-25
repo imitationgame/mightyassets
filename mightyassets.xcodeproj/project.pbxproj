@@ -263,6 +263,8 @@
 				DAAFB2B01CC994FD003173A7 /* maddsectionproject.m */,
 				DAAFB2B81CC9ACA1003173A7 /* maddsectioncolors.h */,
 				DAAFB2B91CC9ACA1003173A7 /* maddsectioncolors.m */,
+				DAAFB2EB1CCDBC4D003173A7 /* maddsectionposition.h */,
+				DAAFB2EC1CCDBC4D003173A7 /* maddsectionposition.m */,
 				DAAFB2AC1CC993DC003173A7 /* madditem.h */,
 				DAAFB2AD1CC993DC003173A7 /* madditem.m */,
 				DAAFB2B21CC9959D003173A7 /* madditemprojectname.h */,
@@ -277,8 +279,6 @@
 				DAAFB2C81CCAB230003173A7 /* madditemcolorsdevice.m */,
 				DAAFB2CA1CCAB37A003173A7 /* madditemcolorstext.h */,
 				DAAFB2CB1CCAB37A003173A7 /* madditemcolorstext.m */,
-				DAAFB2EB1CCDBC4D003173A7 /* maddsectionposition.h */,
-				DAAFB2EC1CCDBC4D003173A7 /* maddsectionposition.m */,
 				DAAFB2EE1CCDBC71003173A7 /* madditempositioniphone.h */,
 				DAAFB2EF1CCDBC71003173A7 /* madditempositioniphone.m */,
 			);
