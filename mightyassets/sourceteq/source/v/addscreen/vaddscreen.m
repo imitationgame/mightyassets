@@ -12,7 +12,21 @@
     
     vaddscreenbar *bar = [[vaddscreenbar alloc] init:controller];
     
+    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+    [flow setHeaderReferenceSize:CGSizeZero];
+    
+    UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
+    [collection setBackgroundColor:[UIColor clearColor]];
+    [collection setClipsToBounds:YES];
+    [collection setShowsVerticalScrollIndicator:NO];
+    [collection setShowsHorizontalScrollIndicator:NO];
+    [collection setAlwaysBounceVertical:YES];
+    [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [collection setDelegate:self];
+    [collection setDataSource:self];
+    
     [self addSubview:bar];
+    [self addSubview:collection];
     
     NSDictionary *views = @{@"bar":bar};
     NSDictionary *metrics = @{};

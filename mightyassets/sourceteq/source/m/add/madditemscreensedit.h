@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "madditem.h"
 #import "maddsectionscreens.h"
+#import "madditemscreensedittitle.h"
 
 @interface madditemscreensedit:madditem
 
@@ -9,6 +10,6 @@
 @property(weak, nonatomic)maddsectionscreens *model;
 @property(assign, nonatomic)NSInteger index;
 @property(strong, nonatomic)UIImageView *image;
-@property(strong, nonatomic)NSMutableArray<NSString*> *titles;
+@property(strong, nonatomic)NSMutableArray<madditemscreensedittitle*> *titles;
 
 @end

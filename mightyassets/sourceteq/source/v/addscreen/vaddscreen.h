@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "caddscreen.h"
 
-@interface vaddscreen:UIView
+@interface vaddscreen:UIView<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 -(instancetype)init:(caddscreen*)controller;
 

@@ -142,20 +142,16 @@ static NSInteger const warningsize = 45;
     if(model.image)
     {
         iconimagewidth = iconsize;
-    }
-    
-    if(model.titles.count == model.model.modelproject.languages.quantity)
-    {
-        icontitleswidth = iconsize;
-    }
-    
-    if(iconimagewidth && icontitleswidth)
-    {
         self.layouticonwarningwidth.constant = 0;
     }
     else
     {
         self.layouticonwarningwidth.constant = warningsize;
+    }
+    
+    if(model.titles.count == model.model.modelproject.languages.quantity)
+    {
+        icontitleswidth = iconsize;
     }
     
     self.layouticontitleswidth.constant = icontitleswidth;
