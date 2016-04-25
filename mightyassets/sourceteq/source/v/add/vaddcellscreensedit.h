@@ -6,7 +6,7 @@
 @property(weak, nonatomic)UILabel *label;
 @property(weak, nonatomic)UIImageView *icondonetitles;
 @property(weak, nonatomic)UIImageView *icondoneimage;
-@property(strong, nonatomic)UIColor *coloroff;
-@property(strong, nonatomic)UIColor *coloron;
+@property(weak, nonatomic)NSLayoutConstraint *layouticontitleswidth;
+@property(weak, nonatomic)NSLayoutConstraint *layouticonimagewidth;
 
 @end

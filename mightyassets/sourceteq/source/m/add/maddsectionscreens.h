@@ -6,6 +6,7 @@
 
 -(instancetype)init:(maddsectionproject*)modelproject;
 
+@property(strong, nonatomic)NSMutableArray<madditem*> *items;
 @property(weak, nonatomic)maddsectionproject *modelproject;
 
 @end

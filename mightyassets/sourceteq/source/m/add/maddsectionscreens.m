@@ -2,12 +2,6 @@
 #import "madditemscreensedit.h"
 #import "madditemscreensadd.h"
 
-@interface maddsectionscreens ()
-
-@property(strong, nonatomic)NSMutableArray<madditem*> *items;
-
-@end
-
 @implementation maddsectionscreens
 
 @dynamic items;

@@ -6,7 +6,7 @@
 -(instancetype)init:(madditemscreensedit*)model;
 -(void)back;
 
-@property(weak, nonatomic)madditemscreensedit *model;
+@property(strong, nonatomic)madditemscreensedit *model;
 @property(weak, nonatomic)id<UIGestureRecognizerDelegate> prevgesturedelegate;
 
 @end

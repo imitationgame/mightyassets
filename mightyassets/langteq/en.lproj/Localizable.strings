@@ -2,6 +2,8 @@
 
 "addcolor_title"="%@ color";
 
+"addscreen_title"="Screen %@";
+
 "madd_section_project_name"="Project";
 "madd_section_colors_name"="Colors";
 "madd_section_position_name"="Position";
@@ -18,4 +20,6 @@
 "madd_item_positioniphoneportraitusable_title"="Usable";
 "madd_item_screensedit_title"="Edit screen";
 "madd_item_screensedit_cell_title"="Screen %@";
+"madd_item_screensedit_cell_titles"="Titles";
+"madd_item_screensedit_cell_image"="Image";
 "madd_item_screensadd_title"="Add screen";
