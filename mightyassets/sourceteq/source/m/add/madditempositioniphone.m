@@ -1,13 +1,15 @@
-//
-//  madditempositioniphone.m
-//  mightyassets
-//
-//  Created by zero on 4/24/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
-
 #import "madditempositioniphone.h"
 
+static NSInteger const cellheight = 120;
+
 @implementation madditempositioniphone
+
+-(instancetype)init
+{
+    self = [super init:NSLocalizedString(@"madd_item_projectdevices_title", nil)];
+    self.height = cellheight;
+    
+    return self;
+}
 
 @end
