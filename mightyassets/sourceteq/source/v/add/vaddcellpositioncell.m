@@ -72,6 +72,7 @@
 {
     [self.name setText:model.name];
     [self.asset setImage:[UIImage imageNamed:model.asset]];
+    [self hover];
 }
 
 @end

@@ -3,13 +3,14 @@
 #import "caddscreen.h"
 #import "cmain.h"
 
-static NSInteger const cellheight = 90;
+static NSInteger const cellheight = 140;
 
 @implementation madditemscreensedit
 
--(instancetype)init
+-(instancetype)init:(NSInteger)index
 {
     self = [super init:NSLocalizedString(@"madd_item_screensedit_title", nil)];
+    self.index = index;
     self.height = cellheight;
     self.cellclass = [vaddcellscreensedit class];
     self.selectable = YES;
