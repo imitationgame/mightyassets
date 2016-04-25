@@ -32,7 +32,7 @@ static NSInteger const maxvalue = 3;
     [stepper setTranslatesAutoresizingMaskIntoConstraints:NO];
     [stepper setMinimumValue:minvalue];
     [stepper setMaximumValue:maxvalue];
-    [stepper setTintColor:[UIColor blackColor]];
+    [stepper setTintColor:[UIColor colorWithWhite:0.4 alpha:1]];
     [stepper addTarget:self action:@selector(actionstepper:) forControlEvents:UIControlEventValueChanged];
     self.stepper = stepper;
     
