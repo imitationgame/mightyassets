@@ -1,5 +1,8 @@
 #import "madditemscreensadd.h"
+#import "madditemscreensedit.h"
 #import "vaddcellscreensadd.h"
+#import "caddscreen.h"
+#import "cmain.h"
 
 static NSInteger const cellheight = 60;
 
@@ -20,7 +23,9 @@ static NSInteger const cellheight = 60;
 
 -(void)selectedaction
 {
-    
+    madditemscreensedit *model = [[madditemscreensedit alloc] init];
+    caddscreen *controller = [[caddscreen alloc] init:model];
+    [[cmain singleton] pushViewController:controller animated:YES];
 }
 
 @end

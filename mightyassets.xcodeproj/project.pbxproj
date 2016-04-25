@@ -26,6 +26,7 @@
 		DA9A41141CCE7AD600E49298 /* vaddcellprojectlanguages.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A41131CCE7AD600E49298 /* vaddcellprojectlanguages.m */; };
 		DA9A41171CCE88D900E49298 /* caddscreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A41161CCE88D900E49298 /* caddscreen.m */; };
 		DA9A411B1CCE89E800E49298 /* vaddscreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A411A1CCE89E800E49298 /* vaddscreen.m */; };
+		DA9A411E1CCE8E1D00E49298 /* vaddscreenbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A411D1CCE8E1D00E49298 /* vaddscreenbar.m */; };
 		DAAFB2871CC96842003173A7 /* vlanding.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2861CC96842003173A7 /* vlanding.m */; };
 		DAAFB28A1CC96947003173A7 /* vlandingbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2891CC96947003173A7 /* vlandingbar.m */; };
 		DAAFB28D1CC970AB003173A7 /* vlandingclearheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB28C1CC970AB003173A7 /* vlandingclearheader.m */; };
@@ -120,6 +121,8 @@
 		DA9A41161CCE88D900E49298 /* caddscreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = caddscreen.m; sourceTree = "<group>"; };
 		DA9A41191CCE89E800E49298 /* vaddscreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaddscreen.h; sourceTree = "<group>"; };
 		DA9A411A1CCE89E800E49298 /* vaddscreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddscreen.m; sourceTree = "<group>"; };
+		DA9A411C1CCE8E1D00E49298 /* vaddscreenbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaddscreenbar.h; sourceTree = "<group>"; };
+		DA9A411D1CCE8E1D00E49298 /* vaddscreenbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddscreenbar.m; sourceTree = "<group>"; };
 		DAAFB2851CC96842003173A7 /* vlanding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlanding.h; sourceTree = "<group>"; };
 		DAAFB2861CC96842003173A7 /* vlanding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vlanding.m; sourceTree = "<group>"; };
 		DAAFB2881CC96947003173A7 /* vlandingbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlandingbar.h; sourceTree = "<group>"; };
@@ -265,6 +268,8 @@
 			children = (
 				DA9A41191CCE89E800E49298 /* vaddscreen.h */,
 				DA9A411A1CCE89E800E49298 /* vaddscreen.m */,
+				DA9A411C1CCE8E1D00E49298 /* vaddscreenbar.h */,
+				DA9A411D1CCE8E1D00E49298 /* vaddscreenbar.m */,
 			);
 			path = addscreen;
 			sourceTree = "<group>";
@@ -840,6 +845,7 @@
 				DA9A40FF1CCE6FBC00E49298 /* maddsectionscreens.m in Sources */,
 				DAAFB2E21CCC539E003173A7 /* maddcoloritem.m in Sources */,
 				DA9A40FC1CCE603900E49298 /* madditempositionitemiphoneportraitusable.m in Sources */,
+				DA9A411E1CCE8E1D00E49298 /* vaddscreenbar.m in Sources */,
 				DAAFB2941CC972C8003173A7 /* mfixedconstraints.m in Sources */,
 				DAB377041CC93901001E8625 /* analytics.m in Sources */,
 				DAAFB2ED1CCDBC4D003173A7 /* maddsectionposition.m in Sources */,
