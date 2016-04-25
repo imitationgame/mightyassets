@@ -36,6 +36,7 @@ static NSInteger const cellwidth = 100;
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     [collection setDataSource:self];
     [collection setDelegate:self];
+    [collection registerClass:[vaddcellpositioncell class] forCellWithReuseIdentifier:positioncellid];
     self.collection = collection;
     
     [self addSubview:collection];
