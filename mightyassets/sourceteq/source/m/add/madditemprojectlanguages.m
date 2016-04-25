@@ -2,7 +2,7 @@
 #import "vaddcellprojectlanguages.h"
 
 static NSInteger const initialquantity = 1;
-static NSInteger const cellheight = 100;
+static NSInteger const cellheight = 80;
 
 @implementation madditemprojectlanguages
 

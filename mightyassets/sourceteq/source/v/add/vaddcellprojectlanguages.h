@@ -3,4 +3,7 @@
 
 @interface vaddcellprojectlanguages:vaddcell
 
+@property(weak, nonatomic)UIStepper *stepper;
+@property(weak, nonatomic)UILabel *labelquantity;
+
 @end
