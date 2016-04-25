@@ -13,10 +13,9 @@
     UILabel *name = [[UILabel alloc] init];
     [name setUserInteractionEnabled:NO];
     [name setBackgroundColor:[UIColor clearColor]];
-    [name setFont:[UIFont regularsize:16]];
+    [name setFont:[UIFont regularsize:15]];
     [name setTextAlignment:NSTextAlignmentCenter];
     [name setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [name setTextColor:[UIColor main]];
     self.name = name;
     
     UIImageView *asset = [[UIImageView alloc] init];
@@ -33,7 +32,7 @@
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[name]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[asset]-0-[name(30)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[asset]-0-[name(20)]-10-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[asset]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
@@ -58,10 +57,12 @@
     if(self.isSelected || self.isHighlighted)
     {
         [self setAlpha:1];
+        [self.name setTextColor:[UIColor main]];
     }
     else
     {
-        [self setAlpha:0.5];
+        [self setAlpha:0.2];
+        [self.name setTextColor:[UIColor colorWithWhite:0.2 alpha:1]];
     }
 }
 

@@ -4,6 +4,7 @@
 
 static NSString* const positioncellid = @"positioncell";
 static NSInteger const cellwidth = 100;
+static NSInteger const interitem = 3;
 
 @interface vaddcellposition ()
 
@@ -22,7 +23,7 @@ static NSInteger const cellwidth = 100;
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setHeaderReferenceSize:CGSizeZero];
     [flow setFooterReferenceSize:CGSizeZero];
-    [flow setMinimumLineSpacing:0];
+    [flow setMinimumLineSpacing:interitem];
     [flow setMinimumInteritemSpacing:0];
     [flow setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     
@@ -75,8 +76,9 @@ static NSInteger const cellwidth = 100;
 {
     CGFloat width = col.bounds.size.width;
     NSInteger cells = self.model.items.count;
+    CGFloat width_items = width - ((cells - 1) * interitem);
     CGFloat totalwidth = cellwidth * cells;
-    CGFloat remain = width - totalwidth;
+    CGFloat remain = width_items - totalwidth;
     CGFloat margin = remain / 2.0;
     UIEdgeInsets insets = UIEdgeInsetsMake(0, margin, 0, margin);
     

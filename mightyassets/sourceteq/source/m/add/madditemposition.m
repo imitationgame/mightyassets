@@ -1,7 +1,7 @@
 #import "madditemposition.h"
 #import "vaddcellposition.h"
 
-static NSInteger const cellheight = 120;
+static NSInteger const cellheight = 150;
 
 @implementation madditemposition
 
