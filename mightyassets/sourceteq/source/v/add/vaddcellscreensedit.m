@@ -101,6 +101,30 @@
     NSString *stringtitle = [NSString stringWithFormat:NSLocalizedString(@"madd_item_screensedit_cell_title", nil), @(index)];
     [self.label setText:stringtitle];
     [self hover];
+    
+    UIColor *colorimage;
+    UIColor *colortitles;
+    
+    if(model.image)
+    {
+        colorimage = self.coloron;
+    }
+    else
+    {
+        colorimage = self.coloroff;
+    }
+    
+    if(model.titles.count == model.model.modelproject.languages.quantity)
+    {
+        colortitles = self.coloron;
+    }
+    else
+    {
+        colortitles = self.coloroff;
+    }
+    
+    [self.icondonetitles setTintColor:colortitles];
+    [self.icondoneimage setTintColor:colorimage];
 }
 
 @end

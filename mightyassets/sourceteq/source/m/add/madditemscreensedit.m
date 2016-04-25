@@ -7,13 +7,15 @@ static NSInteger const cellheight = 140;
 
 @implementation madditemscreensedit
 
--(instancetype)init:(NSInteger)index
+-(instancetype)init:(NSInteger)index model:(maddsectionscreens*)model
 {
     self = [super init:NSLocalizedString(@"madd_item_screensedit_title", nil)];
+    self.model = model;
     self.index = index;
     self.height = cellheight;
     self.cellclass = [vaddcellscreensedit class];
     self.selectable = YES;
+    self.titles = [NSMutableArray array];
     
     return self;
 }

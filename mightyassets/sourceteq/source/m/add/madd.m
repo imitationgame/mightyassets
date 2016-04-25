@@ -9,11 +9,15 @@
 -(instancetype)init
 {
     self = [super init];
+    
+    maddsectionproject *modelproject = [[maddsectionproject alloc] init];
+    maddsectionscreens *modelscreens = [[maddsectionscreens alloc] init:modelproject];
+    
     self.sections = @[
-                      [[maddsectionproject alloc] init],
+                      modelproject,
                       [[maddsectioncolors alloc] init],
                       [[maddsectionposition alloc] init],
-                      [[maddsectionscreens alloc] init]
+                      modelscreens
                       ];
     
     return self;
