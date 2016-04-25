@@ -66,8 +66,8 @@ static NSInteger const interitem = 3;
 -(void)config:(madditemposition*)model
 {
     [super config:model];
-    
     [self.collection reloadData];
+    [self.collection selectItemAtIndexPath:[NSIndexPath indexPathForRow:model.selected inSection:0] animated:NO scrollPosition:UICollectionViewScrollPositionNone];
 }
 
 #pragma mark col del
@@ -112,6 +112,12 @@ static NSInteger const interitem = 3;
     [cell config:model];
     
     return cell;
+}
+
+-(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    NSInteger selected = index.item;
+    self.model.selected = selected;
 }
 
 @end

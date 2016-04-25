@@ -5,5 +5,6 @@
 @interface madditemposition:madditem
 
 @property(strong, nonatomic)NSArray<madditempositionitem*> *items;
+@property(assign, nonatomic)NSInteger selected;
 
 @end

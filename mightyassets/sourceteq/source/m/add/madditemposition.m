@@ -10,6 +10,7 @@ static NSInteger const cellheight = 150;
     self = [super init:title];
     self.height = cellheight;
     self.cellclass = [vaddcellposition class];
+    self.selected = 0;
     
     return self;
 }
