@@ -1,4 +1,5 @@
 #import "madditemposition.h"
+#import "vaddcellposition.h"
 
 static NSInteger const cellheight = 120;
 
@@ -8,7 +9,7 @@ static NSInteger const cellheight = 120;
 {
     self = [super init:title];
     self.height = cellheight;
-    self.cellclass = [vaddcellcolor class];
+    self.cellclass = [vaddcellposition class];
     
     return self;
 }

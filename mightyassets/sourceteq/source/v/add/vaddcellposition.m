@@ -19,6 +19,27 @@ static NSInteger const cellwidth = 100;
 {
     self = [super initWithFrame:frame];
     
+    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+    [flow setHeaderReferenceSize:CGSizeZero];
+    [flow setFooterReferenceSize:CGSizeZero];
+    [flow setMinimumLineSpacing:0];
+    [flow setMinimumInteritemSpacing:0];
+    [flow setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+    
+    UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
+    [collection setClipsToBounds:YES];
+    [collection setBackgroundColor:[UIColor clearColor]];
+    [collection setShowsVerticalScrollIndicator:NO];
+    [collection setShowsHorizontalScrollIndicator:NO];
+    [collection setScrollEnabled:NO];
+    [collection setBounces:NO];
+    [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [collection setDataSource:self];
+    [collection setDelegate:self];
+    self.collection = collection;
+    
+    [self addSubview:collection];
+    
     return self;
 }
 
@@ -36,8 +57,9 @@ static NSInteger const cellwidth = 100;
 
 -(void)config:(madditemposition*)model
 {
-    
     [super config:model];
+    
+    [self.collection reloadData];
 }
 
 #pragma mark col del
