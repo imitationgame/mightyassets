@@ -22,6 +22,8 @@
 		DA9A41051CCE753100E49298 /* madditemscreensadd.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A41041CCE753100E49298 /* madditemscreensadd.m */; };
 		DA9A41081CCE77A100E49298 /* vaddcellscreensedit.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A41071CCE77A100E49298 /* vaddcellscreensedit.m */; };
 		DA9A410B1CCE77AD00E49298 /* vaddcellscreensadd.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A410A1CCE77AD00E49298 /* vaddcellscreensadd.m */; };
+		DA9A41111CCE79AE00E49298 /* madditemprojectlanguages.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A41101CCE79AE00E49298 /* madditemprojectlanguages.m */; };
+		DA9A41141CCE7AD600E49298 /* vaddcellprojectlanguages.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A41131CCE7AD600E49298 /* vaddcellprojectlanguages.m */; };
 		DAAFB2871CC96842003173A7 /* vlanding.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2861CC96842003173A7 /* vlanding.m */; };
 		DAAFB28A1CC96947003173A7 /* vlandingbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2891CC96947003173A7 /* vlandingbar.m */; };
 		DAAFB28D1CC970AB003173A7 /* vlandingclearheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB28C1CC970AB003173A7 /* vlandingclearheader.m */; };
@@ -108,6 +110,10 @@
 		DA9A41071CCE77A100E49298 /* vaddcellscreensedit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddcellscreensedit.m; sourceTree = "<group>"; };
 		DA9A41091CCE77AD00E49298 /* vaddcellscreensadd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaddcellscreensadd.h; sourceTree = "<group>"; };
 		DA9A410A1CCE77AD00E49298 /* vaddcellscreensadd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddcellscreensadd.m; sourceTree = "<group>"; };
+		DA9A410F1CCE79AE00E49298 /* madditemprojectlanguages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditemprojectlanguages.h; sourceTree = "<group>"; };
+		DA9A41101CCE79AE00E49298 /* madditemprojectlanguages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditemprojectlanguages.m; sourceTree = "<group>"; };
+		DA9A41121CCE7AD600E49298 /* vaddcellprojectlanguages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaddcellprojectlanguages.h; sourceTree = "<group>"; };
+		DA9A41131CCE7AD600E49298 /* vaddcellprojectlanguages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddcellprojectlanguages.m; sourceTree = "<group>"; };
 		DAAFB2851CC96842003173A7 /* vlanding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlanding.h; sourceTree = "<group>"; };
 		DAAFB2861CC96842003173A7 /* vlanding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vlanding.m; sourceTree = "<group>"; };
 		DAAFB2881CC96947003173A7 /* vlandingbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlandingbar.h; sourceTree = "<group>"; };
@@ -281,6 +287,8 @@
 				DAAFB2A31CC98F9F003173A7 /* vaddheader.m */,
 				DAAFB29F1CC98F8C003173A7 /* vaddcell.h */,
 				DAAFB2A01CC98F8C003173A7 /* vaddcell.m */,
+				DA9A41121CCE7AD600E49298 /* vaddcellprojectlanguages.h */,
+				DA9A41131CCE7AD600E49298 /* vaddcellprojectlanguages.m */,
 				DAAFB2C11CCA9F06003173A7 /* vaddcellcolor.h */,
 				DAAFB2C21CCA9F06003173A7 /* vaddcellcolor.m */,
 				DA9A40EE1CCE5C4600E49298 /* vaddcellposition.h */,
@@ -316,6 +324,8 @@
 				DAAFB2B31CC9959D003173A7 /* madditemprojectname.m */,
 				DAAFB2B51CC9AA20003173A7 /* madditemprojectdevices.h */,
 				DAAFB2B61CC9AA20003173A7 /* madditemprojectdevices.m */,
+				DA9A410F1CCE79AE00E49298 /* madditemprojectlanguages.h */,
+				DA9A41101CCE79AE00E49298 /* madditemprojectlanguages.m */,
 				DAAFB2C41CCAAD6B003173A7 /* madditemcolors.h */,
 				DAAFB2C51CCAAD6B003173A7 /* madditemcolors.m */,
 				DAAFB2BB1CC9AD7A003173A7 /* madditemcolorsbackground.h */,
@@ -769,6 +779,7 @@
 				DAB377091CC93901001E8625 /* updater.m in Sources */,
 				DAAFB2D31CCABD60003173A7 /* vaddcolor.m in Sources */,
 				DAAFB2B11CC994FD003173A7 /* maddsectionproject.m in Sources */,
+				DA9A41111CCE79AE00E49298 /* madditemprojectlanguages.m in Sources */,
 				DA9A41081CCE77A100E49298 /* vaddcellscreensedit.m in Sources */,
 				DAB377081CC93901001E8625 /* uifont+uifontmain.m in Sources */,
 				DA9A40EA1CCE555F00E49298 /* madditempositioniphoneportrait.m in Sources */,
@@ -797,6 +808,7 @@
 				DAB377101CC93901001E8625 /* mdirs.m in Sources */,
 				DAAFB2901CC970B4003173A7 /* vlandingcell.m in Sources */,
 				DAAFB2AB1CC9939F003173A7 /* maddsection.m in Sources */,
+				DA9A41141CCE7AD600E49298 /* vaddcellprojectlanguages.m in Sources */,
 				DAAFB2A81CC99385003173A7 /* madd.m in Sources */,
 				DA9A40ED1CCE5B7900E49298 /* madditemposition.m in Sources */,
 				DA9A40F01CCE5C4600E49298 /* vaddcellposition.m in Sources */,

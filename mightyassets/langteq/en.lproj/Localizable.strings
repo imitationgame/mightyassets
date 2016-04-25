@@ -8,6 +8,7 @@
 "madd_section_screens_name"="Screens";
 "madd_item_projectname_title"="Name";
 "madd_item_projectdevices_title"="Devices";
+"madd_item_projectlanguages_title"="Languages";
 "madd_item_colorsbackground_title"="Background";
 "madd_item_colorsdevice_title"="Device";
 "madd_item_colorstext_title"="Text";
