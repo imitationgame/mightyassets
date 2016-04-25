@@ -15,6 +15,8 @@
 		DA9A40F01CCE5C4600E49298 /* vaddcellposition.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A40EF1CCE5C4600E49298 /* vaddcellposition.m */; };
 		DA9A40F31CCE5DC100E49298 /* vaddcellpositioncell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A40F21CCE5DC100E49298 /* vaddcellpositioncell.m */; };
 		DA9A40F61CCE5F4400E49298 /* madditempositionitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A40F51CCE5F4400E49298 /* madditempositionitem.m */; };
+		DA9A40F91CCE602E00E49298 /* madditempositionitemiphoneportraitfull.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A40F81CCE602E00E49298 /* madditempositionitemiphoneportraitfull.m */; };
+		DA9A40FC1CCE603900E49298 /* madditempositionitemiphoneportraitusable.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A40FB1CCE603900E49298 /* madditempositionitemiphoneportraitusable.m */; };
 		DAAFB2871CC96842003173A7 /* vlanding.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2861CC96842003173A7 /* vlanding.m */; };
 		DAAFB28A1CC96947003173A7 /* vlandingbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2891CC96947003173A7 /* vlandingbar.m */; };
 		DAAFB28D1CC970AB003173A7 /* vlandingclearheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB28C1CC970AB003173A7 /* vlandingclearheader.m */; };
@@ -87,6 +89,10 @@
 		DA9A40F21CCE5DC100E49298 /* vaddcellpositioncell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddcellpositioncell.m; sourceTree = "<group>"; };
 		DA9A40F41CCE5F4400E49298 /* madditempositionitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditempositionitem.h; sourceTree = "<group>"; };
 		DA9A40F51CCE5F4400E49298 /* madditempositionitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditempositionitem.m; sourceTree = "<group>"; };
+		DA9A40F71CCE602E00E49298 /* madditempositionitemiphoneportraitfull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditempositionitemiphoneportraitfull.h; sourceTree = "<group>"; };
+		DA9A40F81CCE602E00E49298 /* madditempositionitemiphoneportraitfull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditempositionitemiphoneportraitfull.m; sourceTree = "<group>"; };
+		DA9A40FA1CCE603900E49298 /* madditempositionitemiphoneportraitusable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditempositionitemiphoneportraitusable.h; sourceTree = "<group>"; };
+		DA9A40FB1CCE603900E49298 /* madditempositionitemiphoneportraitusable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditempositionitemiphoneportraitusable.m; sourceTree = "<group>"; };
 		DAAFB2851CC96842003173A7 /* vlanding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlanding.h; sourceTree = "<group>"; };
 		DAAFB2861CC96842003173A7 /* vlanding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vlanding.m; sourceTree = "<group>"; };
 		DAAFB2881CC96947003173A7 /* vlandingbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlandingbar.h; sourceTree = "<group>"; };
@@ -303,6 +309,10 @@
 				DA9A40F51CCE5F4400E49298 /* madditempositionitem.m */,
 				DA9A40E81CCE555F00E49298 /* madditempositioniphoneportrait.h */,
 				DA9A40E91CCE555F00E49298 /* madditempositioniphoneportrait.m */,
+				DA9A40F71CCE602E00E49298 /* madditempositionitemiphoneportraitfull.h */,
+				DA9A40F81CCE602E00E49298 /* madditempositionitemiphoneportraitfull.m */,
+				DA9A40FA1CCE603900E49298 /* madditempositionitemiphoneportraitusable.h */,
+				DA9A40FB1CCE603900E49298 /* madditempositionitemiphoneportraitusable.m */,
 			);
 			path = add;
 			sourceTree = "<group>";
@@ -744,6 +754,7 @@
 				DAAFB2CC1CCAB37A003173A7 /* madditemcolorstext.m in Sources */,
 				DAAFB29E1CC98A76003173A7 /* vaddbar.m in Sources */,
 				DAB377051CC93901001E8625 /* nsnotification+nsnotificationmain.m in Sources */,
+				DA9A40F91CCE602E00E49298 /* madditempositionitemiphoneportraitfull.m in Sources */,
 				DAB3770D1CC93901001E8625 /* cpages.m in Sources */,
 				DAAFB2C91CCAB230003173A7 /* madditemcolorsdevice.m in Sources */,
 				DAAFB2BA1CC9ACA1003173A7 /* maddsectioncolors.m in Sources */,
@@ -766,6 +777,7 @@
 				DAB377111CC93901001E8625 /* msettings.m in Sources */,
 				DA9A40F61CCE5F4400E49298 /* madditempositionitem.m in Sources */,
 				DAAFB2E21CCC539E003173A7 /* maddcoloritem.m in Sources */,
+				DA9A40FC1CCE603900E49298 /* madditempositionitemiphoneportraitusable.m in Sources */,
 				DAAFB2941CC972C8003173A7 /* mfixedconstraints.m in Sources */,
 				DAB377041CC93901001E8625 /* analytics.m in Sources */,
 				DAAFB2ED1CCDBC4D003173A7 /* maddsectionposition.m in Sources */,
