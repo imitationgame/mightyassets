@@ -24,6 +24,8 @@
 		DA9A410B1CCE77AD00E49298 /* vaddcellscreensadd.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A410A1CCE77AD00E49298 /* vaddcellscreensadd.m */; };
 		DA9A41111CCE79AE00E49298 /* madditemprojectlanguages.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A41101CCE79AE00E49298 /* madditemprojectlanguages.m */; };
 		DA9A41141CCE7AD600E49298 /* vaddcellprojectlanguages.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A41131CCE7AD600E49298 /* vaddcellprojectlanguages.m */; };
+		DA9A41171CCE88D900E49298 /* caddscreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A41161CCE88D900E49298 /* caddscreen.m */; };
+		DA9A411B1CCE89E800E49298 /* vaddscreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A411A1CCE89E800E49298 /* vaddscreen.m */; };
 		DAAFB2871CC96842003173A7 /* vlanding.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2861CC96842003173A7 /* vlanding.m */; };
 		DAAFB28A1CC96947003173A7 /* vlandingbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2891CC96947003173A7 /* vlandingbar.m */; };
 		DAAFB28D1CC970AB003173A7 /* vlandingclearheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB28C1CC970AB003173A7 /* vlandingclearheader.m */; };
@@ -114,6 +116,10 @@
 		DA9A41101CCE79AE00E49298 /* madditemprojectlanguages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditemprojectlanguages.m; sourceTree = "<group>"; };
 		DA9A41121CCE7AD600E49298 /* vaddcellprojectlanguages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaddcellprojectlanguages.h; sourceTree = "<group>"; };
 		DA9A41131CCE7AD600E49298 /* vaddcellprojectlanguages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddcellprojectlanguages.m; sourceTree = "<group>"; };
+		DA9A41151CCE88D900E49298 /* caddscreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = caddscreen.h; sourceTree = "<group>"; };
+		DA9A41161CCE88D900E49298 /* caddscreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = caddscreen.m; sourceTree = "<group>"; };
+		DA9A41191CCE89E800E49298 /* vaddscreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaddscreen.h; sourceTree = "<group>"; };
+		DA9A411A1CCE89E800E49298 /* vaddscreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddscreen.m; sourceTree = "<group>"; };
 		DAAFB2851CC96842003173A7 /* vlanding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlanding.h; sourceTree = "<group>"; };
 		DAAFB2861CC96842003173A7 /* vlanding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vlanding.m; sourceTree = "<group>"; };
 		DAAFB2881CC96947003173A7 /* vlandingbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlandingbar.h; sourceTree = "<group>"; };
@@ -252,6 +258,15 @@
 				3A2001AE63771271D2DE9BB6 /* Pods-mightyassets.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA9A41181CCE89DF00E49298 /* addscreen */ = {
+			isa = PBXGroup;
+			children = (
+				DA9A41191CCE89E800E49298 /* vaddscreen.h */,
+				DA9A411A1CCE89E800E49298 /* vaddscreen.m */,
+			);
+			path = addscreen;
 			sourceTree = "<group>";
 		};
 		DAAFB2841CC96834003173A7 /* landing */ = {
@@ -584,6 +599,7 @@
 		DAB376F71CC93901001E8625 /* v */ = {
 			isa = PBXGroup;
 			children = (
+				DA9A41181CCE89DF00E49298 /* addscreen */,
 				DAAFB2D01CCABD54003173A7 /* addcolor */,
 				DAAFB2981CC98785003173A7 /* add */,
 				DAAFB2841CC96834003173A7 /* landing */,
@@ -618,6 +634,8 @@
 				DAAFB2961CC9872A003173A7 /* cadd.m */,
 				DAAFB2CD1CCAB8D8003173A7 /* caddcolor.h */,
 				DAAFB2CE1CCAB8D8003173A7 /* caddcolor.m */,
+				DA9A41151CCE88D900E49298 /* caddscreen.h */,
+				DA9A41161CCE88D900E49298 /* caddscreen.m */,
 			);
 			path = add;
 			sourceTree = "<group>";
@@ -794,8 +812,10 @@
 				DAAFB2CC1CCAB37A003173A7 /* madditemcolorstext.m in Sources */,
 				DAAFB29E1CC98A76003173A7 /* vaddbar.m in Sources */,
 				DAB377051CC93901001E8625 /* nsnotification+nsnotificationmain.m in Sources */,
+				DA9A411B1CCE89E800E49298 /* vaddscreen.m in Sources */,
 				DA9A40F91CCE602E00E49298 /* madditempositionitemiphoneportraitfull.m in Sources */,
 				DAB3770D1CC93901001E8625 /* cpages.m in Sources */,
+				DA9A41171CCE88D900E49298 /* caddscreen.m in Sources */,
 				DAAFB2C91CCAB230003173A7 /* madditemcolorsdevice.m in Sources */,
 				DAAFB2BA1CC9ACA1003173A7 /* maddsectioncolors.m in Sources */,
 				DAAFB2B71CC9AA20003173A7 /* madditemprojectdevices.m in Sources */,
