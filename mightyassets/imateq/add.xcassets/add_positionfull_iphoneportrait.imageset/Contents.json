@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "add_positionfull.png",
+      "filename" : "add_positionfull_iphoneportrait.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "add_positionfull@2x.png",
+      "filename" : "add_positionfull_iphoneportrait@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "add_positionfull@3x.png",
+      "filename" : "add_positionfull_iphoneportrait@3x.png",
       "scale" : "3x"
     }
   ],

@@ -1,5 +1,5 @@
 #import "maddsectionposition.h"
-#import "madditempositioniphone.h"
+#import "madditempositioniphoneportrait.h"
 
 @implementation maddsectionposition
 
@@ -7,7 +7,7 @@
 {
     self = [super init:NSLocalizedString(@"madd_section_position_name", nil)];
     self.items = @[
-                   [[madditempositioniphone alloc] init]
+                   [[madditempositioniphoneportrait alloc] init]
                    ];
     
     return self;

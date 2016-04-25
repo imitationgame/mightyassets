@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "madditem.h"
 
-@interface madditempositioniphone:madditem
+@interface madditemposition:madditem
 
 @end
