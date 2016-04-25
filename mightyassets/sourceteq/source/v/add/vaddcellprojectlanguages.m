@@ -20,8 +20,8 @@ static NSInteger const maxvalue = 3;
 {
     self = [super initWithFrame:frame];
     
-    NSDictionary *dicttitle = @{NSFontAttributeName:[UIFont regularsize:16], NSForegroundColorAttributeName:[UIColor colorWithWhite:0.4 alpha:1]};
-    NSDictionary *dictdescr = @{NSFontAttributeName:[UIFont regularsize:13], NSForegroundColorAttributeName:[UIColor colorWithWhite:0.65 alpha:1]};
+    NSDictionary *dicttitle = @{NSFontAttributeName:[UIFont regularsize:16], NSForegroundColorAttributeName:[UIColor colorWithWhite:0.3 alpha:1]};
+    NSDictionary *dictdescr = @{NSFontAttributeName:[UIFont regularsize:13], NSForegroundColorAttributeName:[UIColor colorWithWhite:0.55 alpha:1]};
     NSAttributedString *attrtitle = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"madd_item_projectlanguages_title", nil) attributes:dicttitle];
     NSAttributedString *attrdescr = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"madd_item_projectlanguages_descr", nil) attributes:dictdescr];
     NSMutableAttributedString *mutstring = [[NSMutableAttributedString alloc] init];
@@ -33,13 +33,14 @@ static NSInteger const maxvalue = 3;
     [stepper setMinimumValue:minvalue];
     [stepper setMaximumValue:maxvalue];
     [stepper setTintColor:[UIColor blackColor]];
+    [stepper addTarget:self action:@selector(actionstepper:) forControlEvents:UIControlEventValueChanged];
     self.stepper = stepper;
     
     UILabel *labelquantity = [[UILabel alloc] init];
     [labelquantity setBackgroundColor:[UIColor clearColor]];
     [labelquantity setUserInteractionEnabled:NO];
     [labelquantity setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [labelquantity setFont:[UIFont boldsize:20]];
+    [labelquantity setFont:[UIFont boldsize:25]];
     [labelquantity setTextAlignment:NSTextAlignmentRight];
     [labelquantity setTextColor:[UIColor main]];
     self.labelquantity = labelquantity;
@@ -58,12 +59,20 @@ static NSInteger const maxvalue = 3;
     NSDictionary *views = @{@"stepper":stepper, @"labelquantity":labelquantity, @"labeltitle":labeltitle};
     NSDictionary *metrics = @{};
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[labeltitle]-5-[labelquantity(30)]-10-[stepper(130)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[labeltitle]-0-[labelquantity(35)]-10-[stepper(110)]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[stepper]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[labelquantity]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[labelquantity(32)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[labeltitle]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
+}
+
+#pragma mark actions
+
+-(void)actionstepper:(UIStepper*)stepper
+{
+    self.model.quantity = stepper.value;
+    [self print];
 }
 
 #pragma mark functionality
