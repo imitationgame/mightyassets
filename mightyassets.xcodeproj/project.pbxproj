@@ -25,6 +25,7 @@
 		DA7D51E01CCFD564002D06FE /* device.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7D51DF1CCFD564002D06FE /* device.xcassets */; };
 		DA7D51E31CCFD6FA002D06FE /* maddprocessasset.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51E21CCFD6FA002D06FE /* maddprocessasset.m */; };
 		DA7D51E91CCFD71C002D06FE /* maddprocessassetiphone6.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51E81CCFD71C002D06FE /* maddprocessassetiphone6.m */; };
+		DA7D51EC1CCFDBE4002D06FE /* maddprocess.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51EB1CCFDBE4002D06FE /* maddprocess.m */; };
 		DA94F7AB1CC9476E00FC50C9 /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA94F7AA1CC9476E00FC50C9 /* brand.xcassets */; };
 		DA9A40E71CCE531500E49298 /* add.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9A40E61CCE531500E49298 /* add.xcassets */; };
 		DA9A40EA1CCE555F00E49298 /* madditempositioniphoneportrait.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A40E91CCE555F00E49298 /* madditempositioniphoneportrait.m */; };
@@ -139,6 +140,8 @@
 		DA7D51E21CCFD6FA002D06FE /* maddprocessasset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddprocessasset.m; sourceTree = "<group>"; };
 		DA7D51E71CCFD71C002D06FE /* maddprocessassetiphone6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maddprocessassetiphone6.h; sourceTree = "<group>"; };
 		DA7D51E81CCFD71C002D06FE /* maddprocessassetiphone6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddprocessassetiphone6.m; sourceTree = "<group>"; };
+		DA7D51EA1CCFDBE4002D06FE /* maddprocess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maddprocess.h; sourceTree = "<group>"; };
+		DA7D51EB1CCFDBE4002D06FE /* maddprocess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddprocess.m; sourceTree = "<group>"; };
 		DA94F7AA1CC9476E00FC50C9 /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
 		DA9A40E61CCE531500E49298 /* add.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = add.xcassets; sourceTree = "<group>"; };
 		DA9A40E81CCE555F00E49298 /* madditempositioniphoneportrait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditempositioniphoneportrait.h; sourceTree = "<group>"; };
@@ -335,6 +338,8 @@
 		DA7D51C01CCFBFD7002D06FE /* addprocess */ = {
 			isa = PBXGroup;
 			children = (
+				DA7D51EA1CCFDBE4002D06FE /* maddprocess.h */,
+				DA7D51EB1CCFDBE4002D06FE /* maddprocess.m */,
 				DA7D51C11CCFC016002D06FE /* maddprocessdevice.h */,
 				DA7D51C21CCFC016002D06FE /* maddprocessdevice.m */,
 				DA7D51C41CCFC045002D06FE /* maddprocessdeviceiphone4.h */,
@@ -942,6 +947,7 @@
 				DAB3770D1CC93901001E8625 /* cpages.m in Sources */,
 				DA9A41171CCE88D900E49298 /* caddscreen.m in Sources */,
 				DAAFB2C91CCAB230003173A7 /* madditemcolorsdevice.m in Sources */,
+				DA7D51EC1CCFDBE4002D06FE /* maddprocess.m in Sources */,
 				DAAFB2BA1CC9ACA1003173A7 /* maddsectioncolors.m in Sources */,
 				DAAFB2B71CC9AA20003173A7 /* madditemprojectdevices.m in Sources */,
 				DAB377131CC93901001E8625 /* vspinner.m in Sources */,

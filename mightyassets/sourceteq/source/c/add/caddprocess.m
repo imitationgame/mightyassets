@@ -23,7 +23,7 @@
 {
     [super viewDidAppear:animated];
     
-// TODO process
+    self.process = [[maddprocess alloc] init:self.model];
 }
 
 -(void)loadView

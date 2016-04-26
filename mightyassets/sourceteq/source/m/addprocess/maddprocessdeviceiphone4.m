@@ -1,6 +1,5 @@
 #import "maddprocessdeviceiphone4.h"
 
-static NSString
 static NSInteger const sideshort = 640;
 static NSInteger const sidelong = 960;
 

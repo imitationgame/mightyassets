@@ -3,6 +3,7 @@
 #import "maddsectioncolors.h"
 #import "maddsectionposition.h"
 #import "maddsectionscreens.h"
+#import "maddprocessassetiphone6.h"
 
 @implementation madd
 
@@ -10,6 +11,7 @@
 {
     self = [super init];
     
+    self.asset = [[maddprocessasset alloc] init];
     maddsectionproject *modelproject = [[maddsectionproject alloc] init];
     maddsectionscreens *modelscreens = [[maddsectionscreens alloc] init:modelproject];
     

@@ -14,6 +14,8 @@ static NSInteger const screenheight = 1348;
 -(instancetype)init
 {
     self = [super init];
+    self.assetname = assetname;
+    self.assetnamecam = assetnamecam;
     self.imagewidth = imagewidth;
     self.imageheight = imageheight;
     self.screenx = screenx;

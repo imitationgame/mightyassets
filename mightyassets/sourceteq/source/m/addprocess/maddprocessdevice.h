@@ -9,6 +9,5 @@
 
 @property(strong, nonatomic)maddprocessorientation *orientation;
 @property(strong, nonatomic)madditempositionitem *position;
-@property(copy, nonatomic)NSString *assetname;
 
 @end
