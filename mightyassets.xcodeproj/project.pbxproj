@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		454D86336872A50FF82B25FA /* libPods-mightyassets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83AA3957F832637C9B59A446 /* libPods-mightyassets.a */; };
+		DA7D51B51CCFB132002D06FE /* loader.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7D51B41CCFB132002D06FE /* loader.xcassets */; };
 		DA94F7AB1CC9476E00FC50C9 /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA94F7AA1CC9476E00FC50C9 /* brand.xcassets */; };
 		DA9A40E71CCE531500E49298 /* add.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9A40E61CCE531500E49298 /* add.xcassets */; };
 		DA9A40EA1CCE555F00E49298 /* madditempositioniphoneportrait.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A40E91CCE555F00E49298 /* madditempositioniphoneportrait.m */; };
@@ -90,6 +91,7 @@
 		3A2001AE63771271D2DE9BB6 /* Pods-mightyassets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mightyassets.release.xcconfig"; path = "Pods/Target Support Files/Pods-mightyassets/Pods-mightyassets.release.xcconfig"; sourceTree = "<group>"; };
 		83AA3957F832637C9B59A446 /* libPods-mightyassets.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mightyassets.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB378A33F5638E1413452D7C /* Pods-mightyassets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mightyassets.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mightyassets/Pods-mightyassets.debug.xcconfig"; sourceTree = "<group>"; };
+		DA7D51B41CCFB132002D06FE /* loader.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = loader.xcassets; sourceTree = "<group>"; };
 		DA94F7AA1CC9476E00FC50C9 /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
 		DA9A40E61CCE531500E49298 /* add.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = add.xcassets; sourceTree = "<group>"; };
 		DA9A40E81CCE555F00E49298 /* madditempositioniphoneportrait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditempositioniphoneportrait.h; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 				DA94F7AA1CC9476E00FC50C9 /* brand.xcassets */,
 				DAAFB2DA1CCC4D1E003173A7 /* generic.xcassets */,
 				DA9A40E61CCE531500E49298 /* add.xcassets */,
+				DA7D51B41CCFB132002D06FE /* loader.xcassets */,
 			);
 			path = imateq;
 			sourceTree = "<group>";
@@ -742,6 +745,7 @@
 				DA9A40E71CCE531500E49298 /* add.xcassets in Resources */,
 				DA94F7AB1CC9476E00FC50C9 /* brand.xcassets in Resources */,
 				DAB377001CC93901001E8625 /* Localizable.strings in Resources */,
+				DA7D51B51CCFB132002D06FE /* loader.xcassets in Resources */,
 				DAAFB2DB1CCC4D1E003173A7 /* generic.xcassets in Resources */,
 				DAB376FF1CC93901001E8625 /* defs.plist in Resources */,
 				DAAFB2E71CCC5777003173A7 /* colors.plist in Resources */,
