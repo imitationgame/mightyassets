@@ -1,13 +1,16 @@
 #import "maddsectionposition.h"
-#import "madditempositioniphoneportrait.h"
 
 @implementation maddsectionposition
 
 -(instancetype)init
 {
     self = [super init:NSLocalizedString(@"madd_section_position_name", nil)];
+    
+    madditempositioniphoneportrait *modeliphoneportrait = [[madditempositioniphoneportrait alloc] init];
+    self.modeliphoneportrait = modeliphoneportrait;
+    
     self.items = @[
-                   [[madditempositioniphoneportrait alloc] init]
+                   modeliphoneportrait
                    ];
     
     return self;

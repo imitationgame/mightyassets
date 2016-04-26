@@ -1,6 +1,8 @@
 #import "maddprocess.h"
 #import "madditemscreensedit.h"
-#import "maddprocessdevice.h"
+#import "maddprocessdeviceiphone4.h"
+#import "tools.h"
+#import "cmain.h"
 
 @implementation maddprocess
 
@@ -11,6 +13,12 @@
     self.colorbackground = model.modelcolors.modelbackground.color;
     self.colordevice = model.modelcolors.modeldevice.color;
     self.colortext = model.modelcolors.modeltext.color;
+    
+    madditemscreensedit *screen = (madditemscreensedit*)(model.modelscreens.items[0]);
+    madditempositionitem *position = [model.modelposition.modeliphoneportrait itemselected];
+    maddprocessdeviceiphone4 *device = [[maddprocessdeviceiphone4 alloc] init:position];
+    
+    [self drawasset:screen device:device];
     
     return self;
 }
@@ -33,7 +41,20 @@
     UIImage *newasset = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
+    NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"myimage.png"];
+    NSURL *url = [NSURL fileURLWithPath:filepath];
+    [UIImagePNGRepresentation(newasset) writeToURL:url options:NSDataWritingAtomic error:nil];
     
+    UIActivityViewController *act = [[UIActivityViewController alloc] initWithActivityItems:@[url] applicationActivities:nil];
+    
+    if([UIPopoverPresentationController class])
+    {
+        act.popoverPresentationController.sourceView = [cmain singleton].view;
+        act.popoverPresentationController.sourceRect = CGRectMake(([cmain singleton].view.bounds.size.width / 2.0) - 2, [cmain singleton].view.bounds.size.height - 100, 1, 1);
+        act.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUp | UIPopoverArrowDirectionDown;
+    }
+    
+    [[cmain singleton] presentViewController:act animated:YES completion:nil];
     
     /*
     

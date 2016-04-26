@@ -15,4 +15,13 @@ static NSInteger const cellheight = 150;
     return self;
 }
 
+#pragma mark public
+
+-(madditempositionitem*)itemselected
+{
+    madditempositionitem *item = self.items[self.selected];
+    
+    return item;
+}
+
 @end
