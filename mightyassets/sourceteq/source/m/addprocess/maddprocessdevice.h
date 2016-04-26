@@ -4,10 +4,11 @@
 
 @interface maddprocessdevice:NSObject
 
--(instancetype)init:(maddprocessorientation*)orientation position:(madditempositionitem*)position;
+-(instancetype)init:(madditempositionitem*)position sideshort:(NSInteger)sideshort sidelong:(NSInteger)sidelong;
 -(instancetype)init:(madditempositionitem*)position;
 
 @property(strong, nonatomic)maddprocessorientation *orientation;
 @property(strong, nonatomic)madditempositionitem *position;
+@property(copy, nonatomic)NSString *assetname;
 
 @end

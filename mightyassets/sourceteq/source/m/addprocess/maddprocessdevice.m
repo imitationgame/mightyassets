@@ -2,10 +2,10 @@
 
 @implementation maddprocessdevice
 
--(instancetype)init:(maddprocessorientation*)orientation position:(madditempositionitem*)position
+-(instancetype)init:(madditempositionitem*)position sideshort:(NSInteger)sideshort sidelong:(NSInteger)sidelong
 {
     self = [super init];
-    self.orientation = orientation;
+    self.orientation = [position orientationfor:sideshort and:sidelong];
     self.position = position;
     
     return self;
