@@ -1,6 +1,7 @@
 #import "vspinner.h"
 
 static CGFloat const animationduration = 3.0;
+static NSUInteger const spinnerintrinsicsize = 70;
 
 @implementation vspinner
 
@@ -27,7 +28,7 @@ static CGFloat const animationduration = 3.0;
 
 -(CGSize)intrinsicContentSize
 {
-    CGSize size = CGSizeMake(spinnerintrinsicsize, spinnerintrinsicsize);
+    CGSize size = CGSizeMake(UIViewNoIntrinsicMetric, spinnerintrinsicsize);
     
     return size;
 }
