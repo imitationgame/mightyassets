@@ -13,12 +13,21 @@
     
     self.asset = [[maddprocessasset alloc] init];
     maddsectionproject *modelproject = [[maddsectionproject alloc] init];
+    self.modelproject = modelproject;
+    
+    maddsectioncolors *modelcolors = [[maddsectioncolors alloc] init];
+    self.modelcolors = modelcolors;
+    
+    maddsectionposition *modelposition = [[maddsectionposition alloc] init];
+    self.modelposition = modelposition;
+    
     maddsectionscreens *modelscreens = [[maddsectionscreens alloc] init:modelproject];
+    self.modelscreens = modelscreens;
     
     self.sections = @[
                       modelproject,
-                      [[maddsectioncolors alloc] init],
-                      [[maddsectionposition alloc] init],
+                      modelcolors,
+                      modelposition,
                       modelscreens
                       ];
     
