@@ -8,10 +8,20 @@
 -(instancetype)init
 {
     self = [super init:NSLocalizedString(@"madd_section_colors_name", nil)];
+    
+    madditemcolorsbackground *modelbackground = [[madditemcolorsbackground alloc] init];
+    self.modelbackground = modelbackground;
+    
+    madditemcolorsdevice *modeldevice = [[madditemcolorsdevice alloc] init];
+    self.modeldevice = modeldevice;
+    
+    madditemcolorstext *modeltext = [[madditemcolorstext alloc] init];
+    self.modeltext = modeltext;
+    
     self.items = @[
-                   [[madditemcolorsbackground alloc] init],
-                   [[madditemcolorsdevice alloc] init],
-                   [[madditemcolorstext alloc] init]
+                   modelbackground,
+                   modeldevice,
+                   modeltext
                    ];
     
     return self;
