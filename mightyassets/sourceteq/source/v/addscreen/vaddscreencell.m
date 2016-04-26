@@ -32,38 +32,59 @@
     [field setPlaceholder:NSLocalizedString(@"addscreen_titles_placeholder", nil)];
     [field setReturnKeyType:UIReturnKeyDone];
     [field setSpellCheckingType:UITextSpellCheckingTypeNo];
-    [field setTextColor:[UIColor colorWithWhite:0 alpha:0.7]];
-    [field setTintColor:[UIColor colorWithWhite:0 alpha:0.7]];
+    [field setTextColor:[UIColor colorWithWhite:0 alpha:0.9]];
+    [field setTintColor:[UIColor colorWithWhite:0 alpha:0.9]];
     [field setTranslatesAutoresizingMaskIntoConstraints:NO];
     [field setDelegate:self];
     self.field = field;
     
+    UILabel *labelindex = [[UILabel  alloc] init];
+    [labelindex setBackgroundColor:[UIColor clearColor]];
+    [labelindex setUserInteractionEnabled:NO];
+    [labelindex setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [labelindex setFont:[UIFont regularsize:14]];
+    [labelindex setTextColor:[UIColor main]];
+    self.labelindex = labelindex;
+    
+    [self addSubview:labelindex];
     [self addSubview:bordertop];
     [self addSubview:borderbottom];
     [self addSubview:field];
     
-    NSDictionary *views = @{@"bordertop":bordertop, @"borderbottom":borderbottom, @"field":field};
+    NSDictionary *views = @{@"bordertop":bordertop, @"borderbottom":borderbottom, @"field":field, @"labelindex":labelindex};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bordertop]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[borderbottom]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bordertop(1)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[borderbottom(1)]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[field]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[field]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[field]-5-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[labelindex]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[labelindex(20)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-12-[field]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
 
 #pragma mark public
 
--(void)config:(madditemscreensedittitle*)model
+-(void)config:(NSInteger)index model:(madditemscreensedittitle*)model
 {
+    NSInteger printindex = index + 1;
+    NSString *stringindex = [NSString stringWithFormat:NSLocalizedString(@"addscreen_titles_title", nil), @(printindex)];
+    
     self.model = model;
+    [self.labelindex setText:stringindex];
+    [self.field setText:model.title];
 }
 
 #pragma mark -
 #pragma mark field del
+
+-(void)textFieldDidEndEditing:(UITextField*)field
+{
+    self.model.title = field.text;
+}
 
 -(BOOL)textFieldShouldReturn:(UITextField*)field
 {

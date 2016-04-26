@@ -29,4 +29,19 @@ static NSInteger const cellheight = 140;
     [[cmain singleton] pushViewController:controller animated:YES];
 }
 
+-(NSInteger)titlescompleted
+{
+    NSInteger count = 0;
+    
+    for(madditemscreensedittitle *title in self.titles)
+    {
+        if(title.title.length)
+        {
+            count++;
+        }
+    }
+    
+    return count;
+}
+
 @end

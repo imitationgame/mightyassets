@@ -149,7 +149,7 @@ static NSInteger const warningsize = 45;
         self.layouticonwarningwidth.constant = warningsize;
     }
     
-    if(model.titles.count == model.model.modelproject.languages.quantity)
+    if([model titlescompleted] >= model.model.modelproject.languages.quantity)
     {
         icontitleswidth = iconsize;
     }

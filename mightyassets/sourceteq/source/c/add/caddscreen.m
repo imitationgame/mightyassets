@@ -44,6 +44,8 @@
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    [[UIApplication sharedApplication].keyWindow endEditing:YES];
+    
     self.navigationController.interactivePopGestureRecognizer.delegate = self.prevgesturedelegate;
 }
 

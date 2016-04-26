@@ -6,6 +6,7 @@
 @interface madditemscreensedit:madditem
 
 -(instancetype)init:(NSInteger)index model:(maddsectionscreens*)model;
+-(NSInteger)titlescompleted;
 
 @property(weak, nonatomic)maddsectionscreens *model;
 @property(assign, nonatomic)NSInteger index;

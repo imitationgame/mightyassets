@@ -21,7 +21,10 @@
     [title setUserInteractionEnabled:NO];
     [title setText:NSLocalizedString(@"add_title", nil)];
     
+    UIButton *buttoncancel = [[UIButton alloc] init];
+    
     [self addSubview:title];
+    [self addSubview:buttoncancel];
     
     NSDictionary *views = @{@"title":title};
     NSDictionary *metrics = @{};
