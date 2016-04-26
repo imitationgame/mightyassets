@@ -18,4 +18,14 @@
     return nil;
 }
 
+-(NSInteger)visiblewidthfor:(maddprocessasset*)asset
+{
+    return 0;
+}
+
+-(NSInteger)visibleheightfor:(maddprocessasset*)asset
+{
+    return 0;
+}
+
 @end

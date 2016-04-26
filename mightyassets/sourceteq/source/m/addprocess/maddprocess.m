@@ -27,6 +27,27 @@
 
 -(void)drawasset:(madditemscreensedit*)screen device:(maddprocessdevice*)device
 {
+    NSInteger devicerawwidth = self.model.asset.imagewidth;
+    NSInteger devicerawheight = self.model.asset.imageheight;
+    NSInteger percenttouseheight = 100 - (device.position.percenttop - device.position.percentbottom);
+    CGFloat percenttouseheightfloat = percenttouseheight / 100.0;
+    NSInteger usablewidth = device.orientation.width;
+    NSInteger usableheight = percenttouseheightfloat * device.orientation.height;
+    CGFloat ratio = devicerawheight / usableheight;
+    CGFloat drawdevicex = 0;
+    CGFloat drawdevicey = 0;
+    CGFloat drawdevicewidth = devicerawwidth;
+    CGFloat drawdeviceheight = devicerawheight;
+    
+    if(ratio > 1)
+    {
+        drawdevicewidth /= ratio;
+        drawdeviceheight /= ratio;
+    }
+    
+    CGRect rectdevice = CGRectMake(drawdevicex, drawdevicey, drawdevicewidth, drawdeviceheight);
+    UIImage *imagedevice = [UIImage imageNamed:self.model.asset.assetname];
+    
     NSInteger assetwidth = device.orientation.width;
     NSInteger assetheight = device.orientation.height;
     
@@ -37,6 +58,8 @@
     CGContextSetFillColorWithColor(context, self.colorbackground.CGColor);
     CGContextAddRect(context, assetrect);
     CGContextDrawPath(context, kCGPathFill);
+    
+    [imagedevice drawInRect:rectdevice];
     
     UIImage *newasset = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -54,7 +77,11 @@
         act.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUp | UIPopoverArrowDirectionDown;
     }
     
-    [[cmain singleton] presentViewController:act animated:YES completion:nil];
+    [[cmain singleton] presentViewController:act animated:YES completion:
+     ^
+     {
+         [[cmain singleton].pages page_landing:UIPageViewControllerNavigationDirectionReverse animated:YES];
+     }];
     
     /*
     

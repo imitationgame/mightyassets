@@ -7,7 +7,7 @@
 {
     self = [super init];
     
-    self.asset = [[maddprocessasset alloc] init];
+    self.asset = [[maddprocessassetiphone6 alloc] init];
     maddsectionproject *modelproject = [[maddsectionproject alloc] init];
     self.modelproject = modelproject;
     
