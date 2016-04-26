@@ -11,4 +11,11 @@
     return self;
 }
 
+#pragma mark public
+
+-(maddprocessorientation*)orientationfor:(NSInteger)sideshort and:(NSInteger)sidelong
+{
+    return nil;
+}
+
 @end

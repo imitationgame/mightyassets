@@ -1,13 +1,6 @@
-//
-//  maddprocessdeviceiphone6plus.h
-//  mightyassets
-//
-//  Created by zero on 4/26/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
+#import "maddprocessdevice.h"
 
-@interface maddprocessdeviceiphone6plus : NSObject
+@interface maddprocessdeviceiphone6plus:maddprocessdevice
 
 @end
