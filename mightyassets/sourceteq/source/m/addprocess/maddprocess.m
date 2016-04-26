@@ -27,22 +27,24 @@
 
 -(void)drawasset:(madditemscreensedit*)screen device:(maddprocessdevice*)device
 {
-    NSInteger devicerawwidth = self.model.asset.imagewidth;
-    NSInteger devicerawheight = self.model.asset.imageheight;
-    NSInteger percenttouseheight = 100 - (device.position.percenttop - device.position.percentbottom);
+    CGFloat devicerawwidth = self.model.asset.imagewidth;
+    CGFloat devicerawheight = self.model.asset.imageheight;
+    CGFloat percenttouseheight = 100 - (device.position.percenttop - device.position.percentbottom);
     CGFloat percenttouseheightfloat = percenttouseheight / 100.0;
-    NSInteger usablewidth = device.orientation.width;
-    NSInteger usableheight = percenttouseheightfloat * device.orientation.height;
+    CGFloat usablewidth = device.orientation.width;
+    CGFloat usableheight = percenttouseheightfloat * device.orientation.height;
+    CGFloat margintopfloat = device.position.percenttop / 100.0;
+    CGFloat usablemargintop = margintopfloat * device.orientation.height;
     CGFloat ratio = devicerawheight / usableheight;
     CGFloat drawdevicex = 0;
-    CGFloat drawdevicey = 0;
+    CGFloat drawdevicey = usablemargintop;
     CGFloat drawdevicewidth = devicerawwidth;
     CGFloat drawdeviceheight = devicerawheight;
     
     if(ratio > 1)
     {
         drawdevicewidth /= ratio;
-        drawdeviceheight /= ratio;
+        drawdeviceheight = usableheight;
     }
     
     CGRect rectdevice = CGRectMake(drawdevicex, drawdevicey, drawdevicewidth, drawdeviceheight);
@@ -53,13 +55,22 @@
     
     CGSize assetsize = CGSizeMake(assetwidth, assetheight);
     CGRect assetrect = CGRectMake(0, 0, assetwidth, assetheight);
-    UIGraphicsBeginImageContext(assetsize);
+    UIGraphicsBeginImageContextWithOptions(assetsize, NO, 0);
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, self.colorbackground.CGColor);
-    CGContextAddRect(context, assetrect);
-    CGContextDrawPath(context, kCGPathFill);
+//    CGContextSetFillColorWithColor(context, self.colorbackground.CGColor);
+//    CGContextAddRect(context, assetrect);
+//    CGContextDrawPath(context, kCGPathFill);
     
-    [imagedevice drawInRect:rectdevice];
+    CGContextSetBlendMode(context, kCGBlendModeNormal);
+    CGContextDrawImage(context, rectdevice, imagedevice.CGImage);
+    
+    CGContextSetFillColorWithColor(context, self.colordevice.CGColor);
+    CGContextSetBlendMode(context, kCGBlendModeSourceAtop);
+    CGContextFillRect(context, rectdevice);
+    
+    CGContextSetBlendMode(context, kCGBlendModeDestinationOver);
+    CGContextSetFillColorWithColor(context, self.colorbackground.CGColor);
+    CGContextFillRect(context, assetrect);
     
     UIImage *newasset = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
