@@ -1,7 +1,7 @@
 #import "vaddprocess.h"
 #import "vaddprocessbar.h"
 
-static NSInteger const barheight = 150;
+static NSInteger const barheight = 100;
 
 @implementation vaddprocess
 
