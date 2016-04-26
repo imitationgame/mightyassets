@@ -6,7 +6,7 @@
 -(instancetype)init
 {
     self = [super init:NSLocalizedString(@"madd_item_positioniphoneportraitfull_title", nil) asset:@"add_positionfull_iphoneportrait"];
-    self.percenttop = 20;
+    self.percenttop = 15;
     self.percentbottom = 5;
     
     return self;

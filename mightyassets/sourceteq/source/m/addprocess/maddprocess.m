@@ -27,11 +27,12 @@
 
 -(void)drawasset:(madditemscreensedit*)screen device:(maddprocessdevice*)device
 {
+    CGFloat assetwidth = device.orientation.width;
+    CGFloat assetheight = device.orientation.height;
     CGFloat devicerawwidth = self.model.asset.imagewidth;
     CGFloat devicerawheight = self.model.asset.imageheight;
-    CGFloat percenttouseheight = 100 - (device.position.percenttop - device.position.percentbottom);
+    CGFloat percenttouseheight = 100 - (device.position.percenttop + device.position.percentbottom);
     CGFloat percenttouseheightfloat = percenttouseheight / 100.0;
-    CGFloat usablewidth = device.orientation.width;
     CGFloat usableheight = percenttouseheightfloat * device.orientation.height;
     CGFloat margintopfloat = device.position.percenttop / 100.0;
     CGFloat usablemargintop = margintopfloat * device.orientation.height;
@@ -42,25 +43,24 @@
     CGFloat drawdevicey = usablemargintop + usableextrudetop;
     CGFloat drawdevicewidth = devicerawwidth;
     CGFloat drawdeviceheight = usableheight;
+    CGFloat drawdeviceyinverse;
     
     if(ratio > 1)
     {
         drawdevicewidth /= ratio;
+        drawdevicex = (assetwidth - drawdevicewidth) / 2.0;
     }
     
-    CGRect rectdevice = CGRectMake(drawdevicex, drawdevicey, drawdevicewidth, drawdeviceheight);
+    drawdeviceyinverse = assetheight - (drawdevicey + drawdeviceheight);
+    
+    CGRect rectdevice = CGRectMake(drawdevicex, drawdeviceyinverse, drawdevicewidth, drawdeviceheight);
     UIImage *imagedevice = [UIImage imageNamed:self.model.asset.assetname];
-    
-    NSInteger assetwidth = device.orientation.width;
-    NSInteger assetheight = device.orientation.height;
-    
     CGSize assetsize = CGSizeMake(assetwidth, assetheight);
     CGRect assetrect = CGRectMake(0, 0, assetwidth, assetheight);
     UIGraphicsBeginImageContextWithOptions(assetsize, NO, 0);
     CGContextRef context = UIGraphicsGetCurrentContext();
-//    CGContextSetFillColorWithColor(context, self.colorbackground.CGColor);
-//    CGContextAddRect(context, assetrect);
-//    CGContextDrawPath(context, kCGPathFill);
+    CGContextTranslateCTM(context, 0, assetheight);
+    CGContextScaleCTM(context, 1.0, -1.0);
     
     CGContextSetBlendMode(context, kCGBlendModeNormal);
     CGContextDrawImage(context, rectdevice, imagedevice.CGImage);
@@ -94,25 +94,6 @@
      {
          [[cmain singleton].pages page_landing:UIPageViewControllerNavigationDirectionReverse animated:YES];
      }];
-    
-    /*
-    
-    
-    UIImage *bottomImage = [UIImage imageNamed:@"bottom.png"]; //background image
-    UIImage *image       = [UIImage imageNamed:@"top.png"]; //foreground image
-    
-    CGSize newSize = CGSizeMake(width, height);
-    UIGraphicsBeginImageContext( newSize );
-    
-    // Use existing opacity as is
-    [bottomImage drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
-    
-    // Apply supplied opacity if applicable
-    [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height) blendMode:kCGBlendModeNormal alpha:0.8];
-    
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    UIGraphicsEndImageContext();*/
 }
 
 @end
