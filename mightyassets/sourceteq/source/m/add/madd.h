@@ -1,5 +1,8 @@
 #import <UIKit/UIKit.h>
-#import "maddsection.h"
+#import "maddsectionproject.h"
+#import "maddsectioncolors.h"
+#import "maddsectionposition.h"
+#import "maddsectionscreens.h"
 #import "maddprocessasset.h"
 
 @interface madd:NSObject
@@ -8,9 +11,9 @@
 
 @property(strong, nonatomic)NSArray<maddsection*> *sections;
 @property(strong, nonatomic)maddprocessasset *asset;
-@property(weak, nonatomic)maddsection *modelproject;
-@property(weak, nonatomic)maddsection *modelcolors;
-@property(weak, nonatomic)maddsection *modelposition;
-@property(weak, nonatomic)maddsection *modelscreens;
+@property(weak, nonatomic)maddsectionproject *modelproject;
+@property(weak, nonatomic)maddsectioncolors *modelcolors;
+@property(weak, nonatomic)maddsectionposition *modelposition;
+@property(weak, nonatomic)maddsectionscreens *modelscreens;
 
 @end

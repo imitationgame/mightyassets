@@ -8,6 +8,9 @@
 {
     self = [super init];
     self.model = model;
+    self.colorbackground = model.modelcolors.modelbackground.color;
+    self.colordevice = model.modelcolors.modeldevice.color;
+    self.colortext = model.modelcolors.modeltext.color;
     
     return self;
 }
@@ -23,9 +26,16 @@
     CGRect assetrect = CGRectMake(0, 0, assetwidth, assetheight);
     UIGraphicsBeginImageContext(assetsize);
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, self.model.colo)
+    CGContextSetFillColorWithColor(context, self.colorbackground.CGColor);
     CGContextAddRect(context, assetrect);
+    CGContextDrawPath(context, kCGPathFill);
     
+    UIImage *newasset = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    
+    
+    /*
     
     
     UIImage *bottomImage = [UIImage imageNamed:@"bottom.png"]; //background image
@@ -42,7 +52,7 @@
     
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     
-    UIGraphicsEndImageContext();
+    UIGraphicsEndImageContext();*/
 }
 
 @end

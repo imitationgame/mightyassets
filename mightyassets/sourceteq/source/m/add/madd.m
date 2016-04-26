@@ -1,8 +1,4 @@
 #import "madd.h"
-#import "maddsectionproject.h"
-#import "maddsectioncolors.h"
-#import "maddsectionposition.h"
-#import "maddsectionscreens.h"
 #import "maddprocessassetiphone6.h"
 
 @implementation madd
