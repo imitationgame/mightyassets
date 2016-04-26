@@ -1,7 +1,7 @@
 #import "vspinner.h"
 
-static CGFloat const animationduration = 3.0;
-static NSUInteger const spinnerintrinsicsize = 70;
+static CGFloat const animationduration = 0.5;
+static NSUInteger const spinnerintrinsicsize = 40;
 
 @implementation vspinner
 

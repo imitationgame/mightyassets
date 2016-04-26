@@ -1,4 +1,7 @@
 #import "vaddprocess.h"
+#import "vaddprocessbar.h"
+
+static NSInteger const barheight = 150;
 
 @implementation vaddprocess
 
@@ -12,13 +15,17 @@
     vspinner *spinner = [[vspinner alloc] init];
     self.spinner = spinner;
     
-    [self addSubview:spinner];
+    vaddprocessbar *bar = [[vaddprocessbar alloc] init];
     
-    NSDictionary *views = @{@"spinner":spinner};
-    NSDictionary *metrics = @{};
+    [self addSubview:spinner];
+    [self addSubview:bar];
+    
+    NSDictionary *views = @{@"spinner":spinner, @"bar":bar};
+    NSDictionary *metrics = @{@"barheight":@(barheight)};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[spinner]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-100-[spinner]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar(barheight)]-100-[spinner]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bar]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
