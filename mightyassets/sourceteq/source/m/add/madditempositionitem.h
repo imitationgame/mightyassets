@@ -6,8 +6,7 @@
 
 -(instancetype)init:(NSString*)name asset:(NSString*)asset;
 -(maddprocessorientation*)orientationfor:(NSInteger)sideshort and:(NSInteger)sidelong;
--(NSInteger)visiblewidthfor:(maddprocessasset*)asset;
--(NSInteger)visibleheightfor:(maddprocessasset*)asset;
+-(NSInteger)extrudetop:(maddprocessasset*)asset;
 
 @property(copy, nonatomic)NSString *name;
 @property(copy, nonatomic)NSString *asset;

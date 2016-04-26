@@ -35,16 +35,17 @@
     CGFloat usableheight = percenttouseheightfloat * device.orientation.height;
     CGFloat margintopfloat = device.position.percenttop / 100.0;
     CGFloat usablemargintop = margintopfloat * device.orientation.height;
+    CGFloat extrudetop = [device.position extrudetop:self.model.asset];
     CGFloat ratio = devicerawheight / usableheight;
+    CGFloat usableextrudetop = extrudetop / ratio;
     CGFloat drawdevicex = 0;
-    CGFloat drawdevicey = usablemargintop;
+    CGFloat drawdevicey = usablemargintop + usableextrudetop;
     CGFloat drawdevicewidth = devicerawwidth;
-    CGFloat drawdeviceheight = devicerawheight;
+    CGFloat drawdeviceheight = usableheight;
     
     if(ratio > 1)
     {
         drawdevicewidth /= ratio;
-        drawdeviceheight = usableheight;
     }
     
     CGRect rectdevice = CGRectMake(drawdevicex, drawdevicey, drawdevicewidth, drawdeviceheight);

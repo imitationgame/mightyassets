@@ -6,7 +6,7 @@
 -(instancetype)init
 {
     self = [super init:NSLocalizedString(@"madd_item_positioniphoneportraitusable_title", nil) asset:@"add_positionusable_iphoneportrait"];
-    self.percenttop = 30;
+    self.percenttop = 10;
     self.percentbottom = 0;
     
     return self;
@@ -22,18 +22,11 @@
     return orientation;
 }
 
--(NSInteger)visiblewidthfor:(maddprocessasset*)asset
+-(NSInteger)extrudetop:(maddprocessasset*)asset
 {
-    NSInteger visiblewidth = asset.imagewidth;
+    NSInteger extrudetop = asset.imageheight - (asset.screeny + asset.screenheight);
     
-    return visiblewidth;
-}
-
--(NSInteger)visibleheightfor:(maddprocessasset*)asset
-{
-    NSInteger visibleheight = asset.screenx + asset.screenwidth;
-    
-    return visibleheight;
+    return extrudetop;
 }
 
 @end
