@@ -1,5 +1,6 @@
 #import "cadd.h"
 #import "vadd.h"
+#import "cmain.h"
 
 @interface cadd ()
 
@@ -20,6 +21,18 @@
 {
     [super viewDidAppear:animated];
     [self.view.collection reloadData];
+}
+
+#pragma mark public
+
+-(void)cancel
+{
+    [[cmain singleton].pages page_landing:UIPageViewControllerNavigationDirectionReverse animated:YES];
+}
+
+-(void)next
+{
+    [[cmain singleton].pages page_addprocess:self.view.model];
 }
 
 @end
