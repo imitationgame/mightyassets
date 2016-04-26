@@ -19,6 +19,9 @@
 		DA7D51CF1CCFC05F002D06FE /* maddprocessdeviceiphone6plus.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51CE1CCFC05F002D06FE /* maddprocessdeviceiphone6plus.m */; };
 		DA7D51D21CCFC06B002D06FE /* maddprocessdeviceipad.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51D11CCFC06B002D06FE /* maddprocessdeviceipad.m */; };
 		DA7D51D51CCFC078002D06FE /* maddprocessdeviceipadpro.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51D41CCFC078002D06FE /* maddprocessdeviceipadpro.m */; };
+		DA7D51D81CCFC4AB002D06FE /* maddprocessorientation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51D71CCFC4AB002D06FE /* maddprocessorientation.m */; };
+		DA7D51DB1CCFC4B6002D06FE /* maddprocessorientationportrait.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51DA1CCFC4B6002D06FE /* maddprocessorientationportrait.m */; };
+		DA7D51DE1CCFC4C0002D06FE /* maddprocessorientationlandscape.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51DD1CCFC4C0002D06FE /* maddprocessorientationlandscape.m */; };
 		DA94F7AB1CC9476E00FC50C9 /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA94F7AA1CC9476E00FC50C9 /* brand.xcassets */; };
 		DA9A40E71CCE531500E49298 /* add.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9A40E61CCE531500E49298 /* add.xcassets */; };
 		DA9A40EA1CCE555F00E49298 /* madditempositioniphoneportrait.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A40E91CCE555F00E49298 /* madditempositioniphoneportrait.m */; };
@@ -122,6 +125,12 @@
 		DA7D51D11CCFC06B002D06FE /* maddprocessdeviceipad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddprocessdeviceipad.m; sourceTree = "<group>"; };
 		DA7D51D31CCFC078002D06FE /* maddprocessdeviceipadpro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maddprocessdeviceipadpro.h; sourceTree = "<group>"; };
 		DA7D51D41CCFC078002D06FE /* maddprocessdeviceipadpro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddprocessdeviceipadpro.m; sourceTree = "<group>"; };
+		DA7D51D61CCFC4AB002D06FE /* maddprocessorientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maddprocessorientation.h; sourceTree = "<group>"; };
+		DA7D51D71CCFC4AB002D06FE /* maddprocessorientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddprocessorientation.m; sourceTree = "<group>"; };
+		DA7D51D91CCFC4B6002D06FE /* maddprocessorientationportrait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maddprocessorientationportrait.h; sourceTree = "<group>"; };
+		DA7D51DA1CCFC4B6002D06FE /* maddprocessorientationportrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddprocessorientationportrait.m; sourceTree = "<group>"; };
+		DA7D51DC1CCFC4C0002D06FE /* maddprocessorientationlandscape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maddprocessorientationlandscape.h; sourceTree = "<group>"; };
+		DA7D51DD1CCFC4C0002D06FE /* maddprocessorientationlandscape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddprocessorientationlandscape.m; sourceTree = "<group>"; };
 		DA94F7AA1CC9476E00FC50C9 /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
 		DA9A40E61CCE531500E49298 /* add.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = add.xcassets; sourceTree = "<group>"; };
 		DA9A40E81CCE555F00E49298 /* madditempositioniphoneportrait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditempositioniphoneportrait.h; sourceTree = "<group>"; };
@@ -332,6 +341,12 @@
 				DA7D51D11CCFC06B002D06FE /* maddprocessdeviceipad.m */,
 				DA7D51D31CCFC078002D06FE /* maddprocessdeviceipadpro.h */,
 				DA7D51D41CCFC078002D06FE /* maddprocessdeviceipadpro.m */,
+				DA7D51D61CCFC4AB002D06FE /* maddprocessorientation.h */,
+				DA7D51D71CCFC4AB002D06FE /* maddprocessorientation.m */,
+				DA7D51D91CCFC4B6002D06FE /* maddprocessorientationportrait.h */,
+				DA7D51DA1CCFC4B6002D06FE /* maddprocessorientationportrait.m */,
+				DA7D51DC1CCFC4C0002D06FE /* maddprocessorientationlandscape.h */,
+				DA7D51DD1CCFC4C0002D06FE /* maddprocessorientationlandscape.m */,
 			);
 			path = addprocess;
 			sourceTree = "<group>";
@@ -874,6 +889,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7D51D81CCFC4AB002D06FE /* maddprocessorientation.m in Sources */,
 				DA9A41051CCE753100E49298 /* madditemscreensadd.m in Sources */,
 				DAAFB2D61CCABD6C003173A7 /* vaddcolorbar.m in Sources */,
 				DA9A410B1CCE77AD00E49298 /* vaddcellscreensadd.m in Sources */,
@@ -881,6 +897,7 @@
 				DA9A41021CCE738E00E49298 /* madditemscreensedit.m in Sources */,
 				DAAFB29B1CC9878C003173A7 /* vadd.m in Sources */,
 				DA7D51BC1CCFB44B002D06FE /* vaddprocess.m in Sources */,
+				DA7D51DE1CCFC4C0002D06FE /* maddprocessorientationlandscape.m in Sources */,
 				DAAFB2C31CCA9F06003173A7 /* vaddcellcolor.m in Sources */,
 				DAB3770E1CC93901001E8625 /* mdb.m in Sources */,
 				DAAFB2A11CC98F8C003173A7 /* vaddcell.m in Sources */,
@@ -903,6 +920,7 @@
 				DAB377071CC93901001E8625 /* uicolor+uicolormain.m in Sources */,
 				DAAFB2B41CC9959D003173A7 /* madditemprojectname.m in Sources */,
 				DAAFB2CC1CCAB37A003173A7 /* madditemcolorstext.m in Sources */,
+				DA7D51DB1CCFC4B6002D06FE /* maddprocessorientationportrait.m in Sources */,
 				DAAFB29E1CC98A76003173A7 /* vaddbar.m in Sources */,
 				DAB377051CC93901001E8625 /* nsnotification+nsnotificationmain.m in Sources */,
 				DA9A411B1CCE89E800E49298 /* vaddscreen.m in Sources */,

@@ -1,13 +1,10 @@
-//
-//  maddprocessdevice.h
-//  mightyassets
-//
-//  Created by zero on 4/26/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
+#import <UIKit/UIKit.h>
+#import "maddprocessorientation.h"
 
-#import <Foundation/Foundation.h>
+@interface maddprocessdevice:NSObject
 
-@interface maddprocessdevice : NSObject
+@property(strong, nonatomic)maddprocessorientation *orientation;
+@property(assign, nonatomic)NSInteger width;
+@property(assign, nonatomic)NSInteger height;
 
 @end
