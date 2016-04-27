@@ -116,6 +116,7 @@ static NSInteger const interitem = -1;
 -(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
 {
     vaddscreenfooter *footer = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:screenfooterid forIndexPath:index];
+    [footer config:self.controller.model];
     
     return footer;
 }

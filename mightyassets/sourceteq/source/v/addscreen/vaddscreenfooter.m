@@ -1,10 +1,9 @@
 #import "vaddscreenfooter.h"
 #import "uifont+uifontmain.h"
 #import "uicolor+uicolormain.h"
+#import "cmain.h"
 
-static NSInteger const labelleft = 10;
-static NSInteger const labelright = 0;
-static NSInteger const labeltop = 20;
+static NSInteger const screenwidth = 100;
 static NSInteger const circlesize = 70;
 
 @implementation vaddscreenfooter
@@ -17,9 +16,10 @@ static NSInteger const circlesize = 70;
     
     CGFloat width = frame.size.width;
     CGFloat circleleft = (width - circlesize) / 2.0;
+    CGFloat screenleft = (width - screenwidth) / 2.0;
     
-    NSDictionary *dicttitle = @{NSFontAttributeName:[UIFont boldsize:17], NSForegroundColorAttributeName:[UIColor main]};
-    NSDictionary *dictdescr = @{NSFontAttributeName:[UIFont regularsize:15], NSForegroundColorAttributeName:[UIColor colorWithWhite:0.6 alpha:1]};
+    NSDictionary *dicttitle = @{NSFontAttributeName:[UIFont boldsize:20], NSForegroundColorAttributeName:[UIColor main]};
+    NSDictionary *dictdescr = @{NSFontAttributeName:[UIFont regularsize:17], NSForegroundColorAttributeName:[UIColor colorWithWhite:0.5 alpha:1]};
     NSAttributedString *attrtitle = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"addscreen_image_title", nil) attributes:dicttitle];
     NSAttributedString *attrdescr = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"addscreen_image_descr", nil) attributes:dictdescr];
     NSMutableAttributedString *mut = [[NSMutableAttributedString alloc] init];
@@ -32,6 +32,17 @@ static NSInteger const circlesize = 70;
     [label setBackgroundColor:[UIColor clearColor]];
     [label setNumberOfLines:0];
     [label setAttributedText:mut];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    
+    UIImageView *image = [[UIImageView alloc] init];
+    [image setClipsToBounds:YES];
+    [image setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [image setContentMode:UIViewContentModeScaleAspectFit];
+    [image setUserInteractionEnabled:NO];
+    [image.layer setCornerRadius:3];
+    [image.layer setBorderColor:[UIColor second].CGColor];
+    [image.layer setBorderWidth:1];
+    self.image = image;
     
     UIImageView *iconadd = [[UIImageView alloc] init];
     [iconadd setClipsToBounds:YES];
@@ -39,7 +50,6 @@ static NSInteger const circlesize = 70;
     [iconadd setTranslatesAutoresizingMaskIntoConstraints:NO];
     [iconadd setUserInteractionEnabled:NO];
     [iconadd setImage:[UIImage imageNamed:@"add_screen"]];
-    self.iconadd = iconadd;
     
     UIView *circle = [[UIView alloc] init];
     [circle setBackgroundColor:[UIColor second]];
@@ -49,20 +59,96 @@ static NSInteger const circlesize = 70;
     [circle.layer setCornerRadius:circlesize / 2.0];
     self.circle = circle;
     
+    UIButton *buttonupload = [[UIButton alloc] init];
+    [buttonupload setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [buttonupload setBackgroundColor:[UIColor clearColor]];
+    
     [circle addSubview:iconadd];
     [self addSubview:label];
     [self addSubview:circle];
+    [self addSubview:image];
+    [self addSubview:buttonupload];
     
-    NSDictionary *views = @{@"label":label, @"iconadd":iconadd, @"circle":circle};
-    NSDictionary *metrics = @{@"circlesize":@(circlesize), @"circleleft":@(circleleft)};
+    NSDictionary *views = @{@"label":label, @"iconadd":iconadd, @"circle":circle, @"image":image};
+    NSDictionary *metrics = @{@"circlesize":@(circlesize), @"circleleft":@(circleleft), @"screenleft":@(screenleft), @"screenwidth":@(screenwidth)};
     
-    [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(circleleft)-[circle(circlesize)]" options:0 metrics:metrics views:views];
-    [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-100-[circle(circlesize)]-0-[label]-0-|" options:0 metrics:metrics views:views];
-    [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[iconadd]-0-|" options:0 metrics:metrics views:views];
-    [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[iconadd]-0-|" options:0 metrics:metrics views:views];
-    [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[label]-20-|" options:0 metrics:metrics views:views];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(circleleft)-[circle(circlesize)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-100-[circle(circlesize)]-100-[label]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[iconadd]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[iconadd]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[label]-20-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(screenleft)-[image(screenwidth)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[image]-20-[label]" options:0 metrics:metrics views:views]];
     
     return self;
+}
+
+#pragma mark actions
+
+-(void)actionupload:(UIButton*)button
+{
+    [self uploadpicture];
+}
+
+#pragma mark functionality
+
+-(void)display
+{
+    if(self.model.image)
+    {
+        [self.image setImage:self.model.image];
+        [self.circle setHidden:YES];
+    }
+    else
+    {
+        [self.image setImage:nil];
+        [self.circle setHidden:NO];
+    }
+}
+
+-(void)uploadpicture
+{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController:picker];
+        self.popover = popover;
+        [popover presentPopoverFromRect:self.circle.bounds inView:self.circle permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
+    else
+    {
+        [[cmain singleton] presentViewController:picker animated:YES completion:nil];
+    }
+}
+
+#pragma mark public
+
+-(void)config:(madditemscreensedit*)model
+{
+    self.model = model;
+    [self display];
+}
+
+#pragma mark -
+#pragma mark picker del
+
+-(void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary*)info
+{
+    self.model.image = info[UIImagePickerControllerOriginalImage];
+    
+    if(self.popover)
+    {
+        [self.popover dismissPopoverAnimated:YES];
+    }
+    else
+    {
+        [[cmain singleton] dismissViewControllerAnimated:YES completion:nil];
+    }
+    
+    [self display];
 }
 
 @end

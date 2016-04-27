@@ -10,7 +10,7 @@
 
 @property(weak, nonatomic)maddsectionscreens *model;
 @property(assign, nonatomic)NSInteger index;
-@property(strong, nonatomic)UIImageView *image;
+@property(strong, nonatomic)UIImage *image;
 @property(strong, nonatomic)NSMutableArray<madditemscreensedittitle*> *titles;
 
 @end
