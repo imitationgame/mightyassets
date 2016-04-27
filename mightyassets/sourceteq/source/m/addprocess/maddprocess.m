@@ -62,6 +62,21 @@ static NSInteger const maxpercent = 100;
     drawable.device = [[maddprocessdrawabledevice alloc] init:drawdevicex y:drawdevicey width:drawdevicewidth height:drawdeviceheight];
     drawable.device.image = [UIImage imageNamed:asset.assetname];
     
+    if(screen.image)
+    {
+        CGFloat screenx = asset.screenx;
+        CGFloat screeny = asset.screeny;
+        CGFloat screenwidth = asset.screenwidth;
+        CGFloat screenheight = asset.screenheight;
+        CGFloat ratioscreenx = screenx / ratio;
+        CGFloat ratioscreeny = screeny / ratio;
+        CGFloat ratioscreenwidth = screenwidth / ratio;
+        CGFloat ratioscreenheight = screenheight / ratio;
+        
+        drawable.screen = [[maddprocessdrawablescreen alloc] init:ratioscreenx y:ratioscreeny width:ratioscreenwidth height:ratioscreenheight];
+        drawable.screen.image = screen.image;
+    }
+    
     if(screen.titles.count)
     {
         madditemscreensedittitle *title = screen.titles[0];
@@ -78,7 +93,6 @@ static NSInteger const maxpercent = 100;
             CGFloat height_text = drawdevicey - textheight;
             CGFloat textx = width_text / 2.0;
             CGFloat texty = height_text / 2.0;
-            CGRect textrect = CGRectMake(textx, texty, textwidth, textheight);
 
             drawable.text = [[maddprocessdrawabletext alloc] init:textx y:texty width:textwidth height:textheight];
             drawable.text.string = string;
@@ -88,7 +102,7 @@ static NSInteger const maxpercent = 100;
     
     UIImage *newasset = [self createimage:drawable];
     
-    NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"myimage.png"];
+    NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"Xmyimage.png"];
     NSURL *url = [NSURL fileURLWithPath:filepath];
     [UIImagePNGRepresentation(newasset) writeToURL:url options:NSDataWritingAtomic error:nil];
     
@@ -131,13 +145,20 @@ static NSInteger const maxpercent = 100;
     CGContextSetFillColorWithColor(context, self.colorbackground.CGColor);
     CGContextFillRect(context, drawable.rect);
     
+    if(drawable.screen)
+    {
+        CGContextSetBlendMode(context, kCGBlendModeNormal);
+        [drawable.screen.image drawInRect:drawable.screen.rect];
+    }
+    
     if(drawable.text)
     {
         CGContextSetBlendMode(context, kCGBlendModeNormal);
         [drawable.text.string drawInRect:drawable.text.rect withAttributes:drawable.text.attributes];
-        image = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
     }
+    
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     
     return image;
 }

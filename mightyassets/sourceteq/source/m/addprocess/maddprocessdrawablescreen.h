@@ -1,13 +1,10 @@
-//
-//  maddprocessdrawablescreen.h
-//  mightyassets
-//
-//  Created by zero on 4/27/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
+#import <UIKit/UIKit.h>
 
-#import <Foundation/Foundation.h>
+@interface maddprocessdrawablescreen:NSObject
 
-@interface maddprocessdrawablescreen : NSObject
+-(instancetype)init:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height;
+
+@property(weak, nonatomic)UIImage *image;
+@property(assign, nonatomic)CGRect rect;
 
 @end
