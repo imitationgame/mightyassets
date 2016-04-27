@@ -1,13 +1,6 @@
-//
-//  madditemprojectdevicesitemuniversal.h
-//  mightyassets
-//
-//  Created by zero on 4/27/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
+#import "madditemprojectdevicesitem.h"
 
-@interface madditemprojectdevicesitemuniversal : NSObject
+@interface madditemprojectdevicesitemuniversal:madditemprojectdevicesitem
 
 @end
