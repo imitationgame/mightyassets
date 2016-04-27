@@ -4,6 +4,11 @@
 #import "tools.h"
 #import "cmain.h"
 
+static CGFloat const percentdivider = 100.0;
+static NSInteger const maxpercent = 100;
+static NSInteger const contextscalex = 1;
+static NSInteger const contextscaley = -1;
+
 @implementation maddprocess
 
 -(instancetype)init:(madd*)model
@@ -27,54 +32,44 @@
 
 -(void)drawasset:(madditemscreensedit*)screen device:(maddprocessdevice*)device
 {
+    maddprocessasset *asset = self.model.asset;
+    madditempositionitem *position = device.position;
+    CGFloat percenttop = position.percenttop;
+    CGFloat percentbottom = position.percentbottom;
     CGFloat assetwidth = device.orientation.width;
     CGFloat assetheight = device.orientation.height;
-    CGFloat devicerawwidth = self.model.asset.imagewidth;
-    CGFloat devicerawheight = self.model.asset.imageheight;
-    CGFloat percenttouseheight = 100 - (device.position.percenttop + device.position.percentbottom);
-    CGFloat percenttouseheightfloat = percenttouseheight / 100.0;
-    CGFloat usableheight = percenttouseheightfloat * device.orientation.height;
-    CGFloat margintopfloat = device.position.percenttop / 100.0;
-    CGFloat usablemargintop = margintopfloat * device.orientation.height;
-    CGFloat extrudetop = [device.position extrudetop:self.model.asset];
+    CGFloat devicerawwidth = asset.imagewidth;
+    CGFloat devicerawheight = asset.imageheight;
+    CGFloat percenttouseheight = maxpercent - (percenttop + percentbottom);
+    CGFloat percenttouseheightfloat = percenttouseheight / percentdivider;
+    CGFloat usableheight = percenttouseheightfloat * assetheight;
+    CGFloat margintopfloat = percenttop / percentdivider;
+    CGFloat usablemargintop = margintopfloat * assetheight;
+    CGFloat extrudetop = [position extrudetop:asset];
     CGFloat ratio = devicerawheight / usableheight;
-    CGFloat usableextrudetop = extrudetop / ratio;
-    CGFloat drawdevicex = 0;
-    CGFloat drawdevicey = usablemargintop + usableextrudetop;
-    CGFloat drawdevicewidth = devicerawwidth;
-    CGFloat drawdeviceheight = usableheight;
-    CGFloat drawdeviceyinverse;
     
-    if(ratio > 1)
+    if(ratio < 1)
     {
-        drawdevicewidth /= ratio;
-        drawdevicex = (assetwidth - drawdevicewidth) / 2.0;
+        ratio = 1;
     }
     
-    drawdeviceyinverse = assetheight - (drawdevicey + drawdeviceheight);
-    
+    CGFloat usableextrudetop = extrudetop / ratio;
+    CGFloat drawdevicey = usablemargintop + usableextrudetop;
+    CGFloat drawdevicewidth = devicerawwidth / ratio;
+    CGFloat drawdevicex = (assetwidth - drawdevicewidth) / 2.0;
+    CGFloat drawdeviceheight = usableheight;
+    CGFloat drawdeviceyinverse = assetheight - (drawdevicey + drawdeviceheight);
+    CGFloat drawtexty = assetheight - drawdevicey;
     CGRect rectdevice = CGRectMake(drawdevicex, drawdeviceyinverse, drawdevicewidth, drawdeviceheight);
-    UIImage *imagedevice = [UIImage imageNamed:self.model.asset.assetname];
-    CGSize assetsize = CGSizeMake(assetwidth, assetheight);
-    CGRect assetrect = CGRectMake(0, 0, assetwidth, assetheight);
-    UIGraphicsBeginImageContextWithOptions(assetsize, NO, 0);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextTranslateCTM(context, 0, assetheight);
-    CGContextScaleCTM(context, 1.0, -1.0);
+    UIImage *imagedevice = [UIImage imageNamed:asset.assetname];
     
-    CGContextSetBlendMode(context, kCGBlendModeNormal);
-    CGContextDrawImage(context, rectdevice, imagedevice.CGImage);
+    NSString *string = @"hello world";
+    UIFont *font = [UIFont fontWithName:@"ArialMT" size:18];
+    NSDictionary *textattributes = @{NSForegroundColorAttributeName:self.colortext, NSFontAttributeName:font};
+    CGSize textsize = [string sizeWithAttributes:textattributes];
+    CGRect textrect = CGRectMake(0, drawtexty, assetwidth, drawdevicey);
     
-    CGContextSetFillColorWithColor(context, self.colordevice.CGColor);
-    CGContextSetBlendMode(context, kCGBlendModeSourceAtop);
-    CGContextFillRect(context, rectdevice);
-    
-    CGContextSetBlendMode(context, kCGBlendModeDestinationOver);
-    CGContextSetFillColorWithColor(context, self.colorbackground.CGColor);
-    CGContextFillRect(context, assetrect);
-    
-    UIImage *newasset = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    UIImage *newasset = [self createimage:imagedevice width:assetwidth height:assetheight rectdevice:rectdevice string:string stringrect:textrect attributes:textattributes];
     
     NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"myimage.png"];
     NSURL *url = [NSURL fileURLWithPath:filepath];
@@ -94,6 +89,36 @@
      {
          [[cmain singleton].pages page_landing:UIPageViewControllerNavigationDirectionReverse animated:YES];
      }];
+}
+
+-(UIImage*)createimage:(UIImage*)imagedevice width:(NSInteger)width height:(NSInteger)height rectdevice:(CGRect)rectdevice string:(NSString*)string stringrect:(CGRect)stringrect attributes:(NSDictionary*)attributes
+{
+    UIImage *image;
+    
+    CGSize size = CGSizeMake(width, height);
+    CGRect rect = CGRectMake(0, 0, width, height);
+    UIGraphicsBeginImageContext(size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextTranslateCTM(context, 0, height);
+    CGContextScaleCTM(context, contextscalex, contextscaley);
+    CGContextSetBlendMode(context, kCGBlendModeNormal);
+    
+    [imagedevice drawInRect:rectdevice];
+    
+//    CGContextDrawImage(context, rectdevice, imagedevice.CGImage);
+    CGContextSetFillColorWithColor(context, self.colordevice.CGColor);
+    CGContextSetBlendMode(context, kCGBlendModeSourceAtop);
+    CGContextFillRect(context, rectdevice);
+    CGContextSetBlendMode(context, kCGBlendModeDestinationOver);
+    CGContextSetFillColorWithColor(context, self.colorbackground.CGColor);
+    CGContextFillRect(context, rect);
+    
+    CGContextSetBlendMode(context, kCGBlendModeNormal);
+    [string drawInRect:stringrect withAttributes:attributes];
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
 }
 
 @end
