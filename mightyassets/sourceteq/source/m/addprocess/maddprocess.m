@@ -7,6 +7,7 @@
 
 static CGFloat const percentdivider = 100.0;
 static NSInteger const maxpercent = 100;
+static NSInteger const margintext = 50;
 
 @implementation maddprocess
 
@@ -59,8 +60,12 @@ static NSInteger const maxpercent = 100;
     CGFloat drawdeviceheight = usableheight;
     
     maddprocessdrawable *drawable = [[maddprocessdrawable alloc] init:assetwidth height:assetheight];
-    drawable.device = [[maddprocessdrawabledevice alloc] init:drawdevicex y:drawdevicey width:drawdevicewidth height:drawdeviceheight];
-    drawable.device.image = [UIImage imageNamed:asset.assetname];
+    
+    if(asset)
+    {
+        drawable.device = [[maddprocessdrawabledevice alloc] init:drawdevicex y:drawdevicey width:drawdevicewidth height:drawdeviceheight];
+        drawable.device.image = [UIImage imageNamed:asset.assetname];
+    }
     
     if(screen.image)
     {
@@ -72,8 +77,10 @@ static NSInteger const maxpercent = 100;
         CGFloat ratioscreeny = screeny / ratio;
         CGFloat ratioscreenwidth = screenwidth / ratio;
         CGFloat ratioscreenheight = screenheight / ratio;
+        CGFloat usablescreenx = ratioscreenx + drawdevicex;
+        CGFloat usablescreeny = ratioscreeny + drawdevicey;
         
-        drawable.screen = [[maddprocessdrawablescreen alloc] init:ratioscreenx y:ratioscreeny width:ratioscreenwidth height:ratioscreenheight];
+        drawable.screen = [[maddprocessdrawablescreen alloc] init:usablescreenx y:usablescreeny width:ratioscreenwidth height:ratioscreenheight];
         drawable.screen.image = screen.image;
     }
     
@@ -83,15 +90,23 @@ static NSInteger const maxpercent = 100;
         
         if(title.title.length)
         {
+            CGFloat textspacewidth = assetwidth - (margintext + margintext);
+            CGFloat textspaceheight = drawdevicey;
+            CGSize textspace = CGSizeMake(textspacewidth, textspaceheight);
             NSString *string = title.title;
             UIFont *font = [UIFont fontWithName:@"ArialMT" size:device.fontsize];
-            NSDictionary *textattributes = @{NSForegroundColorAttributeName:self.colortext, NSFontAttributeName:font};
-            CGSize textsize = [string sizeWithAttributes:textattributes];
-            CGFloat textwidth = ceilf(textsize.width);
-            CGFloat textheight = ceilf(textsize.height);
-            CGFloat width_text = assetwidth - textwidth;
-            CGFloat height_text = drawdevicey - textheight;
-            CGFloat textx = width_text / 2.0;
+            
+            NSMutableParagraphStyle *textalignment = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+            textalignment.alignment = NSTextAlignmentCenter;
+            
+            NSDictionary *textattributes = @{NSForegroundColorAttributeName:self.colortext, NSFontAttributeName:font, NSParagraphStyleAttributeName:textalignment};
+            
+            CGRect textsize = [string boundingRectWithSize:textspace options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:textattributes context:nil];
+            CGFloat textwidth = ceilf(textsize.size.width);
+            CGFloat textheight = ceilf(textsize.size.height);
+            CGFloat width_text = textspacewidth - textwidth;
+            CGFloat height_text = textspaceheight - textheight;
+            CGFloat textx = (width_text / 2.0) + margintext;
             CGFloat texty = height_text / 2.0;
 
             drawable.text = [[maddprocessdrawabletext alloc] init:textx y:texty width:textwidth height:textheight];
@@ -102,7 +117,7 @@ static NSInteger const maxpercent = 100;
     
     UIImage *newasset = [self createimage:drawable];
     
-    NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"Xmyimage.png"];
+    NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"Zmyimage.png"];
     NSURL *url = [NSURL fileURLWithPath:filepath];
     [UIImagePNGRepresentation(newasset) writeToURL:url options:NSDataWritingAtomic error:nil];
     
