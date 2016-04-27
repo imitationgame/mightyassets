@@ -2,8 +2,9 @@
 #import "madditemprojectdevicesitemiphone.h"
 #import "madditemprojectdevicesitemipad.h"
 #import "madditemprojectdevicesitemuniversal.h"
+#import "vaddcellprojectdevices.h"
 
-static NSInteger const cellheight = 80;
+static NSInteger const cellheight = 100;
 
 @implementation madditemprojectdevices
 
@@ -11,6 +12,8 @@ static NSInteger const cellheight = 80;
 {
     self = [super init:NSLocalizedString(@"madd_item_projectdevices_title", nil)];
     self.height = cellheight;
+    self.selected = 0;
+    self.cellclass = [vaddcellprojectdevices class];
     self.items = @[
                    [[madditemprojectdevicesitemiphone alloc] init],
                    [[madditemprojectdevicesitemipad alloc] init],
@@ -35,6 +38,13 @@ static NSInteger const cellheight = 80;
     }
     
     return array;
+}
+
+-(madditemprojectdevicesitem*)itemselected
+{
+    madditemprojectdevicesitem *item = self.items[self.selected];
+    
+    return item;
 }
 
 @end
