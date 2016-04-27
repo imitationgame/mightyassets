@@ -4,7 +4,7 @@
 
 static NSString* const fontcellid = @"fontcell";
 static NSInteger const interitem = -1;
-static NSInteger const cellheight = 64;
+static NSInteger const cellheight = 54;
 static NSInteger const colbottom = 40;
 
 @implementation vaddfont
@@ -50,6 +50,15 @@ static NSInteger const colbottom = 40;
     return self;
 }
 
+#pragma mark functionality
+
+-(madditemtitlesfontitem*)modelatindex:(NSIndexPath*)index
+{
+    madditemtitlesfontitem *model = self.controller.model.items[index.item];
+    
+    return model;
+}
+
 #pragma mark -
 #pragma mark col del
 
@@ -75,14 +84,19 @@ static NSInteger const colbottom = 40;
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
+    madditemtitlesfontitem *model = [self modelatindex:index];
     vaddfontcell *cell = [col dequeueReusableCellWithReuseIdentifier:fontcellid forIndexPath:index];
+    [cell config:model];
     
     return cell;
 }
 
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
+    madditemtitlesfontitem *model = [self modelatindex:index];
+    self.controller.model.font = model;
     
+    [self.controller back];
 }
 
 @end

@@ -14,6 +14,8 @@ static NSInteger const cellheight = 64;
     self.cellclass = [vaddcelltitlesfont class];
     self.selectable = YES;
     
+    [self loadfonts];
+    
     return self;
 }
 

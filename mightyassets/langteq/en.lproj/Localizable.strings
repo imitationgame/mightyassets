@@ -5,6 +5,8 @@
 
 "addcolor_title"="%@ color";
 
+"addfont_title"="Select a font";
+
 "addscreen_title"="Screen %@";
 "addscreen_titles_title"="Localization %@";
 "addscreen_titles_placeholder"="Use no title";
