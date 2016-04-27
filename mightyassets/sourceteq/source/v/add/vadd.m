@@ -122,6 +122,14 @@ static NSInteger const interitem = -1;
     return cell;
 }
 
+-(BOOL)collectionView:(UICollectionView*)col shouldHighlightItemAtIndexPath:(NSIndexPath*)index
+{
+    madditem *model = [self modelforindex:index];
+    BOOL highlightable = model.selectable;
+    
+    return highlightable;
+}
+
 -(BOOL)collectionView:(UICollectionView*)col shouldSelectItemAtIndexPath:(NSIndexPath*)index
 {
     madditem *model = [self modelforindex:index];
