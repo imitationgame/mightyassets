@@ -20,6 +20,9 @@
 "madd_item_projectname_title"="Name";
 "madd_item_projectname_placeholder"="Project name";
 "madd_item_projectdevices_title"="Devices";
+"madd_item_projectdevices_iphone_title"="iPhone";
+"madd_item_projectdevices_ipad_title"="iPad";
+"madd_item_projectdevices_universal_title"="Universal";
 "madd_item_projectlanguages_title"="Localizations";
 "madd_item_projectlanguages_descr"="\nYou can add a different title for every localization";
 "madd_item_colorsbackground_title"="Background";

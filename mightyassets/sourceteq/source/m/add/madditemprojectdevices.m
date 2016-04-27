@@ -25,6 +25,14 @@ static NSInteger const cellheight = 80;
 -(NSArray<NSString*>*)titles
 {
     NSMutableArray<NSString*> *array = [NSMutableArray array];
+    NSUInteger count = self.items.count;
+    
+    for(NSUInteger i = 0; i < count; i++)
+    {
+        madditemprojectdevicesitem *item = self.items[i];
+        NSString *name = item.name;
+        [array addObject:name];
+    }
     
     return array;
 }
