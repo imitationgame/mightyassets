@@ -99,27 +99,32 @@ static NSInteger const maxpercent = 100;
                    });
 }
 
--(UIImage*)createimage:(UIImage*)imagedevice rect:(CGRect)rect rectdevice:(CGRect)rectdevice string:(NSString*)string stringrect:(CGRect)stringrect attributes:(NSDictionary*)attributes
+-(UIImage*)createimage:(maddprocessdrawable*)drawable
 {
     UIImage *image;
     
-    UIGraphicsBeginImageContext(rect.size);
+    UIGraphicsBeginImageContext(drawable.rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetBlendMode(context, kCGBlendModeNormal);
     
-    [imagedevice drawInRect:rectdevice];
+    if(drawable.device)
+    {
+        [drawable.device.image drawInRect:drawable.device.rect];
+        CGContextSetFillColorWithColor(context, self.colordevice.CGColor);
+        CGContextSetBlendMode(context, kCGBlendModeSourceAtop);
+        CGContextFillRect(context, drawable.device.rect);
+    }
     
-    CGContextSetFillColorWithColor(context, self.colordevice.CGColor);
-    CGContextSetBlendMode(context, kCGBlendModeSourceAtop);
-    CGContextFillRect(context, rectdevice);
     CGContextSetBlendMode(context, kCGBlendModeDestinationOver);
     CGContextSetFillColorWithColor(context, self.colorbackground.CGColor);
-    CGContextFillRect(context, rect);
+    CGContextFillRect(context, drawable.rect);
     
-    CGContextSetBlendMode(context, kCGBlendModeNormal);
-    [string drawInRect:stringrect withAttributes:attributes];
-    image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    if(drawable.text)
+    {
+        CGContextSetBlendMode(context, kCGBlendModeNormal);
+        [drawable.text.string drawInRect:drawable.text.rect withAttributes:drawable.text.attributes];
+        image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    }
     
     return image;
 }

@@ -1,13 +1,11 @@
-//
-//  maddprocessdrawabletext.h
-//  mightyassets
-//
-//  Created by zero on 4/27/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
+#import <UIKit/UIKit.h>
 
-#import <Foundation/Foundation.h>
+@interface maddprocessdrawabletext:NSObject
 
-@interface maddprocessdrawabletext : NSObject
+-(instancetype)init:(CGFloat)x y :(CGFloat)y width:(CGFloat)width height:(CGFloat)height;
+
+@property(strong, nonatomic)NSDictionary *attributes;
+@property(copy, nonatomic)NSString *string;
+@property(assign, nonatomic)CGRect rect;
 
 @end

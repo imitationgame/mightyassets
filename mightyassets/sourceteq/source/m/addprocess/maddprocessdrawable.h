@@ -10,6 +10,6 @@
 @property(strong, nonatomic)maddprocessdrawabledevice *device;
 @property(strong, nonatomic)maddprocessdrawabletext *text;
 @property(strong, nonatomic)maddprocessdrawablescreen *screen;
-@property(assign, nonatomic)CGSize size;
+@property(assign, nonatomic)CGRect rect;
 
 @end
