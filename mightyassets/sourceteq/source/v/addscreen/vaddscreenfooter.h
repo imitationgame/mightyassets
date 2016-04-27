@@ -4,6 +4,6 @@
 
 @property(weak, nonatomic)UIImageView *image;
 @property(weak, nonatomic)UIImageView *iconadd;
-@property(weak, nonatomic)UIView *redcircle;
+@property(weak, nonatomic)UIView *circle;
 
 @end

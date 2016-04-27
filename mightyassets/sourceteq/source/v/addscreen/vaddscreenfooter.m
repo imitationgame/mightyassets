@@ -16,9 +16,7 @@ static NSInteger const circlesize = 70;
     [self setBackgroundColor:[UIColor clearColor]];
     
     CGFloat width = frame.size.width;
-    CGFloat width_2 = width / 2.0;
-    CGFloat labelwidth = width_2 - (labelleft + labelright);
-    CGFloat circleleft = ((width_2 - circlesize) / 2.0) + width_2;
+    CGFloat circleleft = (width - circlesize) / 2.0;
     
     NSDictionary *dicttitle = @{NSFontAttributeName:[UIFont boldsize:17], NSForegroundColorAttributeName:[UIColor main]};
     NSDictionary *dictdescr = @{NSFontAttributeName:[UIFont regularsize:15], NSForegroundColorAttributeName:[UIColor colorWithWhite:0.6 alpha:1]};
@@ -27,8 +25,6 @@ static NSInteger const circlesize = 70;
     NSMutableAttributedString *mut = [[NSMutableAttributedString alloc] init];
     [mut appendAttributedString:attrtitle];
     [mut appendAttributedString:attrdescr];
-    
-    CGFloat labelheight = ceilf([mut boundingRectWithSize:CGSizeMake(labelwidth, 500) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil].size.height);
     
     UILabel *label = [[UILabel alloc] init];
     [label setUserInteractionEnabled:NO];
@@ -45,27 +41,26 @@ static NSInteger const circlesize = 70;
     [iconadd setImage:[UIImage imageNamed:@"add_screen"]];
     self.iconadd = iconadd;
     
-    UIView *redcircle = [[UIView alloc] init];
-    [redcircle setBackgroundColor:[UIColor second]];
-    [redcircle setClipsToBounds:YES];
-    [redcircle setUserInteractionEnabled:NO];
-    [redcircle setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [redcircle.layer setCornerRadius:circlesize / 2.0];
-    self.redcircle = redcircle;
+    UIView *circle = [[UIView alloc] init];
+    [circle setBackgroundColor:[UIColor second]];
+    [circle setClipsToBounds:YES];
+    [circle setUserInteractionEnabled:NO];
+    [circle setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [circle.layer setCornerRadius:circlesize / 2.0];
+    self.circle = circle;
     
+    [circle addSubview:iconadd];
     [self addSubview:label];
-    [self addSubview:redcircle];
-    [self addSubview:iconadd];
+    [self addSubview:circle];
     
-    NSDictionary *views = @{@"label":label, @"iconadd":iconadd, @"redcircle":redcircle};
-    NSDictionary *metrics = @{@"width_2":@(width_2), @"labelleft":@(labelleft), @"labelwidth":@(labelwidth), @"labelheight":@(labelheight), @"labeltop":@(labeltop), @"circlesize":@(circlesize), @"circleleft":@(circleleft)};
+    NSDictionary *views = @{@"label":label, @"iconadd":iconadd, @"circle":circle};
+    NSDictionary *metrics = @{@"circlesize":@(circlesize), @"circleleft":@(circleleft)};
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(labelleft)-[label(labelwidth)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(labeltop)-[label(labelheight)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(width_2)-[iconadd]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(circleleft)-[redcircle(circlesize)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[iconadd(circlesize)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[redcircle(circlesize)]" options:0 metrics:metrics views:views]];
+    [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(circleleft)-[circle(circlesize)]" options:0 metrics:metrics views:views];
+    [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-100-[circle(circlesize)]-0-[label]-0-|" options:0 metrics:metrics views:views];
+    [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[iconadd]-0-|" options:0 metrics:metrics views:views];
+    [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[iconadd]-0-|" options:0 metrics:metrics views:views];
+    [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[label]-20-|" options:0 metrics:metrics views:views];
     
     return self;
 }
