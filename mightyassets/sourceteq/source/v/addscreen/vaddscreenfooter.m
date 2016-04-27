@@ -3,7 +3,7 @@
 #import "uicolor+uicolormain.h"
 #import "cmain.h"
 
-static NSInteger const screenwidth = 100;
+static NSInteger const screenwidth = 160;
 static NSInteger const circlesize = 70;
 
 @implementation vaddscreenfooter
@@ -39,9 +39,8 @@ static NSInteger const circlesize = 70;
     [image setTranslatesAutoresizingMaskIntoConstraints:NO];
     [image setContentMode:UIViewContentModeScaleAspectFit];
     [image setUserInteractionEnabled:NO];
-    [image.layer setCornerRadius:3];
+    [image.layer setCornerRadius:5];
     [image.layer setBorderColor:[UIColor second].CGColor];
-    [image.layer setBorderWidth:1];
     self.image = image;
     
     UIImageView *iconadd = [[UIImageView alloc] init];
@@ -62,6 +61,7 @@ static NSInteger const circlesize = 70;
     UIButton *buttonupload = [[UIButton alloc] init];
     [buttonupload setTranslatesAutoresizingMaskIntoConstraints:NO];
     [buttonupload setBackgroundColor:[UIColor clearColor]];
+    [buttonupload addTarget:self action:@selector(actionupload:) forControlEvents:UIControlEventTouchUpInside];
     
     [circle addSubview:iconadd];
     [self addSubview:label];
@@ -69,7 +69,7 @@ static NSInteger const circlesize = 70;
     [self addSubview:image];
     [self addSubview:buttonupload];
     
-    NSDictionary *views = @{@"label":label, @"iconadd":iconadd, @"circle":circle, @"image":image};
+    NSDictionary *views = @{@"label":label, @"iconadd":iconadd, @"circle":circle, @"image":image, @"button":buttonupload};
     NSDictionary *metrics = @{@"circlesize":@(circlesize), @"circleleft":@(circleleft), @"screenleft":@(screenleft), @"screenwidth":@(screenwidth)};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(circleleft)-[circle(circlesize)]" options:0 metrics:metrics views:views]];
@@ -78,7 +78,9 @@ static NSInteger const circlesize = 70;
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[iconadd]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[label]-20-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(screenleft)-[image(screenwidth)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(screenleft)-[button(screenwidth)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[image]-20-[label]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[button]-20-[label]" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -98,11 +100,13 @@ static NSInteger const circlesize = 70;
     {
         [self.image setImage:self.model.image];
         [self.circle setHidden:YES];
+        [self.image.layer setBorderWidth:0];
     }
     else
     {
         [self.image setImage:nil];
         [self.circle setHidden:NO];
+        [self.image.layer setBorderWidth:1];
     }
 }
 
