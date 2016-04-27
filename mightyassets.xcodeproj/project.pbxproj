@@ -10,6 +10,7 @@
 		454D86336872A50FF82B25FA /* libPods-mightyassets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83AA3957F832637C9B59A446 /* libPods-mightyassets.a */; };
 		DA3559601CD1144A008AD644 /* mproject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA35595F1CD1144A008AD644 /* mproject.m */; };
 		DA3559631CD114DB008AD644 /* mprojectitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559621CD114DB008AD644 /* mprojectitem.m */; };
+		DA3559661CD11AB7008AD644 /* vlandingfooter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559651CD11AB7008AD644 /* vlandingfooter.m */; };
 		DA7D51B51CCFB132002D06FE /* loader.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7D51B41CCFB132002D06FE /* loader.xcassets */; };
 		DA7D51B81CCFB207002D06FE /* caddprocess.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51B71CCFB207002D06FE /* caddprocess.m */; };
 		DA7D51BC1CCFB44B002D06FE /* vaddprocess.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51BB1CCFB44B002D06FE /* vaddprocess.m */; };
@@ -114,6 +115,8 @@
 		DA35595F1CD1144A008AD644 /* mproject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mproject.m; sourceTree = "<group>"; };
 		DA3559611CD114DB008AD644 /* mprojectitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprojectitem.h; sourceTree = "<group>"; };
 		DA3559621CD114DB008AD644 /* mprojectitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprojectitem.m; sourceTree = "<group>"; };
+		DA3559641CD11AB7008AD644 /* vlandingfooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlandingfooter.h; sourceTree = "<group>"; };
+		DA3559651CD11AB7008AD644 /* vlandingfooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vlandingfooter.m; sourceTree = "<group>"; };
 		DA7D51B41CCFB132002D06FE /* loader.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = loader.xcassets; sourceTree = "<group>"; };
 		DA7D51B61CCFB207002D06FE /* caddprocess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = caddprocess.h; sourceTree = "<group>"; };
 		DA7D51B71CCFB207002D06FE /* caddprocess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = caddprocess.m; sourceTree = "<group>"; };
@@ -411,6 +414,8 @@
 				DAAFB28C1CC970AB003173A7 /* vlandingclearheader.m */,
 				DAAFB28E1CC970B4003173A7 /* vlandingcell.h */,
 				DAAFB28F1CC970B4003173A7 /* vlandingcell.m */,
+				DA3559641CD11AB7008AD644 /* vlandingfooter.h */,
+				DA3559651CD11AB7008AD644 /* vlandingfooter.m */,
 			);
 			path = landing;
 			sourceTree = "<group>";
@@ -972,6 +977,7 @@
 				DAAFB2B71CC9AA20003173A7 /* madditemprojectdevices.m in Sources */,
 				DAB377131CC93901001E8625 /* vspinner.m in Sources */,
 				DAAFB2AE1CC993DC003173A7 /* madditem.m in Sources */,
+				DA3559661CD11AB7008AD644 /* vlandingfooter.m in Sources */,
 				DAAFB2EA1CCC60D5003173A7 /* vaddcolorcell.m in Sources */,
 				DAAFB2BD1CC9AD7A003173A7 /* madditemcolorsbackground.m in Sources */,
 				DAAFB2CF1CCAB8D8003173A7 /* caddcolor.m in Sources */,

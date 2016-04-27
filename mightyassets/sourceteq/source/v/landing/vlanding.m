@@ -1,12 +1,15 @@
 #import "vlanding.h"
 #import "vlandingclearheader.h"
+#import "vlandingfooter.h"
 #import "vlandingcell.h"
 #import "genericconstants.h"
 #import "uicolor+uicolormain.h"
 
 static NSString* const clearheaderid = @"clearheader";
+static NSString* const footerid = @"footer";
 static NSString* const cellid = @"cell";
 static NSInteger const barheight = 200;
+static NSInteger const footerheight = 150;
 static NSInteger const cellheight = 80;
 static NSInteger const interitem = 1;
 static NSInteger const colbottom;
@@ -24,7 +27,6 @@ static NSInteger const colbottom;
     self.bar = bar;
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
-    [flow setFooterReferenceSize:CGSizeZero];
     [flow setMinimumLineSpacing:interitem];
     [flow setMinimumInteritemSpacing:0];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
@@ -40,7 +42,9 @@ static NSInteger const colbottom;
     [collection setDataSource:self];
     [collection setDelegate:self];
     [collection registerClass:[vlandingclearheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:clearheaderid];
+    [collection registerClass:[vlandingfooter class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerid];
     [collection registerClass:[vlandingcell class] forCellWithReuseIdentifier:cellid];
+    self.collection = collection;
     
     [self addSubview:collection];
     [self addSubview:bar];
@@ -55,7 +59,28 @@ static NSInteger const colbottom;
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraint:self.layoutbarheight];
     
+    [self loadprojects];
+    
     return self;
+}
+
+#pragma mark functionality
+
+-(void)loadprojects
+{
+    __weak typeof(self) welf = self;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                   ^
+                   {
+                       welf.model = [[mproject alloc] init];
+                       
+                       dispatch_async(dispatch_get_main_queue(),
+                                      ^
+                                      {
+                                          [welf.collection reloadData];
+                                      });
+                   });
 }
 
 #pragma mark -
@@ -82,6 +107,21 @@ static NSInteger const colbottom;
     return size;
 }
 
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForFooterInSection:(NSInteger)section
+{
+    CGFloat width = col.bounds.size.width;
+    CGFloat height = 0;
+    
+    if(!self.model.items.count)
+    {
+        height = footerheight;
+    }
+    
+    CGSize size = CGSizeMake(width, height);
+    
+    return size;
+}
+
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
     CGFloat width = col.bounds.size.width;
@@ -97,15 +137,29 @@ static NSInteger const colbottom;
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    return 100;
+    NSInteger count = self.model.items.count;
+    
+    return count;
 }
 
 -(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
 {
-    vlandingclearheader *header = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:clearheaderid forIndexPath:index];
-    [header config:self.controller constraints:self.bar.interactiveconstraints];
+    UICollectionReusableView *reusable;
     
-    return header;
+    if(kind == UICollectionElementKindSectionHeader)
+    {
+        vlandingclearheader *header = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:clearheaderid forIndexPath:index];
+        [header config:self.controller constraints:self.bar.interactiveconstraints];
+        reusable = header;
+        
+    }
+    else
+    {
+        vlandingfooter *footer = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:footerid forIndexPath:index];
+        reusable = footer;
+    }
+    
+    return reusable;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
