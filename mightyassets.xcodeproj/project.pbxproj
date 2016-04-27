@@ -20,6 +20,10 @@
 		DA3559841CD132B6008AD644 /* vaddwarningcancel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559831CD132B6008AD644 /* vaddwarningcancel.m */; };
 		DA3559871CD132C3008AD644 /* vaddwarningnext.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559861CD132C3008AD644 /* vaddwarningnext.m */; };
 		DA35598A1CD132D4008AD644 /* vaddwarning.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559891CD132D4008AD644 /* vaddwarning.m */; };
+		DA35598D1CD14790008AD644 /* maddprocessdrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = DA35598C1CD14790008AD644 /* maddprocessdrawable.m */; };
+		DA3559901CD147B0008AD644 /* maddprocessdrawabledevice.m in Sources */ = {isa = PBXBuildFile; fileRef = DA35598F1CD147B0008AD644 /* maddprocessdrawabledevice.m */; };
+		DA3559931CD147C6008AD644 /* maddprocessdrawabletext.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559921CD147C6008AD644 /* maddprocessdrawabletext.m */; };
+		DA3559961CD147D9008AD644 /* maddprocessdrawablescreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559951CD147D9008AD644 /* maddprocessdrawablescreen.m */; };
 		DA7D51B51CCFB132002D06FE /* loader.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7D51B41CCFB132002D06FE /* loader.xcassets */; };
 		DA7D51B81CCFB207002D06FE /* caddprocess.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51B71CCFB207002D06FE /* caddprocess.m */; };
 		DA7D51BC1CCFB44B002D06FE /* vaddprocess.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51BB1CCFB44B002D06FE /* vaddprocess.m */; };
@@ -144,6 +148,14 @@
 		DA3559861CD132C3008AD644 /* vaddwarningnext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddwarningnext.m; sourceTree = "<group>"; };
 		DA3559881CD132D4008AD644 /* vaddwarning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaddwarning.h; sourceTree = "<group>"; };
 		DA3559891CD132D4008AD644 /* vaddwarning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddwarning.m; sourceTree = "<group>"; };
+		DA35598B1CD14790008AD644 /* maddprocessdrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maddprocessdrawable.h; sourceTree = "<group>"; };
+		DA35598C1CD14790008AD644 /* maddprocessdrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddprocessdrawable.m; sourceTree = "<group>"; };
+		DA35598E1CD147B0008AD644 /* maddprocessdrawabledevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maddprocessdrawabledevice.h; sourceTree = "<group>"; };
+		DA35598F1CD147B0008AD644 /* maddprocessdrawabledevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddprocessdrawabledevice.m; sourceTree = "<group>"; };
+		DA3559911CD147C6008AD644 /* maddprocessdrawabletext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maddprocessdrawabletext.h; sourceTree = "<group>"; };
+		DA3559921CD147C6008AD644 /* maddprocessdrawabletext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddprocessdrawabletext.m; sourceTree = "<group>"; };
+		DA3559941CD147D9008AD644 /* maddprocessdrawablescreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maddprocessdrawablescreen.h; sourceTree = "<group>"; };
+		DA3559951CD147D9008AD644 /* maddprocessdrawablescreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddprocessdrawablescreen.m; sourceTree = "<group>"; };
 		DA7D51B41CCFB132002D06FE /* loader.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = loader.xcassets; sourceTree = "<group>"; };
 		DA7D51B61CCFB207002D06FE /* caddprocess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = caddprocess.h; sourceTree = "<group>"; };
 		DA7D51B71CCFB207002D06FE /* caddprocess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = caddprocess.m; sourceTree = "<group>"; };
@@ -411,6 +423,14 @@
 				DA7D51E21CCFD6FA002D06FE /* maddprocessasset.m */,
 				DA7D51E71CCFD71C002D06FE /* maddprocessassetiphone6.h */,
 				DA7D51E81CCFD71C002D06FE /* maddprocessassetiphone6.m */,
+				DA35598B1CD14790008AD644 /* maddprocessdrawable.h */,
+				DA35598C1CD14790008AD644 /* maddprocessdrawable.m */,
+				DA35598E1CD147B0008AD644 /* maddprocessdrawabledevice.h */,
+				DA35598F1CD147B0008AD644 /* maddprocessdrawabledevice.m */,
+				DA3559911CD147C6008AD644 /* maddprocessdrawabletext.h */,
+				DA3559921CD147C6008AD644 /* maddprocessdrawabletext.m */,
+				DA3559941CD147D9008AD644 /* maddprocessdrawablescreen.h */,
+				DA3559951CD147D9008AD644 /* maddprocessdrawablescreen.m */,
 			);
 			path = addprocess;
 			sourceTree = "<group>";
@@ -997,6 +1017,7 @@
 				DA7D51CC1CCFC055002D06FE /* maddprocessdeviceiphone6.m in Sources */,
 				DAAFB2B11CC994FD003173A7 /* maddsectionproject.m in Sources */,
 				DA9A41111CCE79AE00E49298 /* madditemprojectlanguages.m in Sources */,
+				DA35598D1CD14790008AD644 /* maddprocessdrawable.m in Sources */,
 				DA9A41081CCE77A100E49298 /* vaddcellscreensedit.m in Sources */,
 				DAB377081CC93901001E8625 /* uifont+uifontmain.m in Sources */,
 				DA9A40EA1CCE555F00E49298 /* madditempositioniphoneportrait.m in Sources */,
@@ -1004,6 +1025,7 @@
 				DA3559841CD132B6008AD644 /* vaddwarningcancel.m in Sources */,
 				DAB377011CC93901001E8625 /* appdel.m in Sources */,
 				DAB3770F1CC93901001E8625 /* mdbcreate.m in Sources */,
+				DA3559901CD147B0008AD644 /* maddprocessdrawabledevice.m in Sources */,
 				DAAFB28A1CC96947003173A7 /* vlandingbar.m in Sources */,
 				DAAFB2DF1CCC5348003173A7 /* maddcolor.m in Sources */,
 				DAB377121CC93901001E8625 /* vblur.m in Sources */,
@@ -1041,6 +1063,7 @@
 				DA35597B1CD12BC2008AD644 /* madditemprojectdevicesitemiphone.m in Sources */,
 				DAAFB2AB1CC9939F003173A7 /* maddsection.m in Sources */,
 				DA9A41141CCE7AD600E49298 /* vaddcellprojectlanguages.m in Sources */,
+				DA3559961CD147D9008AD644 /* maddprocessdrawablescreen.m in Sources */,
 				DAAFB2A81CC99385003173A7 /* madd.m in Sources */,
 				DA9A40ED1CCE5B7900E49298 /* madditemposition.m in Sources */,
 				DA7D51C91CCFC04D002D06FE /* maddprocessdeviceiphone5.m in Sources */,
@@ -1062,6 +1085,7 @@
 				DA9A40FC1CCE603900E49298 /* madditempositionitemiphoneportraitusable.m in Sources */,
 				DA9A411E1CCE8E1D00E49298 /* vaddscreenbar.m in Sources */,
 				DA7D51C31CCFC016002D06FE /* maddprocessdevice.m in Sources */,
+				DA3559931CD147C6008AD644 /* maddprocessdrawabletext.m in Sources */,
 				DA7D51D51CCFC078002D06FE /* maddprocessdeviceipadpro.m in Sources */,
 				DAAFB2941CC972C8003173A7 /* mfixedconstraints.m in Sources */,
 				DAB377041CC93901001E8625 /* analytics.m in Sources */,

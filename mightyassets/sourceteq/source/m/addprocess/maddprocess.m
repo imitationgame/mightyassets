@@ -1,6 +1,7 @@
 #import "maddprocess.h"
 #import "madditemscreensedit.h"
 #import "maddprocessdeviceiphone4.h"
+#import "maddprocessdrawable.h"
 #import "tools.h"
 #import "cmain.h"
 
