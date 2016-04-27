@@ -57,23 +57,36 @@ static NSInteger const maxpercent = 100;
     CGFloat drawdevicewidth = devicerawwidth / ratio;
     CGFloat drawdevicex = (assetwidth - drawdevicewidth) / 2.0;
     CGFloat drawdeviceheight = usableheight;
-    CGRect rectdevice = CGRectMake(drawdevicex, drawdevicey, drawdevicewidth, drawdeviceheight);
-    UIImage *imagedevice = [UIImage imageNamed:asset.assetname];
     
-    NSString *string = @"hello world";
-    UIFont *font = [UIFont fontWithName:@"ArialMT" size:device.fontsize];
-    NSDictionary *textattributes = @{NSForegroundColorAttributeName:self.colortext, NSFontAttributeName:font};
-    CGSize textsize = [string sizeWithAttributes:textattributes];
-    CGFloat textwidth = ceilf(textsize.width);
-    CGFloat textheight = ceilf(textsize.height);
-    CGFloat width_text = assetwidth - textwidth;
-    CGFloat height_text = drawdevicey - textheight;
-    CGFloat textx = width_text / 2.0;
-    CGFloat texty = height_text / 2.0;
-    CGRect textrect = CGRectMake(textx, texty, textwidth, textheight);
-    CGRect rectasset = CGRectMake(0, 0, assetwidth, assetheight);
+    maddprocessdrawable *drawable = [[maddprocessdrawable alloc] init:assetwidth height:assetheight];
+    drawable.device = [[maddprocessdrawabledevice alloc] init:drawdevicex y:drawdevicey width:drawdevicewidth height:drawdeviceheight];
+    drawable.device.image = [UIImage imageNamed:asset.assetname];
     
-    UIImage *newasset = [self createimage:imagedevice rect:rectasset rectdevice:rectdevice string:string stringrect:textrect attributes:textattributes];
+    if(screen.titles.count)
+    {
+        madditemscreensedittitle *title = screen.titles[0];
+        
+        if(title.title.length)
+        {
+            NSString *string = title.title;
+            UIFont *font = [UIFont fontWithName:@"ArialMT" size:device.fontsize];
+            NSDictionary *textattributes = @{NSForegroundColorAttributeName:self.colortext, NSFontAttributeName:font};
+            CGSize textsize = [string sizeWithAttributes:textattributes];
+            CGFloat textwidth = ceilf(textsize.width);
+            CGFloat textheight = ceilf(textsize.height);
+            CGFloat width_text = assetwidth - textwidth;
+            CGFloat height_text = drawdevicey - textheight;
+            CGFloat textx = width_text / 2.0;
+            CGFloat texty = height_text / 2.0;
+            CGRect textrect = CGRectMake(textx, texty, textwidth, textheight);
+
+            drawable.text = [[maddprocessdrawabletext alloc] init:textx y:texty width:textwidth height:textheight];
+            drawable.text.string = string;
+            drawable.text.attributes = textattributes;
+        }
+    }
+    
+    UIImage *newasset = [self createimage:drawable];
     
     NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"myimage.png"];
     NSURL *url = [NSURL fileURLWithPath:filepath];
