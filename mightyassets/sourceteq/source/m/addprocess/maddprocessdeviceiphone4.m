@@ -2,7 +2,7 @@
 
 static NSInteger const sideshort = 640;
 static NSInteger const sidelong = 960;
-static NSInteger const fontsize = 40;
+static NSInteger const fontsize = 50;
 
 @implementation maddprocessdeviceiphone4
 

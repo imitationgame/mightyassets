@@ -5,9 +5,8 @@
 
 static NSString* const screencellid = @"screencell";
 static NSString* const screenfooterid = @"screenfooter";
-static NSInteger const footerheight = 150;
+static NSInteger const footerheight = 350;
 static NSInteger const cellheight = 70;
-static NSInteger const colbottom = 40;
 static NSInteger const interitem = -1;
 
 @implementation vaddscreen
@@ -47,7 +46,7 @@ static NSInteger const interitem = -1;
     [flow setMinimumInteritemSpacing:0];
     [flow setMinimumLineSpacing:interitem];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flow setSectionInset:UIEdgeInsetsMake(0, 0, colbottom, 0)];
+    [flow setSectionInset:UIEdgeInsetsZero];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setBackgroundColor:[UIColor clearColor]];

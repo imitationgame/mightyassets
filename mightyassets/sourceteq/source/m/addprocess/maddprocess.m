@@ -64,7 +64,13 @@ static NSInteger const maxpercent = 100;
     UIFont *font = [UIFont fontWithName:@"ArialMT" size:device.fontsize];
     NSDictionary *textattributes = @{NSForegroundColorAttributeName:self.colortext, NSFontAttributeName:font};
     CGSize textsize = [string sizeWithAttributes:textattributes];
-    CGRect textrect = CGRectMake(0, drawtexty, assetwidth, drawdevicey);
+    CGFloat textwidth = ceilf(textsize.width);
+    CGFloat textheight = ceilf(textsize.height);
+    CGFloat width_text = assetwidth - textwidth;
+    CGFloat height_text = drawdevicey - textheight;
+    CGFloat textx = width_text / 2.0;
+    CGFloat texty = height_text / 2.0;
+    CGRect textrect = CGRectMake(textx, texty, textwidth, textheight);
     CGRect rectasset = CGRectMake(0, 0, assetwidth, assetheight);
     
     UIImage *newasset = [self createimage:imagedevice rect:rectasset rectdevice:rectdevice string:string stringrect:textrect attributes:textattributes];

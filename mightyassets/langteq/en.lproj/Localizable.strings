@@ -5,6 +5,8 @@
 "addscreen_title"="Screen %@";
 "addscreen_titles_title"="Localization %@";
 "addscreen_titles_placeholder"="Use no title";
+"addscreen_image_title"="Image";
+"addscreen_image_descr"="\nSelect one of your app's screenshot to create a branding image";
 
 "addprocess_title"="Processing";
 

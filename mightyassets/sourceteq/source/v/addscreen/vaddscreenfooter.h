@@ -2,4 +2,8 @@
 
 @interface vaddscreenfooter:UICollectionReusableView
 
+@property(weak, nonatomic)UIImageView *image;
+@property(weak, nonatomic)UIImageView *iconadd;
+@property(weak, nonatomic)UIView *redcircle;
+
 @end
