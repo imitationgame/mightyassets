@@ -20,7 +20,7 @@ static NSInteger const interitem = -1;
     self.controller = controller;
     self.model = [[madd alloc] init];
     
-    vaddbar *bar = [[vaddbar alloc] init:controller];
+    vaddbar *bar = [[vaddbar alloc] init:self];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setFooterReferenceSize:CGSizeZero];

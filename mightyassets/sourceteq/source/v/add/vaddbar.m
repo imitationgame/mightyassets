@@ -1,16 +1,18 @@
 #import "vaddbar.h"
 #import "uicolor+uicolormain.h"
 #import "uifont+uifontmain.h"
+#import "vaddwarningnext.h"
+#import "vaddwarningcancel.h"
 
 @implementation vaddbar
 
--(instancetype)init:(cadd*)controller
+-(instancetype)init:(vadd*)view
 {
     self = [super init];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor main]];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
-    self.controller = controller;
+    self.view = view;
  
     UILabel *title = [[UILabel alloc] init];
     [title setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -61,13 +63,22 @@
 -(void)actioncancel:(UIButton*)button
 {
     [[UIApplication sharedApplication].keyWindow endEditing:YES];
-    [self.controller cancel];
+    
+    __unused vaddwarningcancel *warning = [[vaddwarningcancel alloc] init:self.view];
 }
 
 -(void)actionnext:(UIButton*)button
 {
     [[UIApplication sharedApplication].keyWindow endEditing:YES];
-    [self.controller next];
+    
+    if([self.view.model.modelscreens completed])
+    {
+        [self.view.controller next];
+    }
+    else
+    {
+        __unused vaddwarningnext *warning = [[vaddwarningnext alloc] init:self.view];
+    }
 }
 
 @end

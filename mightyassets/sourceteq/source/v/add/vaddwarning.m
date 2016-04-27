@@ -2,7 +2,7 @@
 #import "uicolor+uicolormain.h"
 #import "uifont+uifontmain.h"
 
-static CGFloat const animationduration = 0.6;
+static CGFloat const animationduration = 0.3;
 
 @implementation vaddwarning
 
@@ -15,16 +15,16 @@ static CGFloat const animationduration = 0.6;
     [self setAlpha:0];
     self.view = view;
     
-    vblur *blur = [vblur light:NO];
+    vblur *blur = [vblur light:YES];
     
     UILabel *label = [[UILabel alloc] init];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setUserInteractionEnabled:NO];
     [label setBackgroundColor:[UIColor clearColor]];
-    [label setFont:[UIFont regularsize:18]];
+    [label setFont:[UIFont regularsize:20]];
     [label setNumberOfLines:0];
     [label setTextAlignment:NSTextAlignmentCenter];
-    [label setTextColor:[UIColor main]];
+    [label setTextColor:[UIColor colorWithWhite:0 alpha:0.8]];
     self.label = label;
     
     UIButton *buttoncancel = [[UIButton alloc] init];
@@ -35,6 +35,7 @@ static CGFloat const animationduration = 0.6;
     [buttoncancel setTitleColor:[UIColor colorWithWhite:1 alpha:0.2] forState:UIControlStateHighlighted];
     [buttoncancel.layer setCornerRadius:4];
     [buttoncancel addTarget:self action:@selector(actioncancel:) forControlEvents:UIControlEventTouchUpInside];
+    [buttoncancel.titleLabel setFont:[UIFont boldsize:16]];
     self.buttoncancel = buttoncancel;
     
     UIButton *buttoncontinue = [[UIButton alloc] init];
@@ -45,24 +46,26 @@ static CGFloat const animationduration = 0.6;
     [buttoncontinue setTitleColor:[UIColor colorWithWhite:1 alpha:0.2] forState:UIControlStateHighlighted];
     [buttoncontinue.layer setCornerRadius:4];
     [buttoncontinue addTarget:self action:@selector(actioncontinue:) forControlEvents:UIControlEventTouchUpInside];
+    [buttoncontinue.titleLabel setFont:[UIFont boldsize:16]];
     self.buttoncontinue = buttoncontinue;
     
+    [view addSubview:self];
     [self addSubview:blur];
     [self addSubview:label];
     [self addSubview:buttoncancel];
     [self addSubview:buttoncontinue];
     
-    NSDictionary *views = @{@"self":self, @"blur":blur, @"label":label, @"buttoncancel":buttoncancel, @"buttoncontinue":buttoncontinue};
+    NSDictionary *views = @{@"warning":self, @"blur":blur, @"label":label, @"buttoncancel":buttoncancel, @"buttoncontinue":buttoncontinue};
     NSDictionary *metrics = @{};
     
-    [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[self]-0-|" options:0 metrics:metrics views:views]];
-    [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[self]-0-|" options:0 metrics:metrics views:views]];
+    [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[warning]-0-|" options:0 metrics:metrics views:views]];
+    [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[warning]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[label]-20-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-100-[buttoncancel]-100-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-100-[buttoncontinue]-100-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-100-[label(100)]-0-[buttoncancel(34)]-20-[buttoncontinue(34)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-80-[buttoncancel]-80-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-80-[buttoncontinue]-80-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-80-[label(180)]-0-[buttoncancel(38)]-20-[buttoncontinue(38)]" options:0 metrics:metrics views:views]];
     
     __weak typeof(self) welf = self;
     

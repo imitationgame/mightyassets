@@ -17,5 +17,26 @@
     return self;
 }
 
+#pragma mark public
+
+-(BOOL)completed
+{
+    BOOL completed = YES;
+    
+    for(madditem *item in self.items)
+    {
+        if([item isKindOfClass:[madditemscreensedit class]])
+        {
+            if(!((madditemscreensedit*)item).image)
+            {
+                completed = NO;
+                
+                break;
+            }
+        }
+    }
+    
+    return completed;
+}
 
 @end

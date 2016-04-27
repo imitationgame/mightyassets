@@ -1,10 +1,10 @@
 #import <UIKit/UIKit.h>
-#import "cadd.h"
+#import "vadd.h"
 
 @interface vaddbar:UIView
 
--(instancetype)init:(cadd*)controller;
+-(instancetype)init:(vadd*)view;
 
-@property(weak, nonatomic)cadd *controller;
+@property(weak, nonatomic)vadd *view;
 
 @end
