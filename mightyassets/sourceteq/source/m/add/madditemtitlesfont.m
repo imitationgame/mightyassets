@@ -1,5 +1,7 @@
 #import "madditemtitlesfont.h"
 #import "vaddcelltitlesfont.h"
+#import "caddfont.h"
+#import "cmain.h"
 
 static NSInteger const cellheight = 64;
 
@@ -44,6 +46,15 @@ static NSInteger const cellheight = 64;
                            return [obj1.name compare:obj2.name];
                        }];
                    });
+}
+
+#pragma mark -
+#pragma mark add item
+
+-(void)selectedaction
+{
+    caddfont *controller = [[caddfont alloc] init:self];
+    [[cmain singleton] pushViewController:controller animated:YES];
 }
 
 @end

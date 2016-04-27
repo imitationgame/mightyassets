@@ -1,6 +1,15 @@
 #import "caddfont.h"
+#import "vaddfont.h"
+
+@interface caddfont ()
+
+@property(strong, nonatomic)vaddfont *view;
+
+@end
 
 @implementation caddfont
+
+@dynamic view;
 
 -(instancetype)init:(madditemtitlesfont*)model
 {
@@ -18,6 +27,11 @@
 -(BOOL)prefersStatusBarHidden
 {
     return NO;
+}
+
+-(void)loadView
+{
+    self.view = [[vaddfont alloc] init:self];
 }
 
 -(void)viewDidAppear:(BOOL)animated
