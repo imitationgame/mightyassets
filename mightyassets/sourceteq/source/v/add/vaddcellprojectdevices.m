@@ -3,8 +3,8 @@
 #import "uifont+uifontmain.h"
 #import "madditemprojectdevices.h"
 
-static NSInteger const segmentedwidth = 280;
-static NSInteger const segmentedheight = 34;
+static NSInteger const segmentedwidth = 300;
+static NSInteger const segmentedheight = 32;
 
 @interface vaddcellprojectdevices ()
 
