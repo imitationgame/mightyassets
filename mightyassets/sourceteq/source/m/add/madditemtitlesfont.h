@@ -4,7 +4,7 @@
 
 @interface madditemtitlesfont:madditem
 
-@property(strong, nonatomic)NSMutableArray<madditemtitlesfont*> *items;
-@property(copy, nonatomic)NSString *fontname;
+@property(strong, nonatomic)NSArray<madditemtitlesfontitem*> *items;
+@property(weak, nonatomic)madditemtitlesfontitem *font;
 
 @end
