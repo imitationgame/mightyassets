@@ -3,4 +3,6 @@
 
 @interface vaddcellprojectdevices:vaddcell
 
+@property(weak, nonatomic)UISegmentedControl *segmented;
+
 @end
