@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		454D86336872A50FF82B25FA /* libPods-mightyassets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83AA3957F832637C9B59A446 /* libPods-mightyassets.a */; };
 		DA3559601CD1144A008AD644 /* mproject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA35595F1CD1144A008AD644 /* mproject.m */; };
+		DA3559631CD114DB008AD644 /* mprojectitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559621CD114DB008AD644 /* mprojectitem.m */; };
 		DA7D51B51CCFB132002D06FE /* loader.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7D51B41CCFB132002D06FE /* loader.xcassets */; };
 		DA7D51B81CCFB207002D06FE /* caddprocess.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51B71CCFB207002D06FE /* caddprocess.m */; };
 		DA7D51BC1CCFB44B002D06FE /* vaddprocess.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51BB1CCFB44B002D06FE /* vaddprocess.m */; };
@@ -111,6 +112,8 @@
 		BB378A33F5638E1413452D7C /* Pods-mightyassets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mightyassets.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mightyassets/Pods-mightyassets.debug.xcconfig"; sourceTree = "<group>"; };
 		DA35595E1CD1144A008AD644 /* mproject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mproject.h; sourceTree = "<group>"; };
 		DA35595F1CD1144A008AD644 /* mproject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mproject.m; sourceTree = "<group>"; };
+		DA3559611CD114DB008AD644 /* mprojectitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprojectitem.h; sourceTree = "<group>"; };
+		DA3559621CD114DB008AD644 /* mprojectitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprojectitem.m; sourceTree = "<group>"; };
 		DA7D51B41CCFB132002D06FE /* loader.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = loader.xcassets; sourceTree = "<group>"; };
 		DA7D51B61CCFB207002D06FE /* caddprocess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = caddprocess.h; sourceTree = "<group>"; };
 		DA7D51B71CCFB207002D06FE /* caddprocess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = caddprocess.m; sourceTree = "<group>"; };
@@ -332,6 +335,8 @@
 			children = (
 				DA35595E1CD1144A008AD644 /* mproject.h */,
 				DA35595F1CD1144A008AD644 /* mproject.m */,
+				DA3559611CD114DB008AD644 /* mprojectitem.h */,
+				DA3559621CD114DB008AD644 /* mprojectitem.m */,
 			);
 			path = project;
 			sourceTree = "<group>";
@@ -929,6 +934,7 @@
 				DA9A41021CCE738E00E49298 /* madditemscreensedit.m in Sources */,
 				DAAFB29B1CC9878C003173A7 /* vadd.m in Sources */,
 				DA7D51BC1CCFB44B002D06FE /* vaddprocess.m in Sources */,
+				DA3559631CD114DB008AD644 /* mprojectitem.m in Sources */,
 				DA7D51DE1CCFC4C0002D06FE /* maddprocessorientationlandscape.m in Sources */,
 				DAAFB2C31CCA9F06003173A7 /* vaddcellcolor.m in Sources */,
 				DAB3770E1CC93901001E8625 /* mdb.m in Sources */,

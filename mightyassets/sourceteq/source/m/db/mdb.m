@@ -26,4 +26,14 @@
     [mdbcreate create];
 }
 
++(NSArray<NSDictionary*>*)fetchprojects
+{
+    NSString *query = [NSString stringWithFormat:
+                       @"SELECT id, created, name FROM project "
+                       "ORDER BY created ASC;"];
+    NSArray<NSDictionary*> *rawprojects = [db rows:query];
+    
+    return rawprojects;
+}
+
 @end

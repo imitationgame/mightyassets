@@ -6,5 +6,6 @@
 @interface mdb:NSObject
 
 +(void)updatedb;
++(NSArray<NSDictionary*>*)fetchprojects;
 
 @end
