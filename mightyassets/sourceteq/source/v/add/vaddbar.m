@@ -31,6 +31,7 @@
     [buttoncancel.imageView setClipsToBounds:YES];
     [buttoncancel.imageView setContentMode:UIViewContentModeScaleAspectFit];
     [buttoncancel addTarget:self action:@selector(actioncancel:) forControlEvents:UIControlEventTouchUpInside];
+    [buttoncancel setImageEdgeInsets:UIEdgeInsetsMake(10, 0, 10, 18)];
     
     UIButton *buttonnext = [[UIButton alloc] init];
     [buttonnext setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -40,6 +41,7 @@
     [buttonnext.imageView setClipsToBounds:YES];
     [buttonnext.imageView setContentMode:UIViewContentModeScaleAspectFit];
     [buttonnext addTarget:self action:@selector(actionnext:) forControlEvents:UIControlEventTouchUpInside];
+    [buttonnext setImageEdgeInsets:UIEdgeInsetsMake(10, 15, 10, 0)];
     
     [self addSubview:title];
     [self addSubview:buttoncancel];
@@ -50,10 +52,10 @@
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-50-[title]-50-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[title(45)]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[buttoncancel(46)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[buttonnext(46)]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[buttoncancel(25)]-10-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[buttonnext(25)]-10-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[buttoncancel(60)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[buttonnext(60)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[buttoncancel(45)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[buttonnext(45)]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }

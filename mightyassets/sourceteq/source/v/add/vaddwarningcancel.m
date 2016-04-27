@@ -12,4 +12,12 @@
     return self;
 }
 
+#pragma mark -
+#pragma mark warning
+
+-(void)actioncontinue:(UIButton*)button
+{
+    [self.view.controller cancel];
+}
+
 @end
