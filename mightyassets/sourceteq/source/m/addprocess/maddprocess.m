@@ -6,8 +6,6 @@
 
 static CGFloat const percentdivider = 100.0;
 static NSInteger const maxpercent = 100;
-static NSInteger const contextscalex = 1;
-static NSInteger const contextscaley = -1;
 
 @implementation maddprocess
 
@@ -58,18 +56,18 @@ static NSInteger const contextscaley = -1;
     CGFloat drawdevicewidth = devicerawwidth / ratio;
     CGFloat drawdevicex = (assetwidth - drawdevicewidth) / 2.0;
     CGFloat drawdeviceheight = usableheight;
-    CGFloat drawdeviceyinverse = assetheight - (drawdevicey + drawdeviceheight);
-    CGFloat drawtexty = assetheight - drawdevicey;
-    CGRect rectdevice = CGRectMake(drawdevicex, drawdeviceyinverse, drawdevicewidth, drawdeviceheight);
+    CGFloat drawtexty = 0;
+    CGRect rectdevice = CGRectMake(drawdevicex, drawdevicey, drawdevicewidth, drawdeviceheight);
     UIImage *imagedevice = [UIImage imageNamed:asset.assetname];
     
     NSString *string = @"hello world";
-    UIFont *font = [UIFont fontWithName:@"ArialMT" size:18];
+    UIFont *font = [UIFont fontWithName:@"ArialMT" size:device.fontsize];
     NSDictionary *textattributes = @{NSForegroundColorAttributeName:self.colortext, NSFontAttributeName:font};
     CGSize textsize = [string sizeWithAttributes:textattributes];
     CGRect textrect = CGRectMake(0, drawtexty, assetwidth, drawdevicey);
+    CGRect rectasset = CGRectMake(0, 0, assetwidth, assetheight);
     
-    UIImage *newasset = [self createimage:imagedevice width:assetwidth height:assetheight rectdevice:rectdevice string:string stringrect:textrect attributes:textattributes];
+    UIImage *newasset = [self createimage:imagedevice rect:rectasset rectdevice:rectdevice string:string stringrect:textrect attributes:textattributes];
     
     NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"myimage.png"];
     NSURL *url = [NSURL fileURLWithPath:filepath];
@@ -91,21 +89,16 @@ static NSInteger const contextscaley = -1;
      }];
 }
 
--(UIImage*)createimage:(UIImage*)imagedevice width:(NSInteger)width height:(NSInteger)height rectdevice:(CGRect)rectdevice string:(NSString*)string stringrect:(CGRect)stringrect attributes:(NSDictionary*)attributes
+-(UIImage*)createimage:(UIImage*)imagedevice rect:(CGRect)rect rectdevice:(CGRect)rectdevice string:(NSString*)string stringrect:(CGRect)stringrect attributes:(NSDictionary*)attributes
 {
     UIImage *image;
     
-    CGSize size = CGSizeMake(width, height);
-    CGRect rect = CGRectMake(0, 0, width, height);
-    UIGraphicsBeginImageContext(size);
+    UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextTranslateCTM(context, 0, height);
-    CGContextScaleCTM(context, contextscalex, contextscaley);
     CGContextSetBlendMode(context, kCGBlendModeNormal);
     
     [imagedevice drawInRect:rectdevice];
     
-//    CGContextDrawImage(context, rectdevice, imagedevice.CGImage);
     CGContextSetFillColorWithColor(context, self.colordevice.CGColor);
     CGContextSetBlendMode(context, kCGBlendModeSourceAtop);
     CGContextFillRect(context, rectdevice);
