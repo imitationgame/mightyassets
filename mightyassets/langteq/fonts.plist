@@ -16,69 +16,75 @@
     </dict>
     <dict>
         <key>name</key>
-        <string>Avenir Next</string>
+        <string>Apple SD Gothic</string>
         <key>font</key>
-        <string>AvenirNext-Regular</string>
+        <string>AppleSDGothicNeo-Regular</string>
     </dict>
     <dict>
         <key>name</key>
-        <string>Avenir Next</string>
+        <string>Apple SD Gothic bold</string>
         <key>font</key>
-        <string>AvenirNext-Regular</string>
+        <string>AppleSDGothicNeo-Bold</string>
     </dict>
     <dict>
         <key>name</key>
-        <string>Avenir Next</string>
+        <string>Arial</string>
         <key>font</key>
-        <string>AvenirNext-Regular</string>
+        <string>ArialMT</string>
     </dict>
     <dict>
         <key>name</key>
-        <string>Avenir Next</string>
+        <string>Arial bold</string>
         <key>font</key>
-        <string>AvenirNext-Regular</string>
+        <string>Arial-BoldMT</string>
     </dict>
     <dict>
         <key>name</key>
-        <string>Avenir Next</string>
+        <string>Futura</string>
         <key>font</key>
-        <string>AvenirNext-Regular</string>
+        <string>Futura-Medium</string>
     </dict>
     <dict>
         <key>name</key>
-        <string>Avenir Next</string>
+        <string>Futura bold</string>
         <key>font</key>
-        <string>AvenirNext-Regular</string>
+        <string>Futura-CondensedExtraBold</string>
     </dict>
     <dict>
         <key>name</key>
-        <string>Avenir Next</string>
+        <string>Helvetica Neue</string>
         <key>font</key>
-        <string>AvenirNext-Regular</string>
+        <string>HelveticaNeue</string>
     </dict>
     <dict>
         <key>name</key>
-        <string>Avenir Next</string>
+        <string>Helvetica Neue bold</string>
         <key>font</key>
-        <string>AvenirNext-Regular</string>
+        <string>HelveticaNeue-Bold</string>
     </dict>
     <dict>
         <key>name</key>
-        <string>Avenir Next</string>
+        <string>Menlo</string>
         <key>font</key>
-        <string>AvenirNext-Regular</string>
+        <string>Menlo-Regular</string>
     </dict>
     <dict>
         <key>name</key>
-        <string>Avenir Next</string>
+        <string>Menlo bold</string>
         <key>font</key>
-        <string>AvenirNext-Regular</string>
+        <string>Menlo-Bold</string>
     </dict>
     <dict>
         <key>name</key>
-        <string>Avenir Next</string>
+        <string>Times New Roman</string>
         <key>font</key>
-        <string>AvenirNext-Regular</string>
+        <string>TimesNewRomanPSMT</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Times New Roman bold</string>
+        <key>font</key>
+        <string>TimesNewRomanPS-BoldMT</string>
     </dict>
 </array>
 </plist>
