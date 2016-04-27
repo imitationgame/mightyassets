@@ -10,6 +10,12 @@
 "addscreen_titles_placeholder"="Use no title";
 "addscreen_image_title"="Image";
 "addscreen_image_descr"="\nSelect one of your app's screenshot to create a branding image";
+"addscreen_warning_cancel_label"="If you close the project everything you already set will be lost";
+"addscreen_warning_cancel_btncancel"="Don't close";
+"addscreen_warning_cancel_btncontinue"="Discard project";
+"addscreen_warning_continue_label"="Some screens haven't been customized, you won't be able to edit them later";
+"addscreen_warning_continue_btncancel"="Stay";
+"addscreen_warning_continue_btncontinue"="Finish";
 
 "addprocess_title"="Processing";
 

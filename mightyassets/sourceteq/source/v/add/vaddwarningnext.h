@@ -1,13 +1,6 @@
-//
-//  vaddwarningnext.h
-//  mightyassets
-//
-//  Created by zero on 4/27/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
+#import <UIKit/UIKit.h>
+#import "vaddwarning.h"
 
-#import <Foundation/Foundation.h>
-
-@interface vaddwarningnext : NSObject
+@interface vaddwarningnext:vaddwarning
 
 @end
