@@ -1,13 +1,10 @@
-//
-//  vaddfontbar.h
-//  mightyassets
-//
-//  Created by zero on 4/27/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
+#import <UIKit/UIKit.h>
+#import "caddfont.h"
 
-#import <Foundation/Foundation.h>
+@interface vaddfontbar:UIView
 
-@interface vaddfontbar : NSObject
+-(instancetype)init:(caddfont*)controller;
+
+@property(weak, nonatomic)caddfont *controller;
 
 @end
