@@ -96,7 +96,7 @@ static NSInteger const margintext = 50;
             NSString *string = title.title;
             UIFont *font = [UIFont fontWithName:@"ArialMT" size:device.fontsize];
             
-            NSMutableParagraphStyle *textalignment = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+            NSMutableParagraphStyle *textalignment = [[NSMutableParagraphStyle alloc] init];
             textalignment.alignment = NSTextAlignmentCenter;
             
             NSDictionary *textattributes = @{NSForegroundColorAttributeName:self.colortext, NSFontAttributeName:font, NSParagraphStyleAttributeName:textalignment};

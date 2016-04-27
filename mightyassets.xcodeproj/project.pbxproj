@@ -24,6 +24,8 @@
 		DA3559901CD147B0008AD644 /* maddprocessdrawabledevice.m in Sources */ = {isa = PBXBuildFile; fileRef = DA35598F1CD147B0008AD644 /* maddprocessdrawabledevice.m */; };
 		DA3559931CD147C6008AD644 /* maddprocessdrawabletext.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559921CD147C6008AD644 /* maddprocessdrawabletext.m */; };
 		DA3559961CD147D9008AD644 /* maddprocessdrawablescreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559951CD147D9008AD644 /* maddprocessdrawablescreen.m */; };
+		DA3559991CD16284008AD644 /* maddsectiontitles.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559981CD16284008AD644 /* maddsectiontitles.m */; };
+		DA35599C1CD16313008AD644 /* madditemtitlesfont.m in Sources */ = {isa = PBXBuildFile; fileRef = DA35599B1CD16313008AD644 /* madditemtitlesfont.m */; };
 		DA7D51B51CCFB132002D06FE /* loader.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7D51B41CCFB132002D06FE /* loader.xcassets */; };
 		DA7D51B81CCFB207002D06FE /* caddprocess.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51B71CCFB207002D06FE /* caddprocess.m */; };
 		DA7D51BC1CCFB44B002D06FE /* vaddprocess.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51BB1CCFB44B002D06FE /* vaddprocess.m */; };
@@ -156,6 +158,10 @@
 		DA3559921CD147C6008AD644 /* maddprocessdrawabletext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddprocessdrawabletext.m; sourceTree = "<group>"; };
 		DA3559941CD147D9008AD644 /* maddprocessdrawablescreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maddprocessdrawablescreen.h; sourceTree = "<group>"; };
 		DA3559951CD147D9008AD644 /* maddprocessdrawablescreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddprocessdrawablescreen.m; sourceTree = "<group>"; };
+		DA3559971CD16284008AD644 /* maddsectiontitles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maddsectiontitles.h; sourceTree = "<group>"; };
+		DA3559981CD16284008AD644 /* maddsectiontitles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddsectiontitles.m; sourceTree = "<group>"; };
+		DA35599A1CD16313008AD644 /* madditemtitlesfont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditemtitlesfont.h; sourceTree = "<group>"; };
+		DA35599B1CD16313008AD644 /* madditemtitlesfont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditemtitlesfont.m; sourceTree = "<group>"; };
 		DA7D51B41CCFB132002D06FE /* loader.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = loader.xcassets; sourceTree = "<group>"; };
 		DA7D51B61CCFB207002D06FE /* caddprocess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = caddprocess.h; sourceTree = "<group>"; };
 		DA7D51B71CCFB207002D06FE /* caddprocess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = caddprocess.m; sourceTree = "<group>"; };
@@ -520,6 +526,8 @@
 				DAAFB2AA1CC9939F003173A7 /* maddsection.m */,
 				DAAFB2AF1CC994FD003173A7 /* maddsectionproject.h */,
 				DAAFB2B01CC994FD003173A7 /* maddsectionproject.m */,
+				DA3559971CD16284008AD644 /* maddsectiontitles.h */,
+				DA3559981CD16284008AD644 /* maddsectiontitles.m */,
 				DAAFB2B81CC9ACA1003173A7 /* maddsectioncolors.h */,
 				DAAFB2B91CC9ACA1003173A7 /* maddsectioncolors.m */,
 				DAAFB2EB1CCDBC4D003173A7 /* maddsectionposition.h */,
@@ -542,6 +550,8 @@
 				DA3559801CD12BD9008AD644 /* madditemprojectdevicesitemuniversal.m */,
 				DA9A410F1CCE79AE00E49298 /* madditemprojectlanguages.h */,
 				DA9A41101CCE79AE00E49298 /* madditemprojectlanguages.m */,
+				DA35599A1CD16313008AD644 /* madditemtitlesfont.h */,
+				DA35599B1CD16313008AD644 /* madditemtitlesfont.m */,
 				DAAFB2C41CCAAD6B003173A7 /* madditemcolors.h */,
 				DAAFB2C51CCAAD6B003173A7 /* madditemcolors.m */,
 				DAAFB2BB1CC9AD7A003173A7 /* madditemcolorsbackground.h */,
@@ -1056,6 +1066,7 @@
 				DA9A41241CCECBF500E49298 /* vaddscreenfooter.m in Sources */,
 				DAB3770C1CC93901001E8625 /* cmain.m in Sources */,
 				DAB377101CC93901001E8625 /* mdirs.m in Sources */,
+				DA3559991CD16284008AD644 /* maddsectiontitles.m in Sources */,
 				DA9A41211CCECBEC00E49298 /* vaddscreencell.m in Sources */,
 				DA7D51E91CCFD71C002D06FE /* maddprocessassetiphone6.m in Sources */,
 				DA7D51E31CCFD6FA002D06FE /* maddprocessasset.m in Sources */,
@@ -1083,6 +1094,7 @@
 				DA7D51C61CCFC045002D06FE /* maddprocessdeviceiphone4.m in Sources */,
 				DA9A41271CCED21800E49298 /* madditemscreensedittitle.m in Sources */,
 				DA9A40FC1CCE603900E49298 /* madditempositionitemiphoneportraitusable.m in Sources */,
+				DA35599C1CD16313008AD644 /* madditemtitlesfont.m in Sources */,
 				DA9A411E1CCE8E1D00E49298 /* vaddscreenbar.m in Sources */,
 				DA7D51C31CCFC016002D06FE /* maddprocessdevice.m in Sources */,
 				DA3559931CD147C6008AD644 /* maddprocessdrawabletext.m in Sources */,

@@ -9,7 +9,7 @@
     self = [super init:NSLocalizedString(@"madd_section_project_name", nil)];
     
     madditemprojectlanguages *languages = [[madditemprojectlanguages alloc] init];
-    self.languages = languages;
+    self.modellanguages = languages;
     
     self.items = @[
                    [[madditemprojectname alloc] init],

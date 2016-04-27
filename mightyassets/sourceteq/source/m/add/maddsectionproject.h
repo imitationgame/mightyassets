@@ -4,6 +4,6 @@
 
 @interface maddsectionproject:maddsection
 
-@property(weak, nonatomic)madditemprojectlanguages *languages;
+@property(weak, nonatomic)madditemprojectlanguages *modellanguages;
 
 @end

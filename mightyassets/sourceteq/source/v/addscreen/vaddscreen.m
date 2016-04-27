@@ -19,7 +19,7 @@ static NSInteger const interitem = -1;
     self.controller = controller;
     
     NSInteger current = controller.model.titles.count;
-    NSInteger shouldhave = controller.model.model.modelproject.languages.quantity;
+    NSInteger shouldhave = controller.model.model.modelproject.modellanguages.quantity;
     
     if(current < shouldhave)
     {
