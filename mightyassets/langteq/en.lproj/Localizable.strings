@@ -32,6 +32,7 @@
 "madd_item_projectdevices_universal_title"="Universal";
 "madd_item_projectlanguages_title"="Localizations";
 "madd_item_projectlanguages_descr"="\nYou can add a different title for every localization";
+"madd_item_titlesfont_title"="Font";
 "madd_item_colorsbackground_title"="Background";
 "madd_item_colorsdevice_title"="Device";
 "madd_item_colorstext_title"="Text";

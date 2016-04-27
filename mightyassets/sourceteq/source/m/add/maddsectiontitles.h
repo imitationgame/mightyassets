@@ -1,4 +1,4 @@
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import "maddsection.h"
 #import "madditemtitlesfont.h"
 

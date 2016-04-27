@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Avenir Next</string>
+		<key>font</key>
+		<string>AvenirNext-Regular</string>
+	</dict>
+    <dict>
+        <key>name</key>
+        <string>Avenir Next bold</string>
+        <key>font</key>
+        <string>AvenirNext-DemiBold</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Avenir Next</string>
+        <key>font</key>
+        <string>AvenirNext-Regular</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Avenir Next</string>
+        <key>font</key>
+        <string>AvenirNext-Regular</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Avenir Next</string>
+        <key>font</key>
+        <string>AvenirNext-Regular</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Avenir Next</string>
+        <key>font</key>
+        <string>AvenirNext-Regular</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Avenir Next</string>
+        <key>font</key>
+        <string>AvenirNext-Regular</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Avenir Next</string>
+        <key>font</key>
+        <string>AvenirNext-Regular</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Avenir Next</string>
+        <key>font</key>
+        <string>AvenirNext-Regular</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Avenir Next</string>
+        <key>font</key>
+        <string>AvenirNext-Regular</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Avenir Next</string>
+        <key>font</key>
+        <string>AvenirNext-Regular</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Avenir Next</string>
+        <key>font</key>
+        <string>AvenirNext-Regular</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Avenir Next</string>
+        <key>font</key>
+        <string>AvenirNext-Regular</string>
+    </dict>
+</array>
+</plist>

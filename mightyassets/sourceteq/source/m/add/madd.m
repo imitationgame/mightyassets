@@ -10,6 +10,9 @@
     self.asset = [[maddprocessassetiphone6 alloc] init];
     maddsectionproject *modelproject = [[maddsectionproject alloc] init];
     self.modelproject = modelproject;
+
+    maddsectiontitles *modeltitles = [[maddsectiontitles alloc] init];
+    self.modeltitles = modeltitles;
     
     maddsectioncolors *modelcolors = [[maddsectioncolors alloc] init];
     self.modelcolors = modelcolors;
@@ -22,6 +25,7 @@
     
     self.sections = @[
                       modelproject,
+                      modeltitles,
                       modelcolors,
                       modelposition,
                       modelscreens
