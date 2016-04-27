@@ -38,32 +38,4 @@
     return self;
 }
 
-#pragma mark functionality
-
--(void)setSelected:(BOOL)selected
-{
-    [super setSelected:selected];
-    [self hover];
-}
-
--(void)setHighlighted:(BOOL)highlighted
-{
-    [super setHighlighted:highlighted];
-    [self hover];
-}
-
-#pragma mark functionality
-
--(void)hover
-{
-    if(self.isSelected || self.isHighlighted)
-    {
-        [self setAlpha:0.2];
-    }
-    else
-    {
-        [self setAlpha:1];
-    }
-}
-
 @end

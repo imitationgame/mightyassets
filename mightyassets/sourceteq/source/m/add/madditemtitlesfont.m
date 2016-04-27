@@ -38,7 +38,7 @@ static NSInteger const cellheight = 64;
                        }
                        
                        welf.items = [array sortedArrayUsingComparator:
-                                     ^NSComparisonResult(madditemtitlesfontitem *obj1, madditemtitlesfontitem *obj2)
+                        ^NSComparisonResult(madditemtitlesfontitem *obj1, madditemtitlesfontitem *obj2)
                        {
                            return [obj1.name compare:obj2.name];
                        }];

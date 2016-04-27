@@ -1,4 +1,5 @@
 #import <UIKit/UIKit.h>
+#import "vaddcell.h"
 #import "madditempositionitem.h"
 
 @interface vaddcellpositioncell:UICollectionViewCell

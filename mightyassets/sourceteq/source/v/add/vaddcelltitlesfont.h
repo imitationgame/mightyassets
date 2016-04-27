@@ -3,4 +3,6 @@
 
 @interface vaddcelltitlesfont:vaddcell
 
+@property(weak, nonatomic)UILabel *labelfont;
+
 @end

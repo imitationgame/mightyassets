@@ -98,34 +98,6 @@ static NSInteger const warningsize = 45;
     return self;
 }
 
-#pragma mark functionality
-
--(void)setSelected:(BOOL)selected
-{
-    [super setSelected:selected];
-    [self hover];
-}
-
--(void)setHighlighted:(BOOL)highlighted
-{
-    [super setHighlighted:highlighted];
-    [self hover];
-}
-
-#pragma mark functionality
-
--(void)hover
-{
-    if(self.isSelected || self.isHighlighted)
-    {
-        [self setAlpha:0.2];
-    }
-    else
-    {
-        [self setAlpha:1];
-    }
-}
-
 #pragma mark -
 #pragma mark add cell
 
@@ -134,7 +106,6 @@ static NSInteger const warningsize = 45;
     NSInteger index = model.index + 1;
     NSString *stringtitle = [NSString stringWithFormat:NSLocalizedString(@"madd_item_screensedit_cell_title", nil), @(index)];
     [self.label setText:stringtitle];
-    [self hover];
     
     NSInteger iconimagewidth = 0;
     NSInteger icontitleswidth = 0;
@@ -156,6 +127,8 @@ static NSInteger const warningsize = 45;
     
     self.layouticontitleswidth.constant = icontitleswidth;
     self.layouticonimagewidth.constant = iconimagewidth;
+    
+    [super config:model];
 }
 
 @end

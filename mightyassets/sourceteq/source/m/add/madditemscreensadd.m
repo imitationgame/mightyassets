@@ -4,7 +4,7 @@
 #import "caddscreen.h"
 #import "cmain.h"
 
-static NSInteger const cellheight = 60;
+static NSInteger const cellheight = 64;
 
 @implementation madditemscreensadd
 

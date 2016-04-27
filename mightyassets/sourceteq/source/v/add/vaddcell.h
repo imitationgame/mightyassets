@@ -4,6 +4,7 @@
 @interface vaddcell:UICollectionViewCell
 
 -(void)config:(madditem*)model;
+-(void)hover;
 
 @property(weak, nonatomic)madditem *model;
 
