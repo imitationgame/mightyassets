@@ -29,6 +29,7 @@
 		DA35599F1CD164EA008AD644 /* madditemtitlesfontitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA35599E1CD164EA008AD644 /* madditemtitlesfontitem.m */; };
 		DA3559A21CD16653008AD644 /* vaddcelltitlesfont.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559A11CD16653008AD644 /* vaddcelltitlesfont.m */; };
 		DA3559A41CD16767008AD644 /* fonts.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA3559A31CD16767008AD644 /* fonts.plist */; };
+		DA3559A71CD176D9008AD644 /* caddfont.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559A61CD176D9008AD644 /* caddfont.m */; };
 		DA7D51B51CCFB132002D06FE /* loader.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7D51B41CCFB132002D06FE /* loader.xcassets */; };
 		DA7D51B81CCFB207002D06FE /* caddprocess.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51B71CCFB207002D06FE /* caddprocess.m */; };
 		DA7D51BC1CCFB44B002D06FE /* vaddprocess.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51BB1CCFB44B002D06FE /* vaddprocess.m */; };
@@ -170,6 +171,8 @@
 		DA3559A01CD16653008AD644 /* vaddcelltitlesfont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaddcelltitlesfont.h; sourceTree = "<group>"; };
 		DA3559A11CD16653008AD644 /* vaddcelltitlesfont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddcelltitlesfont.m; sourceTree = "<group>"; };
 		DA3559A31CD16767008AD644 /* fonts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fonts.plist; sourceTree = "<group>"; };
+		DA3559A51CD176D9008AD644 /* caddfont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = caddfont.h; sourceTree = "<group>"; };
+		DA3559A61CD176D9008AD644 /* caddfont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = caddfont.m; sourceTree = "<group>"; };
 		DA7D51B41CCFB132002D06FE /* loader.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = loader.xcassets; sourceTree = "<group>"; };
 		DA7D51B61CCFB207002D06FE /* caddprocess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = caddprocess.h; sourceTree = "<group>"; };
 		DA7D51B71CCFB207002D06FE /* caddprocess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = caddprocess.m; sourceTree = "<group>"; };
@@ -869,6 +872,8 @@
 				DA9A41161CCE88D900E49298 /* caddscreen.m */,
 				DA7D51B61CCFB207002D06FE /* caddprocess.h */,
 				DA7D51B71CCFB207002D06FE /* caddprocess.m */,
+				DA3559A51CD176D9008AD644 /* caddfont.h */,
+				DA3559A61CD176D9008AD644 /* caddfont.m */,
 			);
 			path = add;
 			sourceTree = "<group>";
@@ -1122,6 +1127,7 @@
 				DAAFB2A41CC98F9F003173A7 /* vaddheader.m in Sources */,
 				DAAFB2C61CCAAD6B003173A7 /* madditemcolors.m in Sources */,
 				DAAFB28D1CC970AB003173A7 /* vlandingclearheader.m in Sources */,
+				DA3559A71CD176D9008AD644 /* caddfont.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

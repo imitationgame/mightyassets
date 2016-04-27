@@ -10,6 +10,7 @@ static NSInteger const cellheight = 64;
     self = [super init:NSLocalizedString(@"madd_item_titlesfont_title", nil)];
     self.height = cellheight;
     self.cellclass = [vaddcelltitlesfont class];
+    self.selectable = YES;
     
     return self;
 }

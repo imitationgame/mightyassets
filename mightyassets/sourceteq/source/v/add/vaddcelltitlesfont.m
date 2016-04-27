@@ -3,7 +3,7 @@
 #import "uifont+uifontmain.h"
 #import "uicolor+uicolormain.h"
 
-static NSInteger const fontsize = 17;
+static NSInteger const fontsize = 19;
 
 @interface vaddcelltitlesfont ()
 
@@ -31,8 +31,8 @@ static NSInteger const fontsize = 17;
     [label setBackgroundColor:[UIColor clearColor]];
     [label setUserInteractionEnabled:NO];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [label setFont:[UIFont regularsize:15]];
-    [label setTextColor:[UIColor colorWithWhite:0 alpha:0.7]];
+    [label setFont:[UIFont regularsize:16]];
+    [label setTextColor:[UIColor colorWithWhite:0.3 alpha:1]];
     [label setText:NSLocalizedString(@"madd_item_titlesfont_title", nil)];
     
     [self addSubview:label];
