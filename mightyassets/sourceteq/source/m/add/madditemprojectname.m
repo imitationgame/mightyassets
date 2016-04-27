@@ -1,6 +1,7 @@
 #import "madditemprojectname.h"
+#import "vaddcellprojectname.h"
 
-static NSInteger const cellheight = 100;
+static NSInteger const cellheight = 70;
 
 @implementation madditemprojectname
 
@@ -8,6 +9,8 @@ static NSInteger const cellheight = 100;
 {
     self = [super init:NSLocalizedString(@"madd_item_projectname_title", nil)];
     self.height = cellheight;
+    self.name = @"";
+    self.cellclass = [vaddcellprojectname class];
     
     return self;
 }

@@ -1,9 +1,10 @@
 #import "vlandingbar.h"
 #import "uicolor+uicolormain.h"
+#import "uifont+uifontmain.h"
 
-static NSInteger const buttonbottommargin = 100;
-static NSInteger const buttonrightmargin = 100;
-static NSInteger const buttonleftmargin = 100;
+static NSInteger const buttonbottommargin = 20;
+static NSInteger const buttonrightmargin = 110;
+static NSInteger const buttonleftmargin = 110;
 static NSInteger const buttonheight = 50;
 
 @implementation vlandingbar
@@ -22,21 +23,32 @@ static NSInteger const buttonheight = 50;
     self.interactiveconstraints.left = buttonleftmargin;
     self.interactiveconstraints.height = buttonheight;
     
-    UIButton *buttonadd = [[UIButton alloc] init];
-    [buttonadd setClipsToBounds:YES];
-    [buttonadd setBackgroundColor:[UIColor whiteColor]];
-    [buttonadd setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [buttonadd setTitle:@"+" forState:UIControlStateNormal];
-    [buttonadd setTitleColor:[UIColor main] forState:UIControlStateNormal];
-    [buttonadd.layer setCornerRadius:20];
+    UILabel *label = [[UILabel alloc] init];
+    [label setUserInteractionEnabled:NO];
+    [label setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [label setNumberOfLines:0];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [label setFont:[UIFont regularsize:15]];
+    [label setTextColor:[UIColor whiteColor]];
+    [label setText:NSLocalizedString(@"landing_header_title", nil)];
     
-    [self addSubview:buttonadd];
+    UIImageView *iconadd = [[UIImageView alloc] init];
+    [iconadd setUserInteractionEnabled:NO];
+    [iconadd setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [iconadd setClipsToBounds:YES];
+    [iconadd setContentMode:UIViewContentModeCenter];
+    [iconadd setImage:[[UIImage imageNamed:@"generic_add"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+    [iconadd setTintColor:[UIColor whiteColor]];
     
-    NSDictionary *views = @{@"buttonadd":buttonadd};
+    [self addSubview:label];
+    [self addSubview:iconadd];
+    
+    NSDictionary *views = @{@"buttonadd":iconadd, @"label":label};
     NSDictionary *metrics = @{@"buttonbottom":@(buttonbottommargin), @"buttonright":@(buttonrightmargin), @"buttonleft":@(buttonleftmargin), @"buttonheight":@(buttonheight)};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(buttonleft)-[buttonadd]-(buttonright)-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[buttonadd(buttonheight)]-(buttonbottom)-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(buttonleft)-[label]-(buttonright)-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[label(18)]-0-[buttonadd(buttonheight)]-(buttonbottom)-|" options:0 metrics:metrics views:views]];
     
     return self;
 }

@@ -3,4 +3,6 @@
 
 @interface madditemprojectname:madditem
 
+@property(copy, nonatomic)NSString *name;
+
 @end

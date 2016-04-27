@@ -14,8 +14,8 @@
     UILabel *label = [[UILabel alloc] init];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setUserInteractionEnabled:NO];
-    [label setFont:[UIFont regularsize:15]];
-    [label setTextColor:[UIColor main]];
+    [label setFont:[UIFont boldsize:17]];
+    [label setTextColor:[UIColor second]];
     [label setTextAlignment:NSTextAlignmentCenter];
     [label setNumberOfLines:0];
     [label setText:NSLocalizedString(@"landing_footer_label", nil)];

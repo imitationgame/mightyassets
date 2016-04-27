@@ -1,3 +1,4 @@
+"landing_header_title"="Create a new project";
 "landing_footer_label"="No projects created yet";
 
 "add_title"="New project";
@@ -17,6 +18,7 @@
 "madd_section_position_name"="Position";
 "madd_section_screens_name"="Screens";
 "madd_item_projectname_title"="Name";
+"madd_item_projectname_placeholder"="Project name";
 "madd_item_projectdevices_title"="Devices";
 "madd_item_projectlanguages_title"="Localizations";
 "madd_item_projectlanguages_descr"="\nYou can add a different title for every localization";
@@ -27,7 +29,7 @@
 "madd_item_positioniphoneportraitfull_title"="Full";
 "madd_item_positioniphoneportraitusable_title"="Usable";
 "madd_item_screensedit_title"="Edit screen";
-"madd_item_screensedit_cell_title"="Screen %@";
+"madd_item_screensedit_cell_title"="Screen %@/5";
 "madd_item_screensedit_cell_titles"="Titles";
 "madd_item_screensedit_cell_image"="Image";
 "madd_item_screensadd_title"="Add screen";

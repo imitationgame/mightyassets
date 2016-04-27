@@ -20,7 +20,7 @@ static NSInteger const colbottom;
 {
     self = [super init];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor background]];
+    [self setBackgroundColor:[UIColor whiteColor]];
     self.controller = controller;
     
     vlandingbar *bar = [[vlandingbar alloc] init:controller];

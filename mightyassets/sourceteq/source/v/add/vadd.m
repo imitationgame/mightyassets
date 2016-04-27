@@ -6,7 +6,7 @@
 #import "uicolor+uicolormain.h"
 
 static NSString* const addheaderid = @"addheader";
-static NSInteger const headerheight = 40;
+static NSInteger const headerheight = 50;
 static NSInteger const colbottom = 40;
 static NSInteger const interitem = -1;
 
