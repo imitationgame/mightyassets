@@ -56,7 +56,6 @@ static NSInteger const maxpercent = 100;
     CGFloat drawdevicewidth = devicerawwidth / ratio;
     CGFloat drawdevicex = (assetwidth - drawdevicewidth) / 2.0;
     CGFloat drawdeviceheight = usableheight;
-    CGFloat drawtexty = 0;
     CGRect rectdevice = CGRectMake(drawdevicex, drawdevicey, drawdevicewidth, drawdeviceheight);
     UIImage *imagedevice = [UIImage imageNamed:asset.assetname];
     
@@ -79,20 +78,24 @@ static NSInteger const maxpercent = 100;
     NSURL *url = [NSURL fileURLWithPath:filepath];
     [UIImagePNGRepresentation(newasset) writeToURL:url options:NSDataWritingAtomic error:nil];
     
-    UIActivityViewController *act = [[UIActivityViewController alloc] initWithActivityItems:@[url] applicationActivities:nil];
-    
-    if([UIPopoverPresentationController class])
-    {
-        act.popoverPresentationController.sourceView = [cmain singleton].view;
-        act.popoverPresentationController.sourceRect = CGRectMake(([cmain singleton].view.bounds.size.width / 2.0) - 2, [cmain singleton].view.bounds.size.height - 100, 1, 1);
-        act.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUp | UIPopoverArrowDirectionDown;
-    }
-    
-    [[cmain singleton] presentViewController:act animated:YES completion:
-     ^
-     {
-         [[cmain singleton].pages page_landing:UIPageViewControllerNavigationDirectionReverse animated:YES];
-     }];
+    dispatch_async(dispatch_get_main_queue(),
+                   ^
+                   {
+                       UIActivityViewController *act = [[UIActivityViewController alloc] initWithActivityItems:@[url] applicationActivities:nil];
+                       
+                       if([UIPopoverPresentationController class])
+                       {
+                           act.popoverPresentationController.sourceView = [cmain singleton].view;
+                           act.popoverPresentationController.sourceRect = CGRectMake(([cmain singleton].view.bounds.size.width / 2.0) - 2, [cmain singleton].view.bounds.size.height - 100, 1, 1);
+                           act.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUp | UIPopoverArrowDirectionDown;
+                       }
+                       
+                       [[cmain singleton] presentViewController:act animated:YES completion:
+                        ^
+                        {
+                            [[cmain singleton].pages page_landing:UIPageViewControllerNavigationDirectionReverse animated:YES];
+                        }];
+                   });
 }
 
 -(UIImage*)createimage:(UIImage*)imagedevice rect:(CGRect)rect rectdevice:(CGRect)rectdevice string:(NSString*)string stringrect:(CGRect)stringrect attributes:(NSDictionary*)attributes

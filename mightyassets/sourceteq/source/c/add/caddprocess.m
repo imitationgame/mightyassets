@@ -23,7 +23,16 @@
 {
     [super viewDidAppear:animated];
     
-    self.process = [[maddprocess alloc] init:self.model];
+    __weak typeof(self) welf = self;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                   ^
+                   {
+                       if(!welf.process)
+                       {
+                           welf.process = [[maddprocess alloc] init:welf.model];
+                       }
+                   });
 }
 
 -(void)loadView
