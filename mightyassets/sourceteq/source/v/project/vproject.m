@@ -5,7 +5,8 @@
 static NSString* const projectcellid = @"projectcell";
 static NSInteger const interitem = 10;
 static NSInteger const maxcellwidth = 200;
-static NSInteger const maxcellheight = 280;
+static NSInteger const maxcellheight = 300;
+static NSInteger const celltextheight = 100;
 
 @implementation vproject
 
@@ -53,11 +54,16 @@ static NSInteger const maxcellheight = 280;
 
 #pragma mark functionality
 
--(mprojectitempicsitem*)modelforindex:(NSIndexPath*)index
+-(mprojectitempicsitem*)modelforitem:(NSInteger)item
 {
-    mprojectitempicsitem *model = self.pics.items[index.item];
+    mprojectitempicsitem *model = self.pics.items[item];
     
     return model;
+}
+
+-(void)constraint:(mprojectitempicsitem*)model
+{
+    model.constraints = [mprojectitempicsitemconstraints imagewidth:model.imagewidth imageheight:model.imageheight maxwidth:maxcellwidth maxheight:maxcellheight textheight:celltextheight];
 }
 
 #pragma mark public
@@ -84,14 +90,28 @@ static NSInteger const maxcellheight = 280;
 
 -(UIEdgeInsets)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout insetForSectionAtIndex:(NSInteger)section
 {
-    UIEdgeInsets insets;
+    mprojectitempicsitem *model = [self modelforitem:section];
+    
+    if(!model.constraints)
+    {
+        [self constraint:model];
+    }
+    
+    UIEdgeInsets insets = UIEdgeInsetsMake(model.constraints.insetstop, 0, 0, 0);
     
     return insets;
 }
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
-    CGSize size;
+    mprojectitempicsitem *model = [self modelforitem:index.section];
+    
+    if(!model.constraints)
+    {
+        [self constraint:model];
+    }
+    
+    CGSize size = CGSizeMake(model.constraints.cellwidth, model.constraints.cellheight);
     
     return size;
 }
@@ -110,7 +130,7 @@ static NSInteger const maxcellheight = 280;
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
-    mprojectitempicsitem *model = [self modelforindex:index];
+    mprojectitempicsitem *model = [self modelforitem:index.section];
     vprojectcell *cell = [col dequeueReusableCellWithReuseIdentifier:projectcellid forIndexPath:index];
     [cell config:model];
     
