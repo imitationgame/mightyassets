@@ -37,6 +37,9 @@
 		DA7C64411CD268E50058CCA3 /* vproject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7C64401CD268E50058CCA3 /* vproject.m */; };
 		DA7C64441CD26CA60058CCA3 /* vprojectbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7C64431CD26CA60058CCA3 /* vprojectbar.m */; };
 		DA7C64461CD272940058CCA3 /* project.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7C64451CD272940058CCA3 /* project.xcassets */; };
+		DA7C64491CD2756F0058CCA3 /* mprojectitempics.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7C64481CD2756F0058CCA3 /* mprojectitempics.m */; };
+		DA7C644C1CD2761D0058CCA3 /* mprojectitempicsitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7C644B1CD2761D0058CCA3 /* mprojectitempicsitem.m */; };
+		DA7C644F1CD2788F0058CCA3 /* vprojectcell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7C644E1CD2788F0058CCA3 /* vprojectcell.m */; };
 		DA7D51B51CCFB132002D06FE /* loader.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7D51B41CCFB132002D06FE /* loader.xcassets */; };
 		DA7D51B81CCFB207002D06FE /* caddprocess.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51B71CCFB207002D06FE /* caddprocess.m */; };
 		DA7D51BC1CCFB44B002D06FE /* vaddprocess.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51BB1CCFB44B002D06FE /* vaddprocess.m */; };
@@ -193,6 +196,12 @@
 		DA7C64421CD26CA60058CCA3 /* vprojectbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprojectbar.h; sourceTree = "<group>"; };
 		DA7C64431CD26CA60058CCA3 /* vprojectbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprojectbar.m; sourceTree = "<group>"; };
 		DA7C64451CD272940058CCA3 /* project.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = project.xcassets; sourceTree = "<group>"; };
+		DA7C64471CD2756F0058CCA3 /* mprojectitempics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprojectitempics.h; sourceTree = "<group>"; };
+		DA7C64481CD2756F0058CCA3 /* mprojectitempics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprojectitempics.m; sourceTree = "<group>"; };
+		DA7C644A1CD2761D0058CCA3 /* mprojectitempicsitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprojectitempicsitem.h; sourceTree = "<group>"; };
+		DA7C644B1CD2761D0058CCA3 /* mprojectitempicsitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprojectitempicsitem.m; sourceTree = "<group>"; };
+		DA7C644D1CD2788F0058CCA3 /* vprojectcell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprojectcell.h; sourceTree = "<group>"; };
+		DA7C644E1CD2788F0058CCA3 /* vprojectcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprojectcell.m; sourceTree = "<group>"; };
 		DA7D51B41CCFB132002D06FE /* loader.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = loader.xcassets; sourceTree = "<group>"; };
 		DA7D51B61CCFB207002D06FE /* caddprocess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = caddprocess.h; sourceTree = "<group>"; };
 		DA7D51B71CCFB207002D06FE /* caddprocess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = caddprocess.m; sourceTree = "<group>"; };
@@ -416,6 +425,10 @@
 				DA35595F1CD1144A008AD644 /* mproject.m */,
 				DA3559611CD114DB008AD644 /* mprojectitem.h */,
 				DA3559621CD114DB008AD644 /* mprojectitem.m */,
+				DA7C64471CD2756F0058CCA3 /* mprojectitempics.h */,
+				DA7C64481CD2756F0058CCA3 /* mprojectitempics.m */,
+				DA7C644A1CD2761D0058CCA3 /* mprojectitempicsitem.h */,
+				DA7C644B1CD2761D0058CCA3 /* mprojectitempicsitem.m */,
 			);
 			path = project;
 			sourceTree = "<group>";
@@ -440,6 +453,8 @@
 				DA7C64401CD268E50058CCA3 /* vproject.m */,
 				DA7C64421CD26CA60058CCA3 /* vprojectbar.h */,
 				DA7C64431CD26CA60058CCA3 /* vprojectbar.m */,
+				DA7C644D1CD2788F0058CCA3 /* vprojectcell.h */,
+				DA7C644E1CD2788F0058CCA3 /* vprojectcell.m */,
 			);
 			path = project;
 			sourceTree = "<group>";
@@ -1097,6 +1112,7 @@
 				DA7D51CC1CCFC055002D06FE /* maddprocessdeviceiphone6.m in Sources */,
 				DAAFB2B11CC994FD003173A7 /* maddsectionproject.m in Sources */,
 				DA9A41111CCE79AE00E49298 /* madditemprojectlanguages.m in Sources */,
+				DA7C644F1CD2788F0058CCA3 /* vprojectcell.m in Sources */,
 				DA35598D1CD14790008AD644 /* maddprocessdrawable.m in Sources */,
 				DA9A41081CCE77A100E49298 /* vaddcellscreensedit.m in Sources */,
 				DAB377081CC93901001E8625 /* uifont+uifontmain.m in Sources */,
@@ -1130,6 +1146,7 @@
 				DAB377131CC93901001E8625 /* vspinner.m in Sources */,
 				DA3559AB1CD177AE008AD644 /* vaddfont.m in Sources */,
 				DAAFB2AE1CC993DC003173A7 /* madditem.m in Sources */,
+				DA7C64491CD2756F0058CCA3 /* mprojectitempics.m in Sources */,
 				DA3559811CD12BD9008AD644 /* madditemprojectdevicesitemuniversal.m in Sources */,
 				DA3559661CD11AB7008AD644 /* vlandingfooter.m in Sources */,
 				DA35598A1CD132D4008AD644 /* vaddwarning.m in Sources */,
@@ -1180,6 +1197,7 @@
 				DAB377041CC93901001E8625 /* analytics.m in Sources */,
 				DA3559691CD121F8008AD644 /* vaddcellprojectname.m in Sources */,
 				DAAFB2ED1CCDBC4D003173A7 /* maddsectionposition.m in Sources */,
+				DA7C644C1CD2761D0058CCA3 /* mprojectitempicsitem.m in Sources */,
 				DAAFB2A41CC98F9F003173A7 /* vaddheader.m in Sources */,
 				DAAFB2C61CCAAD6B003173A7 /* madditemcolors.m in Sources */,
 				DAAFB28D1CC970AB003173A7 /* vlandingclearheader.m in Sources */,

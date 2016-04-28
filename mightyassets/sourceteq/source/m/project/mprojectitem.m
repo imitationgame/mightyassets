@@ -27,4 +27,11 @@
     [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:nil];
 }
 
+-(mprojectitempics*)pics
+{
+    mprojectitempics *pics;
+    
+    return pics;
+}
+
 @end

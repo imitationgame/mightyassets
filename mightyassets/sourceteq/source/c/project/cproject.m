@@ -20,6 +20,16 @@
     return self;
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if(!self.view.pics)
+    {
+        [self.view loadpics];
+    }
+}
+
 -(void)loadView
 {
     self.view = [[vproject alloc] init:self];

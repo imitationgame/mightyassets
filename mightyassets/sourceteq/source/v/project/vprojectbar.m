@@ -2,7 +2,7 @@
 #import "uicolor+uicolormain.h"
 #import "uifont+uifontmain.h"
 
-static NSInteger const height = 100;
+static NSInteger const height = 110;
 
 @implementation vprojectbar
 
@@ -39,14 +39,26 @@ static NSInteger const height = 100;
     [backbutton.imageView setTintColor:[UIColor colorWithWhite:1 alpha:0.2]];
     [backbutton addTarget:self action:@selector(actionback:) forControlEvents:UIControlEventTouchUpInside];
     ;
+    
+    UIButton *buttonshare = [[UIButton alloc] init];
+    [buttonshare setClipsToBounds:YES];
+    [buttonshare setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [buttonshare setImage:[[UIImage imageNamed:@"project_share"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    [buttonshare setImage:[[UIImage imageNamed:@"project_share"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateHighlighted];
+    [buttonshare.imageView setContentMode:UIViewContentModeScaleAspectFit];
+    [buttonshare.imageView setClipsToBounds:YES];
+    [buttonshare.imageView setTintColor:[UIColor whiteColor]];
+    
     [self addSubview:label];
     [self addSubview:backbutton];
+    [self addSubview:buttonshare];
     
-    NSDictionary *views = @{@"label":label, @"back":backbutton};
+    NSDictionary *views = @{@"label":label, @"back":backbutton, @"share":buttonshare};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[label(45)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-100-[share]-100-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[label(45)]-0-[share(40)]-5-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[back(60)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[back(45)]" options:0 metrics:metrics views:views]];
     
