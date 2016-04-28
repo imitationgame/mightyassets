@@ -103,7 +103,7 @@ static NSInteger const margintext = 50;
     CGFloat drawdevicey = usablemargintop + usableextrudetop;
     CGFloat drawdevicewidth = devicerawwidth / ratio;
     CGFloat drawdevicex = (assetwidth - drawdevicewidth) / 2.0;
-    CGFloat drawdeviceheight = usableheight;
+    CGFloat drawdeviceheight = devicerawheight / ratio;
     
     NSMutableParagraphStyle *textalignment = [[NSMutableParagraphStyle alloc] init];
     textalignment.alignment = NSTextAlignmentCenter;
@@ -144,7 +144,7 @@ static NSInteger const margintext = 50;
         
         for(NSUInteger indextitle = 0; indextitle < counttitles; indextitle++)
         {
-            madditemscreensedittitle *title = screen.titles[0];
+            madditemscreensedittitle *title = screen.titles[indextitle];
             
             if(title.title.length)
             {

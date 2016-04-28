@@ -3,7 +3,7 @@
 static NSString* const name = @"ipad_pro";
 static NSInteger const sideshort = 2732;
 static NSInteger const sidelong = 2048;
-static NSInteger const fontsize = 100;
+static NSInteger const fontsize = 120;
 
 @implementation maddprocessdeviceipadpro
 
