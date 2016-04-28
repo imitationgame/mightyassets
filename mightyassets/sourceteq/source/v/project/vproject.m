@@ -48,6 +48,15 @@ static NSInteger const interitem = 10;
     return self;
 }
 
+#pragma mark functionality
+
+-(mprojectitempicsitem*)modelforindex:(NSIndexPath*)index
+{
+    mprojectitempicsitem *model = self.model.items[index.item];
+    
+    return model;
+}
+
 #pragma mark public
 
 -(void)loadpics
@@ -98,7 +107,11 @@ static NSInteger const interitem = 10;
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
-    return nil;
+    mprojectitempicsitem *model = [self modelforindex:index];
+    vprojectcell *cell = [col dequeueReusableCellWithReuseIdentifier:projectcellid forIndexPath:index];
+    [cell config:model];
+    
+    return cell;
 }
 
 @end
