@@ -5,7 +5,7 @@
 -(instancetype)init
 {
     self = [super init:NSLocalizedString(@"madd_item_colorstext_title", nil)];
-    self.color = [UIColor colorWithWhite:0.5 alpha:1];
+    self.color = [UIColor blackColor];
     
     return self;
 }
