@@ -5,6 +5,7 @@
 #import "tools.h"
 #import "cmain.h"
 
+static NSString* const imagename = @"%@_%@_%@.png";
 static CGFloat const percentdivider = 100.0;
 static NSInteger const maxpercent = 100;
 static NSInteger const margintext = 50;
@@ -32,6 +33,13 @@ static NSInteger const margintext = 50;
 }
 
 #pragma mark functionality
+
+-(NSString*)nameforimage:(NSString*)device localization:(NSInteger)localization screen:(NSInteger)screen
+{
+    NSString *name = [NSString stringWithFormat:imagename, device, @(localization), @(screen)];
+    
+    return name;
+}
 
 -(void)drawasset:(madditemscreensedit*)screen device:(maddprocessdevice*)device
 {
