@@ -52,7 +52,7 @@ static NSInteger const interitem = 10;
 
 -(mprojectitempicsitem*)modelforindex:(NSIndexPath*)index
 {
-    mprojectitempicsitem *model = self.model.items[index.item];
+    mprojectitempicsitem *model = self.pics.items[index.item];
     
     return model;
 }

@@ -17,10 +17,7 @@
 
 -(void)addimage:(UIImage*)image name:(NSString*)name
 {
-    NSString *foldername = [NSString stringWithFormat:@"%@", @(self.itemid)];
-    NSString *documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-    NSString *projects = [documents stringByAppendingPathComponent:folderprojects];
-    NSString *folder = [projects stringByAppendingPathComponent:foldername];
+    NSString *folder = [self folderpath];
     NSString *imagename = [folder stringByAppendingPathComponent:name];
     NSURL *url = [NSURL fileURLWithPath:imagename];
     
@@ -29,9 +26,19 @@
 
 -(mprojectitempics*)pics
 {
-    mprojectitempics *pics;
+    mprojectitempics *pics = [[mprojectitempics alloc] init:self];
     
     return pics;
+}
+
+-(NSString*)folderpath
+{
+    NSString *foldername = [NSString stringWithFormat:@"%@", @(self.itemid)];
+    NSString *documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSString *projects = [documents stringByAppendingPathComponent:folderprojects];
+    NSString *folder = [projects stringByAppendingPathComponent:foldername];
+    
+    return folder;
 }
 
 @end
