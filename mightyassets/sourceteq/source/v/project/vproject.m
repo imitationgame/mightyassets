@@ -4,6 +4,8 @@
 
 static NSString* const projectcellid = @"projectcell";
 static NSInteger const interitem = 10;
+static NSInteger const maxcellwidth = 200;
+static NSInteger const maxcellheight = 280;
 
 @implementation vproject
 
@@ -39,11 +41,12 @@ static NSInteger const interitem = 10;
     [self addSubview:collection];
     
     NSDictionary *views = @{@"bar":bar, @"col":collection};
-    NSDictionary *metrics = @{};
+    NSDictionary *metrics = @{@"maxcellheight":@(maxcellheight)};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bar]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar]-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[col(maxcellheight)]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
