@@ -9,6 +9,7 @@
 
 @property(strong, nonatomic)maddprocessorientation *orientation;
 @property(strong, nonatomic)madditempositionitem *position;
+@property(copy, nonatomic)NSString *name;
 @property(assign, nonatomic)NSInteger fontsize;
 
 @end

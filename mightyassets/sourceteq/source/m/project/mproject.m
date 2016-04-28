@@ -1,7 +1,31 @@
 #import "mproject.h"
 #import "mdb.h"
+#import "mdirs.h"
+#import "genericconstants.h"
 
 @implementation mproject
+
++(mprojectitem*)newproject:(NSString*)name
+{
+    NSInteger created = [NSDate date].timeIntervalSince1970;
+    NSInteger projectid = [mdb addproject:name created:created];
+    
+    [mproject folderforproject:projectid];
+    
+    mprojectitem *model = [[mprojectitem alloc] init:projectid created:created name:name];
+    
+    return model;
+}
+
++(void)folderforproject:(NSInteger)projectid
+{
+    NSString *foldername = [NSString stringWithFormat:@"%@", @(projectid)];
+    NSString *documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSString *projects = [documents stringByAppendingPathComponent:folderprojects];
+    NSString *newfolder = [projects stringByAppendingPathComponent:foldername];
+    
+    [mdirs createdir:[NSURL fileURLWithPath:newfolder]];
+}
 
 -(instancetype)init
 {

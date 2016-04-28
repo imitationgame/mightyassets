@@ -17,28 +17,7 @@ static NSInteger const interitem = -1;
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
     self.controller = controller;
-    
-    NSInteger current = controller.model.titles.count;
-    NSInteger shouldhave = controller.model.model.modelproject.modellanguages.quantity;
-    
-    if(current < shouldhave)
-    {
-        while(current < shouldhave)
-        {
-            madditemscreensedittitle *newtitle = [[madditemscreensedittitle alloc] init];
-            [controller.model.titles addObject:newtitle];
-            current++;
-        }
-    }
-    else if(current > shouldhave)
-    {
-        while(current > shouldhave)
-        {
-            [controller.model.titles removeObjectAtIndex:current - 1];
-            current--;
-        }
-    }
-    
+    [controller.model.model clean];
     vaddscreenbar *bar = [[vaddscreenbar alloc] init:controller];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];

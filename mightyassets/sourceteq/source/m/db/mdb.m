@@ -2,12 +2,11 @@
 #import "mdbcreate.h"
 #import "db.h"
 #import "tools.h"
-#import "updater.h"
 #import "mdirs.h"
 
 @implementation mdb
 
-+(void)updatedb
++(void)updatedb:(NSString*)documents
 {
     NSUserDefaults *userdef = [NSUserDefaults standardUserDefaults];
     NSDictionary *def = [tools defaultdict];
@@ -34,6 +33,18 @@
     NSArray<NSDictionary*> *rawprojects = [db rows:query];
     
     return rawprojects;
+}
+
++(NSInteger)addproject:(NSString*)name created:(NSInteger)created
+{
+    NSString *query = [NSString stringWithFormat:
+                       @"INSERT INTO project (created, name) "
+                       "values(%@, \"%@\");",
+                       @(created), name];
+    
+    NSInteger projectid = [db query_identity:query];
+    
+    return projectid;
 }
 
 @end

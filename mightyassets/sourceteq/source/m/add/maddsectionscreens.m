@@ -39,4 +39,33 @@
     return completed;
 }
 
+-(void)clean
+{
+    NSInteger shouldhave = self.modelproject.modellanguages.quantity;
+    
+    for(madditem *item in self.items)
+    {
+        if([item isKindOfClass:[madditemscreensedit class]])
+        {
+            madditemscreensedit *edititem = (madditemscreensedit*)item;
+            NSInteger current = edititem.titles.count;
+            
+            if(current < shouldhave)
+            {
+                while(current < shouldhave)
+                {
+                    madditemscreensedittitle *newtitle = [[madditemscreensedittitle alloc] init];
+                    [edititem.titles addObject:newtitle];
+                    current++;
+                }
+            }
+            else if(current > shouldhave)
+            {
+                NSRange range = NSMakeRange(shouldhave, current - shouldhave);
+                [edititem.titles removeObjectsInRange:range];
+            }
+        }
+    }
+}
+
 @end

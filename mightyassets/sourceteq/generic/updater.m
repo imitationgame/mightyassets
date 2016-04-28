@@ -5,10 +5,10 @@
 #import "db.h"
 #import "analytics.h"
 #import "cmain.h"
+#import "mdirs.h"
+#import "genericconstants.h"
 
 @implementation updater
-
-NSString *documents;
 
 +(void)launch
 {
@@ -21,7 +21,7 @@ NSString *documents;
 
 +(void)update
 {
-    documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSString *documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSDictionary *defaults = [tools defaultdict];
     NSUserDefaults *properties = [NSUserDefaults standardUserDefaults];
     NSInteger def_version = [defaults[@"version"] integerValue];
@@ -33,15 +33,15 @@ NSString *documents;
         
         if(pro_version < 10)
         {
-            [updater firsttime:defaults];
-            [mdb updatedb];
+            [updater firsttime:defaults documents:documents];
+            [mdb updatedb:documents];
         }
     }
     
     dbname = [documents stringByAppendingPathComponent:[properties valueForKey:@"dbname"]];
 }
 
-+(void)firsttime:(NSDictionary*)plist
++(void)firsttime:(NSDictionary*)plist documents:(NSString*)documents
 {
     NSNumber *appid = plist[@"appid"];
     NSUserDefaults *userdef = [NSUserDefaults standardUserDefaults];
@@ -51,15 +51,9 @@ NSString *documents;
     [userdef removePersistentDomainForName:NSRegistrationDomain];
     [userdef setValue:appid forKey:@"appid"];
     [userdef synchronize];
-}
-
-+(void)registernotifications
-{
-    if([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)])
-    {
-        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert categories:nil];
-        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
-    }
+    
+    NSString *projects = [documents stringByAppendingPathComponent:folderprojects];
+    [mdirs createdir:[NSURL fileURLWithPath:projects]];
 }
 
 @end

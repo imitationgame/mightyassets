@@ -5,7 +5,8 @@
 
 @interface mdb:NSObject
 
-+(void)updatedb;
++(void)updatedb:(NSString*)documents;
 +(NSArray<NSDictionary*>*)fetchprojects;
++(NSInteger)addproject:(NSString*)name created:(NSInteger)created;
 
 @end
