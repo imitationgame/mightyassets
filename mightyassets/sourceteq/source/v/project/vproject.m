@@ -33,14 +33,17 @@ static NSInteger const interitem = 10;
     [collection setDataSource:self];
     [collection setDelegate:self];
     [collection registerClass:[vprojectcell class] forCellWithReuseIdentifier:projectcellid];
+    self.collection = collection;
     
     [self addSubview:bar];
+    [self addSubview:collection];
     
-    NSDictionary *views = @{@"bar":bar};
+    NSDictionary *views = @{@"bar":bar, @"col":collection};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bar]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar]-0-[col]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -55,6 +58,12 @@ static NSInteger const interitem = 10;
                    ^
                    {
                        welf.pics = [welf.controller.model pics];
+                       
+                       dispatch_async(dispatch_get_main_queue(),
+                                      ^
+                                      {
+                                          [welf.collection reloadData];
+                                      });
                    });
 }
 
