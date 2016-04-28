@@ -24,9 +24,16 @@ static NSInteger const margintext = 50;
     self.colortext = model.modelcolors.modeltext.color;
     self.position = [model.modelposition.modeliphoneportrait itemselected];
     
-    madditemscreensedit *screen = (madditemscreensedit*)(model.modelscreens.items[0]);
+    NSArray<maddprocessdevice*> *devices = [[model.modelproject.modeldevices itemselected] devices:self.position];
+    NSArray<madditemscreensedit*> *screens = [model.modelscreens screens];
     
-//    [self drawasset:screen device:device];
+    NSUInteger countdevices = devices.count;
+    
+    for(NSUInteger indexdevice = 0; indexdevice < countdevices; indexdevice++)
+    {
+        maddprocessdevice *device = devices[indexdevice];
+        [self drawdevice:devices screens:screens];
+    }
     
     return self;
 }
@@ -38,6 +45,11 @@ static NSInteger const margintext = 50;
     NSString *name = [NSString stringWithFormat:imagename, device, @(localization), @(screen)];
     
     return name;
+}
+
+-(void)drawdevice:(maddprocessdevice*)device screens:(NSArray<madditemscreensedit*>*)screens
+{
+    
 }
 
 -(void)drawasset:(madditemscreensedit*)screen device:(maddprocessdevice*)device
