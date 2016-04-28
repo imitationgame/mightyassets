@@ -1,5 +1,7 @@
 "landing_header_title"="Create a new project";
 "landing_footer_label"="No projects created yet";
+"landing_cell_created"="\n%@ ago";
+"landing_cell_noname"="Unnamed project";
 
 "add_title"="New project";
 
@@ -47,3 +49,7 @@
 "madd_item_screensedit_cell_titles"="Titles";
 "madd_item_screensedit_cell_image"="Image";
 "madd_item_screensadd_title"="Add screen";
+
+"elapsedtime_days"="%@ days";
+"elapsedtime_hours"="%@ hours";
+"elapsedtime_minutes"="%@ minutes";

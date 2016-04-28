@@ -10,9 +10,9 @@ static NSString* const footerid = @"footer";
 static NSString* const cellid = @"cell";
 static NSInteger const barheight = 200;
 static NSInteger const footerheight = 150;
-static NSInteger const cellheight = 80;
-static NSInteger const interitem = 1;
-static NSInteger const colbottom;
+static NSInteger const cellheight = 60;
+static NSInteger const interitem = -1;
+static NSInteger const colbottom = 40;
 
 @implementation vlanding
 
@@ -81,6 +81,13 @@ static NSInteger const colbottom;
                                           [welf.collection reloadData];
                                       });
                    });
+}
+
+-(mprojectitem*)modelforindex:(NSIndexPath*)index
+{
+    mprojectitem *model = self.model.items[index.item];
+    
+    return model;
 }
 
 #pragma mark -
@@ -164,7 +171,9 @@ static NSInteger const colbottom;
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
+    mprojectitem *model = [self modelforindex:index];
     vlandingcell *cell = [col dequeueReusableCellWithReuseIdentifier:cellid forIndexPath:index];
+    [cell config:model];
     
     return cell;
 }

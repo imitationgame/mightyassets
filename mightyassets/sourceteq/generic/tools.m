@@ -3,11 +3,13 @@
 
 static NSString* const shareurl = @"https://itunes.apple.com/us/app/cdmx/id%@";
 static NSString* const rateurl = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@";
+static NSUInteger const dayseconds = 86400;
+static NSUInteger const hourseconds = 3600;
+static NSUInteger const minuteseconds = 60;
 
 @implementation tools
 {
     NSNumberFormatter *numformatter;
-    NSDateFormatter *dateformatter;
     CFStringRef stringref;
 }
 
@@ -89,6 +91,35 @@ static NSString* const rateurl = @"itms-apps://itunes.apple.com/WebObjects/MZSto
     return str;
 }
 
++(NSString*)elapsedtimefrom:(NSUInteger)timestamp
+{
+    NSString *string;
+    NSUInteger currenttime = [NSDate date].timeIntervalSince1970;
+    NSUInteger elapsedtime = currenttime - timestamp;
+    NSUInteger days = elapsedtime / dayseconds;
+    
+    if(days)
+    {
+        string = [NSString stringWithFormat:NSLocalizedString(@"elapsedtime_days", nil), @(days)];
+    }
+    else
+    {
+        NSUInteger hours = (elapsedtime % dayseconds) / hourseconds;
+        
+        if(hours)
+        {
+            string = [NSString stringWithFormat:NSLocalizedString(@"elapsedtime_hours", nil), @(hours)];
+        }
+        else
+        {
+            NSUInteger minutes = (elapsedtime % hourseconds) / minuteseconds;
+            string = [NSString stringWithFormat:NSLocalizedString(@"elapsedtime_minutes", nil), @(minutes)];
+        }
+    }
+    
+    return string;
+}
+
 #pragma mark -
 
 -(instancetype)init
@@ -98,8 +129,6 @@ static NSString* const rateurl = @"itms-apps://itunes.apple.com/WebObjects/MZSto
     numformatter = [[NSNumberFormatter alloc] init];
     [numformatter setNumberStyle:NSNumberFormatterDecimalStyle];
     stringref = (CFStringRef)@"!*'();:@&=+$,/?%#[]";
-    dateformatter = [[NSDateFormatter alloc] init];
-    [dateformatter setDateFormat:@"yyyy-MM-dd"];
     
     return self;
 }
@@ -118,11 +147,6 @@ static NSString* const rateurl = @"itms-apps://itunes.apple.com/WebObjects/MZSto
     NSString *string = [numformatter stringFromNumber:number];
     
     return string;
-}
-
--(NSDate*)stringtodate:(NSString*)string
-{
-    return [dateformatter dateFromString:string];
 }
 
 @end
