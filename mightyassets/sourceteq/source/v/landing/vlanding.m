@@ -178,4 +178,9 @@ static NSInteger const colbottom = 40;
     return cell;
 }
 
+-(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    
+}
+
 @end
