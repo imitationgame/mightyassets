@@ -1,6 +1,6 @@
 #import "maddsectionscreens.h"
-#import "madditemscreensedit.h"
 #import "madditemscreensadd.h"
+#import "madditemscreensedit.h"
 
 @implementation maddsectionscreens
 
@@ -66,6 +66,24 @@
             }
         }
     }
+}
+
+-(NSArray<madditemscreensedit*>*)screens
+{
+    NSMutableArray<madditemscreensedit*> *screens = [NSMutableArray array];
+    NSInteger count = self.items.count;
+    
+    for(NSUInteger i = 0; i < count; i++)
+    {
+        madditem *item = self.items[i];
+        
+        if([item isKindOfClass:[madditemscreensedit class]])
+        {
+            [screens addObject:(madditemscreensedit*)item];
+        }
+    }
+    
+    return screens;
 }
 
 @end
