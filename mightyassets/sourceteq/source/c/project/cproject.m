@@ -30,6 +30,12 @@
     }
 }
 
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [self.view clean];
+}
+
 -(void)loadView
 {
     self.view = [[vproject alloc] init:self];

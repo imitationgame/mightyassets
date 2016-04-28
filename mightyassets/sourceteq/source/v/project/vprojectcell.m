@@ -58,9 +58,9 @@
     NSAttributedString *stringwidth = [[NSAttributedString alloc] initWithString:width attributes:self.attrdescr];
     NSAttributedString *stringheight = [[NSAttributedString alloc] initWithString:height attributes:self.attrdescr];
     NSMutableAttributedString *mutstring = [[NSMutableAttributedString alloc] init];
-    [mutstring appendAttributedString:stringname];
     [mutstring appendAttributedString:stringwidth];
     [mutstring appendAttributedString:stringheight];
+    [mutstring appendAttributedString:stringname];
     
     [self.label setAttributedText:mutstring];
 }

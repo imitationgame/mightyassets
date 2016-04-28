@@ -4,8 +4,8 @@
 
 static NSString* const projectcellid = @"projectcell";
 static NSInteger const interitem = 1;
-static NSInteger const celltextheight = 110;
-static NSInteger const emptyscace = 50;
+static NSInteger const celltextheight = 65;
+static NSInteger const emptyscace = 20;
 
 @implementation vproject
 
@@ -85,6 +85,12 @@ static NSInteger const emptyscace = 50;
                                           [welf.collection reloadData];
                                       });
                    });
+}
+
+-(void)clean
+{
+    [self.collection removeFromSuperview];
+    self.pics = nil;
 }
 
 #pragma mark -

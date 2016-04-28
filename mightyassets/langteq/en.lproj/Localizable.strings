@@ -51,8 +51,8 @@
 "madd_item_screensadd_title"="Add screen";
 
 "project_title_noname"="Project";
-"project_title_sizes_width"="\nwidth %@ px";
-"project_title_sizes_height"="\nheight %@ px";
+"project_title_sizes_width"="width %@ px";
+"project_title_sizes_height"="\nheight %@ px\n";
 
 "elapsedtime_days"="%@ days";
 "elapsedtime_hours"="%@ hours";
