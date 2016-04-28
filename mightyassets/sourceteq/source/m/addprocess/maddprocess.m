@@ -18,7 +18,7 @@ static NSInteger const margintext = 50;
     self.model = model;
     [model.modelscreens clean];
     
-    self.project = [mproject newproject:model.modelproject.name];
+    self.project = [mproject newproject:model.modelproject.modelname.name];
     self.colorbackground = model.modelcolors.modelbackground.color;
     self.colordevice = model.modelcolors.modeldevice.color;
     self.colortext = model.modelcolors.modeltext.color;
@@ -32,116 +32,16 @@ static NSInteger const margintext = 50;
     for(NSUInteger indexdevice = 0; indexdevice < countdevices; indexdevice++)
     {
         maddprocessdevice *device = devices[indexdevice];
-        [self drawdevice:devices screens:screens];
+        [self drawdevice:device screens:screens];
     }
     
-    return self;
-}
-
-#pragma mark functionality
-
--(NSString*)nameforimage:(NSString*)device localization:(NSInteger)localization screen:(NSInteger)screen
-{
-    NSString *name = [NSString stringWithFormat:imagename, device, @(localization), @(screen)];
     
-    return name;
-}
-
--(void)drawdevice:(maddprocessdevice*)device screens:(NSArray<madditemscreensedit*>*)screens
-{
     
-}
-
--(void)drawasset:(madditemscreensedit*)screen device:(maddprocessdevice*)device
-{
-    maddprocessasset *asset = self.model.asset;
-    madditempositionitem *position = device.position;
-    CGFloat percenttop = position.percenttop;
-    CGFloat percentbottom = position.percentbottom;
-    CGFloat assetwidth = device.orientation.width;
-    CGFloat assetheight = device.orientation.height;
-    CGFloat devicerawwidth = asset.imagewidth;
-    CGFloat devicerawheight = asset.imageheight;
-    CGFloat percenttouseheight = maxpercent - (percenttop + percentbottom);
-    CGFloat percenttouseheightfloat = percenttouseheight / percentdivider;
-    CGFloat usableheight = percenttouseheightfloat * assetheight;
-    CGFloat margintopfloat = percenttop / percentdivider;
-    CGFloat usablemargintop = margintopfloat * assetheight;
-    CGFloat extrudetop = [position extrudetop:asset];
-    CGFloat ratio = devicerawheight / usableheight;
-    
-    if(ratio < 1)
-    {
-        ratio = 1;
-    }
-    
-    CGFloat usableextrudetop = extrudetop / ratio;
-    CGFloat drawdevicey = usablemargintop + usableextrudetop;
-    CGFloat drawdevicewidth = devicerawwidth / ratio;
-    CGFloat drawdevicex = (assetwidth - drawdevicewidth) / 2.0;
-    CGFloat drawdeviceheight = usableheight;
-    
-    maddprocessdrawable *drawable = [[maddprocessdrawable alloc] init:assetwidth height:assetheight];
-    
-    if(asset)
-    {
-        drawable.device = [[maddprocessdrawabledevice alloc] init:drawdevicex y:drawdevicey width:drawdevicewidth height:drawdeviceheight];
-        drawable.device.image = [UIImage imageNamed:asset.assetname];
-    }
-    
-    if(screen.image)
-    {
-        CGFloat screenx = asset.screenx;
-        CGFloat screeny = asset.screeny;
-        CGFloat screenwidth = asset.screenwidth;
-        CGFloat screenheight = asset.screenheight;
-        CGFloat ratioscreenx = screenx / ratio;
-        CGFloat ratioscreeny = screeny / ratio;
-        CGFloat ratioscreenwidth = screenwidth / ratio;
-        CGFloat ratioscreenheight = screenheight / ratio;
-        CGFloat usablescreenx = ratioscreenx + drawdevicex;
-        CGFloat usablescreeny = ratioscreeny + drawdevicey;
-        
-        drawable.screen = [[maddprocessdrawablescreen alloc] init:usablescreenx y:usablescreeny width:ratioscreenwidth height:ratioscreenheight];
-        drawable.screen.image = screen.image;
-    }
-    
-    if(screen.titles.count)
-    {
-        madditemscreensedittitle *title = screen.titles[0];
-        
-        if(title.title.length)
-        {
-            CGFloat textspacewidth = assetwidth - (margintext + margintext);
-            CGFloat textspaceheight = drawdevicey;
-            CGSize textspace = CGSizeMake(textspacewidth, textspaceheight);
-            NSString *string = title.title;
-            UIFont *font = [UIFont fontWithName:@"ArialMT" size:device.fontsize];
-            
-            NSMutableParagraphStyle *textalignment = [[NSMutableParagraphStyle alloc] init];
-            textalignment.alignment = NSTextAlignmentCenter;
-            
-            NSDictionary *textattributes = @{NSForegroundColorAttributeName:self.colortext, NSFontAttributeName:font, NSParagraphStyleAttributeName:textalignment};
-            
-            CGRect textsize = [string boundingRectWithSize:textspace options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:textattributes context:nil];
-            CGFloat textwidth = ceilf(textsize.size.width);
-            CGFloat textheight = ceilf(textsize.size.height);
-            CGFloat width_text = textspacewidth - textwidth;
-            CGFloat height_text = textspaceheight - textheight;
-            CGFloat textx = (width_text / 2.0) + margintext;
-            CGFloat texty = height_text / 2.0;
-
-            drawable.text = [[maddprocessdrawabletext alloc] init:textx y:texty width:textwidth height:textheight];
-            drawable.text.string = string;
-            drawable.text.attributes = textattributes;
-        }
-    }
-    
-    UIImage *newasset = [self createimage:drawable];
-    
-    NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"Zmyimage.png"];
-    NSURL *url = [NSURL fileURLWithPath:filepath];
-    [UIImagePNGRepresentation(newasset) writeToURL:url options:NSDataWritingAtomic error:nil];
+    NSString *foldername = [NSString stringWithFormat:@"%@", @(self.project.itemid)];
+    NSString *documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSString *projects = [documents stringByAppendingPathComponent:@"projects"];
+    NSString *folder = [projects stringByAppendingPathComponent:foldername];
+    NSURL *url = [NSURL fileURLWithPath:folder];
     
     dispatch_async(dispatch_get_main_queue(),
                    ^
@@ -161,6 +61,116 @@ static NSInteger const margintext = 50;
                             [[cmain singleton].pages page_landing:UIPageViewControllerNavigationDirectionReverse animated:YES];
                         }];
                    });
+    
+    return self;
+}
+
+#pragma mark functionality
+
+-(NSString*)nameforimage:(NSString*)device localization:(NSInteger)localization screen:(NSInteger)screen
+{
+    NSInteger indexlocalization = localization + 1;
+    NSInteger indexscreen = screen + 1;
+    NSString *name = [NSString stringWithFormat:imagename, device, @(indexlocalization), @(indexscreen)];
+    
+    return name;
+}
+
+-(void)drawdevice:(maddprocessdevice*)device screens:(NSArray<madditemscreensedit*>*)screens
+{
+    maddprocessasset *asset = self.model.asset;
+    UIFont *font = [UIFont fontWithName:self.model.modeltitles.modelfont.font.font size:device.fontsize];
+    CGFloat percenttop = self.position.percenttop;
+    CGFloat percentbottom = self.position.percentbottom;
+    CGFloat assetwidth = device.orientation.width;
+    CGFloat assetheight = device.orientation.height;
+    CGFloat devicerawwidth = asset.imagewidth;
+    CGFloat devicerawheight = asset.imageheight;
+    CGFloat percenttouseheight = maxpercent - (percenttop + percentbottom);
+    CGFloat percenttouseheightfloat = percenttouseheight / percentdivider;
+    CGFloat usableheight = percenttouseheightfloat * assetheight;
+    CGFloat margintopfloat = percenttop / percentdivider;
+    CGFloat usablemargintop = margintopfloat * assetheight;
+    CGFloat extrudetop = [self.position extrudetop:asset];
+    CGFloat ratio = devicerawheight / usableheight;
+    
+    if(ratio < 1)
+    {
+        ratio = 1;
+    }
+    
+    CGFloat usableextrudetop = extrudetop / ratio;
+    CGFloat drawdevicey = usablemargintop + usableextrudetop;
+    CGFloat drawdevicewidth = devicerawwidth / ratio;
+    CGFloat drawdevicex = (assetwidth - drawdevicewidth) / 2.0;
+    CGFloat drawdeviceheight = usableheight;
+    
+    NSMutableParagraphStyle *textalignment = [[NSMutableParagraphStyle alloc] init];
+    textalignment.alignment = NSTextAlignmentCenter;
+    NSDictionary *textattributes = @{NSForegroundColorAttributeName:self.colortext, NSFontAttributeName:font, NSParagraphStyleAttributeName:textalignment};
+    
+    maddprocessdrawable *drawable = [[maddprocessdrawable alloc] init:assetwidth height:assetheight];
+    
+    if(asset)
+    {
+        drawable.device = [[maddprocessdrawabledevice alloc] init:drawdevicex y:drawdevicey width:drawdevicewidth height:drawdeviceheight];
+        drawable.device.image = [UIImage imageNamed:asset.assetname];
+    }
+    
+    NSInteger countscreens = screens.count;
+    
+    for(NSUInteger indexscreen = 0; indexscreen < countscreens; indexscreen++)
+    {
+        madditemscreensedit *screen = screens[indexscreen];
+        
+        if(screen.image)
+        {
+            CGFloat screenx = asset.screenx;
+            CGFloat screeny = asset.screeny;
+            CGFloat screenwidth = asset.screenwidth;
+            CGFloat screenheight = asset.screenheight;
+            CGFloat ratioscreenx = screenx / ratio;
+            CGFloat ratioscreeny = screeny / ratio;
+            CGFloat ratioscreenwidth = screenwidth / ratio;
+            CGFloat ratioscreenheight = screenheight / ratio;
+            CGFloat usablescreenx = ratioscreenx + drawdevicex;
+            CGFloat usablescreeny = ratioscreeny + drawdevicey;
+            
+            drawable.screen = [[maddprocessdrawablescreen alloc] init:usablescreenx y:usablescreeny width:ratioscreenwidth height:ratioscreenheight];
+            drawable.screen.image = screen.image;
+        }
+        
+        NSUInteger counttitles = screen.titles.count;
+        
+        for(NSUInteger indextitle = 0; indextitle < counttitles; indextitle++)
+        {
+            madditemscreensedittitle *title = screen.titles[0];
+            
+            if(title.title.length)
+            {
+                NSString *string = title.title;
+                CGFloat textspacewidth = assetwidth - (margintext + margintext);
+                CGFloat textspaceheight = drawdevicey;
+                CGSize textspace = CGSizeMake(textspacewidth, textspaceheight);
+                CGRect textsize = [string boundingRectWithSize:textspace options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:textattributes context:nil];
+                CGFloat textwidth = ceilf(textsize.size.width);
+                CGFloat textheight = ceilf(textsize.size.height);
+                CGFloat width_text = textspacewidth - textwidth;
+                CGFloat height_text = textspaceheight - textheight;
+                CGFloat textx = (width_text / 2.0) + margintext;
+                CGFloat texty = height_text / 2.0;
+                
+                drawable.text = [[maddprocessdrawabletext alloc] init:textx y:texty width:textwidth height:textheight];
+                drawable.text.string = string;
+                drawable.text.attributes = textattributes;
+            }
+            
+            UIImage *newimage = [self createimage:drawable];
+            NSString *imagename = [self nameforimage:device.name localization:indextitle screen:indexscreen];
+            
+            [self.project addimage:newimage name:imagename];
+        }
+    }
 }
 
 -(UIImage*)createimage:(maddprocessdrawable*)drawable
