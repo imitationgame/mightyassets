@@ -36,6 +36,7 @@
 		DA7C643D1CD267130058CCA3 /* cproject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7C643C1CD267130058CCA3 /* cproject.m */; };
 		DA7C64411CD268E50058CCA3 /* vproject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7C64401CD268E50058CCA3 /* vproject.m */; };
 		DA7C64441CD26CA60058CCA3 /* vprojectbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7C64431CD26CA60058CCA3 /* vprojectbar.m */; };
+		DA7C64461CD272940058CCA3 /* project.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7C64451CD272940058CCA3 /* project.xcassets */; };
 		DA7D51B51CCFB132002D06FE /* loader.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7D51B41CCFB132002D06FE /* loader.xcassets */; };
 		DA7D51B81CCFB207002D06FE /* caddprocess.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51B71CCFB207002D06FE /* caddprocess.m */; };
 		DA7D51BC1CCFB44B002D06FE /* vaddprocess.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D51BB1CCFB44B002D06FE /* vaddprocess.m */; };
@@ -191,6 +192,7 @@
 		DA7C64401CD268E50058CCA3 /* vproject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vproject.m; sourceTree = "<group>"; };
 		DA7C64421CD26CA60058CCA3 /* vprojectbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprojectbar.h; sourceTree = "<group>"; };
 		DA7C64431CD26CA60058CCA3 /* vprojectbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprojectbar.m; sourceTree = "<group>"; };
+		DA7C64451CD272940058CCA3 /* project.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = project.xcassets; sourceTree = "<group>"; };
 		DA7D51B41CCFB132002D06FE /* loader.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = loader.xcassets; sourceTree = "<group>"; };
 		DA7D51B61CCFB207002D06FE /* caddprocess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = caddprocess.h; sourceTree = "<group>"; };
 		DA7D51B71CCFB207002D06FE /* caddprocess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = caddprocess.m; sourceTree = "<group>"; };
@@ -706,6 +708,7 @@
 				DA9A40E61CCE531500E49298 /* add.xcassets */,
 				DA7D51B41CCFB132002D06FE /* loader.xcassets */,
 				DA7D51DF1CCFD564002D06FE /* device.xcassets */,
+				DA7C64451CD272940058CCA3 /* project.xcassets */,
 			);
 			path = imateq;
 			sourceTree = "<group>";
@@ -1009,6 +1012,7 @@
 				DAB377001CC93901001E8625 /* Localizable.strings in Resources */,
 				DA3559A41CD16767008AD644 /* fonts.plist in Resources */,
 				DA7D51B51CCFB132002D06FE /* loader.xcassets in Resources */,
+				DA7C64461CD272940058CCA3 /* project.xcassets in Resources */,
 				DAAFB2DB1CCC4D1E003173A7 /* generic.xcassets in Resources */,
 				DAB376FF1CC93901001E8625 /* defs.plist in Resources */,
 				DAAFB2E71CCC5777003173A7 /* colors.plist in Resources */,

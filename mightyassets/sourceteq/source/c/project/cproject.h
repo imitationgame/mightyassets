@@ -4,6 +4,7 @@
 @interface cproject:UIViewController
 
 -(instancetype)init:(mprojectitem*)model;
+-(void)back;
 
 @property(strong, nonatomic)mprojectitem *model;
 

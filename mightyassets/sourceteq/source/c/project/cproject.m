@@ -1,5 +1,6 @@
 #import "cproject.h"
 #import "vproject.h"
+#import "cmain.h"
 
 @interface cproject ()
 
@@ -22,6 +23,13 @@
 -(void)loadView
 {
     self.view = [[vproject alloc] init:self];
+}
+
+#pragma mark public
+
+-(void)back
+{
+    [[cmain singleton].pages page_landing:UIPageViewControllerNavigationDirectionReverse animated:YES];
 }
 
 @end

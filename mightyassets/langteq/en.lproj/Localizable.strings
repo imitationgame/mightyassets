@@ -50,6 +50,8 @@
 "madd_item_screensedit_cell_image"="Image";
 "madd_item_screensadd_title"="Add screen";
 
+"project_title_noname"="Project";
+
 "elapsedtime_days"="%@ days";
 "elapsedtime_hours"="%@ hours";
 "elapsedtime_minutes"="%@ minutes";
