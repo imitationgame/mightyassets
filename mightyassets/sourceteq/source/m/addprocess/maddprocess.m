@@ -17,17 +17,16 @@ static NSInteger const margintext = 50;
     self = [super init];
     self.model = model;
     [model.modelscreens clean];
-    self.project = [mproject newproject:model.modelproject.name];
     
+    self.project = [mproject newproject:model.modelproject.name];
     self.colorbackground = model.modelcolors.modelbackground.color;
     self.colordevice = model.modelcolors.modeldevice.color;
     self.colortext = model.modelcolors.modeltext.color;
+    self.position = [model.modelposition.modeliphoneportrait itemselected];
     
     madditemscreensedit *screen = (madditemscreensedit*)(model.modelscreens.items[0]);
-    madditempositionitem *position = [model.modelposition.modeliphoneportrait itemselected];
-    maddprocessdeviceiphone4 *device = [[maddprocessdeviceiphone4 alloc] init:position];
     
-    [self drawasset:screen device:device];
+//    [self drawasset:screen device:device];
     
     return self;
 }

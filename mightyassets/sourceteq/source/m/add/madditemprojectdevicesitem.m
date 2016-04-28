@@ -10,4 +10,11 @@
     return self;
 }
 
+#pragma mark public
+
+-(NSArray<maddprocessdevice*>*)devices:(madditempositionitem*)position
+{
+    return nil;
+}
+
 @end

@@ -1,6 +1,4 @@
 #import "maddsectionproject.h"
-#import "madditemprojectname.h"
-#import "madditemprojectdevices.h"
 
 @implementation maddsectionproject
 
@@ -8,13 +6,19 @@
 {
     self = [super init:NSLocalizedString(@"madd_section_project_name", nil)];
     
-    madditemprojectlanguages *languages = [[madditemprojectlanguages alloc] init];
-    self.modellanguages = languages;
+    madditemprojectname *modelname = [[madditemprojectname alloc] init];
+    self.modelname = modelname;
+    
+    madditemprojectdevices *modeldevices = [[madditemprojectdevices alloc] init];
+    self.modeldevices = modeldevices;
+    
+    madditemprojectlanguages *modellanguages = [[madditemprojectlanguages alloc] init];
+    self.modellanguages = modellanguages;
     
     self.items = @[
-                   [[madditemprojectname alloc] init],
-                   [[madditemprojectdevices alloc] init],
-                   languages
+                   modelname,
+                   modeldevices,
+                   modellanguages
                    ];
     
     return self;
