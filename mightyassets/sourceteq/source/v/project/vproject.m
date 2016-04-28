@@ -3,10 +3,9 @@
 #import "vprojectcell.h"
 
 static NSString* const projectcellid = @"projectcell";
-static NSInteger const interitem = 10;
-static NSInteger const maxcellwidth = 200;
-static NSInteger const maxcellheight = 300;
-static NSInteger const celltextheight = 100;
+static NSInteger const interitem = 1;
+static NSInteger const celltextheight = 110;
+static NSInteger const emptyscace = 50;
 
 @implementation vproject
 
@@ -24,7 +23,7 @@ static NSInteger const celltextheight = 100;
     [flow setFooterReferenceSize:CGSizeZero];
     [flow setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     [flow setMinimumLineSpacing:0];
-    [flow setMinimumInteritemSpacing:interitem];
+    [flow setMinimumInteritemSpacing:0];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setBackgroundColor:[UIColor clearColor]];
@@ -42,12 +41,11 @@ static NSInteger const celltextheight = 100;
     [self addSubview:collection];
     
     NSDictionary *views = @{@"bar":bar, @"col":collection};
-    NSDictionary *metrics = @{@"maxcellheight":@(maxcellheight)};
+    NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bar]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[col(maxcellheight)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar]-0-[col]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -63,7 +61,11 @@ static NSInteger const celltextheight = 100;
 
 -(void)constraint:(mprojectitempicsitem*)model
 {
-    model.constraints = [mprojectitempicsitemconstraints imagewidth:model.imagewidth imageheight:model.imageheight maxwidth:maxcellwidth maxheight:maxcellheight textheight:celltextheight];
+    CGFloat width = self.collection.bounds.size.width;
+    CGFloat height = self.collection.bounds.size.height;
+    CGFloat maxcellwidth = width - emptyscace;
+    
+    model.constraints = [mprojectitempicsitemconstraints imagewidth:model.imagewidth imageheight:model.imageheight maxwidth:maxcellwidth maxheight:height textheight:celltextheight];
 }
 
 #pragma mark public
@@ -97,7 +99,7 @@ static NSInteger const celltextheight = 100;
         [self constraint:model];
     }
     
-    UIEdgeInsets insets = UIEdgeInsetsMake(model.constraints.insetstop, 0, 0, 0);
+    UIEdgeInsets insets = UIEdgeInsetsMake(model.constraints.insetstop, interitem, 0, interitem);
     
     return insets;
 }
@@ -132,7 +134,7 @@ static NSInteger const celltextheight = 100;
 {
     mprojectitempicsitem *model = [self modelforitem:index.section];
     vprojectcell *cell = [col dequeueReusableCellWithReuseIdentifier:projectcellid forIndexPath:index];
-    [cell config:model];
+    [cell config:model textheight:celltextheight];
     
     return cell;
 }
