@@ -180,7 +180,8 @@ static NSInteger const colbottom = 40;
 
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
-    
+    mprojectitem *model = [self modelforindex:index];
+    [self.controller openproject:model];
 }
 
 @end

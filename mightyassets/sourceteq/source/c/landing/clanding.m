@@ -24,4 +24,9 @@
     [[cmain singleton].pages page_add];
 }
 
+-(void)openproject:(mprojectitem*)model
+{
+    [[cmain singleton].pages page_project:model];
+}
+
 @end

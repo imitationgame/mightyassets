@@ -2,6 +2,7 @@
 #import "clanding.h"
 #import "cadd.h"
 #import "caddprocess.h"
+#import "cproject.h"
 
 @implementation cpages
 
@@ -56,6 +57,12 @@
 -(void)page_addprocess:(madd*)model
 {
     caddprocess *controller = [[caddprocess alloc] init:model];
+    [self changecontroller:controller direction:UIPageViewControllerNavigationDirectionForward animated:YES];
+}
+
+-(void)page_project:(mprojectitem*)model
+{
+    cproject *controller = [[cproject alloc] init:model];
     [self changecontroller:controller direction:UIPageViewControllerNavigationDirectionForward animated:YES];
 }
 
