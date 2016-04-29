@@ -5,6 +5,9 @@
 -(instancetype)init
 {
     self = [super init:NSLocalizedString(@"madd_section_position_name", nil)];
+
+    madditemframe *modelframe = [[madditemframe alloc] init];
+    self.modelframe = modelframe;
     
     madditemorientation *modelorientation = [[madditemorientation alloc] init];
     self.modelorientation = modelorientation;
@@ -13,6 +16,7 @@
     self.modelposition = modelposition;
     
     self.items = @[
+                   modelframe,
                    modelorientation,
                    modelposition
                    ];
