@@ -50,11 +50,23 @@ static NSInteger const height = 110;
     [buttonshare.imageView setTintColor:[UIColor whiteColor]];
     [buttonshare addTarget:self action:@selector(actionshare:) forControlEvents:UIControlEventTouchUpInside];
     
+    UIButton *buttonremove = [[UIButton alloc] init];
+    [buttonremove setClipsToBounds:YES];
+    [buttonremove setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [buttonremove setImage:[[UIImage imageNamed:@"generic_close"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+    [buttonremove setImage:[[UIImage imageNamed:@"generic_close"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateHighlighted];
+    [buttonremove.imageView setContentMode:UIViewContentModeScaleAspectFit];
+    [buttonremove.imageView setClipsToBounds:YES];
+    [buttonremove.imageView setTintColor:[UIColor colorWithWhite:1 alpha:0.2]];
+    [buttonremove addTarget:self action:@selector(actionremove:) forControlEvents:UIControlEventTouchUpInside];
+    [buttonremove setImageEdgeInsets:UIEdgeInsetsMake(11, 18, 11, 0)];
+    
     [self addSubview:label];
     [self addSubview:backbutton];
     [self addSubview:buttonshare];
+    [self addSubview:buttonremove];
     
-    NSDictionary *views = @{@"label":label, @"back":backbutton, @"share":buttonshare};
+    NSDictionary *views = @{@"label":label, @"back":backbutton, @"share":buttonshare, @"remove":buttonremove};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
@@ -62,6 +74,8 @@ static NSInteger const height = 110;
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[label(45)]-0-[share(40)]-5-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[back(60)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[back(45)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[remove(60)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[remove(45)]" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -81,6 +95,11 @@ static NSInteger const height = 110;
 }
 
 -(void)actionback:(UIButton*)button
+{
+    [self.controller back];
+}
+
+-(void)actionremove:(UIButton*)button
 {
     [self.controller back];
 }
