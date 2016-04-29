@@ -1,6 +1,7 @@
 #import "vprojectbar.h"
 #import "uicolor+uicolormain.h"
 #import "uifont+uifontmain.h"
+#import "vprojectwarning.h"
 
 static NSInteger const height = 110;
 
@@ -101,7 +102,7 @@ static NSInteger const height = 110;
 
 -(void)actionremove:(UIButton*)button
 {
-    [self.controller back];
+    __unused vprojectwarning *warning = [[vprojectwarning alloc] init:self.controller.view];
 }
 
 @end

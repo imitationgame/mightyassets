@@ -1,6 +1,7 @@
 #import "vproject.h"
 #import "vprojectbar.h"
 #import "vprojectcell.h"
+#import "cproject.h"
 
 static NSString* const projectcellid = @"projectcell";
 static NSInteger const interitem = 1;

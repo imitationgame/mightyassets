@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
-#import "cproject.h"
 #import "mprojectitempics.h"
+
+@class cproject;
 
 @interface vproject:UIView<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 

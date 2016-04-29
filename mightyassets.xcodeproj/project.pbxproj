@@ -33,6 +33,7 @@
 		DA3559AB1CD177AE008AD644 /* vaddfont.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559AA1CD177AE008AD644 /* vaddfont.m */; };
 		DA3559AE1CD17911008AD644 /* vaddfontbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559AD1CD17911008AD644 /* vaddfontbar.m */; };
 		DA3559B11CD17920008AD644 /* vaddfontcell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559B01CD17920008AD644 /* vaddfontcell.m */; };
+		DA489E241CD3ED7100F68E74 /* vprojectwarning.m in Sources */ = {isa = PBXBuildFile; fileRef = DA489E231CD3ED7100F68E74 /* vprojectwarning.m */; };
 		DA7C643D1CD267130058CCA3 /* cproject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7C643C1CD267130058CCA3 /* cproject.m */; };
 		DA7C64411CD268E50058CCA3 /* vproject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7C64401CD268E50058CCA3 /* vproject.m */; };
 		DA7C64441CD26CA60058CCA3 /* vprojectbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7C64431CD26CA60058CCA3 /* vprojectbar.m */; };
@@ -190,6 +191,8 @@
 		DA3559AD1CD17911008AD644 /* vaddfontbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddfontbar.m; sourceTree = "<group>"; };
 		DA3559AF1CD17920008AD644 /* vaddfontcell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaddfontcell.h; sourceTree = "<group>"; };
 		DA3559B01CD17920008AD644 /* vaddfontcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddfontcell.m; sourceTree = "<group>"; };
+		DA489E221CD3ED7100F68E74 /* vprojectwarning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprojectwarning.h; sourceTree = "<group>"; };
+		DA489E231CD3ED7100F68E74 /* vprojectwarning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprojectwarning.m; sourceTree = "<group>"; };
 		DA7C643B1CD267130058CCA3 /* cproject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cproject.h; sourceTree = "<group>"; };
 		DA7C643C1CD267130058CCA3 /* cproject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cproject.m; sourceTree = "<group>"; };
 		DA7C643F1CD268E50058CCA3 /* vproject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vproject.h; sourceTree = "<group>"; };
@@ -460,6 +463,8 @@
 				DA7C64431CD26CA60058CCA3 /* vprojectbar.m */,
 				DA7C644D1CD2788F0058CCA3 /* vprojectcell.h */,
 				DA7C644E1CD2788F0058CCA3 /* vprojectcell.m */,
+				DA489E221CD3ED7100F68E74 /* vprojectwarning.h */,
+				DA489E231CD3ED7100F68E74 /* vprojectwarning.m */,
 			);
 			path = project;
 			sourceTree = "<group>";
@@ -1198,6 +1203,7 @@
 				DA3559931CD147C6008AD644 /* maddprocessdrawabletext.m in Sources */,
 				DA7D51D51CCFC078002D06FE /* maddprocessdeviceipadpro.m in Sources */,
 				DA3559AE1CD17911008AD644 /* vaddfontbar.m in Sources */,
+				DA489E241CD3ED7100F68E74 /* vprojectwarning.m in Sources */,
 				DA35599F1CD164EA008AD644 /* madditemtitlesfontitem.m in Sources */,
 				DAAFB2941CC972C8003173A7 /* mfixedconstraints.m in Sources */,
 				DAB377041CC93901001E8625 /* analytics.m in Sources */,

@@ -1,6 +1,7 @@
 #import "mprojectitem.h"
 #import "genericconstants.h"
 #import "cmain.h"
+#import "mdb.h"
 
 @implementation mprojectitem
 
@@ -56,6 +57,20 @@
     }
     
     [[cmain singleton] presentViewController:act animated:YES completion:nil];
+}
+
+-(void)remove
+{
+    [mdb deleteproject:self.itemid];
+    NSString *folderpath = [self folderpath];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                   ^
+                   {
+                       NSURL *url = [NSURL fileURLWithPath:folderpath];
+                       NSFileManager *manager = [NSFileManager defaultManager];
+                       [manager removeItemAtURL:url error:nil];
+                   });
 }
 
 @end

@@ -1,8 +1,6 @@
 #import "mprojectitempicsitem.h"
 #import "tools.h"
 
-static CGFloat const scale = 1;
-
 @implementation mprojectitempicsitem
 
 -(instancetype)init:(NSURL*)url

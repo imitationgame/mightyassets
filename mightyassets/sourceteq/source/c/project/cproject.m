@@ -2,12 +2,6 @@
 #import "vproject.h"
 #import "cmain.h"
 
-@interface cproject ()
-
-@property(strong, nonatomic)vproject *view;
-
-@end
-
 @implementation cproject
 
 @dynamic view;
@@ -46,6 +40,11 @@
 -(void)back
 {
     [[cmain singleton].pages page_landing:UIPageViewControllerNavigationDirectionReverse animated:YES];
+}
+
+-(void)deleteproject
+{
+    [self.model remove];
 }
 
 @end

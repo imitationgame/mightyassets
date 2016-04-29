@@ -8,6 +8,7 @@
 -(mprojectitempics*)pics;
 -(NSString*)folderpath;
 -(void)share;
+-(void)remove;
 
 @property(copy, nonatomic)NSString *name;
 @property(assign, nonatomic)NSInteger itemid;

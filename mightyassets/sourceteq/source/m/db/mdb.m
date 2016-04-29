@@ -47,4 +47,13 @@
     return projectid;
 }
 
++(void)deleteproject:(NSInteger)projectid
+{
+    NSString *query = [NSString stringWithFormat:
+                       @"DELETE FROM project where id=%@;",
+                       @(projectid)];
+    
+    [db query:query];
+}
+
 @end
