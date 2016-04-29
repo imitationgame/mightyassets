@@ -1,13 +1,10 @@
-//
-//  madditemframeitem.h
-//  mightyassets
-//
-//  Created by zero on 4/29/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
-@interface madditemframeitem : NSObject
+@interface madditemframeitem:NSObject
+
+-(instancetype)init:(NSString*)name asset:(NSString*)asset;
+
+@property(copy, nonatomic)NSString *name;
+@property(copy, nonatomic)NSString *asset;
 
 @end

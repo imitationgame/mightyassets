@@ -22,6 +22,7 @@ static CGFloat const animationduration = 0.3;
     [image setTranslatesAutoresizingMaskIntoConstraints:NO];
     [image.layer setBorderWidth:1];
     [image.layer setBorderColor:[UIColor background].CGColor];
+    [image.layer setCornerRadius:7];
     self.image = image;
     
     UILabel *label = [[UILabel alloc] init];

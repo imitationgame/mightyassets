@@ -1,13 +1,12 @@
-//
-//  madditemframeitemiphone6.m
-//  mightyassets
-//
-//  Created by zero on 4/29/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
-
 #import "madditemframeitemiphone6.h"
 
 @implementation madditemframeitemiphone6
+
+-(instancetype)init
+{
+    self = [super init:NSLocalizedString(@"madd_item_frame_iphone6_title", nil) asset:@"add_frame_iphone6"];
+    
+    return self;
+}
 
 @end

@@ -1,13 +1,14 @@
-//
-//  madditemframeitem.m
-//  mightyassets
-//
-//  Created by zero on 4/29/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
-
 #import "madditemframeitem.h"
 
 @implementation madditemframeitem
+
+-(instancetype)init:(NSString*)name asset:(NSString*)asset
+{
+    self = [super init];
+    self.name = name;
+    self.asset = asset;
+    
+    return self;
+}
 
 @end

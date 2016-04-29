@@ -2,7 +2,7 @@
 #import "madditemframeitemiphone6.h"
 #import "vaddcellframe.h"
 
-static NSInteger const cellheight = 150;
+static NSInteger const cellheight = 90;
 
 @implementation madditemframe
 
