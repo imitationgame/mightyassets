@@ -54,6 +54,9 @@
 "project_title_sizes_width"="width %@ px";
 "project_title_sizes_height"="\nheight %@ px\n";
 
+"elapsedtime_day"="%@ day";
+"elapsedtime_hour"="%@ hour";
+"elapsedtime_minute"="%@ minute";
 "elapsedtime_days"="%@ days";
 "elapsedtime_hours"="%@ hours";
 "elapsedtime_minutes"="%@ minutes";

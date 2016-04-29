@@ -100,7 +100,18 @@ static NSUInteger const minuteseconds = 60;
     
     if(days)
     {
-        string = [NSString stringWithFormat:NSLocalizedString(@"elapsedtime_days", nil), @(days)];
+        NSString *locstring;
+        
+        if(days == 1)
+        {
+            locstring = @"elapsedtime_day";
+        }
+        else
+        {
+            locstring = @"elapsedtime_days";
+        }
+        
+        string = [NSString stringWithFormat:NSLocalizedString(locstring, nil), @(days)];
     }
     else
     {
@@ -108,12 +119,35 @@ static NSUInteger const minuteseconds = 60;
         
         if(hours)
         {
-            string = [NSString stringWithFormat:NSLocalizedString(@"elapsedtime_hours", nil), @(hours)];
+            NSString *locstring;
+            
+            if(hours == 1)
+            {
+                locstring = @"elapsedtime_hour";
+            }
+            else
+            {
+                locstring = @"elapsedtime_hours";
+            }
+            
+            string = [NSString stringWithFormat:NSLocalizedString(locstring, nil), @(hours)];
         }
         else
         {
             NSUInteger minutes = (elapsedtime % hourseconds) / minuteseconds;
-            string = [NSString stringWithFormat:NSLocalizedString(@"elapsedtime_minutes", nil), @(minutes)];
+            
+            NSString *locstring;
+            
+            if(minutes == 1)
+            {
+                locstring = @"elapsedtime_minute";
+            }
+            else
+            {
+                locstring = @"elapsedtime_minutes";
+            }
+            
+            string = [NSString stringWithFormat:NSLocalizedString(locstring, nil), @(minutes)];
         }
     }
     
