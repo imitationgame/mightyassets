@@ -13,7 +13,7 @@
     UILabel *name = [[UILabel alloc] init];
     [name setUserInteractionEnabled:NO];
     [name setBackgroundColor:[UIColor clearColor]];
-    [name setFont:[UIFont regularsize:14]];
+    [name setFont:[UIFont regularsize:15]];
     [name setTextAlignment:NSTextAlignmentCenter];
     [name setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.name = name;
@@ -32,7 +32,7 @@
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[name]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[asset]-0-[name(18)]-10-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[asset]-10-[name(18)]-25-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[asset]-0-|" options:0 metrics:metrics views:views]];
     
     return self;

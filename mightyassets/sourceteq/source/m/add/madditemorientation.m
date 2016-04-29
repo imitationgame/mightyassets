@@ -3,7 +3,7 @@
 #import "madditemorientationitemlandscape.h"
 #import "vaddcellorientation.h"
 
-static NSInteger const cellheight = 150;
+static NSInteger const cellheight = 90;
 
 @implementation madditemorientation
 

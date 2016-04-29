@@ -1,10 +1,11 @@
 #import "vaddcellposition.h"
 #import "vaddcellpositioncell.h"
 #import "madditemposition.h"
+#import "uifont+uifontmain.h"
 
 static NSString* const positioncellid = @"positioncell";
-static NSInteger const cellwidth = 100;
-static NSInteger const interitem = 3;
+static NSInteger const cellwidth = 120;
+static NSInteger const interitem = 0;
 
 @interface vaddcellposition ()
 
@@ -40,13 +41,24 @@ static NSInteger const interitem = 3;
     [collection registerClass:[vaddcellpositioncell class] forCellWithReuseIdentifier:positioncellid];
     self.collection = collection;
     
+    UILabel *label = [[UILabel alloc] init];
+    [label setUserInteractionEnabled:NO];
+    [label setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [label setBackgroundColor:[UIColor clearColor]];
+    [label setFont:[UIFont regularsize:16]];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [label setText:NSLocalizedString(@"madd_item_position_title", nil)];
+    [label setTextColor:[UIColor colorWithWhite:0.3 alpha:1]];
+    
+    [self addSubview:label];
     [self addSubview:collection];
     
-    NSDictionary *views = @{@"col":collection};
+    NSDictionary *views = @{@"col":collection, @"label":label};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-25-[label(20)]-0-[col]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }

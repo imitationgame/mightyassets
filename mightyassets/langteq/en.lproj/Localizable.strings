@@ -46,7 +46,8 @@
 "madd_item_orientation_title"="Orientation";
 "madd_item_orientation_portrait_title"="Portrait";
 "madd_item_orientation_landscape_title"="Landscape";
-"madd_item_positionportrait_title"="iPhone portrait";
+"madd_item_position_title"="Position";
+"madd_item_positionportrait_title"="Position portrait";
 "madd_item_positionportraitfull_title"="Full";
 "madd_item_positionportraitusable_title"="Usable";
 "madd_item_screensedit_title"="Edit screen";
