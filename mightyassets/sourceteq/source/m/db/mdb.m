@@ -29,7 +29,7 @@
 {
     NSString *query = [NSString stringWithFormat:
                        @"SELECT id, created, name FROM project "
-                       "ORDER BY created ASC;"];
+                       "ORDER BY created DESC;"];
     NSArray<NSDictionary*> *rawprojects = [db rows:query];
     
     return rawprojects;
