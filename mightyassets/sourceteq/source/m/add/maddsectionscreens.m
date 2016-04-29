@@ -86,4 +86,21 @@
     return screens;
 }
 
+-(void)remove:(madditemscreensedit*)screen
+{
+    [self.items removeObject:screen];
+    
+    NSInteger count = self.items.count;
+    
+    for(NSUInteger i = 0; i < count; i++)
+    {
+        madditem *item = self.items[i];
+        
+        if([item isKindOfClass:[madditemscreensedit class]])
+        {
+            ((madditemscreensedit*)item).index = i;
+        }
+    }
+}
+
 @end

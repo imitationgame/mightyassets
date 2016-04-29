@@ -10,6 +10,7 @@
 -(BOOL)completed;
 -(void)clean;
 -(NSArray<madditemscreensedit*>*)screens;
+-(void)remove:(madditemscreensedit*)screen;
 
 @property(strong, nonatomic)NSMutableArray<madditem*> *items;
 @property(weak, nonatomic)maddsectionproject *modelproject;

@@ -36,24 +36,27 @@
     
     UIButton *buttonremove = [[UIButton alloc] init];
     [buttonremove setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [buttonremove setImage:[[UIImage imageNamed:@"generic_close"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-    [buttonremove setImage:[[UIImage imageNamed:@"generic_close"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateHighlighted];
+    [buttonremove setImage:[[UIImage imageNamed:@"generic_close"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+    [buttonremove setImage:[[UIImage imageNamed:@"generic_close"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateHighlighted];
     [buttonremove.imageView setClipsToBounds:YES];
     [buttonremove.imageView setContentMode:UIViewContentModeScaleAspectFit];
-    [buttonremove.imageView setTintColor:[UIColor blackColor]];
-    [buttonremove setImageEdgeInsets:UIEdgeInsetsMake(5, 5, 15, 15)];
+    [buttonremove.imageView setTintColor:[UIColor colorWithWhite:1 alpha:0.2]];
+    [buttonremove setImageEdgeInsets:UIEdgeInsetsMake(10, 17, 10, 0)];
+    [buttonremove addTarget:self action:@selector(actionremove:) forControlEvents:UIControlEventTouchUpInside];
     
     [self addSubview:label];
     [self addSubview:backbutton];
     [self addSubview:buttonremove];
     
-    NSDictionary *views = @{@"label":label, @"back":backbutton};
+    NSDictionary *views = @{@"label":label, @"back":backbutton, @"remove":buttonremove};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[label(45)]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[back(60)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[back(45)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[remove(60)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[remove(45)]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -69,6 +72,16 @@
 
 -(void)actionback:(UIButton*)button
 {
+    [self.controller back];
+}
+
+-(void)actionremove:(UIButton*)button
+{
+    if(self.controller.model.model.items.count > 2)
+    {
+        [self.controller.model.model remove:self.controller.model];
+    }
+    
     [self.controller back];
 }
 
