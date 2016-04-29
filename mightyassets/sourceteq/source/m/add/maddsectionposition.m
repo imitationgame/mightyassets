@@ -6,8 +6,11 @@
 {
     self = [super init:NSLocalizedString(@"madd_section_position_name", nil)];
     
-    madditempositioniphoneportrait *modeliphoneportrait = [[madditempositioniphoneportrait alloc] init];
-    self.modeliphoneportrait = modeliphoneportrait;
+    madditemorientation *modelorientation = [[madditemorientation alloc] init];
+    self.modelorientation = modelorientation;
+    
+    madditempositioniphoneportrait *modelposition = [[madditempositioniphoneportrait alloc] init];
+    self.modelposition = modelposition;
     
     self.items = @[
                    modeliphoneportrait

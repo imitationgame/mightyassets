@@ -34,6 +34,16 @@
 		DA3559AE1CD17911008AD644 /* vaddfontbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559AD1CD17911008AD644 /* vaddfontbar.m */; };
 		DA3559B11CD17920008AD644 /* vaddfontcell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559B01CD17920008AD644 /* vaddfontcell.m */; };
 		DA489E241CD3ED7100F68E74 /* vprojectwarning.m in Sources */ = {isa = PBXBuildFile; fileRef = DA489E231CD3ED7100F68E74 /* vprojectwarning.m */; };
+		DA489E271CD3F99B00F68E74 /* madditemorientation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA489E261CD3F99B00F68E74 /* madditemorientation.m */; };
+		DA489E2A1CD3FC1B00F68E74 /* madditemorientationitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA489E291CD3FC1B00F68E74 /* madditemorientationitem.m */; };
+		DA489E2D1CD3FC2C00F68E74 /* madditemorientationitemportrait.m in Sources */ = {isa = PBXBuildFile; fileRef = DA489E2C1CD3FC2C00F68E74 /* madditemorientationitemportrait.m */; };
+		DA489E301CD3FC5B00F68E74 /* madditemorientationitemlandscape.m in Sources */ = {isa = PBXBuildFile; fileRef = DA489E2F1CD3FC5B00F68E74 /* madditemorientationitemlandscape.m */; };
+		DA489E331CD3FCFB00F68E74 /* madditempositionportrait.m in Sources */ = {isa = PBXBuildFile; fileRef = DA489E321CD3FCFB00F68E74 /* madditempositionportrait.m */; };
+		DA489E361CD3FD0E00F68E74 /* madditempositionportraitfull.m in Sources */ = {isa = PBXBuildFile; fileRef = DA489E351CD3FD0E00F68E74 /* madditempositionportraitfull.m */; };
+		DA489E391CD3FD1D00F68E74 /* madditempositionportraitusable.m in Sources */ = {isa = PBXBuildFile; fileRef = DA489E381CD3FD1D00F68E74 /* madditempositionportraitusable.m */; };
+		DA489E3C1CD3FD2E00F68E74 /* madditempositionlandscape.m in Sources */ = {isa = PBXBuildFile; fileRef = DA489E3B1CD3FD2E00F68E74 /* madditempositionlandscape.m */; };
+		DA489E3F1CD3FD3F00F68E74 /* madditempositionlandscapedown.m in Sources */ = {isa = PBXBuildFile; fileRef = DA489E3E1CD3FD3F00F68E74 /* madditempositionlandscapedown.m */; };
+		DA489E421CD3FD5400F68E74 /* madditempositionlandscapemargin.m in Sources */ = {isa = PBXBuildFile; fileRef = DA489E411CD3FD5400F68E74 /* madditempositionlandscapemargin.m */; };
 		DA7C643D1CD267130058CCA3 /* cproject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7C643C1CD267130058CCA3 /* cproject.m */; };
 		DA7C64411CD268E50058CCA3 /* vproject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7C64401CD268E50058CCA3 /* vproject.m */; };
 		DA7C64441CD26CA60058CCA3 /* vprojectbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7C64431CD26CA60058CCA3 /* vprojectbar.m */; };
@@ -193,6 +203,26 @@
 		DA3559B01CD17920008AD644 /* vaddfontcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddfontcell.m; sourceTree = "<group>"; };
 		DA489E221CD3ED7100F68E74 /* vprojectwarning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprojectwarning.h; sourceTree = "<group>"; };
 		DA489E231CD3ED7100F68E74 /* vprojectwarning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprojectwarning.m; sourceTree = "<group>"; };
+		DA489E251CD3F99B00F68E74 /* madditemorientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditemorientation.h; sourceTree = "<group>"; };
+		DA489E261CD3F99B00F68E74 /* madditemorientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditemorientation.m; sourceTree = "<group>"; };
+		DA489E281CD3FC1B00F68E74 /* madditemorientationitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditemorientationitem.h; sourceTree = "<group>"; };
+		DA489E291CD3FC1B00F68E74 /* madditemorientationitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditemorientationitem.m; sourceTree = "<group>"; };
+		DA489E2B1CD3FC2C00F68E74 /* madditemorientationitemportrait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditemorientationitemportrait.h; sourceTree = "<group>"; };
+		DA489E2C1CD3FC2C00F68E74 /* madditemorientationitemportrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditemorientationitemportrait.m; sourceTree = "<group>"; };
+		DA489E2E1CD3FC5B00F68E74 /* madditemorientationitemlandscape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditemorientationitemlandscape.h; sourceTree = "<group>"; };
+		DA489E2F1CD3FC5B00F68E74 /* madditemorientationitemlandscape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditemorientationitemlandscape.m; sourceTree = "<group>"; };
+		DA489E311CD3FCFB00F68E74 /* madditempositionportrait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditempositionportrait.h; sourceTree = "<group>"; };
+		DA489E321CD3FCFB00F68E74 /* madditempositionportrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditempositionportrait.m; sourceTree = "<group>"; };
+		DA489E341CD3FD0E00F68E74 /* madditempositionportraitfull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditempositionportraitfull.h; sourceTree = "<group>"; };
+		DA489E351CD3FD0E00F68E74 /* madditempositionportraitfull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditempositionportraitfull.m; sourceTree = "<group>"; };
+		DA489E371CD3FD1D00F68E74 /* madditempositionportraitusable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditempositionportraitusable.h; sourceTree = "<group>"; };
+		DA489E381CD3FD1D00F68E74 /* madditempositionportraitusable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditempositionportraitusable.m; sourceTree = "<group>"; };
+		DA489E3A1CD3FD2E00F68E74 /* madditempositionlandscape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditempositionlandscape.h; sourceTree = "<group>"; };
+		DA489E3B1CD3FD2E00F68E74 /* madditempositionlandscape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditempositionlandscape.m; sourceTree = "<group>"; };
+		DA489E3D1CD3FD3F00F68E74 /* madditempositionlandscapedown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditempositionlandscapedown.h; sourceTree = "<group>"; };
+		DA489E3E1CD3FD3F00F68E74 /* madditempositionlandscapedown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditempositionlandscapedown.m; sourceTree = "<group>"; };
+		DA489E401CD3FD5400F68E74 /* madditempositionlandscapemargin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madditempositionlandscapemargin.h; sourceTree = "<group>"; };
+		DA489E411CD3FD5400F68E74 /* madditempositionlandscapemargin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madditempositionlandscapemargin.m; sourceTree = "<group>"; };
 		DA7C643B1CD267130058CCA3 /* cproject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cproject.h; sourceTree = "<group>"; };
 		DA7C643C1CD267130058CCA3 /* cproject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cproject.m; sourceTree = "<group>"; };
 		DA7C643F1CD268E50058CCA3 /* vproject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vproject.h; sourceTree = "<group>"; };
@@ -644,10 +674,30 @@
 				DAAFB2C81CCAB230003173A7 /* madditemcolorsdevice.m */,
 				DAAFB2CA1CCAB37A003173A7 /* madditemcolorstext.h */,
 				DAAFB2CB1CCAB37A003173A7 /* madditemcolorstext.m */,
+				DA489E251CD3F99B00F68E74 /* madditemorientation.h */,
+				DA489E261CD3F99B00F68E74 /* madditemorientation.m */,
+				DA489E281CD3FC1B00F68E74 /* madditemorientationitem.h */,
+				DA489E291CD3FC1B00F68E74 /* madditemorientationitem.m */,
+				DA489E2B1CD3FC2C00F68E74 /* madditemorientationitemportrait.h */,
+				DA489E2C1CD3FC2C00F68E74 /* madditemorientationitemportrait.m */,
+				DA489E2E1CD3FC5B00F68E74 /* madditemorientationitemlandscape.h */,
+				DA489E2F1CD3FC5B00F68E74 /* madditemorientationitemlandscape.m */,
 				DA9A40EB1CCE5B7900E49298 /* madditemposition.h */,
 				DA9A40EC1CCE5B7900E49298 /* madditemposition.m */,
 				DA9A40F41CCE5F4400E49298 /* madditempositionitem.h */,
 				DA9A40F51CCE5F4400E49298 /* madditempositionitem.m */,
+				DA489E311CD3FCFB00F68E74 /* madditempositionportrait.h */,
+				DA489E321CD3FCFB00F68E74 /* madditempositionportrait.m */,
+				DA489E3A1CD3FD2E00F68E74 /* madditempositionlandscape.h */,
+				DA489E3B1CD3FD2E00F68E74 /* madditempositionlandscape.m */,
+				DA489E341CD3FD0E00F68E74 /* madditempositionportraitfull.h */,
+				DA489E351CD3FD0E00F68E74 /* madditempositionportraitfull.m */,
+				DA489E371CD3FD1D00F68E74 /* madditempositionportraitusable.h */,
+				DA489E381CD3FD1D00F68E74 /* madditempositionportraitusable.m */,
+				DA489E3D1CD3FD3F00F68E74 /* madditempositionlandscapedown.h */,
+				DA489E3E1CD3FD3F00F68E74 /* madditempositionlandscapedown.m */,
+				DA489E401CD3FD5400F68E74 /* madditempositionlandscapemargin.h */,
+				DA489E411CD3FD5400F68E74 /* madditempositionlandscapemargin.m */,
 				DA9A40E81CCE555F00E49298 /* madditempositioniphoneportrait.h */,
 				DA9A40E91CCE555F00E49298 /* madditempositioniphoneportrait.m */,
 				DA9A40F71CCE602E00E49298 /* madditempositionitemiphoneportraitfull.h */,
@@ -1116,6 +1166,7 @@
 				DAB3770E1CC93901001E8625 /* mdb.m in Sources */,
 				DAAFB2A11CC98F8C003173A7 /* vaddcell.m in Sources */,
 				DAB377031CC93901001E8625 /* main.m in Sources */,
+				DA489E391CD3FD1D00F68E74 /* madditempositionportraitusable.m in Sources */,
 				DA7D51CF1CCFC05F002D06FE /* maddprocessdeviceiphone6plus.m in Sources */,
 				DAB377091CC93901001E8625 /* updater.m in Sources */,
 				DAAFB2D31CCABD60003173A7 /* vaddcolor.m in Sources */,
@@ -1136,12 +1187,15 @@
 				DA3559901CD147B0008AD644 /* maddprocessdrawabledevice.m in Sources */,
 				DAAFB28A1CC96947003173A7 /* vlandingbar.m in Sources */,
 				DAAFB2DF1CCC5348003173A7 /* maddcolor.m in Sources */,
+				DA489E3C1CD3FD2E00F68E74 /* madditempositionlandscape.m in Sources */,
 				DAB377121CC93901001E8625 /* vblur.m in Sources */,
 				DAB377071CC93901001E8625 /* uicolor+uicolormain.m in Sources */,
 				DAAFB2B41CC9959D003173A7 /* madditemprojectname.m in Sources */,
 				DAAFB2CC1CCAB37A003173A7 /* madditemcolorstext.m in Sources */,
 				DA7D51DB1CCFC4B6002D06FE /* maddprocessorientationportrait.m in Sources */,
+				DA489E3F1CD3FD3F00F68E74 /* madditempositionlandscapedown.m in Sources */,
 				DAAFB29E1CC98A76003173A7 /* vaddbar.m in Sources */,
+				DA489E421CD3FD5400F68E74 /* madditempositionlandscapemargin.m in Sources */,
 				DAB377051CC93901001E8625 /* nsnotification+nsnotificationmain.m in Sources */,
 				DA9A411B1CCE89E800E49298 /* vaddscreen.m in Sources */,
 				DA3559601CD1144A008AD644 /* mproject.m in Sources */,
@@ -1168,6 +1222,7 @@
 				DAB3770C1CC93901001E8625 /* cmain.m in Sources */,
 				DAB377101CC93901001E8625 /* mdirs.m in Sources */,
 				DA3559991CD16284008AD644 /* maddsectiontitles.m in Sources */,
+				DA489E2A1CD3FC1B00F68E74 /* madditemorientationitem.m in Sources */,
 				DA9A41211CCECBEC00E49298 /* vaddscreencell.m in Sources */,
 				DA7D51E91CCFD71C002D06FE /* maddprocessassetiphone6.m in Sources */,
 				DA7C64441CD26CA60058CCA3 /* vprojectbar.m in Sources */,
@@ -1177,9 +1232,12 @@
 				DAAFB2AB1CC9939F003173A7 /* maddsection.m in Sources */,
 				DA9A41141CCE7AD600E49298 /* vaddcellprojectlanguages.m in Sources */,
 				DA3559961CD147D9008AD644 /* maddprocessdrawablescreen.m in Sources */,
+				DA489E2D1CD3FC2C00F68E74 /* madditemorientationitemportrait.m in Sources */,
 				DAAFB2A81CC99385003173A7 /* madd.m in Sources */,
 				DA9A40ED1CCE5B7900E49298 /* madditemposition.m in Sources */,
+				DA489E271CD3F99B00F68E74 /* madditemorientation.m in Sources */,
 				DA7D51C91CCFC04D002D06FE /* maddprocessdeviceiphone5.m in Sources */,
+				DA489E361CD3FD0E00F68E74 /* madditempositionportraitfull.m in Sources */,
 				DA9A40F01CCE5C4600E49298 /* vaddcellposition.m in Sources */,
 				DAAFB2871CC96842003173A7 /* vlanding.m in Sources */,
 				DAB377061CC93901001E8625 /* tools.m in Sources */,
@@ -1187,6 +1245,7 @@
 				DAB377111CC93901001E8625 /* msettings.m in Sources */,
 				DA9A40F61CCE5F4400E49298 /* madditempositionitem.m in Sources */,
 				DA7D51BF1CCFB9B1002D06FE /* vaddprocessbar.m in Sources */,
+				DA489E301CD3FC5B00F68E74 /* madditemorientationitemlandscape.m in Sources */,
 				DA3559B11CD17920008AD644 /* vaddfontcell.m in Sources */,
 				DA3559781CD12BB2008AD644 /* madditemprojectdevicesitem.m in Sources */,
 				DA7D51B81CCFB207002D06FE /* caddprocess.m in Sources */,
@@ -1206,6 +1265,7 @@
 				DA489E241CD3ED7100F68E74 /* vprojectwarning.m in Sources */,
 				DA35599F1CD164EA008AD644 /* madditemtitlesfontitem.m in Sources */,
 				DAAFB2941CC972C8003173A7 /* mfixedconstraints.m in Sources */,
+				DA489E331CD3FCFB00F68E74 /* madditempositionportrait.m in Sources */,
 				DAB377041CC93901001E8625 /* analytics.m in Sources */,
 				DA3559691CD121F8008AD644 /* vaddcellprojectname.m in Sources */,
 				DAAFB2ED1CCDBC4D003173A7 /* maddsectionposition.m in Sources */,
