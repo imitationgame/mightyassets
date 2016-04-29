@@ -22,7 +22,7 @@ static NSInteger const margintext = 60;
     self.colorbackground = model.modelcolors.modelbackground.color;
     self.colordevice = model.modelcolors.modeldevice.color;
     self.colortext = model.modelcolors.modeltext.color;
-    self.position = [model.modelposition.modeliphoneportrait itemselected];
+    self.position = [model.modelposition.modelposition itemselected];
     
     NSArray<maddprocessdevice*> *devices = [[model.modelproject.modeldevices itemselected] devices:self.position];
     NSArray<madditemscreensedit*> *screens = [model.modelscreens screens];

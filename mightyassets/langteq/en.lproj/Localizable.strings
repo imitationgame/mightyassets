@@ -41,9 +41,12 @@
 "madd_item_colorsbackground_title"="Background";
 "madd_item_colorsdevice_title"="Device";
 "madd_item_colorstext_title"="Text";
-"madd_item_positioniphoneportrait_title"="iPhone portrait";
-"madd_item_positioniphoneportraitfull_title"="Full";
-"madd_item_positioniphoneportraitusable_title"="Usable";
+"madd_item_orientation_title"="Orientation";
+"madd_item_orientation_portrait_title"="Portrait";
+"madd_item_orientation_landscape_title"="Landscape";
+"madd_item_positionportrait_title"="iPhone portrait";
+"madd_item_positionportraitfull_title"="Full";
+"madd_item_positionportraitusable_title"="Usable";
 "madd_item_screensedit_title"="Edit screen";
 "madd_item_screensedit_cell_title"="Screen %@/5";
 "madd_item_screensedit_cell_titles"="Titles";

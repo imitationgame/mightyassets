@@ -1,13 +1,6 @@
-//
-//  madditemorientationitemportrait.h
-//  mightyassets
-//
-//  Created by zero on 4/29/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
+#import "madditemorientationitem.h"
 
-@interface madditemorientationitemportrait : NSObject
+@interface madditemorientationitemportrait:madditemorientationitem
 
 @end
