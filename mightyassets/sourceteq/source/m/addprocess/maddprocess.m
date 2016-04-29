@@ -101,6 +101,7 @@ static NSInteger const margintext = 60;
     {
         drawable.device = [[maddprocessdrawabledevice alloc] init:drawdevicex y:drawdevicey width:drawdevicewidth height:drawdeviceheight];
         drawable.device.image = [UIImage imageNamed:asset.assetname];
+        drawable.device.imagecam = [UIImage imageNamed:asset.assetnamecam];
     }
     
     NSInteger countscreens = screens.count;
@@ -168,10 +169,17 @@ static NSInteger const margintext = 60;
     
     if(drawable.device)
     {
+        CGContextSetBlendMode(context, kCGBlendModeNormal);
         [drawable.device.image drawInRect:drawable.device.rect];
         CGContextSetFillColorWithColor(context, self.colordevice.CGColor);
         CGContextSetBlendMode(context, kCGBlendModeSourceAtop);
         CGContextFillRect(context, drawable.device.rect);
+        
+        if(drawable.device.imagecam)
+        {
+            CGContextSetBlendMode(context, kCGBlendModeNormal);
+            [drawable.device.imagecam drawInRect:drawable.device.rect];
+        }
     }
     
     CGContextSetBlendMode(context, kCGBlendModeDestinationOver);
