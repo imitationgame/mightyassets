@@ -48,6 +48,7 @@ static NSInteger const height = 110;
     [buttonshare.imageView setContentMode:UIViewContentModeScaleAspectFit];
     [buttonshare.imageView setClipsToBounds:YES];
     [buttonshare.imageView setTintColor:[UIColor whiteColor]];
+    [buttonshare addTarget:self action:@selector(actionshare:) forControlEvents:UIControlEventTouchUpInside];
     
     [self addSubview:label];
     [self addSubview:backbutton];
@@ -73,6 +74,11 @@ static NSInteger const height = 110;
 }
 
 #pragma mark functionality
+
+-(void)actionshare:(UIButton*)button
+{
+    [self.controller.model share];
+}
 
 -(void)actionback:(UIButton*)button
 {

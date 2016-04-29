@@ -35,33 +35,6 @@ static NSInteger const margintext = 50;
         [self drawdevice:device screens:screens];
     }
     
-    
-    
-    NSString *foldername = [NSString stringWithFormat:@"%@", @(self.project.itemid)];
-    NSString *documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-    NSString *projects = [documents stringByAppendingPathComponent:@"projects"];
-    NSString *folder = [projects stringByAppendingPathComponent:foldername];
-    NSURL *url = [NSURL fileURLWithPath:folder];
-    
-    dispatch_async(dispatch_get_main_queue(),
-                   ^
-                   {
-                       UIActivityViewController *act = [[UIActivityViewController alloc] initWithActivityItems:@[url] applicationActivities:nil];
-                       
-                       if([UIPopoverPresentationController class])
-                       {
-                           act.popoverPresentationController.sourceView = [cmain singleton].view;
-                           act.popoverPresentationController.sourceRect = CGRectMake(([cmain singleton].view.bounds.size.width / 2.0) - 2, [cmain singleton].view.bounds.size.height - 100, 1, 1);
-                           act.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUp | UIPopoverArrowDirectionDown;
-                       }
-                       
-                       [[cmain singleton] presentViewController:act animated:YES completion:
-                        ^
-                        {
-                            [[cmain singleton].pages page_landing:UIPageViewControllerNavigationDirectionReverse animated:YES];
-                        }];
-                   });
-    
     return self;
 }
 
@@ -206,6 +179,7 @@ static NSInteger const margintext = 50;
     
     image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    CGContextRelease(context);
     
     return image;
 }

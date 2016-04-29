@@ -1,5 +1,6 @@
 #import "mprojectitem.h"
 #import "genericconstants.h"
+#import "cmain.h"
 
 @implementation mprojectitem
 
@@ -39,6 +40,22 @@
     NSString *folder = [projects stringByAppendingPathComponent:foldername];
     
     return folder;
+}
+
+-(void)share
+{
+    NSString *folderpath = [self folderpath];
+    NSURL *urlfolder = [NSURL fileURLWithPath:folderpath];
+    UIActivityViewController *act = [[UIActivityViewController alloc] initWithActivityItems:@[urlfolder] applicationActivities:nil];
+    
+    if([UIPopoverPresentationController class])
+    {
+        act.popoverPresentationController.sourceView = [cmain singleton].view;
+        act.popoverPresentationController.sourceRect = CGRectMake(([cmain singleton].view.bounds.size.width / 2.0) - 2, [cmain singleton].view.bounds.size.height - 100, 1, 1);
+        act.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUp | UIPopoverArrowDirectionDown;
+    }
+    
+    [[cmain singleton] presentViewController:act animated:YES completion:nil];
 }
 
 @end

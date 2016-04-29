@@ -7,6 +7,7 @@
 -(void)addimage:(UIImage*)image name:(NSString*)name;
 -(mprojectitempics*)pics;
 -(NSString*)folderpath;
+-(void)share;
 
 @property(copy, nonatomic)NSString *name;
 @property(assign, nonatomic)NSInteger itemid;

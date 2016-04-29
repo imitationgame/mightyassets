@@ -9,6 +9,7 @@
 +(UIImage*)qrcode:(NSString*)string;
 +(NSString*)cleanlatin:(NSString*)string;
 +(NSString*)elapsedtimefrom:(NSUInteger)timestamp;
++(UIImage*)bufferimage:(UIImage*)image;
 -(NSString*)urlencode:(NSString*)string;
 
 @end

@@ -1,4 +1,7 @@
 #import "mprojectitempicsitem.h"
+#import "tools.h"
+
+static CGFloat const scale = 1;
 
 @implementation mprojectitempicsitem
 
@@ -6,12 +9,21 @@
 {
     self = [super init];
     self.url = url;
-    self.image = [UIImage imageWithContentsOfFile:url.path];
+    
+    self.buffer = [UIImage imageWithContentsOfFile:url.path];
     self.imagename = url.lastPathComponent;
-    self.imagewidth = self.image.size.width;
-    self.imageheight = self.image.size.height;
+    self.imagewidth = self.buffer.size.width;
+    self.imageheight = self.buffer.size.height;
     
     return self;
+}
+
+#pragma mark public
+
+-(void)loadbuffer
+{
+    self.image = [tools bufferimage:self.buffer];
+    self.buffer = nil;
 }
 
 @end

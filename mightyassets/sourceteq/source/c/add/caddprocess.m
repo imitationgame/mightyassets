@@ -1,5 +1,6 @@
 #import "caddprocess.h"
 #import "vaddprocess.h"
+#import "cmain.h"
 
 @interface caddprocess ()
 
@@ -32,6 +33,12 @@
                        {
                            welf.process = [[maddprocess alloc] init:welf.model];
                        }
+                       
+                       dispatch_async(dispatch_get_main_queue(),
+                                      ^
+                                      {
+                                          [[cmain singleton].pages page_project:welf.process.project];
+                                      });
                    });
 }
 

@@ -2,6 +2,8 @@
 #import "uifont+uifontmain.h"
 #import "uicolor+uicolormain.h"
 
+static CGFloat const animationduration = 0.3;
+
 @implementation vprojectcell
 
 -(instancetype)initWithFrame:(CGRect)frame
@@ -48,8 +50,9 @@
 
 -(void)config:(mprojectitempicsitem*)model textheight:(NSInteger)textheight
 {
+    [self.image setImage:nil];
+    [self.image setAlpha:0];
     self.layoutlabelheight.constant = textheight;
-    [self.image setImage:model.image];
     
     NSString *name = model.imagename;
     NSString *width = [NSString stringWithFormat:NSLocalizedString(@"project_title_sizes_width", nil), @(model.imagewidth)];
@@ -63,6 +66,29 @@
     [mutstring appendAttributedString:stringname];
     
     [self.label setAttributedText:mutstring];
+    
+    __weak typeof(self) welf = self;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                   ^
+                   {
+                       if(!model.image)
+                       {
+                           [model loadbuffer];
+                       }
+                       
+                       dispatch_async(dispatch_get_main_queue(),
+                                      ^
+                                      {
+                                          [welf.image setImage:model.image];
+                                          
+                                          [UIView animateWithDuration:animationduration animations:
+                                           ^
+                                           {
+                                               [welf.image setAlpha:1];
+                                           }];
+                                      });
+                   });
 }
 
 @end
