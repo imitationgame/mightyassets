@@ -3,7 +3,7 @@
 static NSString* const name = @"4-inch";
 static NSInteger const sideshort = 640;
 static NSInteger const sidelong = 1136;
-static NSInteger const fontsize = 50;
+static NSInteger const fontsize = 40;
 
 @implementation maddprocessdeviceiphone5
 

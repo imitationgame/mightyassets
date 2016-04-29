@@ -1,13 +1,16 @@
 #import "madditempositionitemiphoneportraitusable.h"
 #import "maddprocessorientationportrait.h"
 
+static NSInteger const percenttop = 5;
+static NSInteger const percentbottom = 0;
+
 @implementation madditempositionitemiphoneportraitusable
 
 -(instancetype)init
 {
     self = [super init:NSLocalizedString(@"madd_item_positioniphoneportraitusable_title", nil) asset:@"add_positionusable_iphoneportrait"];
-    self.percenttop = 5;
-    self.percentbottom = 0;
+    self.percenttop = percenttop;
+    self.percentbottom = percentbottom;
     
     return self;
 }

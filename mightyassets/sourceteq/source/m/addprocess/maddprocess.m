@@ -8,7 +8,7 @@
 static NSString* const imagename = @"%@_%@_%@.png";
 static CGFloat const percentdivider = 100.0;
 static NSInteger const maxpercent = 100;
-static NSInteger const margintext = 50;
+static NSInteger const margintext = 60;
 
 @implementation maddprocess
 
