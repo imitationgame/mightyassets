@@ -3,7 +3,7 @@
 #import "uicolor+uicolormain.h"
 #import "madditemscreensedit.h"
 
-static NSInteger const iconsize = 30;
+static NSInteger const iconsize = 20;
 static NSInteger const warningsize = 45;
 
 @interface vaddcellscreensedit ()
@@ -52,7 +52,7 @@ static NSInteger const warningsize = 45;
     [label setUserInteractionEnabled:NO];
     [label setBackgroundColor:[UIColor clearColor]];
     [label setFont:[UIFont regularsize:16]];
-    [label setTextColor:[UIColor colorWithWhite:0.5 alpha:1]];
+    [label setTextColor:[UIColor colorWithWhite:0.2 alpha:1]];
     self.label = label;
     
     UILabel *labeltitles = [[UILabel alloc] init];
@@ -71,26 +71,39 @@ static NSInteger const warningsize = 45;
     [labelimage setTranslatesAutoresizingMaskIntoConstraints:NO];
     [labelimage setText:NSLocalizedString(@"madd_item_screensedit_cell_image", nil)];
     
+    UIButton *buttonremove = [[UIButton alloc] init];
+    [buttonremove setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [buttonremove setImage:[[UIImage imageNamed:@"generic_close"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    [buttonremove setImage:[[UIImage imageNamed:@"generic_close"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateHighlighted];
+    [buttonremove.imageView setClipsToBounds:YES];
+    [buttonremove.imageView setContentMode:UIViewContentModeScaleAspectFit];
+    [buttonremove.imageView setTintColor:[UIColor blackColor]];
+    [buttonremove setImageEdgeInsets:UIEdgeInsetsMake(5, 5, 15, 15)];
+    self.buttonremove = buttonremove;
+    
     [self addSubview:label];
     [self addSubview:labeltitles];
     [self addSubview:labelimage];
     [self addSubview:icondonetitles];
     [self addSubview:icondoneimage];
     [self addSubview:iconwarning];
+    [self addSubview:buttonremove];
     
-    NSDictionary *views = @{@"icondonetitles":icondonetitles, @"icondoneimage":icondoneimage, @"label":label, @"labeltitles":labeltitles, @"labelimage":labelimage, @"iconwarning":iconwarning};
+    NSDictionary *views = @{@"icondonetitles":icondonetitles, @"icondoneimage":icondoneimage, @"label":label, @"labeltitles":labeltitles, @"labelimage":labelimage, @"iconwarning":iconwarning, @"buttonremove":buttonremove};
     NSDictionary *metric = @{};
     
     self.layouticontitleswidth = [NSLayoutConstraint constraintWithItem:icondonetitles attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:0];
     self.layouticonimagewidth = [NSLayoutConstraint constraintWithItem:icondoneimage attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:0];
     self.layouticonwarningwidth = [NSLayoutConstraint constraintWithItem:iconwarning attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:0];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[iconwarning]-0-[label]-10-|" options:0 metrics:metric views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[icondonetitles]-5-[labeltitles(100)]" options:0 metrics:metric views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[icondoneimage]-5-[labelimage(100)]" options:0 metrics:metric views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[label(20)]-20-[icondonetitles(30)]-10-[icondoneimage(30)]" options:0 metrics:metric views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[label]-20-[labeltitles(30)]" options:0 metrics:metric views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[icondonetitles]-10-[labelimage(30)]" options:0 metrics:metric views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[iconwarning(20)]" options:0 metrics:metric views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-40-[iconwarning]-0-[label]-10-|" options:0 metrics:metric views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-40-[icondonetitles]-5-[labeltitles(100)]" options:0 metrics:metric views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-40-[icondoneimage]-5-[labelimage(100)]" options:0 metrics:metric views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-40-[label(20)]-10-[icondonetitles(20)]-10-[icondoneimage(20)]" options:0 metrics:metric views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[label]-10-[labeltitles(20)]" options:0 metrics:metric views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[icondonetitles]-10-[labelimage(20)]" options:0 metrics:metric views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-40-[iconwarning(20)]" options:0 metrics:metric views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[buttonremove(45)]" options:0 metrics:metric views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[buttonremove(45)]" options:0 metrics:metric views:views]];
     [self addConstraint:self.layouticonimagewidth];
     [self addConstraint:self.layouticontitleswidth];
     [self addConstraint:self.layouticonwarningwidth];
@@ -104,6 +117,16 @@ static NSInteger const warningsize = 45;
 -(void)config:(madditemscreensedit*)model
 {
     NSInteger index = model.index + 1;
+    
+    if(index == 1)
+    {
+        [self.buttonremove setHidden:YES];
+    }
+    else
+    {
+        [self.buttonremove setHidden:NO];
+    }
+    
     NSString *stringtitle = [NSString stringWithFormat:NSLocalizedString(@"madd_item_screensedit_cell_title", nil), @(index)];
     [self.label setText:stringtitle];
     
