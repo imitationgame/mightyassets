@@ -3,7 +3,7 @@
 #import "caddscreen.h"
 #import "cmain.h"
 
-static NSInteger const cellheight = 140;
+static NSInteger const cellheight = 110;
 
 @implementation madditemscreensedit
 

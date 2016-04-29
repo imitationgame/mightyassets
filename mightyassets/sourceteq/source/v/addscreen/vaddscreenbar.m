@@ -34,8 +34,18 @@
     [backbutton.imageView setTintColor:[UIColor colorWithWhite:1 alpha:0.2]];
     [backbutton addTarget:self action:@selector(actionback:) forControlEvents:UIControlEventTouchUpInside];
     
+    UIButton *buttonremove = [[UIButton alloc] init];
+    [buttonremove setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [buttonremove setImage:[[UIImage imageNamed:@"generic_close"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    [buttonremove setImage:[[UIImage imageNamed:@"generic_close"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateHighlighted];
+    [buttonremove.imageView setClipsToBounds:YES];
+    [buttonremove.imageView setContentMode:UIViewContentModeScaleAspectFit];
+    [buttonremove.imageView setTintColor:[UIColor blackColor]];
+    [buttonremove setImageEdgeInsets:UIEdgeInsetsMake(5, 5, 15, 15)];
+    
     [self addSubview:label];
     [self addSubview:backbutton];
+    [self addSubview:buttonremove];
     
     NSDictionary *views = @{@"label":label, @"back":backbutton};
     NSDictionary *metrics = @{};
