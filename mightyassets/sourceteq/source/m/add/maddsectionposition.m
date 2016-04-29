@@ -9,11 +9,12 @@
     madditemorientation *modelorientation = [[madditemorientation alloc] init];
     self.modelorientation = modelorientation;
     
-    madditempositioniphoneportrait *modelposition = [[madditempositioniphoneportrait alloc] init];
+    madditemposition *modelposition = [[modelorientation itemselected] position];
     self.modelposition = modelposition;
     
     self.items = @[
-                   modeliphoneportrait
+                   modelorientation,
+                   modelposition
                    ];
     
     return self;
