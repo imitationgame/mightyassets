@@ -61,7 +61,7 @@ static NSInteger const circlesize = 70;
     UIButton *buttonupload = [[UIButton alloc] init];
     [buttonupload setTranslatesAutoresizingMaskIntoConstraints:NO];
     [buttonupload setBackgroundColor:[UIColor clearColor]];
-    [buttonupload addTarget:self action:@selector(actionupload:) forControlEvents:UIControlEventTouchUpInside];
+    [buttonupload addTarget:self action:@selector(actionupload:) forControlEvents:UIControlEventTouchDown];
     
     [circle addSubview:iconadd];
     [self addSubview:label];

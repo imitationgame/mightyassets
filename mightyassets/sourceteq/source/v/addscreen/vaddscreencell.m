@@ -10,6 +10,14 @@
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor clearColor]];
     
+    UIImageView *icon = [[UIImageView alloc] init];
+    [icon setUserInteractionEnabled:NO];
+    [icon setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [icon setImage:[[UIImage imageNamed:@"generic_type"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+    [icon setContentMode:UIViewContentModeScaleAspectFit];
+    [icon setTintColor:[UIColor second]];
+    [icon setClipsToBounds:YES];
+    
     UIView *bordertop = [[UIView alloc] init];
     [bordertop setUserInteractionEnabled:NO];
     [bordertop setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -46,12 +54,13 @@
     [labelindex setTextColor:[UIColor main]];
     self.labelindex = labelindex;
     
+    [self addSubview:icon];
     [self addSubview:labelindex];
     [self addSubview:bordertop];
     [self addSubview:borderbottom];
     [self addSubview:field];
     
-    NSDictionary *views = @{@"bordertop":bordertop, @"borderbottom":borderbottom, @"field":field, @"labelindex":labelindex};
+    NSDictionary *views = @{@"bordertop":bordertop, @"borderbottom":borderbottom, @"field":field, @"labelindex":labelindex, @"icon":icon};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-5-[bordertop]-5-|" options:0 metrics:metrics views:views]];
@@ -62,6 +71,8 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[labelindex]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[labelindex(20)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-16-[field]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[icon(50)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[icon]-20-|" options:0 metrics:metrics views:views]];
     
     return self;
 }

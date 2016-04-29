@@ -17,6 +17,14 @@
 {
     self = [super initWithFrame:frame];
     
+    UIImageView *icon = [[UIImageView alloc] init];
+    [icon setUserInteractionEnabled:NO];
+    [icon setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [icon setImage:[[UIImage imageNamed:@"generic_type"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+    [icon setContentMode:UIViewContentModeScaleAspectFit];
+    [icon setTintColor:[UIColor second]];
+    [icon setClipsToBounds:YES];
+    
     UITextField *field = [[UITextField alloc] init];
     [field setAutocapitalizationType:UITextAutocapitalizationTypeNone];
     [field setAutocorrectionType:UITextAutocorrectionTypeNo];
@@ -35,13 +43,16 @@
     [field setDelegate:self];
     self.field = field;
     
+    [self addSubview:icon];
     [self addSubview:field];
     
-    NSDictionary *views = @{@"field":field};
+    NSDictionary *views = @{@"field":field, @"icon":icon};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[field]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[field]-10-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[icon(50)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-15-[icon]-15-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
