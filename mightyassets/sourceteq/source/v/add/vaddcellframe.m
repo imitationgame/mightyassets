@@ -3,7 +3,7 @@
 #import "madditemframe.h"
 
 static NSString* const framecellid = @"framecell";
-static NSInteger const cellwidth = 100;
+static NSInteger const cellwidth = 120;
 static NSInteger const interitem = 0;
 
 @interface vaddcellframe ()
