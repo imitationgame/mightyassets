@@ -3,6 +3,13 @@
 
 @implementation madditemorientationitemlandscape
 
+-(instancetype)init
+{
+    self = [super init:NSLocalizedString(@"madd_item_orientation_landscape_title", nil) asset:@"add_orientation_landscape"];
+    
+    return self;
+}
+
 #pragma mark -
 #pragma mark orientation
 

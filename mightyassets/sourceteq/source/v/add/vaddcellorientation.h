@@ -1,6 +1,8 @@
 #import <UIKit/UIKit.h>
 #import "vaddcell.h"
 
-@interface vaddcellorientation:vaddcell
+@interface vaddcellorientation:vaddcell<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+
+@property(weak, nonatomic)UICollectionView *collection;
 
 @end
