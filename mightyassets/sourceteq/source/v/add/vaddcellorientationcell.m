@@ -23,7 +23,6 @@
     [asset setClipsToBounds:YES];
     [asset setContentMode:UIViewContentModeScaleAspectFit];
     [asset setUserInteractionEnabled:NO];
-    [asset setTintColor:[UIColor main]];
     self.asset = asset;
     
     [self addSubview:asset];
@@ -57,13 +56,13 @@
 {
     if(self.isSelected || self.isHighlighted)
     {
-        [self setAlpha:1];
+        [self.asset setTintColor:[UIColor main]];
         [self.name setTextColor:[UIColor main]];
     }
     else
     {
-        [self setAlpha:0.2];
-        [self.name setTextColor:[UIColor colorWithWhite:0.2 alpha:1]];
+        [self.asset setTintColor:[UIColor colorWithWhite:0 alpha:0.3]];
+        [self.name setTextColor:[UIColor colorWithWhite:0 alpha:0.3]];
     }
 }
 

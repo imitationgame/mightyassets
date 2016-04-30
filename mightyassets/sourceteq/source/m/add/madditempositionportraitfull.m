@@ -8,7 +8,7 @@ static NSInteger const percentbottom = 5;
 
 -(instancetype)init
 {
-    self = [super init:NSLocalizedString(@"madd_item_positionportraitfull_title", nil) asset:@"add_positionfull_iphoneportrait"];
+    self = [super init:NSLocalizedString(@"madd_item_positionportraitfull_title", nil) asset:@"add_positionfull_portrait"];
     self.percenttop = percenttop;
     self.percentbottom = percentbottom;
     
