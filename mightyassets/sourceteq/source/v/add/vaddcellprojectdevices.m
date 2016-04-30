@@ -68,9 +68,9 @@ static NSInteger const segmentedheight = 32;
 #pragma mark -
 #pragma mark add cell
 
--(void)config:(madditemprojectdevices*)model
+-(void)config:(madditemprojectdevices*)model topcollection:(UICollectionView*)topcollection
 {
-    [super config:model];
+    [super config:model topcollection:topcollection];
     
     if(!self.segmented)
     {

@@ -7,10 +7,9 @@ static NSInteger const cellheight = 70;
 
 -(instancetype)init
 {
-    self = [super init:NSLocalizedString(@"madd_item_projectname_title", nil)];
+    self = [super init:NSLocalizedString(@"madd_item_projectname_title", nil) cellclass:[vaddcellprojectname class]];
     self.height = cellheight;
     self.name = @"";
-    self.cellclass = [vaddcellprojectname class];
     
     return self;
 }

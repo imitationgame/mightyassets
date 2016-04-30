@@ -2,7 +2,7 @@
 
 @interface madditem:NSObject
 
--(instancetype)init:(NSString*)title;
+-(instancetype)init:(NSString*)title cellclass:(Class)cellclass;
 -(void)selectedaction;
 
 @property(copy, nonatomic)NSString *title;

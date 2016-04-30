@@ -52,7 +52,7 @@ static NSInteger const fontsize = 19;
 #pragma mark -
 #pragma mark add cell
 
--(void)config:(madditemtitlesfont*)model
+-(void)config:(madditemtitlesfont*)model topcollection:(UICollectionView*)topcollection
 {
     if(model.font)
     {
@@ -65,7 +65,7 @@ static NSInteger const fontsize = 19;
         [self.labelfont setFont:[UIFont regularsize:fontsize]];
     }
     
-    [super config:model];
+    [super config:model topcollection:topcollection];
 }
 
 @end

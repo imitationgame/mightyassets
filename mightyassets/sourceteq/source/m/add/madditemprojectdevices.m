@@ -10,10 +10,9 @@ static NSInteger const cellheight = 56;
 
 -(instancetype)init
 {
-    self = [super init:NSLocalizedString(@"madd_item_projectdevices_title", nil)];
+    self = [super init:NSLocalizedString(@"madd_item_projectdevices_title", nil) cellclass:[vaddcellprojectdevices class]];
     self.height = cellheight;
     self.selected = 0;
-    self.cellclass = [vaddcellprojectdevices class];
     self.items = @[
                    [[madditemprojectdevicesitemiphone alloc] init],
                    [[madditemprojectdevicesitemipad alloc] init],

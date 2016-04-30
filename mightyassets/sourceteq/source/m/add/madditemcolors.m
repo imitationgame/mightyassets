@@ -9,10 +9,9 @@ static NSInteger const cellheight = 64;
 
 -(instancetype)init:(NSString*)title
 {
-    self = [super init:title];
+    self = [super init:title cellclass:[vaddcellcolor class]];
     self.height = cellheight;
     self.selectable = YES;
-    self.cellclass = [vaddcellcolor class];
     
     return self;
 }

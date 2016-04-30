@@ -75,9 +75,9 @@ static NSInteger const interitem = 0;
 #pragma mark -
 #pragma mark add cell
 
--(void)config:(madditemposition*)model
+-(void)config:(madditemposition*)model topcollection:(UICollectionView*)topcollection
 {
-    [super config:model];
+    [super config:model topcollection:topcollection];
     [self.collection reloadData];
     [self.collection selectItemAtIndexPath:[NSIndexPath indexPathForRow:model.selected inSection:0] animated:NO scrollPosition:UICollectionViewScrollPositionNone];
 }

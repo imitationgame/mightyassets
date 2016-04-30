@@ -7,9 +7,8 @@ static NSInteger const cellheight = 165;
 
 -(instancetype)init:(NSString*)title
 {
-    self = [super init:title];
+    self = [super init:title cellclass:[vaddcellposition class]];
     self.height = cellheight;
-    self.cellclass = [vaddcellposition class];
     self.selected = 0;
     
     return self;

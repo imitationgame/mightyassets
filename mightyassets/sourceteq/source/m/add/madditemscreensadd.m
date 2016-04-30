@@ -10,10 +10,9 @@ static NSInteger const cellheight = 64;
 
 -(instancetype)init:(maddsectionscreens*)model
 {
-    self = [super init:NSLocalizedString(@"madd_item_screensadd_title", nil)];
+    self = [super init:NSLocalizedString(@"madd_item_screensadd_title", nil) cellclass:[vaddcellscreensadd class]];
     self.model = model;
     self.height = cellheight;
-    self.cellclass = [vaddcellscreensadd class];
     self.selectable = YES;
     
     return self;

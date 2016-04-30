@@ -43,11 +43,11 @@ static NSInteger const circlesize = 40;
 #pragma mark -
 #pragma mark add cell
 
--(void)config:(madditemcolors*)model
+-(void)config:(madditemcolors*)model topcollection:(UICollectionView*)topcollection
 {
     [self.title setText:model.title];
     [self.circle setBackgroundColor:model.color];
-    [super config:model];
+    [super config:model topcollection:topcollection];
 }
 
 @end

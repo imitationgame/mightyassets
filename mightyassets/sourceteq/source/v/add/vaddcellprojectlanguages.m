@@ -87,11 +87,11 @@ static NSInteger const maxvalue = 3;
 #pragma mark -
 #pragma mark add cell
 
--(void)config:(madditemprojectlanguages*)model
+-(void)config:(madditemprojectlanguages*)model topcollection:(UICollectionView*)topcollection
 {
     [self.stepper setValue:model.quantity];
     [self print];
-    [super config:model];
+    [super config:model topcollection:topcollection];
 }
 
 @end

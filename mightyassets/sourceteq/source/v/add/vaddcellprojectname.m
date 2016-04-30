@@ -60,10 +60,10 @@
 #pragma mark -
 #pragma mark add cell
 
--(void)config:(madditemprojectname*)model
+-(void)config:(madditemprojectname*)model topcollection:(UICollectionView*)topcollection
 {
     [self.field setText:model.name];
-    [super config:model];
+    [super config:model topcollection:topcollection];
 }
 
 #pragma mark field del

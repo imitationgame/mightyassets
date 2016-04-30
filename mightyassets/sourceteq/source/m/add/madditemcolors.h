@@ -3,6 +3,8 @@
 
 @interface madditemcolors:madditem
 
+-(instancetype)init:(NSString*)title;
+
 @property(strong, nonatomic)UIColor *color;
 
 @end

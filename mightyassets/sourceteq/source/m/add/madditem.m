@@ -3,13 +3,13 @@
 
 @implementation madditem
 
--(instancetype)init:(NSString*)title
+-(instancetype)init:(NSString*)title cellclass:(Class)cellclass
 {
     self = [super init];
-    self.cellclassname = NSStringFromClass(self.class);
+    self.cellclass = cellclass;
+    self.cellclassname = NSStringFromClass(cellclass);
     self.title = title;
     self.selectable = NO;
-    self.cellclass = [vaddcell class];
     
     return self;
 }

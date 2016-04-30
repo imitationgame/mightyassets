@@ -10,10 +10,9 @@ static NSInteger const cellheight = 90;
 
 -(instancetype)init:(maddsectionposition*)position
 {
-    self = [super init:NSLocalizedString(@"madd_item_orientation_title", nil)];
+    self = [super init:NSLocalizedString(@"madd_item_orientation_title", nil) cellclass:[vaddcellorientation class]];
     self.position = position;
     self.height = cellheight;
-    self.cellclass = [vaddcellorientation class];
     self.selected = 0;
     self.items = @[
                    [[madditemorientationitemportrait alloc] init:self],

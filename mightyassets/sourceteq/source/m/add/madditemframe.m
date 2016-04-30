@@ -8,9 +8,8 @@ static NSInteger const cellheight = 90;
 
 -(instancetype)init
 {
-    self = [super init:NSLocalizedString(@"madd_item_frame_title", nil)];
+    self = [super init:NSLocalizedString(@"madd_item_frame_title", nil) cellclass:[vaddcellframe class]];
     self.height = cellheight;
-    self.cellclass = [vaddcellframe class];
     self.selected = 0;
     self.items = @[
                    [[madditemframeitemiphone6 alloc] init]

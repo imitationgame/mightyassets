@@ -9,9 +9,8 @@ static NSInteger const cellheight = 64;
 
 -(instancetype)init
 {
-    self = [super init:NSLocalizedString(@"madd_item_titlesfont_title", nil)];
+    self = [super init:NSLocalizedString(@"madd_item_titlesfont_title", nil) cellclass:[vaddcelltitlesfont class]];
     self.height = cellheight;
-    self.cellclass = [vaddcelltitlesfont class];
     self.selectable = YES;
     
     [self loadfonts];

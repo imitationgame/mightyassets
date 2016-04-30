@@ -63,9 +63,10 @@
 
 #pragma mark public
 
--(void)config:(madditem*)model
+-(void)config:(madditem*)model topcollection:(UICollectionView*)topcollection
 {
     self.model = model;
+    self.topcollection = topcollection;
     [self hover];
 }
 

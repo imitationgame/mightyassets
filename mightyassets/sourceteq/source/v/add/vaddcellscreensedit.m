@@ -101,7 +101,7 @@ static NSInteger const warningsize = 45;
 #pragma mark -
 #pragma mark add cell
 
--(void)config:(madditemscreensedit*)model
+-(void)config:(madditemscreensedit*)model topcollection:(UICollectionView*)topcollection
 {
     NSInteger index = model.index + 1;
     NSString *stringtitle = [NSString stringWithFormat:NSLocalizedString(@"madd_item_screensedit_cell_title", nil), @(index)];
@@ -128,7 +128,7 @@ static NSInteger const warningsize = 45;
     self.layouticontitleswidth.constant = icontitleswidth;
     self.layouticonimagewidth.constant = iconimagewidth;
     
-    [super config:model];
+    [super config:model topcollection:topcollection];
 }
 
 @end
