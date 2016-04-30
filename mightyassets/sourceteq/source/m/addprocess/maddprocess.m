@@ -52,20 +52,19 @@ static NSInteger const margintext = 60;
 
 -(void)drawdevice:(maddprocessdevice*)device screens:(NSArray<madditemscreensedit*>*)screens
 {
-    maddprocessasset *asset = self.asset;
     UIFont *font = [UIFont fontWithName:self.model.modeltitles.modelfont.font.font size:device.fontsize];
     CGFloat percenttop = self.position.percenttop;
     CGFloat percentbottom = self.position.percentbottom;
     CGFloat assetwidth = device.orientation.width;
     CGFloat assetheight = device.orientation.height;
-    CGFloat devicerawwidth = asset.imagewidth;
-    CGFloat devicerawheight = asset.imageheight;
+    CGFloat devicerawwidth = self.asset.imagewidth;
+    CGFloat devicerawheight = self.asset.imageheight;
     CGFloat percenttouseheight = maxpercent - (percenttop + percentbottom);
     CGFloat percenttouseheightfloat = percenttouseheight / percentdivider;
     CGFloat usableheight = percenttouseheightfloat * assetheight;
     CGFloat margintopfloat = percenttop / percentdivider;
     CGFloat usablemargintop = margintopfloat * assetheight;
-    CGFloat extrudetop = [self.position extrudetop:asset];
+    CGFloat extrudetop = [self.position extrudetop:self.asset];
     CGFloat ratio = devicerawheight / usableheight;
     
     if(ratio < 1)
@@ -92,11 +91,11 @@ static NSInteger const margintext = 60;
     
     maddprocessdrawable *drawable = [[maddprocessdrawable alloc] init:assetwidth height:assetheight];
     
-    if(asset)
+    if(self.asset)
     {
         drawable.device = [[maddprocessdrawabledevice alloc] init:drawdevicex y:drawdevicey width:drawdevicewidth height:drawdeviceheight];
-        drawable.device.image = [UIImage imageNamed:asset.assetname];
-        drawable.device.imagecam = [UIImage imageNamed:asset.assetnamecam];
+        drawable.device.image = [device.orientation imageoriented:[UIImage imageNamed:self.asset.assetname]];
+        drawable.device.imagecam = [device.orientation imageoriented:[UIImage imageNamed:self.asset.assetnamecam]];
     }
     
     NSInteger countscreens = screens.count;
@@ -107,10 +106,10 @@ static NSInteger const margintext = 60;
         
         if(screen.image)
         {
-            CGFloat screenx = asset.screenx;
-            CGFloat screeny = asset.screeny;
-            CGFloat screenwidth = asset.screenwidth;
-            CGFloat screenheight = asset.screenheight;
+            CGFloat screenx = self.asset.screenx;
+            CGFloat screeny = self.asset.screeny;
+            CGFloat screenwidth = self.asset.screenwidth;
+            CGFloat screenheight = self.asset.screenheight;
             CGFloat ratioscreenx = screenx / ratio;
             CGFloat ratioscreeny = screeny / ratio;
             CGFloat ratioscreenwidth = screenwidth / ratio;

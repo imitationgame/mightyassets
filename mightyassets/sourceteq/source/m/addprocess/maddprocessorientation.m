@@ -9,4 +9,11 @@
     return self;
 }
 
+#pragma mark public
+
+-(UIImage*)imageoriented:(UIImage*)image
+{
+    return image;
+}
+
 @end

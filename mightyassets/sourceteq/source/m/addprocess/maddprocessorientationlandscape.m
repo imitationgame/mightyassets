@@ -1,7 +1,5 @@
 #import "maddprocessorientationlandscape.h"
 
-static CGFloat const rotationradians = 1.5708;
-
 @implementation maddprocessorientationlandscape
 
 -(instancetype)init:(NSInteger)sideshort sidelong:(NSInteger)sidelong
@@ -9,9 +7,18 @@ static CGFloat const rotationradians = 1.5708;
     self = [super init];
     self.width = sidelong;
     self.height = sideshort;
-    self.rotation = rotationradians;
     
     return self;
+}
+
+#pragma mark -
+#pragma mark orientation
+
+-(UIImage*)imageoriented:(UIImage*)image
+{
+    UIImage *newimage = [UIImage imageWithCGImage:image.CGImage scale:1 orientation:UIImageOrientationLeft];
+    
+    return image;
 }
 
 @end
