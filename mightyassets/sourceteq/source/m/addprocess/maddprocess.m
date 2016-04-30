@@ -23,6 +23,7 @@ static NSInteger const margintext = 60;
     self.colordevice = model.modelcolors.modeldevice.color;
     self.colortext = model.modelcolors.modeltext.color;
     self.position = [model.modelposition.modelposition itemselected];
+    self.asset = [[model.modelposition.modelframe itemselected] asset];
     
     NSArray<maddprocessdevice*> *devices = [[model.modelproject.modeldevices itemselected] devices:self.position];
     NSArray<madditemscreensedit*> *screens = [model.modelscreens screens];
@@ -51,7 +52,7 @@ static NSInteger const margintext = 60;
 
 -(void)drawdevice:(maddprocessdevice*)device screens:(NSArray<madditemscreensedit*>*)screens
 {
-    maddprocessasset *asset = self.model.asset;
+    maddprocessasset *asset = self.asset;
     UIFont *font = [UIFont fontWithName:self.model.modeltitles.modelfont.font.font size:device.fontsize];
     CGFloat percenttop = self.position.percenttop;
     CGFloat percentbottom = self.position.percentbottom;

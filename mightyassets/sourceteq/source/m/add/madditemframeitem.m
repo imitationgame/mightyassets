@@ -11,4 +11,11 @@
     return self;
 }
 
+#pragma mark public
+
+-(maddprocessasset*)asset
+{
+    return nil;
+}
+
 @end

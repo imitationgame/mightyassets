@@ -1,5 +1,4 @@
 #import "madd.h"
-#import "maddprocessassetiphone6.h"
 
 @implementation madd
 
@@ -7,7 +6,6 @@
 {
     self = [super init];
     
-    self.asset = [[maddprocessassetiphone6 alloc] init];
     maddsectionproject *modelproject = [[maddsectionproject alloc] init];
     self.modelproject = modelproject;
 
