@@ -18,7 +18,7 @@
     maddsectionposition *modelposition = [[maddsectionposition alloc] init];
     self.modelposition = modelposition;
     
-    maddsectionscreens *modelscreens = [[maddsectionscreens alloc] init:modelproject];
+    maddsectionscreens *modelscreens = [[maddsectionscreens alloc] init:self];
     self.modelscreens = modelscreens;
     
     self.sections = @[

@@ -9,5 +9,6 @@
 @property(weak, nonatomic)UIImageView *image;
 @property(weak, nonatomic)UIView *circle;
 @property(weak, nonatomic)UIPopoverController *popover;
+@property(weak, nonatomic)UILabel *label;
 
 @end

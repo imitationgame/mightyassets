@@ -5,7 +5,7 @@
 
 static NSString* const screencellid = @"screencell";
 static NSString* const screenfooterid = @"screenfooter";
-static NSInteger const footerheight = 350;
+static NSInteger const footerheight = 480;
 static NSInteger const cellheight = 80;
 static NSInteger const interitem = -1;
 

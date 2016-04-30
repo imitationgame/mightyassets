@@ -1,15 +1,16 @@
 #import "maddsectionscreens.h"
 #import "madditemscreensadd.h"
 #import "madditemscreensedit.h"
+#import "madd.h"
 
 @implementation maddsectionscreens
 
 @dynamic items;
 
--(instancetype)init:(maddsectionproject*)modelproject
+-(instancetype)init:(madd*)model;
 {
     self = [super init:NSLocalizedString(@"madd_section_screens_name", nil)];
-    self.modelproject = modelproject;
+    self.model = model;
     self.items = [NSMutableArray array];
     [self.items addObject:[[madditemscreensedit alloc] init:0 model:self]];
     [self.items addObject:[[madditemscreensadd alloc] init:self]];
@@ -41,7 +42,7 @@
 
 -(void)clean
 {
-    NSInteger shouldhave = self.modelproject.modellanguages.quantity;
+    NSInteger shouldhave = self.model.modelproject.modellanguages.quantity;
     
     for(madditem *item in self.items)
     {

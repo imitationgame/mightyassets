@@ -2,6 +2,7 @@
 #import "uifont+uifontmain.h"
 #import "uicolor+uicolormain.h"
 #import "madditemscreensedit.h"
+#import "madd.h"
 
 static NSInteger const iconsize = 20;
 static NSInteger const warningsize = 45;
@@ -120,7 +121,7 @@ static NSInteger const warningsize = 45;
         self.layouticonwarningwidth.constant = warningsize;
     }
     
-    if([model titlescompleted] >= model.model.modelproject.modellanguages.quantity)
+    if([model titlescompleted] >= model.model.model.modelproject.modellanguages.quantity)
     {
         icontitleswidth = iconsize;
     }

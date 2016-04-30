@@ -2,6 +2,8 @@
 #import "uifont+uifontmain.h"
 #import "uicolor+uicolormain.h"
 #import "cmain.h"
+#import "maddprocessassetoriented.h"
+#import "maddprocessasset.h"
 
 static NSInteger const screenwidth = 160;
 static NSInteger const circlesize = 70;
@@ -18,21 +20,13 @@ static NSInteger const circlesize = 70;
     CGFloat circleleft = (width - circlesize) / 2.0;
     CGFloat screenleft = (width - screenwidth) / 2.0;
     
-    NSDictionary *dicttitle = @{NSFontAttributeName:[UIFont boldsize:20], NSForegroundColorAttributeName:[UIColor main]};
-    NSDictionary *dictdescr = @{NSFontAttributeName:[UIFont regularsize:17], NSForegroundColorAttributeName:[UIColor colorWithWhite:0.5 alpha:1]};
-    NSAttributedString *attrtitle = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"addscreen_image_title", nil) attributes:dicttitle];
-    NSAttributedString *attrdescr = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"addscreen_image_descr", nil) attributes:dictdescr];
-    NSMutableAttributedString *mut = [[NSMutableAttributedString alloc] init];
-    [mut appendAttributedString:attrtitle];
-    [mut appendAttributedString:attrdescr];
-    
     UILabel *label = [[UILabel alloc] init];
     [label setUserInteractionEnabled:NO];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setBackgroundColor:[UIColor clearColor]];
     [label setNumberOfLines:0];
-    [label setAttributedText:mut];
     [label setTextAlignment:NSTextAlignmentCenter];
+    self.label = label;
     
     UIImageView *image = [[UIImageView alloc] init];
     [image setClipsToBounds:YES];
@@ -134,6 +128,29 @@ static NSInteger const circlesize = 70;
 {
     self.model = model;
     [self display];
+    
+    madditemframeitem *frame = [model.model.model.modelposition.modelframe itemselected];
+    madditemorientationitem *orientation = [model.model.model.modelposition.modelorientation itemselected];
+    maddprocessasset *asset = [frame modelasset];
+    maddprocessassetoriented *assetoriented = [orientation assetoriented:asset];
+    CGFloat width = assetoriented.screenwidth;
+    CGFloat height = assetoriented.screenheight;
+    
+    NSString *stringsize = [NSString stringWithFormat:NSLocalizedString(@"addscreen_image_size", nil), @(width), @(height), frame.name, orientation.name];
+    
+    NSDictionary *dicttitle = @{NSFontAttributeName:[UIFont boldsize:20], NSForegroundColorAttributeName:[UIColor main]};
+    NSDictionary *dictdescr = @{NSFontAttributeName:[UIFont regularsize:17], NSForegroundColorAttributeName:[UIColor colorWithWhite:0.25 alpha:1]};
+    NSDictionary *dictsize = @{NSFontAttributeName:[UIFont regularsize:17], NSForegroundColorAttributeName:[UIColor colorWithWhite:0.55 alpha:1]};
+    NSAttributedString *attrtitle = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"addscreen_image_title", nil) attributes:dicttitle];
+    NSAttributedString *attrdescr = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"addscreen_image_descr", nil) attributes:dictdescr];
+    NSAttributedString *attrsize = [[NSAttributedString alloc] initWithString:stringsize attributes:dictsize];
+    
+    NSMutableAttributedString *mut = [[NSMutableAttributedString alloc] init];
+    [mut appendAttributedString:attrtitle];
+    [mut appendAttributedString:attrdescr];
+    [mut appendAttributedString:attrsize];
+    
+    [self.label setAttributedText:mut];
 }
 
 #pragma mark -
