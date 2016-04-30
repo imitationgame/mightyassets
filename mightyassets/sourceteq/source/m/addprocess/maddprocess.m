@@ -23,7 +23,10 @@ static NSInteger const margintext = 60;
     self.colordevice = model.modelcolors.modeldevice.color;
     self.colortext = model.modelcolors.modeltext.color;
     self.position = [model.modelposition.modelposition itemselected];
-    self.asset = [[model.modelposition.modelframe itemselected] modelasset];
+    
+    madditemorientationitem *orientation = [model.modelposition.modelorientation itemselected];
+    maddprocessasset *asset = [[model.modelposition.modelframe itemselected] modelasset];
+    self.asset = [orientation assetoriented:asset];
     
     NSArray<maddprocessdevice*> *devices = [[model.modelproject.modeldevices itemselected] devices:self.position];
     NSArray<madditemscreensedit*> *screens = [model.modelscreens screens];
@@ -94,8 +97,6 @@ static NSInteger const margintext = 60;
     if(self.asset)
     {
         drawable.device = [[maddprocessdrawabledevice alloc] init:drawdevicex y:drawdevicey width:drawdevicewidth height:drawdeviceheight];
-        drawable.device.image = [device.orientation imageoriented:[UIImage imageNamed:self.asset.assetname]];
-        drawable.device.imagecam = [device.orientation imageoriented:[UIImage imageNamed:self.asset.assetnamecam]];
     }
     
     NSInteger countscreens = screens.count;
@@ -164,15 +165,15 @@ static NSInteger const margintext = 60;
     if(drawable.device)
     {
         CGContextSetBlendMode(context, kCGBlendModeNormal);
-        [drawable.device.image drawInRect:drawable.device.rect];
+        [self.asset.image drawInRect:drawable.device.rect];
         CGContextSetFillColorWithColor(context, self.colordevice.CGColor);
         CGContextSetBlendMode(context, kCGBlendModeSourceAtop);
         CGContextFillRect(context, drawable.device.rect);
         
-        if(drawable.device.imagecam)
+        if(self.asset.imagecam)
         {
             CGContextSetBlendMode(context, kCGBlendModeNormal);
-            [drawable.device.imagecam drawInRect:drawable.device.rect];
+            [self.asset.imagecam drawInRect:drawable.device.rect];
         }
     }
     

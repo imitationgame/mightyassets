@@ -18,7 +18,7 @@
     return nil;
 }
 
--(NSInteger)extrudetop:(maddprocessasset*)asset
+-(NSInteger)extrudetop:(maddprocessassetoriented*)asset
 {
     return 0;
 }

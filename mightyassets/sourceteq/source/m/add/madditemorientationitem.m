@@ -25,4 +25,9 @@
     return nil;
 }
 
+-(maddprocessassetoriented*)assetoriented:(maddprocessasset*)asset
+{
+    return nil;
+}
+
 @end

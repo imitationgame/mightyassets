@@ -25,7 +25,7 @@ static NSInteger const percentbottom = 0;
     return orientation;
 }
 
--(NSInteger)extrudetop:(maddprocessasset*)asset
+-(NSInteger)extrudetop:(maddprocessassetoriented*)asset
 {
     NSInteger extrudetop = asset.imageheight - (asset.screeny + asset.screenheight);
     

@@ -51,6 +51,7 @@
 		DA489E511CD4098400F68E74 /* vaddcellframe.m in Sources */ = {isa = PBXBuildFile; fileRef = DA489E501CD4098400F68E74 /* vaddcellframe.m */; };
 		DA489E541CD410BD00F68E74 /* vaddcellframecell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA489E531CD410BD00F68E74 /* vaddcellframecell.m */; };
 		DA489E571CD410CE00F68E74 /* vaddcellorientationcell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA489E561CD410CE00F68E74 /* vaddcellorientationcell.m */; };
+		DA489E5D1CD4928E00F68E74 /* maddprocessassetoriented.m in Sources */ = {isa = PBXBuildFile; fileRef = DA489E5C1CD4928E00F68E74 /* maddprocessassetoriented.m */; };
 		DA7C643D1CD267130058CCA3 /* cproject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7C643C1CD267130058CCA3 /* cproject.m */; };
 		DA7C64411CD268E50058CCA3 /* vproject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7C64401CD268E50058CCA3 /* vproject.m */; };
 		DA7C64441CD26CA60058CCA3 /* vprojectbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7C64431CD26CA60058CCA3 /* vprojectbar.m */; };
@@ -240,6 +241,8 @@
 		DA489E531CD410BD00F68E74 /* vaddcellframecell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddcellframecell.m; sourceTree = "<group>"; };
 		DA489E551CD410CE00F68E74 /* vaddcellorientationcell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaddcellorientationcell.h; sourceTree = "<group>"; };
 		DA489E561CD410CE00F68E74 /* vaddcellorientationcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddcellorientationcell.m; sourceTree = "<group>"; };
+		DA489E5B1CD4928E00F68E74 /* maddprocessassetoriented.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maddprocessassetoriented.h; sourceTree = "<group>"; };
+		DA489E5C1CD4928E00F68E74 /* maddprocessassetoriented.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddprocessassetoriented.m; sourceTree = "<group>"; };
 		DA7C643B1CD267130058CCA3 /* cproject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cproject.h; sourceTree = "<group>"; };
 		DA7C643C1CD267130058CCA3 /* cproject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cproject.m; sourceTree = "<group>"; };
 		DA7C643F1CD268E50058CCA3 /* vproject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vproject.h; sourceTree = "<group>"; };
@@ -547,6 +550,8 @@
 				DA7D51DD1CCFC4C0002D06FE /* maddprocessorientationlandscape.m */,
 				DA7D51E11CCFD6FA002D06FE /* maddprocessasset.h */,
 				DA7D51E21CCFD6FA002D06FE /* maddprocessasset.m */,
+				DA489E5B1CD4928E00F68E74 /* maddprocessassetoriented.h */,
+				DA489E5C1CD4928E00F68E74 /* maddprocessassetoriented.m */,
 				DA7D51E71CCFD71C002D06FE /* maddprocessassetiphone6.h */,
 				DA7D51E81CCFD71C002D06FE /* maddprocessassetiphone6.m */,
 				DA35598B1CD14790008AD644 /* maddprocessdrawable.h */,
@@ -1293,6 +1298,7 @@
 				DAAFB2A41CC98F9F003173A7 /* vaddheader.m in Sources */,
 				DAAFB2C61CCAAD6B003173A7 /* madditemcolors.m in Sources */,
 				DAAFB28D1CC970AB003173A7 /* vlandingclearheader.m in Sources */,
+				DA489E5D1CD4928E00F68E74 /* maddprocessassetoriented.m in Sources */,
 				DA3559A71CD176D9008AD644 /* caddfont.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

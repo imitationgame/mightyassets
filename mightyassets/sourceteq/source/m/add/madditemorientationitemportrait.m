@@ -20,4 +20,19 @@
     return position;
 }
 
+-(maddprocessassetoriented*)assetoriented:(maddprocessasset*)asset
+{
+    maddprocessassetoriented *oriented = [[maddprocessassetoriented alloc] init];
+    oriented.image = [UIImage imageNamed:asset.assetname];
+    oriented.imagecam = [UIImage imageNamed:asset.assetnamecam];
+    oriented.imagewidth = asset.imagewidth;
+    oriented.imageheight = asset.imageheight;
+    oriented.screenx = asset.screenx;
+    oriented.screeny = asset.screeny;
+    oriented.screenwidth = asset.screenwidth;
+    oriented.screenheight = asset.screenheight;
+    
+    return oriented;
+}
+
 @end
