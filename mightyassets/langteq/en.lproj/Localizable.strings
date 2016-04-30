@@ -50,6 +50,9 @@
 "madd_item_positionportrait_title"="Position portrait";
 "madd_item_positionportraitfull_title"="Full";
 "madd_item_positionportraitusable_title"="Usable";
+"madd_item_positionlandscape_title"="Position landscape";
+"madd_item_positionlandscapedown_title"="Bottom";
+"madd_item_positionlandscapemargin_title"="Centered";
 "madd_item_screensedit_title"="Edit screen";
 "madd_item_screensedit_cell_title"="Screen %@/5";
 "madd_item_screensedit_cell_titles"="Titles";
