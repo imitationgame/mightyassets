@@ -1,14 +1,13 @@
-#import "caddcolor.h"
-#import "vaddcolor.h"
 #import "caddcoloradd.h"
+#import "vaddcoloradd.h"
 
-@interface caddcolor ()
+@interface caddcoloradd ()
 
-@property(strong, nonatomic)vaddcolor *view;
+@property(strong, nonatomic)vaddcoloradd *view;
 
 @end
 
-@implementation caddcolor
+@implementation caddcoloradd
 
 @dynamic view;
 
@@ -32,7 +31,7 @@
 
 -(void)loadView
 {
-    self.view = [[vaddcolor alloc] init:self];
+    self.view = [[vaddcoloradd alloc] init:self];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -40,11 +39,6 @@
     [super viewDidAppear:animated];
     self.prevgesturedelegate = self.navigationController.interactivePopGestureRecognizer.delegate;
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
-    
-    if(!self.view.collection)
-    {
-        [self.view viewappear];
-    }
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -65,11 +59,4 @@
     self.model.color = color;
     [self back];
 }
-
--(void)add
-{
-    caddcoloradd *controller = [[caddcoloradd alloc] init:self.model];
-    [self.navigationController pushViewController:controller animated:YES];
-}
-
 @end

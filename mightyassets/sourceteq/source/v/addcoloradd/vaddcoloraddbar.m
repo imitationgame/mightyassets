@@ -1,11 +1,11 @@
-#import "vaddcolorbar.h"
+#import "vaddcoloraddbar.h"
 #import "uicolor+uicolormain.h"
 #import "uifont+uifontmain.h"
 #import "genericconstants.h"
 
-@implementation vaddcolorbar
+@implementation vaddcoloraddbar
 
--(instancetype)init:(caddcolor*)controller
+-(instancetype)init:(caddcoloradd*)controller
 {
     self = [super init];
     [self setClipsToBounds:YES];
@@ -19,7 +19,7 @@
     [border setTranslatesAutoresizingMaskIntoConstraints:NO];
     [border setClipsToBounds:YES];
     
-    NSString *texttitle = [NSString stringWithFormat:NSLocalizedString(@"addcolor_title", nil), controller.model.title];
+    NSString *texttitle = [NSString stringWithFormat:NSLocalizedString(@"addcoloradd_title", nil), controller.model.title];
     
     UILabel *label = [[UILabel alloc] init];
     [label setUserInteractionEnabled:NO];
@@ -39,23 +39,11 @@
     [backbutton.imageView setTintColor:[UIColor blackColor]];
     [backbutton addTarget:self action:@selector(actionback:) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton *addbutton = [[UIButton alloc] init];
-    [addbutton setClipsToBounds:YES];
-    [addbutton setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [addbutton setImage:[[UIImage imageNamed:@"generic_add"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-    [addbutton setImage:[[UIImage imageNamed:@"generic_add"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateHighlighted];
-    [addbutton.imageView setClipsToBounds:YES];
-    [addbutton.imageView setContentMode:UIViewContentModeScaleAspectFit];
-    [addbutton.imageView setTintColor:[UIColor blackColor]];
-    [addbutton setImageEdgeInsets:UIEdgeInsetsMake(9, 15, 9, 0)];
-    [addbutton addTarget:self action:@selector(actionadd:) forControlEvents:UIControlEventTouchUpInside];
-    
     [self addSubview:border];
     [self addSubview:label];
     [self addSubview:backbutton];
-    [self addSubview:addbutton];
     
-    NSDictionary *views = @{@"border":border, @"label":label, @"back":backbutton, @"add":addbutton};
+    NSDictionary *views = @{@"border":border, @"label":label, @"back":backbutton};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-5-[border]-5-|" options:0 metrics:metrics views:views]];
@@ -64,8 +52,6 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[label(45)]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[back(60)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[back(45)]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[add(60)]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[add(45)]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -82,11 +68,6 @@
 -(void)actionback:(UIButton*)button
 {
     [self.controller back];
-}
-
--(void)actionadd:(UIButton*)button
-{
-    [self.controller add];
 }
 
 @end

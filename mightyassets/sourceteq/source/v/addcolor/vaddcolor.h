@@ -11,6 +11,5 @@
 @property(strong, nonatomic)maddcolor *model;
 @property(weak, nonatomic)caddcolor *controller;
 @property(weak, nonatomic)vaddcolorbar *bar;
-@property(weak, nonatomic)UICollectionView *collection;
 
 @end

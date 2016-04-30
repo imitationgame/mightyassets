@@ -6,6 +6,10 @@
 "add_title"="New project";
 
 "addcolor_title"="%@ color";
+"addcoloradd_title"="Create color";
+"addcoloradd_color_red"="Red";
+"addcoloradd_color_green"="Green";
+"addcoloradd_color_blue"="Blue";
 
 "addfont_title"="Select a font";
 
