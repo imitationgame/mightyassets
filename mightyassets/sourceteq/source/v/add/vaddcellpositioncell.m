@@ -23,6 +23,7 @@
     [asset setClipsToBounds:YES];
     [asset setContentMode:UIViewContentModeScaleAspectFit];
     [asset setUserInteractionEnabled:NO];
+    [asset setTintColor:[UIColor main]];
     self.asset = asset;
     
     [self addSubview:asset];
@@ -71,7 +72,7 @@
 -(void)config:(madditempositionitem*)model
 {
     [self.name setText:model.name];
-    [self.asset setImage:[UIImage imageNamed:model.asset]];
+    [self.asset setImage:[[UIImage imageNamed:model.asset] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
     [self hover];
 }
 
