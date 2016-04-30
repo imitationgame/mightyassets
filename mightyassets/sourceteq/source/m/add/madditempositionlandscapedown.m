@@ -1,7 +1,7 @@
 #import "madditempositionlandscapedown.h"
 #import "maddprocessorientationlandscape.h"
 
-static NSInteger const percenttop = 8;
+static NSInteger const percenttop = 30;
 static NSInteger const percentbottom = 0;
 
 @implementation madditempositionlandscapedown
