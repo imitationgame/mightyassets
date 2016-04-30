@@ -72,6 +72,15 @@ static NSInteger const warningsize = 45;
     [labelimage setTranslatesAutoresizingMaskIntoConstraints:NO];
     [labelimage setText:NSLocalizedString(@"madd_item_screensedit_cell_image", nil)];
     
+    UIImageView *iconnext = [[UIImageView alloc] init];
+    [iconnext setImage:[[UIImage imageNamed:@"generic_next"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+    [iconnext setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [iconnext setClipsToBounds:YES];
+    [iconnext setContentMode:UIViewContentModeScaleAspectFit];
+    [iconnext setTintColor:[UIColor second]];
+    [iconnext setUserInteractionEnabled:NO];
+    
+    [self addSubview:iconnext];
     [self addSubview:label];
     [self addSubview:labeltitles];
     [self addSubview:labelimage];
@@ -79,7 +88,7 @@ static NSInteger const warningsize = 45;
     [self addSubview:icondoneimage];
     [self addSubview:iconwarning];
     
-    NSDictionary *views = @{@"icondonetitles":icondonetitles, @"icondoneimage":icondoneimage, @"label":label, @"labeltitles":labeltitles, @"labelimage":labelimage, @"iconwarning":iconwarning};
+    NSDictionary *views = @{@"icondonetitles":icondonetitles, @"icondoneimage":icondoneimage, @"label":label, @"labeltitles":labeltitles, @"labelimage":labelimage, @"iconwarning":iconwarning, @"iconnext":iconnext};
     NSDictionary *metric = @{};
     
     self.layouticontitleswidth = [NSLayoutConstraint constraintWithItem:icondonetitles attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:0];
@@ -92,6 +101,8 @@ static NSInteger const warningsize = 45;
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[label]-10-[labeltitles(20)]" options:0 metrics:metric views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[icondonetitles]-10-[labelimage(20)]" options:0 metrics:metric views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-15-[iconwarning(20)]" options:0 metrics:metric views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[iconnext(10)]-14-|" options:0 metrics:metric views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[iconnext]-0-|" options:0 metrics:metric views:views]];
     [self addConstraint:self.layouticonimagewidth];
     [self addConstraint:self.layouticontitleswidth];
     [self addConstraint:self.layouticonwarningwidth];
