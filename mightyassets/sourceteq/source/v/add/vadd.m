@@ -118,6 +118,7 @@ static NSInteger const interitem = -1;
     madditem *model = [self modelforindex:index];
     vaddcell *cell = [col dequeueReusableCellWithReuseIdentifier:model.cellclassname forIndexPath:index];
     [cell config:model];
+    cell.maincollection = col;
     
     return cell;
 }

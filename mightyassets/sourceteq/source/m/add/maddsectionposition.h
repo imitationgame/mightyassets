@@ -6,6 +6,9 @@
 
 @interface maddsectionposition:maddsection
 
+-(void)changeposition:(madditemposition*)modelposition;
+
+@property(strong, nonatomic)NSMutableArray<madditem*> *items;
 @property(weak, nonatomic)madditemframe *modelframe;
 @property(weak, nonatomic)madditemorientation *modelorientation;
 @property(weak, nonatomic)madditemposition *modelposition;

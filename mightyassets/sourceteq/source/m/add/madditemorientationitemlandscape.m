@@ -3,9 +3,9 @@
 
 @implementation madditemorientationitemlandscape
 
--(instancetype)init
+-(instancetype)init:(madditemorientation*)orientation
 {
-    self = [super init:NSLocalizedString(@"madd_item_orientation_landscape_title", nil) asset:@"add_orientation_landscape"];
+    self = [super init:orientation name:NSLocalizedString(@"madd_item_orientation_landscape_title", nil) asset:@"add_orientation_landscape"];
     
     return self;
 }

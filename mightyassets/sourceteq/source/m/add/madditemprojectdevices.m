@@ -4,7 +4,7 @@
 #import "madditemprojectdevicesitemuniversal.h"
 #import "vaddcellprojectdevices.h"
 
-static NSInteger const cellheight = 52;
+static NSInteger const cellheight = 56;
 
 @implementation madditemprojectdevices
 

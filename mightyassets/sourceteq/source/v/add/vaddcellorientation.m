@@ -117,7 +117,8 @@ static NSInteger const interitem = 0;
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
     NSInteger selected = index.item;
-    self.model.selected = selected;
+    [self.model changeselected:selected];
+    [self.maincollection reloadData];
 }
 
 @end

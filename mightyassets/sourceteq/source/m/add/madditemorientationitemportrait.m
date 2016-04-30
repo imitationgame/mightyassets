@@ -3,9 +3,9 @@
 
 @implementation madditemorientationitemportrait
 
--(instancetype)init
+-(instancetype)init:(madditemorientation*)orientation
 {
-    self = [super init:NSLocalizedString(@"madd_item_orientation_portrait_title", nil) asset:@"add_orientation_portrait"];
+    self = [super init:orientation name:NSLocalizedString(@"madd_item_orientation_portrait_title", nil) asset:@"add_orientation_portrait"];
     
     return self;
 }

@@ -7,5 +7,6 @@
 -(void)hover;
 
 @property(weak, nonatomic)madditem *model;
+@property(weak, nonatomic)UICollectionView *maincollection;
 
 @end
