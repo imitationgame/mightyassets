@@ -23,7 +23,7 @@ static NSInteger const margintext = 60;
     self.colordevice = model.modelcolors.modeldevice.color;
     self.colortext = model.modelcolors.modeltext.color;
     self.position = [model.modelposition.modelposition itemselected];
-    self.asset = [[model.modelposition.modelframe itemselected] asset];
+    self.asset = [[model.modelposition.modelframe itemselected] modelasset];
     
     NSArray<maddprocessdevice*> *devices = [[model.modelproject.modeldevices itemselected] devices:self.position];
     NSArray<madditemscreensedit*> *screens = [model.modelscreens screens];
@@ -67,22 +67,16 @@ static NSInteger const margintext = 60;
     CGFloat usablemargintop = margintopfloat * assetheight;
     CGFloat extrudetop = [self.position extrudetop:asset];
     CGFloat ratio = devicerawheight / usableheight;
-    CGFloat imageratio = ratio;
     
     if(ratio < 1)
     {
-        imageratio = 1;
-        
-        if(ratio <= 0)
-        {
-            ratio = 1;
-        }
+        ratio = 1;
     }
     
     CGFloat usableextrudetop = extrudetop / ratio;
-    CGFloat drawdevicewidth = devicerawwidth / imageratio;
+    CGFloat drawdevicewidth = devicerawwidth / ratio;
     CGFloat drawdevicex = (assetwidth - drawdevicewidth) / 2.0;
-    CGFloat drawdeviceheight = devicerawheight / imageratio;
+    CGFloat drawdeviceheight = devicerawheight / ratio;
     
     if(drawdeviceheight < usableheight)
     {
@@ -117,10 +111,10 @@ static NSInteger const margintext = 60;
             CGFloat screeny = asset.screeny;
             CGFloat screenwidth = asset.screenwidth;
             CGFloat screenheight = asset.screenheight;
-            CGFloat ratioscreenx = screenx / imageratio;
-            CGFloat ratioscreeny = screeny / imageratio;
-            CGFloat ratioscreenwidth = screenwidth / imageratio;
-            CGFloat ratioscreenheight = screenheight / imageratio;
+            CGFloat ratioscreenx = screenx / ratio;
+            CGFloat ratioscreeny = screeny / ratio;
+            CGFloat ratioscreenwidth = screenwidth / ratio;
+            CGFloat ratioscreenheight = screenheight / ratio;
             CGFloat usablescreenx = ratioscreenx + drawdevicex;
             CGFloat usablescreeny = ratioscreeny + drawdevicey;
             

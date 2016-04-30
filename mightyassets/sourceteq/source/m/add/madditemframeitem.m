@@ -13,7 +13,7 @@
 
 #pragma mark public
 
--(maddprocessasset*)asset
+-(maddprocessasset*)modelasset
 {
     return nil;
 }

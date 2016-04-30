@@ -4,7 +4,7 @@
 @interface madditemframeitem:NSObject
 
 -(instancetype)init:(NSString*)name asset:(NSString*)asset;
--(maddprocessasset*)asset;
+-(maddprocessasset*)modelasset;
 
 @property(copy, nonatomic)NSString *name;
 @property(copy, nonatomic)NSString *asset;

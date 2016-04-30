@@ -13,7 +13,7 @@
 #pragma mark -
 #pragma mark frame item
 
--(maddprocessasset*)asset
+-(maddprocessasset*)modelasset
 {
     maddprocessassetiphone6 *asset = [[maddprocessassetiphone6 alloc] init];
     
