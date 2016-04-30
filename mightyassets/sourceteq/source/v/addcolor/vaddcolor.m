@@ -4,7 +4,7 @@
 static NSString* const colorcellid = @"colorcell";
 static NSInteger const colbottom = 40;
 static NSInteger const cellsize = 100;
-static NSInteger const minmargin = 30;
+static NSInteger const minmargin = 50;
 
 @implementation vaddcolor
 
