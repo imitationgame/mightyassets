@@ -12,10 +12,10 @@
     maddcoloradditemred *red = [[maddcoloradditemred alloc] init];
     self.red = red;
     
-    maddcoloradditemred *green = [[maddcoloradditemgreen alloc] init];
-    self.blue = green;
+    maddcoloradditemgreen *green = [[maddcoloradditemgreen alloc] init];
+    self.green = green;
     
-    maddcoloradditemred *blue = [[maddcoloradditemblue alloc] init];
+    maddcoloradditemblue *blue = [[maddcoloradditemblue alloc] init];
     self.blue = blue;
     
     self.items = @[red, green, blue];

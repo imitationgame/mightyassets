@@ -96,6 +96,7 @@ static NSInteger const interitem = -1;
 -(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
 {
     vaddcoloraddheader *header = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:coloraddheaderid forIndexPath:index];
+    [header config:self.model];
     self.header = header;
     
     return header;
