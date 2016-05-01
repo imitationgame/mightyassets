@@ -18,6 +18,7 @@
 		DA339D431CD57C9600A46698 /* maddcoloradditemgreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DA339D421CD57C9600A46698 /* maddcoloradditemgreen.m */; };
 		DA339D461CD57CA200A46698 /* maddcoloradditemblue.m in Sources */ = {isa = PBXBuildFile; fileRef = DA339D451CD57CA200A46698 /* maddcoloradditemblue.m */; };
 		DA339D491CD5825200A46698 /* vaddcoloraddheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA339D481CD5825200A46698 /* vaddcoloraddheader.m */; };
+		DA339D4C1CD6A93300A46698 /* vaddcoloraddfooter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA339D4B1CD6A93300A46698 /* vaddcoloraddfooter.m */; };
 		DA3559601CD1144A008AD644 /* mproject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA35595F1CD1144A008AD644 /* mproject.m */; };
 		DA3559631CD114DB008AD644 /* mprojectitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559621CD114DB008AD644 /* mprojectitem.m */; };
 		DA3559661CD11AB7008AD644 /* vlandingfooter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559651CD11AB7008AD644 /* vlandingfooter.m */; };
@@ -186,6 +187,8 @@
 		DA339D451CD57CA200A46698 /* maddcoloradditemblue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddcoloradditemblue.m; sourceTree = "<group>"; };
 		DA339D471CD5825200A46698 /* vaddcoloraddheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaddcoloraddheader.h; sourceTree = "<group>"; };
 		DA339D481CD5825200A46698 /* vaddcoloraddheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddcoloraddheader.m; sourceTree = "<group>"; };
+		DA339D4A1CD6A93300A46698 /* vaddcoloraddfooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaddcoloraddfooter.h; sourceTree = "<group>"; };
+		DA339D4B1CD6A93300A46698 /* vaddcoloraddfooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddcoloraddfooter.m; sourceTree = "<group>"; };
 		DA35595E1CD1144A008AD644 /* mproject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mproject.h; sourceTree = "<group>"; };
 		DA35595F1CD1144A008AD644 /* mproject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mproject.m; sourceTree = "<group>"; };
 		DA3559611CD114DB008AD644 /* mprojectitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprojectitem.h; sourceTree = "<group>"; };
@@ -508,6 +511,8 @@
 				DA339D481CD5825200A46698 /* vaddcoloraddheader.m */,
 				DA339D351CD579DC00A46698 /* vaddcoloraddcell.h */,
 				DA339D361CD579DC00A46698 /* vaddcoloraddcell.m */,
+				DA339D4A1CD6A93300A46698 /* vaddcoloraddfooter.h */,
+				DA339D4B1CD6A93300A46698 /* vaddcoloraddfooter.m */,
 			);
 			path = addcoloradd;
 			sourceTree = "<group>";
@@ -1358,6 +1363,7 @@
 				DAAFB2941CC972C8003173A7 /* mfixedconstraints.m in Sources */,
 				DA489E331CD3FCFB00F68E74 /* madditempositionportrait.m in Sources */,
 				DAB377041CC93901001E8625 /* analytics.m in Sources */,
+				DA339D4C1CD6A93300A46698 /* vaddcoloraddfooter.m in Sources */,
 				DA3559691CD121F8008AD644 /* vaddcellprojectname.m in Sources */,
 				DAAFB2ED1CCDBC4D003173A7 /* maddsectionposition.m in Sources */,
 				DA339D461CD57CA200A46698 /* maddcoloradditemblue.m in Sources */,

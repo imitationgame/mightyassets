@@ -1,10 +1,13 @@
 #import "vaddcoloradd.h"
 #import "vaddcoloraddcell.h"
+#import "vaddcoloraddfooter.h"
 #import "vaddcoloraddbar.h"
 
 static NSString* const coloraddheaderid = @"coloraddheader";
+static NSString* const coloraddfooterid = @"coloraddfooter";
 static NSString* const coloraddcellid = @"coloraddcell";
 static NSInteger const headerheight = 200;
+static NSInteger const footerheight = 150;
 static NSInteger const cellheight = 62;
 static NSInteger const interitem = -1;
 
@@ -21,7 +24,6 @@ static NSInteger const interitem = -1;
     vaddcoloraddbar *bar = [[vaddcoloraddbar alloc] init:controller];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
-    [flow setFooterReferenceSize:CGSizeZero];
     [flow setMinimumInteritemSpacing:0];
     [flow setMinimumLineSpacing:interitem];
     [flow setSectionInset:UIEdgeInsetsZero];
@@ -37,6 +39,7 @@ static NSInteger const interitem = -1;
     [collection setDataSource:self];
     [collection setDelegate:self];
     [collection registerClass:[vaddcoloraddheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:coloraddheaderid];
+    [collection registerClass:[vaddcoloraddfooter class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:coloraddfooterid];
     [collection registerClass:[vaddcoloraddcell class] forCellWithReuseIdentifier:coloraddcellid];
     self.collection = collection;
     
@@ -64,6 +67,14 @@ static NSInteger const interitem = -1;
 
 #pragma mark -
 #pragma mark col del
+
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForFooterInSection:(NSInteger)section
+{
+    CGFloat width = col.bounds.size.width;
+    CGSize size = CGSizeMake(width, footerheight);
+    
+    return size;
+}
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForHeaderInSection:(NSInteger)section
 {
@@ -95,11 +106,23 @@ static NSInteger const interitem = -1;
 
 -(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
 {
-    vaddcoloraddheader *header = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:coloraddheaderid forIndexPath:index];
-    [header config:self.model];
-    self.header = header;
+    UICollectionReusableView *reusable;
     
-    return header;
+    if(kind == UICollectionElementKindSectionHeader)
+    {
+        vaddcoloraddheader *header = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:coloraddheaderid forIndexPath:index];
+        [header config:self.model];
+        self.header = header;
+        reusable = header;
+    }
+    else
+    {
+        vaddcoloraddfooter *footer = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:coloraddfooterid forIndexPath:index];
+        [footer config:self.model];
+        reusable = footer;
+    }
+    
+    return reusable;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
