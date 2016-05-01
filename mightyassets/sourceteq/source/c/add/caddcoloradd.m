@@ -55,7 +55,7 @@
     
     NSArray<UIViewController*> *controllers = self.navigationController.viewControllers;
     NSInteger count = controllers.count;
-    UIViewController *prevcontroller = controllers[count - 2];
+    UIViewController *prevcontroller = controllers[count - 3];
     
     [self.navigationController popToViewController:prevcontroller animated:YES];
 }
