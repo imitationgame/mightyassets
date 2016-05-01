@@ -24,12 +24,12 @@
     NSString *documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSDictionary *defaults = [tools defaultdict];
     NSUserDefaults *properties = [NSUserDefaults standardUserDefaults];
-    NSInteger def_version = [defaults[@"version"] integerValue];
-    NSInteger pro_version = [[properties valueForKey:@"version"] integerValue];
+    NSInteger def_version = [defaults[versionkey] integerValue];
+    NSInteger pro_version = [[properties valueForKey:versionkey] integerValue];
     
     if(def_version != pro_version)
     {
-        [properties setValue:@(def_version) forKeyPath:@"version"];        
+        [properties setValue:@(def_version) forKeyPath:versionkey];        
         
         if(pro_version < 10)
         {
@@ -43,13 +43,13 @@
 
 +(void)firsttime:(NSDictionary*)plist documents:(NSString*)documents
 {
-    NSNumber *appid = plist[@"appid"];
+    NSNumber *appid = plist[appidkey];
     NSUserDefaults *userdef = [NSUserDefaults standardUserDefaults];
     
     [userdef removePersistentDomainForName:NSGlobalDomain];
     [userdef removePersistentDomainForName:NSArgumentDomain];
     [userdef removePersistentDomainForName:NSRegistrationDomain];
-    [userdef setValue:appid forKey:@"appid"];
+    [userdef setValue:appid forKey:appidkey];
     [userdef synchronize];
     
     NSString *projects = [documents stringByAppendingPathComponent:folderprojects];
