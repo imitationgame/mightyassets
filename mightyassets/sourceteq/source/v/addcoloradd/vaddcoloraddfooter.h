@@ -1,10 +1,10 @@
 #import <UIKit/UIKit.h>
-#import "caddcoloradd.h"
+#import "vaddcoloradd.h"
 
 @interface vaddcoloraddfooter:UICollectionReusableView
 
--(void)config:(caddcoloradd*)controller;
+-(void)config:(vaddcoloradd*)view;
 
-@property(weak, nonatomic)caddcoloradd *controller;
+@property(weak, nonatomic)vaddcoloradd *view;
 
 @end

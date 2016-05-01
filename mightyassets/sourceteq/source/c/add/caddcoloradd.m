@@ -52,6 +52,11 @@
 -(void)changecolor:(UIColor*)color
 {
     self.model.color = color;
-    [self back];
+    
+    NSArray<UIViewController*> *controllers = self.navigationController.viewControllers;
+    NSInteger count = controllers.count;
+    UIViewController *prevcontroller = controllers[count - 2];
+    
+    [self.navigationController popToViewController:prevcontroller animated:YES];
 }
 @end

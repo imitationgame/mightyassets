@@ -10,6 +10,7 @@
 "addcoloradd_color_red"="Red";
 "addcoloradd_color_green"="Green";
 "addcoloradd_color_blue"="Blue";
+"addcoloradd_color_accept"="Create";
 
 "addfont_title"="Select a font";
 

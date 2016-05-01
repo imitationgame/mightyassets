@@ -118,7 +118,7 @@ static NSInteger const interitem = -1;
     else
     {
         vaddcoloraddfooter *footer = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:coloraddfooterid forIndexPath:index];
-        [footer config:self.model];
+        [footer config:self];
         reusable = footer;
     }
     
