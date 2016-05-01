@@ -2,7 +2,9 @@
 #import "vaddcoloraddcell.h"
 #import "vaddcoloraddbar.h"
 
+static NSString* const coloraddheaderid = @"coloraddheader";
 static NSString* const coloraddcellid = @"coloraddcell";
+static NSInteger const headerheight = 200;
 static NSInteger const cellheight = 100;
 static NSInteger const interitem = -1;
 
@@ -14,10 +16,11 @@ static NSInteger const interitem = -1;
     [self setBackgroundColor:[UIColor whiteColor]];
     self.controller = controller;
     
+    self.model = [[maddcoloradd alloc] init];
+    
     vaddcoloraddbar *bar = [[vaddcoloraddbar alloc] init:controller];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
-    [flow setHeaderReferenceSize:CGSizeZero];
     [flow setFooterReferenceSize:CGSizeZero];
     [flow setMinimumInteritemSpacing:0];
     [flow setMinimumLineSpacing:interitem];
@@ -33,7 +36,8 @@ static NSInteger const interitem = -1;
     [collection setBackgroundColor:[UIColor clearColor]];
     [collection setDataSource:self];
     [collection setDelegate:self];
-    [collection registerClass:[vaddcoloraddcell class] forCellWithReuseIdentifier:colorcellid];
+    [collection registerClass:[vaddcoloraddheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:coloraddheaderid];
+    [collection registerClass:[vaddcoloraddcell class] forCellWithReuseIdentifier:coloraddcellid];
     self.collection = collection;
     
     [self addSubview:collection];
@@ -49,8 +53,33 @@ static NSInteger const interitem = -1;
     return self;
 }
 
+#pragma mark functionality
+
+-(maddcoloradditem*)modelforindex:(NSIndexPath*)index
+{
+    maddcoloradditem *model = self.model.items[index.item];
+    
+    return model;
+}
+
 #pragma mark -
 #pragma mark col del
+
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    CGFloat width = col.bounds.size.width;
+    CGSize size = CGSizeMake(width, headerheight);
+    
+    return size;
+}
+
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
+{
+    CGFloat width = col.bounds.size.width;
+    CGSize size = CGSizeMake(width, cellheight);
+    
+    return size;
+}
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
 {
@@ -64,10 +93,19 @@ static NSInteger const interitem = -1;
     return count;
 }
 
+-(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
+{
+    vaddcoloraddheader *header = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:coloraddheaderid forIndexPath:index];
+    self.header = header;
+    
+    return header;
+}
+
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
+    maddcoloradditem *model = [self modelforindex:index];
     vaddcoloraddcell *cell = [col dequeueReusableCellWithReuseIdentifier:coloraddcellid forIndexPath:index];
-    [cell config:model];
+    [cell config:model view:self];
     
     return cell;
 }

@@ -61,6 +61,7 @@ static NSInteger const minmargin = 50;
     [collection setDataSource:self];
     [collection setDelegate:self];
     [collection registerClass:[vaddcolorcell class] forCellWithReuseIdentifier:colorcellid];
+    self.collection = collection;
     
     [self addSubview:collection];
     

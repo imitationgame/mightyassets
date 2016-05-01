@@ -1,13 +1,13 @@
-//
-//  vaddcoloraddcell.m
-//  mightyassets
-//
-//  Created by zero on 4/30/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
-
 #import "vaddcoloraddcell.h"
 
 @implementation vaddcoloraddcell
+
+#pragma mark public
+
+-(void)config:(maddcoloradditem*)model view:(vaddcoloradd*)view;
+{
+    self.model = model;
+    self.view = view;
+}
 
 @end

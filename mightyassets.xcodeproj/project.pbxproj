@@ -17,6 +17,7 @@
 		DA339D401CD57C8B00A46698 /* maddcoloradditemred.m in Sources */ = {isa = PBXBuildFile; fileRef = DA339D3F1CD57C8B00A46698 /* maddcoloradditemred.m */; };
 		DA339D431CD57C9600A46698 /* maddcoloradditemgreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DA339D421CD57C9600A46698 /* maddcoloradditemgreen.m */; };
 		DA339D461CD57CA200A46698 /* maddcoloradditemblue.m in Sources */ = {isa = PBXBuildFile; fileRef = DA339D451CD57CA200A46698 /* maddcoloradditemblue.m */; };
+		DA339D491CD5825200A46698 /* vaddcoloraddheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA339D481CD5825200A46698 /* vaddcoloraddheader.m */; };
 		DA3559601CD1144A008AD644 /* mproject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA35595F1CD1144A008AD644 /* mproject.m */; };
 		DA3559631CD114DB008AD644 /* mprojectitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559621CD114DB008AD644 /* mprojectitem.m */; };
 		DA3559661CD11AB7008AD644 /* vlandingfooter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3559651CD11AB7008AD644 /* vlandingfooter.m */; };
@@ -183,6 +184,8 @@
 		DA339D421CD57C9600A46698 /* maddcoloradditemgreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddcoloradditemgreen.m; sourceTree = "<group>"; };
 		DA339D441CD57CA200A46698 /* maddcoloradditemblue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maddcoloradditemblue.h; sourceTree = "<group>"; };
 		DA339D451CD57CA200A46698 /* maddcoloradditemblue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddcoloradditemblue.m; sourceTree = "<group>"; };
+		DA339D471CD5825200A46698 /* vaddcoloraddheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaddcoloraddheader.h; sourceTree = "<group>"; };
+		DA339D481CD5825200A46698 /* vaddcoloraddheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vaddcoloraddheader.m; sourceTree = "<group>"; };
 		DA35595E1CD1144A008AD644 /* mproject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mproject.h; sourceTree = "<group>"; };
 		DA35595F1CD1144A008AD644 /* mproject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mproject.m; sourceTree = "<group>"; };
 		DA3559611CD114DB008AD644 /* mprojectitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprojectitem.h; sourceTree = "<group>"; };
@@ -501,6 +504,8 @@
 				DA339D301CD579C500A46698 /* vaddcoloradd.m */,
 				DA339D321CD579CE00A46698 /* vaddcoloraddbar.h */,
 				DA339D331CD579CE00A46698 /* vaddcoloraddbar.m */,
+				DA339D471CD5825200A46698 /* vaddcoloraddheader.h */,
+				DA339D481CD5825200A46698 /* vaddcoloraddheader.m */,
 				DA339D351CD579DC00A46698 /* vaddcoloraddcell.h */,
 				DA339D361CD579DC00A46698 /* vaddcoloraddcell.m */,
 			);
@@ -1302,6 +1307,7 @@
 				DA489E2A1CD3FC1B00F68E74 /* madditemorientationitem.m in Sources */,
 				DA9A41211CCECBEC00E49298 /* vaddscreencell.m in Sources */,
 				DA7D51E91CCFD71C002D06FE /* maddprocessassetiphone6.m in Sources */,
+				DA339D491CD5825200A46698 /* vaddcoloraddheader.m in Sources */,
 				DA7C64441CD26CA60058CCA3 /* vprojectbar.m in Sources */,
 				DA7D51E31CCFD6FA002D06FE /* maddprocessasset.m in Sources */,
 				DAAFB2901CC970B4003173A7 /* vlandingcell.m in Sources */,
