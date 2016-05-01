@@ -32,7 +32,7 @@ static NSInteger const fontsize = 19;
     [label setUserInteractionEnabled:NO];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setFont:[UIFont regularsize:16]];
-    [label setTextColor:[UIColor colorWithWhite:0.3 alpha:1]];
+    [label setTextColor:[UIColor colorWithWhite:0.2 alpha:1]];
     [label setText:NSLocalizedString(@"madd_item_titlesfont_title", nil)];
     
     [self addSubview:label];

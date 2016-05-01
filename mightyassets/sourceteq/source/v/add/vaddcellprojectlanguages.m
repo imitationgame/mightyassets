@@ -20,7 +20,7 @@ static NSInteger const maxvalue = 3;
 {
     self = [super initWithFrame:frame];
     
-    NSDictionary *dicttitle = @{NSFontAttributeName:[UIFont regularsize:16], NSForegroundColorAttributeName:[UIColor colorWithWhite:0.3 alpha:1]};
+    NSDictionary *dicttitle = @{NSFontAttributeName:[UIFont regularsize:16], NSForegroundColorAttributeName:[UIColor colorWithWhite:0.2 alpha:1]};
     NSDictionary *dictdescr = @{NSFontAttributeName:[UIFont regularsize:13], NSForegroundColorAttributeName:[UIColor colorWithWhite:0.55 alpha:1]};
     NSAttributedString *attrtitle = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"madd_item_projectlanguages_title", nil) attributes:dicttitle];
     NSAttributedString *attrdescr = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"madd_item_projectlanguages_descr", nil) attributes:dictdescr];

@@ -17,6 +17,14 @@
     self.view = [[vlanding alloc] init:self];
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    [self setExtendedLayoutIncludesOpaqueBars:NO];
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+}
+
 #pragma mark public
 
 -(void)addproject
