@@ -5,6 +5,6 @@
 
 -(void)config:(maddcoloritem*)model;
 
-@property(weak, nonatomic)UIView *circle;
+@property(weak, nonatomic)UIImageView *circle;
 
 @end
