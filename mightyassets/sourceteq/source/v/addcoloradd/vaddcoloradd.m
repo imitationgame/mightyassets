@@ -5,7 +5,7 @@
 static NSString* const coloraddheaderid = @"coloraddheader";
 static NSString* const coloraddcellid = @"coloraddcell";
 static NSInteger const headerheight = 200;
-static NSInteger const cellheight = 60;
+static NSInteger const cellheight = 62;
 static NSInteger const interitem = -1;
 
 @implementation vaddcoloradd

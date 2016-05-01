@@ -35,19 +35,29 @@ static NSInteger const colormax = 255;
     [slider addTarget:self action:@selector(actionslider:) forControlEvents:UIControlEventValueChanged];
     self.slider = slider;
     
+    UILabel *label = [[UILabel alloc] init];
+    [label setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [label setUserInteractionEnabled:NO];
+    [label setBackgroundColor:[UIColor clearColor]];
+    [label setFont:[UIFont regularsize:12]];
+    [label setTextColor:[UIColor colorWithWhite:0.3 alpha:1]];
+    self.label = label;
+    
     [self addSubview:bordertop];
     [self addSubview:borderbottom];
+    [self addSubview:label];
     [self addSubview:slider];
     
-    NSDictionary *views = @{@"bordertop":bordertop, @"borderbottom":borderbottom, @"slider":slider};
+    NSDictionary *views = @{@"bordertop":bordertop, @"borderbottom":borderbottom, @"slider":slider, @"label":label};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-5-[bordertop]-5-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bordertop(1)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-5-[borderbottom]-5-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[borderbottom(1)]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[slider]-100-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[label(50)]-0-[slider]-150-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[slider]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -67,6 +77,7 @@ static NSInteger const colormax = 255;
 {
     self.model = model;
     self.view = view;
+    [self.label setText:model.name];
     [self.slider setValue:model.value animated:NO];
 }
 

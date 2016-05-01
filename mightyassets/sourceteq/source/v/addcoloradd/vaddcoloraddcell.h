@@ -10,5 +10,6 @@
 @property(weak, nonatomic)vaddcoloradd *view;
 @property(weak, nonatomic)UISlider *slider;
 @property(weak, nonatomic)UITextField *field;
+@property(weak, nonatomic)UILabel *label;
 
 @end
