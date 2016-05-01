@@ -2,7 +2,7 @@
 #import "maddcoloradditem.h"
 #import "vaddcoloradd.h"
 
-@interface vaddcoloraddcell:UICollectionViewCell
+@interface vaddcoloraddcell:UICollectionViewCell<UITextFieldDelegate>
 
 -(void)config:(maddcoloradditem*)model view:(vaddcoloradd*)view;
 
