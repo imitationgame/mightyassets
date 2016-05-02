@@ -1,6 +1,5 @@
 #import <UIKit/UIKit.h>
 #import <Google/Analytics.h>
-#import "mgeneral.h"
 
 @interface analytics:NSObject
 

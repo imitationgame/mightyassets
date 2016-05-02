@@ -1,5 +1,6 @@
 #import "caddscreen.h"
 #import "vaddscreen.h"
+#import "analytics.h"
 
 @interface caddscreen ()
 
@@ -40,6 +41,8 @@
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     [self setExtendedLayoutIncludesOpaqueBars:NO];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    
+    [[analytics singleton] trackscreen:self];
 }
 
 -(void)viewDidAppear:(BOOL)animated

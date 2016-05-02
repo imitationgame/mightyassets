@@ -1,6 +1,7 @@
 #import "caddcolor.h"
 #import "vaddcolor.h"
 #import "caddcoloradd.h"
+#import "analytics.h"
 
 @interface caddcolor ()
 
@@ -41,6 +42,8 @@
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     [self setExtendedLayoutIncludesOpaqueBars:NO];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    
+    [[analytics singleton] trackscreen:self];
 }
 
 -(void)viewDidAppear:(BOOL)animated

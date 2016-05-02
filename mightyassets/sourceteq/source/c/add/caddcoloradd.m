@@ -1,5 +1,6 @@
 #import "caddcoloradd.h"
 #import "vaddcoloradd.h"
+#import "analytics.h"
 
 @interface caddcoloradd ()
 
@@ -40,6 +41,8 @@
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     [self setExtendedLayoutIncludesOpaqueBars:NO];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    
+    [[analytics singleton] trackscreen:self];
 }
 
 #pragma mark public

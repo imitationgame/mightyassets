@@ -1,5 +1,6 @@
 #import "caddfont.h"
 #import "vaddfont.h"
+#import "analytics.h"
 
 @interface caddfont ()
 
@@ -41,6 +42,8 @@
     [self setExtendedLayoutIncludesOpaqueBars:NO];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     self.model.font = nil;
+    
+    [[analytics singleton] trackscreen:self];
 }
 
 -(void)viewDidAppear:(BOOL)animated

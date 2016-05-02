@@ -1,6 +1,7 @@
 #import "caddprocess.h"
 #import "vaddprocess.h"
 #import "cmain.h"
+#import "analytics.h"
 
 @interface caddprocess ()
 
@@ -26,6 +27,8 @@
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     [self setExtendedLayoutIncludesOpaqueBars:NO];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    
+    [[analytics singleton] trackscreen:self];
 }
 
 -(void)viewDidAppear:(BOOL)animated
