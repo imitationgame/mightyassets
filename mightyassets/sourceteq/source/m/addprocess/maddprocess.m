@@ -195,7 +195,6 @@ static NSInteger const margintext = 60;
     
     image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    CGContextRelease(context);
     
     return image;
 }

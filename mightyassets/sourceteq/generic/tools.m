@@ -166,7 +166,6 @@ static NSUInteger const minuteseconds = 60;
     CGContextDrawImage(context, CGRectMake(0, 0, width, height), cgimage);
     CGImageRef newcgimage = CGBitmapContextCreateImage(context);
     UIGraphicsEndImageContext();
-    CGContextRelease(context);
     UIImage *bufferedimage = [UIImage imageWithCGImage:newcgimage scale:1 orientation:image.imageOrientation];
     CGImageRelease(newcgimage);
     
