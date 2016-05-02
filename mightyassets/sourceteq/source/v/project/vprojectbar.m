@@ -2,6 +2,7 @@
 #import "uicolor+uicolormain.h"
 #import "uifont+uifontmain.h"
 #import "vprojectwarning.h"
+#import "analytics.h"
 
 static NSInteger const height = 110;
 
@@ -92,6 +93,7 @@ static NSInteger const height = 110;
 
 -(void)actionshare:(UIButton*)button
 {
+    [[analytics singleton] trackeve];
     [self.controller.model share];
 }
 

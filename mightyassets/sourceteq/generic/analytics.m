@@ -43,9 +43,10 @@ static NSInteger const analyticsrate = 15;
     [self.tracker send:[[[GAIDictionaryBuilder createScreenView] set:screenname forKey:kGAIScreenName] build]];
 }
 
--(void)trackevent:(NSString*)event action:(NSString*)action label:(NSString*)label
+-(void)trackevent:(UIViewController*)event action:(NSString*)action label:(NSString*)label
 {
-    [self.tracker send:[[GAIDictionaryBuilder createEventWithCategory:event action:action label:label value:@(1)] build]];
+    NSString *screenname = NSStringFromClass(controller.class);
+    [self.tracker send:[[GAIDictionaryBuilder createEventWithCategory:screenname action:action label:label value:@(1)] build]];
 }
 
 @end
