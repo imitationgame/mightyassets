@@ -1498,7 +1498,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Agustin Iturbide (7AMWG3RLHN)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/mightyassets/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
