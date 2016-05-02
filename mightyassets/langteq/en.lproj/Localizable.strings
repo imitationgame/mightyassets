@@ -28,6 +28,7 @@
 "addscreen_warning_continue_btncontinue"="Finish";
 
 "addprocess_title"="Processing";
+"addprocess_descr"="\nplease wait...";
 
 "madd_section_project_name"="Project";
 "madd_section_titles_name"="Titles";
