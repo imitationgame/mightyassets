@@ -1,4 +1,4 @@
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <Google/Analytics.h>
 #import "mgeneral.h"
 
@@ -6,8 +6,8 @@
 
 +(instancetype)singleton;
 -(void)start;
--(void)trackscreen:(ga_screen)screen;
--(void)trackevent:(ga_event)event action:(ga_action)action label:(NSString*)label;
+-(void)trackscreen:(UIViewController*)controller;
+-(void)trackevent:(NSString*)event action:(NSString*)action label:(NSString*)label;
 
 @property(weak, nonatomic)id<GAITracker> tracker;
 
