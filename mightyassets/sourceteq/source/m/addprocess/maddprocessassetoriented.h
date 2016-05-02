@@ -10,5 +10,7 @@
 @property(assign, nonatomic)NSInteger screeny;
 @property(assign, nonatomic)NSInteger screenwidth;
 @property(assign, nonatomic)NSInteger screenheight;
+@property(assign, nonatomic)NSInteger devicescreenwidth;
+@property(assign, nonatomic)NSInteger devicescreenheight;
 
 @end

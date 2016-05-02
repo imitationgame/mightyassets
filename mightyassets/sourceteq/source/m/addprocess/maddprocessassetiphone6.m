@@ -8,6 +8,8 @@ static NSInteger const screenx = 50;
 static NSInteger const screeny = 209;
 static NSInteger const screenwidth = 764;
 static NSInteger const screenheight = 1348;
+static NSInteger const devicescreenwidth = 750;
+static NSInteger const devicescreenheight = 1334;
 
 @implementation maddprocessassetiphone6
 
@@ -22,6 +24,8 @@ static NSInteger const screenheight = 1348;
     self.screeny = screeny;
     self.screenwidth = screenwidth;
     self.screenheight = screenheight;
+    self.devicescreenwidth = devicescreenwidth;
+    self.devicescreenheight = devicescreenheight;
     
     return self;
 }

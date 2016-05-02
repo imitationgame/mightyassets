@@ -31,6 +31,8 @@
     oriented.screeny = asset.screeny;
     oriented.screenwidth = asset.screenwidth;
     oriented.screenheight = asset.screenheight;
+    oriented.devicescreenwidth = asset.devicescreenwidth;
+    oriented.devicescreenheight = asset.devicescreenheight;
     
     return oriented;
 }

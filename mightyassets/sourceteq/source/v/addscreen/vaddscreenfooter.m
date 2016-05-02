@@ -133,8 +133,8 @@ static NSInteger const circlesize = 70;
     madditemorientationitem *orientation = [model.model.model.modelposition.modelorientation itemselected];
     maddprocessasset *asset = [frame modelasset];
     maddprocessassetoriented *assetoriented = [orientation assetoriented:asset];
-    CGFloat width = assetoriented.screenwidth;
-    CGFloat height = assetoriented.screenheight;
+    CGFloat width = assetoriented.devicescreenwidth;
+    CGFloat height = assetoriented.devicescreenheight;
     
     NSString *stringsize = [NSString stringWithFormat:NSLocalizedString(@"addscreen_image_size", nil), @(width), @(height), frame.name, orientation.name];
     
