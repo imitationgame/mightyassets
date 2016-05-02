@@ -45,7 +45,7 @@
                        dispatch_async(dispatch_get_main_queue(),
                                       ^
                                       {
-                                          [[cmain singleton].pages page_project:welf.process.project];
+//                                          [[cmain singleton].pages page_project:welf.process.project];
                                       });
                    });
 }

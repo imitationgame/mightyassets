@@ -1,7 +1,7 @@
 #import "vspinner.h"
 
-static CGFloat const animationduration = 0.5;
-static NSUInteger const spinnerintrinsicsize = 40;
+static CGFloat const animationduration = 1;
+static NSUInteger const spinnerintrinsicsize = 50;
 
 @implementation vspinner
 
@@ -19,7 +19,8 @@ static NSUInteger const spinnerintrinsicsize = 40;
                              [UIImage imageNamed:@"loader_1"],
                              [UIImage imageNamed:@"loader_2"],
                              [UIImage imageNamed:@"loader_3"],
-                             [UIImage imageNamed:@"loader_4"],
+                             [UIImage imageNamed:@"loader_2"],
+                             [UIImage imageNamed:@"loader_1"]
                              ];
     [self startAnimating];
     
