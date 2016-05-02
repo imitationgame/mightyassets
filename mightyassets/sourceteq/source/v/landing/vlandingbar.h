@@ -9,5 +9,6 @@
 @property(strong, nonatomic)mfixedconstraints *interactiveconstraints;
 @property(weak, nonatomic)clanding *controller;
 @property(weak, nonatomic)UIButton *buttonadd;
+@property(weak, nonatomic)NSLayoutConstraint *layoutlogotop;
 
 @end
