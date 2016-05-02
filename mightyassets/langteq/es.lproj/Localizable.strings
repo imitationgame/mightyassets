@@ -1,0 +1,81 @@
+"landing_header_title"="Crea un proyecto nuevo";
+"landing_footer_label"="No hay proyectos aun";
+"landing_cell_created"="\n%@ hace";
+"landing_cell_noname"="Proyecto sin nombre";
+
+"add_title"="Proyecto nuevo";
+
+"addcolor_title"="Color de %@";
+"addcoloradd_title"="Crear color";
+"addcoloradd_color_red"="Rojo";
+"addcoloradd_color_green"="Verde";
+"addcoloradd_color_blue"="Azul";
+"addcoloradd_color_accept"="Crear";
+
+"addfont_title"="Selecciona una fuente";
+
+"addscreen_title"="Pantalla %@";
+"addscreen_titles_title"="Localizacion %@";
+"addscreen_titles_placeholder"="No usar titulo";
+"addscreen_image_title"="Imagen";
+"addscreen_image_descr"="\nSelecciona una captura de pantalla de tu app para crear la imagen de comercializacion";
+"addscreen_image_size"="\nPara mejores resultados usa %@px × %@px\n(%@ %@)";
+"addscreen_warning_cancel_label"="Si cierras el proyecto perderas todos los avances";
+"addscreen_warning_cancel_btncancel"="No cerrar";
+"addscreen_warning_cancel_btncontinue"="Descartar proyecto";
+"addscreen_warning_continue_label"="Algunas pantallas no han sido configuradas, no podras editarlas despues";
+"addscreen_warning_continue_btncancel"="Editar";
+"addscreen_warning_continue_btncontinue"="Finalizar";
+
+"addprocess_title"="Procesando";
+"addprocess_descr"="\nespera por favor...";
+
+"madd_section_project_name"="Proyecto";
+"madd_section_titles_name"="Titulos";
+"madd_section_colors_name"="Colores";
+"madd_section_position_name"="Marco";
+"madd_section_screens_name"="Pantallas";
+"madd_item_projectname_title"="Nombre";
+"madd_item_projectname_placeholder"="Nombre de proyecto";
+"madd_item_projectdevices_title"="Devices";
+"madd_item_projectdevices_iphone_title"="iPhone";
+"madd_item_projectdevices_ipad_title"="iPad";
+"madd_item_projectdevices_universal_title"="Universal";
+"madd_item_projectlanguages_title"="Localizations";
+"madd_item_projectlanguages_descr"="\nYou can add a different title for every localization";
+"madd_item_titlesfont_title"="Font";
+"madd_item_titlesfont_default"="Default";
+"madd_item_colorsbackground_title"="Background";
+"madd_item_colorsdevice_title"="Device";
+"madd_item_colorstext_title"="Text";
+"madd_item_frame_title"="Frame";
+"madd_item_frame_iphone6_title"="iPhone 6";
+"madd_item_orientation_title"="Orientation";
+"madd_item_orientation_portrait_title"="Portrait";
+"madd_item_orientation_landscape_title"="Landscape";
+"madd_item_position_title"="Position";
+"madd_item_positionportrait_title"="Position portrait";
+"madd_item_positionportraitfull_title"="Full";
+"madd_item_positionportraitusable_title"="Usable";
+"madd_item_positionlandscape_title"="Position landscape";
+"madd_item_positionlandscapedown_title"="Bottom";
+"madd_item_positionlandscapemargin_title"="Centered";
+"madd_item_screensedit_title"="Edit screen";
+"madd_item_screensedit_cell_title"="Screen %@/5";
+"madd_item_screensedit_cell_titles"="Titles";
+"madd_item_screensedit_cell_image"="Image";
+"madd_item_screensadd_title"="Add screen";
+
+"project_title_noname"="Project";
+"project_title_sizes_width"="width %@ px";
+"project_title_sizes_height"="\nheight %@ px\n";
+"project_warning_title"="Delete project?";
+"project_warning_cancel"="Cancel";
+"project_warning_continue"="Delete";
+
+"elapsedtime_day"="%@ day";
+"elapsedtime_hour"="%@ hour";
+"elapsedtime_minute"="%@ minute";
+"elapsedtime_days"="%@ days";
+"elapsedtime_hours"="%@ hours";
+"elapsedtime_minutes"="%@ minutes";
