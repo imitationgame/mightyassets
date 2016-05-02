@@ -139,7 +139,6 @@
 		DAAFB2EA1CCC60D5003173A7 /* vaddcolorcell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2E91CCC60D5003173A7 /* vaddcolorcell.m */; };
 		DAAFB2ED1CCDBC4D003173A7 /* maddsectionposition.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFB2EC1CCDBC4D003173A7 /* maddsectionposition.m */; };
 		DAB376FD1CC93901001E8625 /* mightyassets.db in Resources */ = {isa = PBXBuildFile; fileRef = DAB376BE1CC93901001E8625 /* mightyassets.db */; };
-		DAB376FE1CC93901001E8625 /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB376C11CC93901001E8625 /* analytics.plist */; };
 		DAB376FF1CC93901001E8625 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB376C21CC93901001E8625 /* defs.plist */; };
 		DAB377001CC93901001E8625 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAB376C31CC93901001E8625 /* Localizable.strings */; };
 		DAB377011CC93901001E8625 /* appdel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB376C91CC93901001E8625 /* appdel.m */; };
@@ -422,7 +421,6 @@
 		DAAFB2EC1CCDBC4D003173A7 /* maddsectionposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maddsectionposition.m; sourceTree = "<group>"; };
 		DAB376A31CC93769001E8625 /* mightyassets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mightyassets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB376BE1CC93901001E8625 /* mightyassets.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mightyassets.db; sourceTree = "<group>"; };
-		DAB376C11CC93901001E8625 /* analytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = analytics.plist; sourceTree = "<group>"; };
 		DAB376C21CC93901001E8625 /* defs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defs.plist; sourceTree = "<group>"; };
 		DAB376C41CC93901001E8625 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DAB376C51CC93901001E8625 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -457,7 +455,6 @@
 		DAB376EF1CC93901001E8625 /* mdbcreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdbcreate.m; sourceTree = "<group>"; };
 		DAB376F11CC93901001E8625 /* mdirs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdirs.h; sourceTree = "<group>"; };
 		DAB376F21CC93901001E8625 /* mdirs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdirs.m; sourceTree = "<group>"; };
-		DAB376F41CC93901001E8625 /* mgeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgeneral.h; sourceTree = "<group>"; };
 		DAB376F51CC93901001E8625 /* msettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msettings.h; sourceTree = "<group>"; };
 		DAB376F61CC93901001E8625 /* msettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msettings.m; sourceTree = "<group>"; };
 		DAB376F91CC93901001E8625 /* vblur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vblur.h; sourceTree = "<group>"; };
@@ -873,7 +870,6 @@
 		DAB376C01CC93901001E8625 /* langteq */ = {
 			isa = PBXGroup;
 			children = (
-				DAB376C11CC93901001E8625 /* analytics.plist */,
 				DAB376C21CC93901001E8625 /* defs.plist */,
 				DAB376C31CC93901001E8625 /* Localizable.strings */,
 				DAAFB2E61CCC5777003173A7 /* colors.plist */,
@@ -1022,7 +1018,6 @@
 		DAB376F31CC93901001E8625 /* general */ = {
 			isa = PBXGroup;
 			children = (
-				DAB376F41CC93901001E8625 /* mgeneral.h */,
 				DAB376F51CC93901001E8625 /* msettings.h */,
 				DAB376F61CC93901001E8625 /* msettings.m */,
 				DAAFB2921CC972C8003173A7 /* mfixedconstraints.h */,
@@ -1175,7 +1170,6 @@
 				DAAFB2DB1CCC4D1E003173A7 /* generic.xcassets in Resources */,
 				DAB376FF1CC93901001E8625 /* defs.plist in Resources */,
 				DAAFB2E71CCC5777003173A7 /* colors.plist in Resources */,
-				DAB376FE1CC93901001E8625 /* analytics.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

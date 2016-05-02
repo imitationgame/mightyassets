@@ -6,6 +6,4 @@
 -(void)load;
 -(void)save;
 
-@property(assign, nonatomic)BOOL notifications;
-
 @end
