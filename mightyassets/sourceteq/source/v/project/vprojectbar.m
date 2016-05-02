@@ -93,7 +93,7 @@ static NSInteger const height = 110;
 
 -(void)actionshare:(UIButton*)button
 {
-    [[analytics singleton] trackeve];
+    [[analytics singleton] trackevent:self.controller action:@"share" label:nil];
     [self.controller.model share];
 }
 
@@ -104,6 +104,7 @@ static NSInteger const height = 110;
 
 -(void)actionremove:(UIButton*)button
 {
+    [[analytics singleton] trackevent:self.controller action:@"remove" label:nil];
     __unused vprojectwarning *warning = [[vprojectwarning alloc] init:self.controller.view];
 }
 
