@@ -1,6 +1,7 @@
 #import "clanding.h"
 #import "vlanding.h"
 #import "cmain.h"
+#import "analytics.h"
 
 @interface clanding ()
 
@@ -23,6 +24,7 @@
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     [self setExtendedLayoutIncludesOpaqueBars:NO];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    [[analytics singleton] trackscreen:self];
 }
 
 #pragma mark public

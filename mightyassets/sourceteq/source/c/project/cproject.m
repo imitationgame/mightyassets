@@ -1,6 +1,7 @@
 #import "cproject.h"
 #import "vproject.h"
 #import "cmain.h"
+#import "analytics.h"
 
 @implementation cproject
 
@@ -20,6 +21,8 @@
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     [self setExtendedLayoutIncludesOpaqueBars:NO];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    
+    [[analytics singleton] trackscreen:self];
 }
 
 -(void)viewDidAppear:(BOOL)animated
